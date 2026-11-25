@@ -1,0 +1,433 @@
+{
+	"type": "controlTemplate",
+	"version": "0.0.96",
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "9ced542b-d25f-4f1b-b1b9-ffe12a214934",
+	"name": "Boxed_Trifeed_v3_pos_control",
+	"instanceId": "design_42ba9717c9ab48ec98ed4af915534cba",
+	"controlId": "sig-dashboard",
+	"properties": [
+		{
+			"name": "position",
+			"value": "absolute",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "top",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "left",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "height",
+			"value": "170px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "width",
+			"value": "170px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "overflow",
+			"value": "visible",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "background",
+			"value": "transparent",
+			"typeId": 0,
+			"propTypeId": 2
+		}
+	],
+	"dashboardelements": [
+		{
+			"type": "control",
+			"designTimeId": "1d9ded3d-9e13-4b93-adc7-322e961bcfed",
+			"name": "Obj_148_Rect_0_0",
+			"instanceId": "lvd9d02321dc8244f319c4d674907e86b51",
+			"controlId": "sig-control-rectangle",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "170px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "170px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-background-color",
+					"value": "MigratedColors:MigratedColor_264",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "dd920b1a-746a-4f14-bb8d-40303cace476",
+			"name": "Button_0_1",
+			"instanceId": "lvd1f11896835944c29b182a7369279f43c",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "Arial12_Bold_Shadow",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "MigratedColors:MigratedColor_217",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\arrow_blue_left_rel.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "b0bbecee-12de-46cc-8249-0fed7f08aeef"
+				},
+				{
+					"name": "sig-control-button-tap",
+					"value": "Boxed_PosL_board3",
+					"typeId": 1,
+					"propTypeId": 3,
+					"refId": "c376904c-2e67-45a0-93dc-d7a1b602e33f"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "8912b283-500b-4515-9b37-91568d87c16c",
+			"name": "Button_1_2",
+			"instanceId": "lvd009633afb68941c996d90d4391d0cdb9",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "103",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "Arial12_Bold_Shadow",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "MigratedColors:MigratedColor_217",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\arrow_blue_up_rel.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "2db98d8a-69b8-4b68-bdf8-eeeed50183e8"
+				},
+				{
+					"name": "sig-control-button-tap",
+					"value": "Boxed_PosF_board3",
+					"typeId": 1,
+					"propTypeId": 3,
+					"refId": "bdf886ac-6ed4-4026-a8c5-78f3388cbfdf"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "4fb5e885-0a66-4e9c-8983-bcc932b448cd",
+			"name": "Button_2_3",
+			"instanceId": "lvd1e35036bfdee44b7b303a4eaa6cef945",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "110px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "104",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "Arial12_Bold_Shadow",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "MigratedColors:MigratedColor_217",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\arrow_blue_right_rel.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "c2e09c36-bd4a-4fe4-9971-ca9c91190f8b"
+				},
+				{
+					"name": "sig-control-button-tap",
+					"value": "Boxed_PosR_board3",
+					"typeId": 1,
+					"propTypeId": 3,
+					"refId": "308e237d-4e4f-4378-a58f-2574ab3c6dd2"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "5c0980e0-9f51-4959-99f0-f94eadd9ed9f",
+			"name": "Button_3_4",
+			"instanceId": "lvddd439e1e2f0d4214876ceaaf9915d0b9",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "110px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "105",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "Arial12_Bold_Shadow",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "MigratedColors:MigratedColor_217",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\arrow_blue_down_rel.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "da33ff11-75d7-452e-b3a7-02e310aa281c"
+				},
+				{
+					"name": "sig-control-button-tap",
+					"value": "Boxed_PosB_board3",
+					"typeId": 1,
+					"propTypeId": 3,
+					"refId": "47eba2b9-ea61-423b-a62b-39801f35c6c8"
+				}
+			]
+		}
+	]
+}

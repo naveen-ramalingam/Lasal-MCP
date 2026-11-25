@@ -1,0 +1,879 @@
+{
+	"type": "controlTemplate",
+	"version": "0.0.96",
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "c0f3275b-991f-4696-a20c-875f2827b6f1",
+	"name": "BGND_Stitch",
+	"instanceId": "design_5fc6e8ffe28b4ea19185e79c8b7e9947",
+	"controlId": "sig-dashboard",
+	"properties": [
+		{
+			"name": "position",
+			"value": "absolute",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "top",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "left",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "height",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "width",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "overflow",
+			"value": "visible",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "background",
+			"value": "transparent",
+			"typeId": 0,
+			"propTypeId": 2
+		}
+	],
+	"dashboardelements": [
+		{
+			"type": "control",
+			"designTimeId": "ac9eb552-bfa0-4655-b104-595181a816bf",
+			"name": "Obj_710_Rect_0_0",
+			"instanceId": "lvd12db3f0030fc483f84387f53dcf306bc",
+			"controlId": "sig-control-rectangle",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "80px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-background-color",
+					"value": "MigratedColors:MigratedColor_219",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8a35d656-d513-47f1-babd-d0e2a484e167"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "e0a6b8a4-0f8e-42bf-85eb-87b40ad13c92",
+			"name": "Line_0_1",
+			"instanceId": "lvd03b42704f79e4ae9b5d75ed51361b11e",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "35px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "20px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "ba9bdc68-0875-4777-a565-0dc0f236bace",
+			"name": "Line_1_2",
+			"instanceId": "lvd2211e7d5816c498f8c507797e1dcab5f",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "65px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "20px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "103",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "3a9e5bfe-ee61-4add-8ff0-fa4b1279515e",
+			"name": "Line_2_3",
+			"instanceId": "lvdbe3c5e92d8c14850bac12666f72dc8cb",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "36px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "104",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "76c5df8e-0415-416b-bfc7-b164a01626eb",
+			"name": "Polygon_3_4",
+			"instanceId": "lvd29c3804e28df40c0bb96a7af55f99e30",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "6px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "32px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "9px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "105",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "e1eb5d83-679f-4396-bb81-9060eb8b81ad",
+			"name": "Polygon_4_5",
+			"instanceId": "lvd06f1b99a1560412db7759c9e13663852",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "6px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "26px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "9px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "106",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "7025efd0-7c32-4b51-9fa1-3bdff83b8cf1",
+			"name": "Polygon_5_6",
+			"instanceId": "lvdd6a64137d0564a9aa0734db7641b319f",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "61px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "32px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "9px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "107",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "1453fc84-00fb-4b80-9773-7d6ffe43a009",
+			"name": "Polygon_6_7",
+			"instanceId": "lvda875001bd17c465aa7b91bbf35f40841",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "31px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "26px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "9px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "108",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "fbb717a6-bd5b-45f3-9f0a-3765098a2dad",
+			"name": "Line_7_8",
+			"instanceId": "lvd08c6d088bbdf49bbb8089ada09c93dac",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "37px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "109",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "3ad1ac9a-c361-42cd-add3-73f390c370a4",
+			"name": "Line_8_9",
+			"instanceId": "lvdf2c8a1fd2d2143fea586a15bab1479d1",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "110",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "38aef25a-20d5-4a77-b8ea-e0d8a9998d11",
+			"name": "Polygon_9_10",
+			"instanceId": "lvd932101e79739499388828a1821d506e8",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "26px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "71px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "15px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "111",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "2a0577a2-e441-4cd9-8e83-843a609de7a1",
+			"name": "Polygon_10_11",
+			"instanceId": "lvd3f6975a1f2644527acaac02496327f66",
+			"controlId": "sig-control-svg-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "20px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "71px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "21px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "112",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-svg-container-background-color",
+					"value": "MigratedColors:MigratedColor_189",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "192bc5f6-97c8-4273-be37-056e78eca241"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "6afc4d14-6c35-4b9a-a6d1-f8f8452105a0",
+			"name": "Line_11_12",
+			"instanceId": "lvd1389dac85cc242dd8cf81eed7e2fee2f",
+			"controlId": "sig-control-line-simple",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "80px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "4px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "113",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "ac2f4c68-6bdc-4052-be25-505948c6631b",
+			"name": "Label_0_13",
+			"instanceId": "lvd3f57b3abbd704b9ea54989663698ad76",
+			"controlId": "sig-control-text",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "37px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "9px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "114",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "Tiny_7",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "79e0c63a-37a5-4dda-a928-d5c703b5b67d"
+				},
+				{
+					"name": "sigtext",
+					"value": "TextList_12:Text_57",
+					"typeId": 5,
+					"propTypeId": 1,
+					"refId": "83075803-a55d-451b-bf56-385ecd939308"
+				},
+				{
+					"name": "--theme-sig-control-text-background-color",
+					"value": "MigratedColors:MigratedColor_264",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+				},
+				{
+					"name": "--theme-sig-control-text-color",
+					"value": "MigratedColors:MigratedColor_000",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "7cee9282-4f90-4d8c-a51e-7dde8789eeab",
+			"name": "Object_711_0_14",
+			"instanceId": "lvdb3efb23bdc7440be92509cff44b09a6a",
+			"controlId": "sig-composite-container",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "47px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "3px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "11px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "17px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "115",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-composite-container-background-color",
+					"value": "MigratedColors:MigratedColor_224",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "6f8046a8-b512-4454-90cb-8cc6768951fe",
+			"name": "Image_0_15",
+			"instanceId": "lvd3ec3b2a5cac042508e463304995864a5",
+			"controlId": "sig-control-image",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "49px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "116",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-color",
+					"value": "MigratedColors:MigratedColor_224",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\stitch_mini.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "ea3e472d-e46d-45f2-9e15-f7d1093190c5"
+				}
+			]
+		}
+	]
+}

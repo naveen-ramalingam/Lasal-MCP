@@ -1,0 +1,2314 @@
+{
+    "name": "sig-control-listview",
+    "shortName": {
+        "en": "ListView",
+        "de": "ListView"
+    },
+    "controlType": {
+        "en": "Utilities",
+        "de": "Utilities"
+    },
+    "version": "02.00.003",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a list view as a polymer custom element.",
+        "de": "Implements a list view as a polymer custom element."
+    },
+    "main": [
+        "sig-control-listview.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-listview.html",
+    "private": true,
+    "baseComponent": "sig-element",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element#^1.2.0",
+        "sig-control-image": "components/user/sig-control-image#^1.2.0",
+        "sig-control-scrollbar": "components/user/sig-control-scrollbar#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "texts": [
+        {
+            "lang": "en",
+            "path": "./langs/en.json",
+            "reference": true
+        },
+        {
+            "lang": "de",
+            "path": "./langs/de.json"
+        }
+    ],
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-listview-css.js"
+        },
+        {
+            "designerAction": "addToPublish",
+            "path": "./spinner.svg"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-control-image"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-control-scrollbar"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "500px",
+        "height": "160px"
+    },
+    "toolbox": false,
+    "slotted": false,
+    "styleClassEditor": true,
+    "usableInShadowDom": true,
+    "moduleImport": {
+        "importType": "dynamic",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "properties": [
+        /*****************************************************************************************************
+        // Hide properties from the base
+        *****************************************************************************************************/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-element-dragged-opacity",
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*****************************************************************************************************
+        // Settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Hide header
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "hideheader",
+            "sortIndex": 150000,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Hide header",
+                "de": "Hide header"
+            },
+            "description": {
+                "en": "Show or hide the header.",
+                "de": "Show or hide the header."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Readonly mode
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "readonly",
+            "sortIndex": 150100,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Readonly mode",
+                "de": "Readonly mode"
+            },
+            "description": {
+                "en": "Set control to readonly mode - no actions will be dispatched.",
+                "de": "Set control to readonly mode - no actions will be dispatched."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Disable multiselection
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "disablemultiselect",
+            "sortIndex": 150200,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Disable multiselection",
+                "de": "Disable multiselection"
+            },
+            "description": {
+                "en": "Disable multiselection for rows.",
+                "de": "Disable multiselection for rows."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Disable auto-deactivate
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "disableautodeactivate",
+            "sortIndex": 150300,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": true,
+            "shortName": {
+                "en": "Keep focus",
+                "de": "Keep focus"
+            },
+            "description": {
+                "en": "If true, the control will stay active if clicked outside (a selected row will stay selected).",
+                "de": "Wenn True, bleibt das Control aktiv, wenn außerhalb geklickt wird (eine ausgewählte Zeile bleibt ausgewählt)."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Longpress delay
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "longpressdelay",
+            "sortIndex": 150400,
+            "dataType": "number",
+            "lockStyleCopy": true,
+            "default": 250,
+            "shortName": {
+                "en": "Longpress delay",
+                "de": "Longpress delay"
+            },
+            "description": {
+                "en": "Sets the delay for the longpress detection.",
+                "de": "Sets the delay for the longpress detection."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Doubleclick delay
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "clickdelay",
+            "sortIndex": 150500,
+            "dataType": "number",
+            "lockStyleCopy": true,
+            "default": 250,
+            "shortName": {
+                "en": "Doubleclick delay",
+                "de": "Doubleclick delay"
+            },
+            "description": {
+                "en": "Sets the delay for the doubleclick detection.",
+                "de": "Sets the delay for the doubleclick detection."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Overflow x-axis
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-overflow-x",
+            "sortIndex": 150600,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "default": "auto",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "hidden",
+                        "de": "hidden"
+                    },
+                    "value": "hidden"
+                },
+                {
+                    "shortName": {
+                        "en": "visible",
+                        "de": "visible"
+                    },
+                    "value": "visible"
+                },
+                {
+                    "shortName": {
+                        "en": "scroll",
+                        "de": "scroll"
+                    },
+                    "value": "scroll"
+                },
+                {
+                    "shortName": {
+                        "en": "auto",
+                        "de": "auto"
+                    },
+                    "value": "auto"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Overflow x-axis",
+                "de": "Overflow x-axis"
+            },
+            "description": {
+                "en": "Specifies what happens if content overflows on x-axis within the component.",
+                "de": "Specifies what happens if content overflows on x-axis within the component."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Overflow y-axis
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-overflow-y",
+            "sortIndex": 150700,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "default": "auto",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "hidden",
+                        "de": "hidden"
+                    },
+                    "value": "hidden"
+                },
+                {
+                    "shortName": {
+                        "en": "visible",
+                        "de": "visible"
+                    },
+                    "value": "visible"
+                },
+                {
+                    "shortName": {
+                        "en": "scroll",
+                        "de": "scroll"
+                    },
+                    "value": "scroll"
+                },
+                {
+                    "shortName": {
+                        "en": "auto",
+                        "de": "auto"
+                    },
+                    "value": "auto"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Overflow y-axis",
+                "de": "Overflow y-axis"
+            },
+            "description": {
+                "en": "Specifies what happens if content overflows on y-axis within the component.",
+                "de": "Specifies what happens if content overflows on y-axis within the component."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-background-color",
+            "sortIndex": 500000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "The background color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-border-color",
+            "sortIndex": 500100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the component.",
+                "de": "The border color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-border-width",
+            "sortIndex": 500200,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component.",
+                "de": "The border width of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-border-style",
+            "sortIndex": 500300,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "The border style of the component.",
+                "de": "The border style of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-border-radius",
+            "sortIndex": 500400,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component.",
+                "de": "The border radius of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Header styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Font style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "lockStyleCopy": false,
+            "name": "table thead",
+            "sortIndex": 500500,
+            "shortName": {
+                "en": "Font style",
+                "de": "Font style"
+            },
+            "description": {
+                "en": "The main font of the component's header.",
+                "de": "The main font of the component's header."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Height
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-height",
+            "sortIndex": 500600,
+            "dataType": "string",
+            "units": "px",
+            "default": "26px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the component's header.",
+                "de": "The height of the component's header."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-background-color",
+            "sortIndex": 500700,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(0, 0, 0, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component's header.",
+                "de": "The background color of the component's header."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-color",
+            "sortIndex": 500800,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of the component's header.",
+                "de": "The text color of the component's header."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Symbol color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-listview-header-symbol-color",
+            "sortIndex": 500900,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(153, 153, 153, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Symbol color",
+                "de": "Symbol color"
+            },
+            "description": {
+                "en": "The color of the filter and sorting symbol.",
+                "de": "The color of the filter and sorting symbol."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Active symbol color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-listview-header-symbol-active-color",
+            "sortIndex": 501000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Active symbol color",
+                "de": "Active symbol color"
+            },
+            "description": {
+                "en": "The color of the active filter and sorting symbol.",
+                "de": "The color of the active filter and sorting symbol."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Symbol fontsize
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-listview-header-symbol-fontsize",
+            "sortIndex": 501100,
+            "dataType": "string",
+            "units": "px",
+            "default": "20px",
+            "shortName": {
+                "en": "Symbol fontsize",
+                "de": "Symbol fontsize"
+            },
+            "description": {
+                "en": "The fontsize of the filter and sorting symbol.",
+                "de": "The fontsize of the filter and sorting symbol."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align horizontal
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-text-align",
+            "sortIndex": 501200,
+            "dataType": "string",
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align horizontal",
+                "de": "Text align horizontal"
+            },
+            "description": {
+                "en": "The horizontal alignment of the component's header text.",
+                "de": "The horizontal alignment of the component's header text."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align vertical
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-vertical-align",
+            "sortIndex": 501300,
+            "dataType": "string",
+            "default": "middle",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "top",
+                        "de": "top"
+                    },
+                    "value": "top"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "middle"
+                },
+                {
+                    "shortName": {
+                        "en": "bottom",
+                        "de": "bottom"
+                    },
+                    "value": "bottom"
+                }
+            ],
+            "shortName": {
+                "en": "Text align vertical",
+                "de": "Text align vertical"
+            },
+            "description": {
+                "en": "The vertical alignment of the component's header text.",
+                "de": "The vertical alignment of the component's header text."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Padding
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-header-padding",
+            "sortIndex": 501400,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px 5px",
+            "shortName": {
+                "en": "Padding",
+                "de": "Padding"
+            },
+            "description": {
+                "en": "The distance to the inner elements of the header. This value can be set as shorthand property.",
+                "de": "The distance to the inner elements of the header. This value can be set as shorthand property."
+            },
+            "group": {
+                "en": "Header styling",
+                "de": "Header styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Spinner styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Spinner color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-spinner-color",
+            "sortIndex": 501500,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Spinner color",
+                "de": "Spinner color"
+            },
+            "description": {
+                "en": "The color of the spinner.",
+                "de": "The color of the spinner."
+            },
+            "group": {
+                "en": "Spinner styling",
+                "de": "Spinner styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Size
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-spinner-size",
+            "sortIndex": 501600,
+            "dataType": "string",
+            "units": "px",
+            "default": "100px",
+            "shortName": {
+                "en": "Size",
+                "de": "Size"
+            },
+            "description": {
+                "en": "The size of the spinner.",
+                "de": "The size of the spinner."
+            },
+            "group": {
+                "en": "Spinner styling",
+                "de": "Spinner styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Row styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Font style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "lockStyleCopy": false,
+            "name": "table tbody",
+            "sortIndex": 501700,
+            "shortName": {
+                "en": "Font style",
+                "de": "Font style"
+            },
+            "description": {
+                "en": "The main font of the list.",
+                "de": "The main font of the list."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Height
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-height",
+            "sortIndex": 501800,
+            "dataType": "string",
+            "units": "px",
+            "default": "26px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the component's row.",
+                "de": "The height of the component's row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Padding
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-padding",
+            "sortIndex": 501900,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px 5px",
+            "shortName": {
+                "en": "Padding",
+                "de": "Padding"
+            },
+            "description": {
+                "en": "The distance to the inner elements of the row. This value can be set as shorthand property.",
+                "de": "The distance to the inner elements of the row. This value can be set as shorthand property."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align horizontal
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-text-align",
+            "sortIndex": 502000,
+            "dataType": "string",
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align horizontal",
+                "de": "Text align horizontal"
+            },
+            "description": {
+                "en": "The horizontal alignment of the component's row text.",
+                "de": "The horizontal alignment of the component's row text."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align vertical
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-vertical-align",
+            "sortIndex": 502100,
+            "dataType": "string",
+            "default": "middle",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "top",
+                        "de": "top"
+                    },
+                    "value": "top"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "middle"
+                },
+                {
+                    "shortName": {
+                        "en": "bottom",
+                        "de": "bottom"
+                    },
+                    "value": "bottom"
+                }
+            ],
+            "shortName": {
+                "en": "Text align vertical",
+                "de": "Text align vertical"
+            },
+            "description": {
+                "en": "The vertical alignment of the component's row text.",
+                "de": "The vertical alignment of the component's row text."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-even-background-color",
+            "sortIndex": 502200,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component's rows.",
+                "de": "The background color of the component's rows."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-even-color",
+            "sortIndex": 502300,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(42, 42, 42, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of the component's rows.",
+                "de": "The text color of the component's rows."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-active-background-color",
+            "sortIndex": 502400,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(120, 120, 120, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Selected background color",
+                "de": "Selected background color"
+            },
+            "description": {
+                "en": "The background color of the selected row.",
+                "de": "The background color of the selected row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-active-color",
+            "sortIndex": 502500,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(42, 42, 42, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Selected text color",
+                "de": "Selected text color"
+            },
+            "description": {
+                "en": "The text color of the selected row.",
+                "de": "The text color of the selected row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Alternate background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-odd-background-color",
+            "sortIndex": 502600,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(215, 215, 215, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Alternate background color",
+                "de": "Alternate background color"
+            },
+            "description": {
+                "en": "The background color of the alternate rows.",
+                "de": "The background color of the alternate rows."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Alternate text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-odd-color",
+            "sortIndex": 502700,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(42, 42, 42, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Alternate text color",
+                "de": "Alternate text color"
+            },
+            "description": {
+                "en": "The text color of the alternate rows.",
+                "de": "The text color of the alternate rows."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Marked background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-marked-background-color",
+            "sortIndex": 502800,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(160, 160, 160, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Marked background color",
+                "de": "Marked background color"
+            },
+            "description": {
+                "en": "The background color of the marked row.",
+                "de": "The background color of the marked row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Marked text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-marked-color",
+            "sortIndex": 502900,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(42, 42, 42, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Marked text color",
+                "de": "Marked text color"
+            },
+            "description": {
+                "en": "The text color of the marked row.",
+                "de": "The text color of the marked row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected marked text color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-row-active-marked-color",
+            "sortIndex": 503000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Selected marked text color",
+                "de": "Selected marked text color"
+            },
+            "description": {
+                "en": "The text color of the selected and marked row.",
+                "de": "The text color of the selected and marked row."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Vertical separator color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-cellseparator-color",
+            "sortIndex": 503100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(112, 112, 112, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Vertical separator color",
+                "de": "Vertical separator color"
+            },
+            "description": {
+                "en": "The vertical separator line color of the list.",
+                "de": "The vertical separator line color of the list."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Vertical separator width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-cellseparator-height",
+            "sortIndex": 503200,
+            "dataType": "string",
+            "units": "px",
+            "default": "1px",
+            "shortName": {
+                "en": "Vertical separator width",
+                "de": "Vertical separator width"
+            },
+            "description": {
+                "en": "The width of the vertical separator line of the list.",
+                "de": "The width of the vertical separator line of the list."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Horizontal separator color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-lineseparator-color",
+            "sortIndex": 503300,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(112, 112, 112, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Horizontal separator color",
+                "de": "Horizontal separator color"
+            },
+            "description": {
+                "en": "The color of the horizontal separator line of the list.",
+                "de": "The color of the horizontal separator line of the list."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Horizontal separator width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-listview-lineseparator-height",
+            "sortIndex": 503400,
+            "dataType": "string",
+            "units": "px",
+            "default": "1px",
+            "shortName": {
+                "en": "Horizontal separator width",
+                "de": "Horizontal separator width"
+            },
+            "description": {
+                "en": "The width of the horizontal separator line of the list.",
+                "de": "The width of the horizontal separator line of the list."
+            },
+            "group": {
+                "en": "Row styling",
+                "de": "Row styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Event actions navigation
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Select previous
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorUp",
+            "sortIndex": 150800,
+            "shortName": {
+                "en": "Select previous",
+                "de": "Select previous"
+            },
+            "description": {
+                "en": "Event handler which selects the previous row in the list.",
+                "de": "Event handler which selects the previous row in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Select next
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorDown",
+            "sortIndex": 150900,
+            "shortName": {
+                "en": "Select next",
+                "de": "Select next"
+            },
+            "description": {
+                "en": "Event handler which selects the next row in the list.",
+                "de": "Event handler which selects the next row in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto previous page
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorPageUp",
+            "sortIndex": 151000,
+            "shortName": {
+                "en": "Goto previous page",
+                "de": "Goto previous page"
+            },
+            "description": {
+                "en": "Event handler which scrolls to the previous page in the list.",
+                "de": "Event handler which scrolls to the previous page in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto next page
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorPageDown",
+            "sortIndex": 151100,
+            "shortName": {
+                "en": "Goto next page",
+                "de": "Goto next page"
+            },
+            "description": {
+                "en": "Event handler which scrolls to the next page in the list.",
+                "de": "Event handler which scrolls to the next page in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto first row
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorTop",
+            "sortIndex": 151200,
+            "shortName": {
+                "en": "Goto first row",
+                "de": "Goto first row"
+            },
+            "description": {
+                "en": "Event handler which scrolls to the first row in the list.",
+                "de": "Event handler which scrolls to the first row in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto last row
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorBottom",
+            "sortIndex": 151300,
+            "shortName": {
+                "en": "Goto last row",
+                "de": "Goto last row"
+            },
+            "description": {
+                "en": "Event handler which scrolls to the last row in the list.",
+                "de": "Event handler which scrolls to the last row in the list."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Scroll to row index
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "moveCursorToRow",
+            "sortIndex": 151400,
+            "shortName": {
+                "en": "Scroll to row index",
+                "de": "Scroll to row index"
+            },
+            "description": {
+                "en": "Event handler which scrolls and selects the row with the given index.",
+                "de": "Event handler which scrolls and selects the row with the given index."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+		// property Goto next column
+		------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "moveCursorRight",
+            "sortIndex": 151500,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Goto next column",
+                "de": "Goto next column"
+            },
+            "description": {
+                "en": "Event to trigger moving the list one column to the right.",
+                "de": "Event welches die Liste um eine Spalte nach rechts scrollt."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto previous column
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "moveCursorLeft",
+            "sortIndex": 151600,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Goto previous column",
+                "de": "Goto previous column"
+            },
+            "description": {
+                "en": "Event to trigger moving the list one column to the left.",
+                "de": "Event welches die Liste um eine Spalte nach links scrollt."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto first column
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "columnToStart",
+            "sortIndex": 151700,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Goto first column",
+                "de": "Goto first column"
+            },
+            "description": {
+                "en": "Event to trigger moving the list to the most left column.",
+                "de": "Event welches die Liste an die linkeste Spalte scrollt."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Goto last column
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "columnToEnd",
+            "sortIndex": 151800,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Goto last column",
+                "de": "Goto last column"
+            },
+            "description": {
+                "en": "Event to trigger moving the list to the most right column.",
+                "de": "Event welches die Liste an die rechteste Spalte scrollt."
+            },
+            "group": {
+                "en": "Event actions navigation",
+                "de": "Event actions navigation"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Image styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Image style class
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "styleClass"
+            ],
+            "propertyType": "styleClass",
+            "default": "",
+            "name": "imageclass",
+            "sortIndex": 110000,
+            "publishName": "sig-control-image",
+            "controlId": "sig-control-image",
+            "shortName": {
+                "en": "Image style class",
+                "de": "Image style class"
+            },
+            "description": {
+                "en": "The style class which should be applied to the images, if there are any.",
+                "de": "The style class which should be applied to the images, if there are any."
+            },
+            "group": {
+                "en": "Image styling",
+                "de": "Image styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Event actions misc
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Reset sorting
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "resetAllSort",
+            "sortIndex": 151900,
+            "shortName": {
+                "en": "Reset sorting",
+                "de": "Reset sorting"
+            },
+            "description": {
+                "en": "Event handler which resets sorting.",
+                "de": "Event handler which resets sorting."
+            },
+            "group": {
+                "en": "Event actions misc",
+                "de": "Event actions misc"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Reset filtering
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "event",
+            "propertyType": "eventhandler",
+            "lockStyleCopy": true,
+            "name": "resetAllFilter",
+            "sortIndex": 152000,
+            "shortName": {
+                "en": "Reset filtering",
+                "de": "Reset filtering"
+            },
+            "description": {
+                "en": "Event handler which resets filtering.",
+                "de": "Event handler which resets filtering."
+            },
+            "group": {
+                "en": "Event actions misc",
+                "de": "Event actions misc"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Listview Komponente_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Listview Component_EN.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

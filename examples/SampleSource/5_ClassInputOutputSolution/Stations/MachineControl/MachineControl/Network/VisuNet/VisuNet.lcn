@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="VisuNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "PcComponentsCheckBox1"
+			GUID       = "{C0E8BF26-CEB4-4C13-97D6-820F9F90BF21}"
+			Class      = "PcComponentsCheckBox"
+			Position   = "(870,390)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="MyComponents"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_Bit32Ram1" GUID="{CEC3C097-DE97-4F9C-8792-8563F2BC36E5}" Class="_Bit32Ram">
+							<Channels>
+								<Server Name="Data"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="RamData" GUID="{7FE95327-3A84-11D6-8BC6-0048545E8899}" Class="Ram">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "PcComponentsRadio1"
+			GUID       = "{40B35A60-7EFD-4052-8A8D-F31E7D7D9E71}"
+			Class      = "PcComponentsRadio"
+			Position   = "(870,150)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="MyComponents"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_Radio321" GUID="{663EDF53-1E2A-46FE-81FA-73FDEE68D3C3}" Class="_Radio32">
+							<Channels>
+								<Server Name="Data"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ValuesForComponents1"
+			GUID       = "{5276BB71-1CB9-46CF-814D-48F9434B9125}"
+			Class      = "ValuesForComponents"
+			Position   = "(210,390)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="MyBar"/>
+				<Server Name="MyDate"/>
+				<Server Name="MyEnumeration"/>
+				<Server Name="MyIPAddress"/>
+				<Server Name="MyMenu"/>
+				<Server Name="MyTime"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Visualize1"
+			GUID       = "{B2FCAF19-4449-453A-B3E9-ADC04047D162}"
+			Class      = "Visualize"
+			Position   = "(210,150)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ClientVisu"/>
+				<Client Name="Client"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lasal Visu Runtime for Designer</title>
+
+    <!-- Essential scripts  -->
+    <script src="rt\node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" type="text/javascript"></script>
+    <script src="rt\node_modules/loadjs/dist/loadjs.min.js" type="text/javascript"></script>
+
+    <!-- Import of the <custom-style> uses @import syntax, we need to load a patched version -->
+    <script type="module" src="rt\node_modules/@polymer/polymer/lib/elements/custom-style.js" crossorigin></script>
+
+    <!-- Style sheets -->
+    <script type="module" src="res\styles/sig-base-css.js" crossorigin></script>
+    <script type="module" src="res\styles/sig-designer-css.js" crossorigin></script>
+    <script type="module" src="res\styles/sig-default-css.js" crossorigin></script>
+    <script type="module" src="res\styles/sig-views-css.js" crossorigin></script>
+    <!-- Static linked components -->
+    	<script type="module" src="res\components\sigmatek\sig-alarm-config-base\sig-alarm-config-base.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-alert\sig-alert.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-app\sig-app.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-dashboard\sig-dashboard.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-dependency-loader\sig-dependency-loader.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-control-info\sig-designer-control-info.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-grid\sig-designer-grid.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-handles\sig-designer-handles.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-lasso\sig-designer-lasso.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-placeholder\sig-designer-placeholder.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-rulers\sig-designer-rulers.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-designer-toolbox\sig-designer-toolbox.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-element-light\sig-element-light.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-element-lit\sig-element-lit.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-element\sig-element.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-ime-extension\sig-ime-extension.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-ag-grid\sig-utils-ag-grid.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-c3\sig-utils-c3.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-d3\sig-utils-d3.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-jquery-jstree\sig-utils-jquery-jstree.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-jquery-mask\sig-utils-jquery-mask.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-jquery\sig-utils-jquery.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-utils-jspanel\sig-utils-jspanel.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-window-container-keyboard\sig-window-container-keyboard.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-window-container-system\sig-window-container-system.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-window-container\sig-window-container.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-window-layer\sig-window-layer.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\sigmatek\sig-wrapper\sig-wrapper.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\user\sig-alarm-config\sig-alarm-config.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\user\sig-control-alarmlist2\sig-control-alarmlist2.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\user\sig-control-splash-screen\sig-control-splash-screen.js" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components\user\sig-control-svg-container\sig-control-svg-container.js" crossorigin="use-credentials"></script>
+
+
+    <script>
+        function allowDrop(ev, effect) {
+            ev.dataTransfer.dropEffect = effect;
+            ev.preventDefault();
+        }
+    </script>
+</head>
+
+<body class="theme-sigmatek2017" ondragover="allowDrop(event, 'copy')">
+<!-- Bundles and other needed scripts -->
+<script type="text/javascript" src="rt\node_modules/babel-polyfill/polyfill.js"></script>
+<script type="text/javascript" src="rt\scripts\designer-bundle.js"></script>
+
+</body>
+
+</html>

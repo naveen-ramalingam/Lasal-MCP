@@ -1,0 +1,385 @@
+{
+	"type": "controlTemplate",
+	"version": "0.0.96",
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "9df20f51-2ac6-4bd5-82d1-9b79f3ed95cf",
+	"name": "FPV_BobstFeederDebug",
+	"instanceId": "design_5c2843947ad84c6b9f301d908f45a163",
+	"controlId": "sig-dashboard",
+	"properties": [
+		{
+			"name": "position",
+			"value": "absolute",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "top",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "left",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "height",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "width",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "overflow",
+			"value": "visible",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "background",
+			"value": "transparent",
+			"typeId": 0,
+			"propTypeId": 2
+		}
+	],
+	"dashboardelements": [
+		{
+			"type": "control",
+			"designTimeId": "6766b0d4-1fa4-448f-adbe-50626cec71b7",
+			"name": "Output_0_BobstFeederDebug_TopCurrentFrame_0",
+			"instanceId": "lvd99c6ce768f1e49bba6a84a6bed797a43",
+			"controlId": "sig-control-output",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "33px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "21px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "LCD36",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "d93cd2e4-d88b-462c-a736-d33cab4c383e"
+				},
+				{
+					"name": "value",
+					"value": "255:BobstFeederDebug.TopCurrentFrame",
+					"typeId": 4,
+					"propTypeId": 1,
+					"refId": "efe039d3-f310-4e1a-ae16-11adedb79970"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color",
+					"value": "MigratedColors:MigratedColor_229",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+				},
+				{
+					"name": "--theme-sig-control-output-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "unittext",
+					"value": "255:BobstFeederDebug.TopCurrentFrame",
+					"typeId": 43,
+					"propTypeId": 1,
+					"path":["Unit"],
+					"refId": "efe039d3-f310-4e1a-ae16-11adedb79970"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "9e284bb0-4165-4768-b8ca-d182d477f76d",
+			"name": "Output_1_BobstFeederDebug_TopSelectedFrame_1",
+			"instanceId": "lvd56def550e3414569b3881141f28e05fe",
+			"controlId": "sig-control-output",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "33px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "21px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "LCD36",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "d93cd2e4-d88b-462c-a736-d33cab4c383e"
+				},
+				{
+					"name": "value",
+					"value": "255:BobstFeederDebug.TopSelectedFrame",
+					"typeId": 4,
+					"propTypeId": 1,
+					"refId": "65de0c34-50de-4377-9619-c9373326d48d"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color",
+					"value": "MigratedColors:MigratedColor_229",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+				},
+				{
+					"name": "--theme-sig-control-output-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "unittext",
+					"value": "255:BobstFeederDebug.TopSelectedFrame",
+					"typeId": 43,
+					"propTypeId": 1,
+					"path":["Unit"],
+					"refId": "65de0c34-50de-4377-9619-c9373326d48d"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "aa1d5720-f358-4a0e-ba10-3444ff3ce328",
+			"name": "Output_2_BobstFeederDebug_BottomCurrentFrame_2",
+			"instanceId": "lvddc5f36716ed3470fa00b01364fae5b15",
+			"controlId": "sig-control-output",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "20px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "33px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "21px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "103",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "LCD36",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "d93cd2e4-d88b-462c-a736-d33cab4c383e"
+				},
+				{
+					"name": "value",
+					"value": "255:BobstFeederDebug.BottomCurrentFrame",
+					"typeId": 4,
+					"propTypeId": 1,
+					"refId": "2701c294-b9d8-4cfa-b28a-a91c1a0cf152"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color",
+					"value": "MigratedColors:MigratedColor_229",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+				},
+				{
+					"name": "--theme-sig-control-output-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "unittext",
+					"value": "255:BobstFeederDebug.BottomCurrentFrame",
+					"typeId": 43,
+					"propTypeId": 1,
+					"path":["Unit"],
+					"refId": "2701c294-b9d8-4cfa-b28a-a91c1a0cf152"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "c4a67a52-be08-4617-8dcb-87015d2e1a48",
+			"name": "Output_3_BobstFeederDebug_BottomSelectedFrame_3",
+			"instanceId": "lvdb22f02b501764d74a18392f67690ed0f",
+			"controlId": "sig-control-output",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "60px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "20px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "33px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "21px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "104",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "LCD36",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "d93cd2e4-d88b-462c-a736-d33cab4c383e"
+				},
+				{
+					"name": "value",
+					"value": "255:BobstFeederDebug.BottomSelectedFrame",
+					"typeId": 4,
+					"propTypeId": 1,
+					"refId": "c982a0a9-ea8c-4a5d-97ca-afa222effaa4"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color",
+					"value": "MigratedColors:MigratedColor_229",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+				},
+				{
+					"name": "--theme-sig-control-output-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				},
+				{
+					"name": "unittext",
+					"value": "255:BobstFeederDebug.BottomSelectedFrame",
+					"typeId": 43,
+					"propTypeId": 1,
+					"path":["Unit"],
+					"refId": "c982a0a9-ea8c-4a5d-97ca-afa222effaa4"
+				}
+			]
+		}
+	]
+}

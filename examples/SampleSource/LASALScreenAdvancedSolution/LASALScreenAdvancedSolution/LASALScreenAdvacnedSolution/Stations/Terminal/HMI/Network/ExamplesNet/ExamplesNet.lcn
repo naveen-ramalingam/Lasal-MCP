@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="ExamplesNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "DataRecord1"
+			GUID       = "{224C5EAE-8F42-4BD1-AFF5-EEF6F131DBF3}"
+			Class      = "DataRecord"
+			Position   = "(300,570)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="CoordX"/>
+				<Server Name="CoordY"/>
+				<Server Name="IntError"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="_StdLib"/>
+				<Client Name="AllocateSize" Value="4 KB"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{72FB0B3B-E457-4227-AA93-C3D7D553795B}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DataRecordSave1"
+			GUID       = "{7B596B7C-E276-4DA1-8F8B-15A1392548D8}"
+			Class      = "DataRecordSave"
+			Position   = "(2460,1110)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Clear"/>
+				<Server Name="IntError"/>
+				<Server Name="Load"/>
+				<Server Name="Refresh"/>
+				<Server Name="Save"/>
+				<Server Name="Server0"/>
+				<Server Name="xKoord"/>
+				<Server Name="yKoord"/>
+				<Client Name="_Grafix"/>
+				<Client Name="_StdLib"/>
+				<Client Name="AllocateSize" Value="4 KB"/>
+				<Client Name="FileHandling"/>
+				<Client Name="FileRead"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{72FB0B3B-E457-4227-AA93-C3D7D553795B}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "FileHandling1"
+			GUID           = "{7CBB6C4E-B8F4-419F-B086-157B81E9B5C3}"
+			Class          = "FileHandling"
+			Position       = "(1560,1500)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "50 ms">
+			<Channels>
+				<Server Name="DriveName1"/>
+				<Server Name="FileExtension1"/>
+				<Server Name="FileIsCreated"/>
+				<Server Name="FileName1"/>
+				<Server Name="IntError"/>
+				<Server Name="StartFileWrite"/>
+				<Server Name="Steps"/>
+				<Client Name="_FileSys"/>
+				<Client Name="_StdLib"/>
+				<Client Name="FileRead"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="DriveName" GUID="{307503CD-C0D3-46D8-BD08-D089626016BF}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="FileExtension" GUID="{A5BA95BE-726A-4345-8855-FCA9F18CB82D}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;.txt&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="FileName" GUID="{DC239375-8714-4069-8932-B9547C045A11}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;MyFile&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "FileRead1"
+			GUID           = "{22FD16DD-B22C-47AB-8A0E-A831AD3B28CE}"
+			Class          = "FileRead"
+			Position       = "(870,1680)"
+			Visualized     = "true"
+			BackgroundTime = "10 ms">
+			<Channels>
+				<Server Name="FileIsCreated"/>
+				<Server Name="IntError"/>
+				<Server Name="ReadSteps"/>
+				<Server Name="StartRead"/>
+				<Client Name="_FileSys"/>
+				<Client Name="_StdLib"/>
+				<Client Name="StringRAM"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Indicator1"
+			GUID       = "{46A48E4B-B072-46BD-8D13-B9579FCD878D}"
+			Class      = "Indicator"
+			Position   = "(300,150)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="IndicatorValue"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{16B5E108-FCA8-4634-BE43-50DAB6B66BD5}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "StringRAM1"
+			GUID       = "{1AFEEAE3-42DC-4047-A477-3BB515270425}"
+			Class      = "StringRAM"
+			Position   = "(300,1800)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data" Value="&quot;C:\MyFile.txt&quot;"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(150,60)" Size="(810,360)" Text="Indicator"/>
+		<Comment Position="(150,480)" Size="(810,480)" Text="Data Record"/>
+		<Comment Position="(150,1020)" Size="(2850,990)" Text="Data Record Save"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Indicator1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="DataRecordSave1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="DataRecord1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="DataRecordSave1.FileHandling" Destination="FileHandling1.Steps" Vertices="(2460,1500),(2430,1500),(2430,1590),(2296,1590),"/>
+		<Connection Source="DataRecordSave1.FileRead" Destination="FileRead1.ReadSteps" Vertices="(2460,1440),(1470,1440),(1470,1740),(1440,1770),(1330,1770),"/>
+		<Connection Source="FileHandling1.FileRead" Destination="FileRead1.ReadSteps" Vertices="(1560,1770),(1330,1770),"/>
+		<Connection Source="FileRead1.StringRAM" Destination="StringRAM1.Data" Vertices="(870,1890),(796,1890),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

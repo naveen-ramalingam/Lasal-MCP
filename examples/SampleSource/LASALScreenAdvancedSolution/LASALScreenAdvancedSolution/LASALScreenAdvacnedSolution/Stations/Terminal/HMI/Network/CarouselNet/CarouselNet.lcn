@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="CarouselNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "MyCarousel1"
+			GUID       = "{49D3BD7B-5DC0-41CA-838C-3BADA20A6E9E}"
+			Class      = "MyCarousel"
+			Position   = "(390,180)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="LasalObjectName" Value="MyValues"/>
+				<Server Name="LSEObjectName" Value="Value"/>
+				<Server Name="Screen"/>
+				<Server Name="ShowActive"/>
+				<Server Name="xy1x" Value="140"/>
+				<Server Name="xy1y" Value="90"/>
+				<Server Name="xy2x" Value="659"/>
+				<Server Name="xy2y" Value="454"/>
+				<Client Name="ImA" Value="0"/>
+				<Client Name="Lse" Value="0"/>
+				<Client Name="No" Value="8"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{BAE1D4AC-63BC-43AA-94A6-7416D104A8BC}" Class="_Screen">
+							<Channels>
+								<Server Name="Screen"/>
+								<Client Name="ImA" Value="0"/>
+								<Client Name="Lse" Value="0"/>
+								<Client Name="No" Value="8"/>
+							</Channels>
+						</Object>
+						<Object Name="LasalObjName" GUID="{DD3EB94F-DF90-439F-939E-8B216C1F0329}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;MyValues&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="LSEObjName" GUID="{D506CAEC-DCA0-49A5-8EBE-6DCEA2351F3C}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;Value&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="MyCarousel1.Lse" Destination="Lse.Lse"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

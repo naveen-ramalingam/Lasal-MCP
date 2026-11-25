@@ -1,0 +1,344 @@
+{
+    "name": "sig-window-container-system",
+    "shortName": {
+        "en": "SystemWindowContainer",
+        "de": "SystemWindowContainer"
+    },
+    "controlType": {
+        "en": "System",
+        "de": "System"
+    },
+    "version": "01.00.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a base system window container for internal use in the LVD.",
+        "de": "Implements a base system window container for internal use in the LVD."
+    },
+    "main": [
+        "sig-window-container-system.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-window-container-system.html",
+    "private": true,
+    "baseComponent": "sig-window-container",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-window-container-system-css.js"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-utils-jspanel"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-window-container"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "400px",
+        "height": "210px"
+    },
+    "toolbox": false,
+    "styleClassEditor": true,
+    "slotted": true,
+    "usableInShadowDom": false,
+    "moduleImport": {
+        "importType": "static",
+        "area": [
+            "designer"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "selectorSettings": {
+        "selectorDefaultStyle": ".jsPanel-theme-systemWindow"
+    },
+    "properties": [
+        {
+            "userLevel": -1,
+            "name": "hasCloseButton"
+        },
+        {
+            "userLevel": -1,
+            "name": "hasMaxButton"
+        },
+        {
+            "userLevel": -1,
+            "name": "hasMinButton"
+        },
+        {
+            "userLevel": -1,
+            "name": "hasSmallifyButton"
+        },
+        {
+            "userLevel": -1,
+            "name": "hideOnClose"
+        },
+        {
+            "userLevel": -1,
+            "name": "isModal"
+        },
+        {
+            "userLevel": -1,
+            "name": "setStatus"
+        },
+        {
+            "userLevel": -1,
+            "name": "dragit-enable"
+        },
+        {
+            "userLevel": -1,
+            "name": "dragit-axis"
+        },
+        {
+            "userLevel": -1,
+            "name": "dragit-opacity"
+        },
+        {
+            "userLevel": -1,
+            "name": "resizeit-enable"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelloaded"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelclosed"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforeclose"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelstatuschange"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelfronted"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspaneldragstart"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspaneldrag"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspaneldragstop"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelresizestart"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelresize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelresizestop"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforemaximize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelmaximized"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforeminimize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelminimized"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforenormalize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelnormalized"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforeunsmallify"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelunsmallified"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelbeforesmallify"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelsmallified"
+        },
+        {
+            "userLevel": -1,
+            "name": "jspanelsmallifiedmax"
+        },
+        {
+            "userLevel": -1,
+            "name": "jsPanelIconMaximize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jsPanelIconMinimize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jsPanelIconNormalize"
+        },
+        {
+            "userLevel": -1,
+            "name": "jsPanelIconSmallify"
+        },
+        {
+            "userLevel": -1,
+            "name": "open"
+        },
+        {
+            "userLevel": -1,
+            "name": "close"
+        },
+        {
+            "userLevel": -1,
+            "name": "enableAnimateIn"
+        },
+        {
+            "userLevel": -1,
+            "name": "animationInClass"
+        },
+        {
+            "userLevel": -1,
+            "name": "enableAnimateOut"
+        },
+        {
+            "userLevel": -1,
+            "name": "animationOutClass"
+        },
+        {
+            "userLevel": -1,
+            "name": "enableModalAnimateIn"
+        },
+        {
+            "userLevel": -1,
+            "name": "modalAnimationInClass"
+        },
+        {
+            "userLevel": -1,
+            "name": "enableModalAnimateOut"
+        },
+        {
+            "userLevel": -1,
+            "name": "modalAnimationOutClass"
+        },
+        {
+            "userLevel": -1,
+            "name": "reopenOnReload"
+        },
+        {
+            "userLevel": -1,
+            "name": "saveStats"
+        },
+        {
+            "userLevel": -1,
+            "name": "checkbit"
+        },
+        {
+            "userLevel": -1,
+            "name": "lockOv"
+        },
+        {
+            "userLevel": -1,
+            "name": "headerTitle"
+        },
+        {
+            "userLevel": -1,
+            "name": "autoclose"
+        },
+        {
+            "userLevel": -1,
+            "name": "closeOnEscape"
+        },
+        {
+            "userLevel": -1,
+            "name": "overloadOnReopen"
+        },
+        {
+            "userLevel": -1,
+            "name": "resizeit-minWidth"
+        },
+        {
+            "userLevel": -1,
+            "name": "resizeit-maxWidth"
+        },
+        {
+            "userLevel": -1,
+            "name": "resizeit-minHeight"
+        },
+        {
+            "userLevel": -1,
+            "name": "resizeit-maxHeight"
+        },
+        {
+            "userLevel": -1,
+            "name": "rtl"
+        },
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-window-panel-content-background-color",
+            "sortIndex": 10300100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(95, 95, 100, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "The background color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

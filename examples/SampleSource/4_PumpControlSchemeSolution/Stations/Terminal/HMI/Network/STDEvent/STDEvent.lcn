@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="STDEvent" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_EventAddToHMI1"
+			GUID       = "{63C7F816-BE06-4A97-BDB5-36C604BB7C07}"
+			Class      = "_EventAddToHMI"
+			Position   = "(1950,570)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Source" Value="310"/>
+				<Server Name="sRecvCnt"/>
+				<Client Name="coEventQueue"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{25A4ABF8-5E76-44ED-BE67-FED89F7AC201}" Class="TCPComReceive">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="310"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "EventChoice"
+			GUID       = "{888385E4-DB43-4C5C-A35A-1B5C32DEE2AE}"
+			Class      = "Bit32Mask"
+			Position   = "(459,360)"
+			Visualized = "true"
+			Comment    = "bitwise access to 4 Byte">
+			<Channels>
+				<Server Name="Bit_BDINT"/>
+				<Server Name="Bit_TYPE" Value="2#11101"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "EventExport1"
+			GUID           = "{4034AF3F-A2D7-490B-8EF9-BBC3AE66EA14}"
+			Class          = "_EventExport"
+			Position       = "(1929,180)"
+			Visualized     = "true"
+			BackgroundTime = "10 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ExFilt_Date1"/>
+				<Server Name="ExFilt_Date2"/>
+				<Server Name="ExportFilter" Value="2#1111111111"/>
+				<Server Name="StartExport"/>
+				<Client Name="coEventJournal"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "EventJournal"
+			GUID       = "{5E799807-6EBF-45EC-B27C-636AA8FB4A78}"
+			Class      = "_EventJournal"
+			Position   = "(1119,180)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Delete"/>
+				<Server Name="DisplayFilter" Value="2#1111111111"/>
+				<Server Name="ExportProgress"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="ccNewEvent"/>
+				<Client Name="ccSystemLogging"/>
+				<Client Name="coDriveLetter"/>
+				<Client Name="coEventTitle"/>
+				<Client Name="coFileSys"/>
+				<Client Name="ColumnChoice" Value="0"/>
+				<Client Name="coSigCLib"/>
+				<Client Name="coStdLib"/>
+				<Client Name="MaxNo" Value="10000"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{74832085-F81D-465B-8CD0-16FB90DA114D}" Class="_AlarmDisplay">
+							<Channels>
+								<Server Name="Acknowledge"/>
+								<Server Name="ActPos"/>
+								<Server Name="Delete"/>
+								<Server Name="NoActive"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Server Name="SortAlgorithm"/>
+								<Client Name="cDpne"/>
+								<Client Name="Filter" Value="0"/>
+								<Client Name="HistoryTemporary" Value="0"/>
+								<Client Name="Lse"/>
+								<Client Name="MaxNo" Value="10000"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{FC597408-EBE4-11D6-8BC9-0048545E8899}" Class="_ScrollArea">
+											<Channels>
+												<Server Name="ActPos"/>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="ExtendedScrollBar" Value="1"/>
+												<Client Name="LineHighness"/>
+												<Client Name="LineWidth" Value="1"/>
+												<Client Name="Lse"/>
+												<Client Name="VerticalLevel" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+															<Channels>
+																<Server Name="Refresh"/>
+																<Server Name="Server0"/>
+																<Client Name="Graphic"/>
+																<Client Name="Lse"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+						<Connection Source="_base.Lse" Destination="Lse.Lse"/>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "EventQueue1"
+			GUID           = "{C954C1D1-A308-490E-9BD9-67CCBD790627}"
+			Class          = "_EventQueue"
+			Position       = "(1950,1140)"
+			Visualized     = "false"
+			BackgroundTime = "10 ms">
+			<Channels>
+				<Server Name="ActEntries"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="MaxEntries"/>
+				<Client Name="ccSystemLogging"/>
+				<Client Name="coEventJournal"/>
+				<Client Name="coGraphic"/>
+				<Client Name="coStdLib"/>
+				<Client Name="Param1" Value="0"/>
+				<Client Name="Param2" Value="0"/>
+				<Client Name="SysDate"/>
+				<Client Name="SysTime"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "EventTitle"
+			GUID       = "{D9F69F88-2451-4AC0-91F2-C2FF43EF21C2}"
+			Class      = "_EventTitleLine"
+			Position   = "(450,840)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="ccSystemLogging"/>
+				<Client Name="ColumnChoice"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{868BC7BA-C999-4778-85EC-3AE9A88EA028}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "EventUserInput1"
+			GUID       = "{06D68594-9946-43EF-BBC7-5E1947F5A3A9}"
+			Class      = "_EventUserInput"
+			Position   = "(1950,870)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="OpenInput"/>
+				<Server Name="Server0"/>
+				<Client Name="ccSystemLogging"/>
+				<Client Name="coEventQueue"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{2694846C-E522-4301-800E-89061C26D046}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+						<Object Name="StringEventUser" GUID="{20EF9F71-98DE-4E0D-A3CE-1032B48119F0}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(429,90)" Size="(2190,60)" Text="EventJournal with user-input and file-export function"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="EventQueue1.ccSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="EventQueue1.Param2" Destination="AccessControlMain1.ActLevel"/>
+		<Connection Source="EventJournal.ccSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="EventQueue1.SysDate" Destination="SysDateTime.SysDate"/>
+		<Connection Source="EventQueue1.SysTime" Destination="SysDateTime.SysTime"/>
+		<Connection Source="EventJournal.coEventTitle" Destination="EventTitle.Server0" Vertices="(1119,570),(1059,570),(1059,930),(1006,930),"/>
+		<Connection Source="EventTitle.ColumnChoice" Destination="EventChoice.Bit_BDINT" Vertices="(450,990),(309,990),(309,570),(969,570),(969,510),(925,510),"/>
+		<Connection Source="EventQueue1.coEventJournal" Destination="EventJournal.Server0" Vertices="(1950,1290),(1749,1290),(1749,270),(1675,270),"/>
+		<Connection Source="EventTitle.Lse" Destination="Lse.Lse"/>
+		<Connection Source="EventExport1.coEventJournal" Destination="EventJournal.Server0" Vertices="(1929,270),(1675,270),"/>
+		<Connection Source="EventJournal.ColumnChoice" Destination="EventChoice.Bit_BDINT" Vertices="(1119,510),(925,510),"/>
+		<Connection Source="EventTitle.ccSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="EventUserInput1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="EventUserInput1.ccSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="EventUserInput1.coEventQueue" Destination="EventQueue1.ClassSvr" Vertices="(1950,1020),(1890,1020),(1890,840),(2550,840),(2550,1230),(2490,1230),(2506,1230),"/>
+		<Connection Source="EventJournal.coDriveLetter" Destination="USBDetection1.DriveLetter"/>
+		<Connection Source="_EventAddToHMI1.toDataManager" Destination="STDDataManagerToMC1.ClassSvr"/>
+		<Connection Source="_EventAddToHMI1.coEventQueue" Destination="EventQueue1.ClassSvr" Vertices="(1950,720),(1890,720),(1890,840),(2550,840),(2550,1230),(2506,1230),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner Company="Sigmatek"/>
+		<Dokumentation Revision="1.0" Date="2016-09-19" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

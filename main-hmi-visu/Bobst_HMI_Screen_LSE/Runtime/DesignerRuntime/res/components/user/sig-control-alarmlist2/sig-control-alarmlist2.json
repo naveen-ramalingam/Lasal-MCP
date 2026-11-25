@@ -1,0 +1,3792 @@
+{
+    "name": "sig-control-alarmlist2",
+    "shortName": {
+        "en": "Alarmlist",
+        "de": "Alarmlist"
+    },
+    "controlType": {
+        "en": "AlarmSystem",
+        "de": "AlarmSystem"
+    },
+    "version": "02.03.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements an alarmlist.",
+        "de": "Implementiert eine Alarmliste."
+    },
+    "main": [
+        "sig-control-alarmlist2.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-alarmlist2.html",
+    "private": true,
+    "baseComponent": "sig-element",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element#^1.2.0",
+        "sig-control-listview": "components/user/sig-control-listview",
+        "sig-control-titlebar": "components/user/sig-control-titlebar#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-alarmlist2-css.js"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-control-listview"
+        },
+        {
+            "designerAction": "componentDependency",
+            "path": "sig-control-titlebar"
+        },
+        {
+            "designerAction": "addToPublish",
+            "path": "./moment-with-locales/moment-with-locales.js"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "750px",
+        "height": "450px"
+    },
+    "toolbox": true,
+    "slotted": false,
+    "styleClassEditor": true,
+    "properties": [
+        /*****************************************************************************************************
+        // Settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Hide header
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "hideheader",
+            "sortIndex": 150000,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Hide header",
+                "de": "Hide header"
+            },
+            "description": {
+                "en": "Show or hide the header.",
+                "de": "Header zeigen oder verstecken."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Readonly
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "readonly",
+            "sortIndex": 150100,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Readonly",
+                "de": "Readonly"
+            },
+            "description": {
+                "en": "Sets component to readonly mode - no actions will be dispatched.",
+                "de": "Setzt die Komponente in der Readonly Zustand."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Date/time format
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "propertyType": "variable",
+            "name": "datetimeformat",
+            "sortIndex": 150200,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Date/time format",
+                "de": "Date/time format"
+            },
+            "description": {
+                "en": "The format for the date/time.\nExamples:\nDD.MM.YY HH:mm -> 25.03.20 13:45\nHH:mm -> 13:45",
+                "de": "Das Format in dem Datum/Uhrzeit angezeigt werden.\nBeispiele:\nDD.MM.YY HH:mm -> 25.03.20 13:45\nHH:mm -> 13:45"
+            },
+            "default": "DD.MM.YYYY HH:mm:ss",
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Delete mode
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "deletemode",
+            "sortIndex": 150300,
+            "dataType": "string",
+            "default": "inactive",
+            "lockStyleCopy": true,
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Inactive alarms",
+                        "de": "Inaktive Alarme"
+                    },
+                    "value": "inactive"
+                },
+                {
+                    "shortName": {
+                        "en": "Inactive & acknowledged alarms",
+                        "de": "Inaktiv & quittierte Alarme"
+                    },
+                    "value": "inactiveackn"
+                },
+                {
+                    "shortName": {
+                        "en": "Auto delete inactive",
+                        "de": "Inaktive Alarme automatisch löschen"
+                    },
+                    "value": "autodelinactive"
+                },
+                {
+                    "shortName": {
+                        "en": "Auto delete inactive & acknowledged alarms",
+                        "de": "Inaktiv & quittierte Alarme automatisch löschen"
+                    },
+                    "value": "autodelinactiveackn"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Delete mode",
+                "de": "Delete mode"
+            },
+            "description": {
+                "en": "Defines which alarms can be deleted.",
+                "de": "Definiert welche Alarme gelöscht werden können."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Acknowledge active alarms on delete
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "acknactiveondelete",
+            "sortIndex": 150400,
+            "dataType": "boolean",
+            "default": true,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Acknowledge active alarms on delete",
+                "de": "Acknowledge active alarms on delete"
+            },
+            "description": {
+                "en": "Active alarms get acknowledge on delete.",
+                "de": "Aktive Alarme werden quittiert wenn ein Löschvorgang angetriggert wird."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Hide inactive time
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "hideinactivetime",
+            "sortIndex": 150500,
+            "dataType": "boolean",
+            "default": true,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Hide inactive time",
+                "de": "Hide inactive time"
+            },
+            "description": {
+                "en": "Hide inactive time if alarm is active again.",
+                "de": "Ausblenden der Zeit wann der Alarm inaktiv wurde wenn dieser wieder aktiv ist."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Alarm text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "alarmtext",
+            "sortIndex": 150600,
+            "dataType": "string",
+            "default": "text1",
+            "lockStyleCopy": true,
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Text 1",
+                        "de": "Text 1"
+                    },
+                    "value": "text1"
+                },
+                {
+                    "shortName": {
+                        "en": "Text 2",
+                        "de": "Text 2"
+                    },
+                    "value": "text2"
+                },
+                {
+                    "shortName": {
+                        "en": "Text 3",
+                        "de": "Text 3"
+                    },
+                    "value": "text3"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Alarm text",
+                "de": "Alarm text"
+            },
+            "description": {
+                "en": "Defines which text of the alarm datapoint configuration is displayed as the alarm text.",
+                "de": "Definiert welcher Text der Alarmdatenpunkt-Konfiguration als Alarmtext angezeigt wird."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Alarm description
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "alarmdescription",
+            "sortIndex": 150700,
+            "dataType": "string",
+            "default": "text2",
+            "lockStyleCopy": true,
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Text 1",
+                        "de": "Text 1"
+                    },
+                    "value": "text1"
+                },
+                {
+                    "shortName": {
+                        "en": "Text 2",
+                        "de": "Text 2"
+                    },
+                    "value": "text2"
+                },
+                {
+                    "shortName": {
+                        "en": "Text 3",
+                        "de": "Text 3"
+                    },
+                    "value": "text3"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Alarm description",
+                "de": "Alarm description"
+            },
+            "description": {
+                "en": "Defines which text of the alarm datapoint configuration is used for the alarm description.",
+                "de": "Definiert welcher Text der Alarmdatenpunkt-Konfiguration als Alarmbeschreibung verwendet wird."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Event settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Event to acknowledge selected alarm
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_acknowledgeselectedalarm",
+            "sortIndex": 150800,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event to acknowledge selected alarm",
+                "de": "Event to acknowledge selected alarm"
+            },
+            "description": {
+                "en": "Event to trigger acknowledging of selected alarms.",
+                "de": "Event welches das Quittieren des ausgewählten Alarmes anstößt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event to acknowledge all alarms
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_acknowledgeallalarms",
+            "sortIndex": 150900,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event to acknowledge all alarms",
+                "de": "Event to acknowledge all alarms"
+            },
+            "description": {
+                "en": "Event to trigger acknowledging of all alarms.",
+                "de": "Event welches das Quittieren aller Alarme anstößt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event to delete the selected alarm
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_delselectedalarm",
+            "sortIndex": 151000,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event to delete the selected alarm",
+                "de": "Event to delete the selected alarm"
+            },
+            "description": {
+                "en": "Event to trigger deleting of the selected alarm.",
+                "de": "Event welches das Löschen des ausgewählten Alarmes anstößt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event to delete all alarms
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_delallalarms",
+            "sortIndex": 151100,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event to delete all alarms",
+                "de": "Event to delete all alarms"
+            },
+            "description": {
+                "en": "Event to trigger deleting of all alarms.",
+                "de": "Event welches das Löschen aller Alarme anstößt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor one line up
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_cursorup",
+            "sortIndex": 151200,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor one line up",
+                "de": "Event cursor one line up"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor on line up.",
+                "de": "Event welches den Cursor um eine Zeile nach oben versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor one line down
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_cursordown",
+            "sortIndex": 151300,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor one line down",
+                "de": "Event cursor one line down"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor on line down.",
+                "de": "Event welches den Cursor um eine Zeile nach unten versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor one page up
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_pageup",
+            "sortIndex": 151400,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor one page up",
+                "de": "Event cursor one page up"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor on page up.",
+                "de": "Event welches den Cursor um eine Seite nach oben versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor one page down
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_pagedown",
+            "sortIndex": 151500,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor one page down",
+                "de": "Event cursor one page down"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor on page down.",
+                "de": "Event welches den Cursor um eine Seite nach unten versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor to top
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_pagetop",
+            "sortIndex": 151600,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor to top",
+                "de": "Event cursor to top"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor to the top of the list.",
+                "de": "Event welches den Cursor an den Anfang der Liste versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event cursor to end
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_pageend",
+            "sortIndex": 151700,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event cursor to end",
+                "de": "Event cursor to end"
+            },
+            "description": {
+                "en": "Event to trigger moving the cursor to the end of the list.",
+                "de": "Event welches den Cursor an das Ende der Liste versetzt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event move one column left
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_columnToLeft",
+            "sortIndex": 151800,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event move one column left",
+                "de": "Event move one column left"
+            },
+            "description": {
+                "en": "Event to trigger moving the list one column to the left.",
+                "de": "Event welches die Liste um eine Spalte nach links scrollt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event move one column right
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_columnToRight",
+            "sortIndex": 151900,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event move one column right",
+                "de": "Event move one column right"
+            },
+            "description": {
+                "en": "Event to trigger moving the list one column to the right.",
+                "de": "Event welches die Liste um eine Spalte nach rechts scrollt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event move to column start
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_columnToStart",
+            "sortIndex": 152000,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event move to column start",
+                "de": "Event move to column start"
+            },
+            "description": {
+                "en": "Event to trigger moving the list to the most left column.",
+                "de": "Event welches die Liste an die linkeste Spalte scrollt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Event move to column end
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "event"
+            ],
+            "propertyType": "eventHandler",
+            "name": "_columnToEnd",
+            "sortIndex": 152100,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Event move to column end",
+                "de": "Event move to column end"
+            },
+            "description": {
+                "en": "Event to trigger moving the list to the most right column.",
+                "de": "Event welches die Liste an die rechteste Spalte scrollt."
+            },
+            "group": {
+                "en": "Event settings",
+                "de": "Event settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Sorting options
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Active alarms top
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "sortoptionsactivetop",
+            "sortIndex": 152200,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Active alarms top",
+                "de": "Active alarms top"
+            },
+            "description": {
+                "en": "Active alarms will be displayed at the top.",
+                "de": "Aktive Alarme werden oben angezeigt."
+            },
+            "default": false,
+            "group": {
+                "en": "Sorting options",
+                "de": "Sorting options"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Default sorting
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "defaultsorting",
+            "sortIndex": 152300,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "None",
+                        "de": "None"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "Alarm number",
+                        "de": "Alarm number"
+                    },
+                    "value": "alarmNr"
+                },
+                {
+                    "shortName": {
+                        "en": "Alarm active",
+                        "de": "Alarm active"
+                    },
+                    "value": "timeHiStr"
+                },
+                {
+                    "shortName": {
+                        "en": "Alarm inactive",
+                        "de": "Alarm inactive"
+                    },
+                    "value": "timeLoStr"
+                },
+                {
+                    "shortName": {
+                        "en": "Alarm group",
+                        "de": "Alarm group"
+                    },
+                    "value": "group"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Default sorting",
+                "de": "Default sorting"
+            },
+            "description": {
+                "en": "Sorting criteria which is used for initial sorting of the list.",
+                "de": "Sortierkriterium für die initiale Sortierung der Liste."
+            },
+            "group": {
+                "en": "Sorting options",
+                "de": "Sorting options"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Default sorting direction
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "defaultsortingdir",
+            "sortIndex": 152400,
+            "dataType": "string",
+            "default": "asc",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Ascending",
+                        "de": "Ascending"
+                    },
+                    "value": "asc"
+                },
+                {
+                    "shortName": {
+                        "en": "Descending",
+                        "de": "Descending"
+                    },
+                    "value": "desc"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Default sorting direction",
+                "de": "Default sorting direction"
+            },
+            "description": {
+                "en": "Sorting direction for the initial sorting of the list.",
+                "de": "Sortierrichtung für die initiale Sortierung der Liste."
+            },
+            "group": {
+                "en": "Sorting options",
+                "de": "Sorting options"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Filter options
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Hidden alarm state
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "alarmstatefilter",
+            "sortIndex": 152500,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "None",
+                        "de": "None"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "Acknowledged alarms",
+                        "de": "Acknowledged alarms"
+                    },
+                    "value": "acknowledged"
+                },
+                {
+                    "shortName": {
+                        "en": "Inactive alarms",
+                        "de": "Inactive alarms"
+                    },
+                    "value": "gone"
+                },
+                {
+                    "shortName": {
+                        "en": "Acknowledged and inactive alarms",
+                        "de": "Acknowledged and inactive alarms"
+                    },
+                    "value": "acknowledgedandgone"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Hidden alarm state",
+                "de": "Hidden alarm state"
+            },
+            "description": {
+                "en": "Select the state of the alarms which should be filtered out. The Alarms with those states will no longer be visible in the list.",
+                "de": "Wähle den Status der Alarme, welche ausgeblendet werden sollen. Die Alarme mit diesen Stati werden nicht mehr angezeigt in der Liste."
+            },
+            "group": {
+                "en": "Filter options",
+                "de": "Filter options"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-alarmlist2-background-color",
+            "sortIndex": 500000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "transparent",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "Die Hintergrundfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-alarmlist2-border-color",
+            "sortIndex": 500100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the component.",
+                "de": "Die Rahmenfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-alarmlist2-border-width",
+            "sortIndex": 500200,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component.",
+                "de": "Die Rahmenbreite der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-alarmlist2-border-style",
+            "sortIndex": 500300,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "The border style of the component.",
+                "de": "Der Rahmenstil der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-alarmlist2-border-radius",
+            "sortIndex": 500400,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component.",
+                "de": "Der Rahmenradius der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Title settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Hide
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "hidetitle",
+            "sortIndex": 152600,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Hide",
+                "de": "Hide"
+            },
+            "description": {
+                "en": "Show or hide the title.",
+                "de": "Titel zeigen oder verstecken."
+            },
+            "group": {
+                "en": "Title settings",
+                "de": "Title settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Titlebar style class
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "styleClass"
+            ],
+            "propertyType": "styleClass",
+            "default": "",
+            "name": "titlebarclass",
+            "sortIndex": 110000,
+            "publishName": "sig-control-titlebar#titlebar",
+            "controlId": "sig-control-titlebar",
+            "shortName": {
+                "en": "Titlebar style class",
+                "de": "Titlebar style class"
+            },
+            "description": {
+                "en": "The style class which should be applied to the titlebar.",
+                "de": "Die Style-Klasse die auf den Titel angewandt wird."
+            },
+            "group": {
+                "en": "Title settings",
+                "de": "Title settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text of the title
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "alarmlisttitletext",
+            "sortIndex": 152700,
+            "dataType": "string",
+            "default": "Alarmlist",
+            "shortName": {
+                "en": "Text of the title",
+                "de": "Text of the title"
+            },
+            "description": {
+                "en": "Sets the text of the titlebar.",
+                "de": "Setzt den Text der Titel Bar."
+            },
+            "group": {
+                "en": "Title settings",
+                "de": "Title settings"
+            },
+            "userLevel": [
+                10,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                10,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // List styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property List style class
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "styleClass"
+            ],
+            "propertyType": "styleClass",
+            "default": "",
+            "name": "listviewclass",
+            "sortIndex": 110100,
+            "publishName": "sig-control-listview",
+            "controlId": "sig-control-listview",
+            "shortName": {
+                "en": "List style class",
+                "de": "List style class"
+            },
+            "description": {
+                "en": "The style class which should be applied to the listview.",
+                "de": "Die Style-Klasse die auf die Listview angewandt wird."
+            },
+            "group": {
+                "en": "List styling",
+                "de": "List styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Column settings: alarm number
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "showalarmnr",
+            "sortIndex": 10000000,
+            "default": true,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "alarmnrheadertext",
+            "sortIndex": 10000100,
+            "dataType": "string",
+            "default": "No",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthalarmnr",
+            "sortIndex": 10000200,
+            "default": "50px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextalignalarmnr",
+            "sortIndex": 10000300,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textalignalarmnr",
+            "sortIndex": 10000400,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "orderalarmnr",
+            "sortIndex": 10000500,
+            "default": 10,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: alarm number",
+                "de": "Column settings: alarm number"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: alarm active
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "showtimehigh",
+            "sortIndex": 10000600,
+            "default": true,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "timehighheadertext",
+            "sortIndex": 10000700,
+            "dataType": "string",
+            "default": "Alarm Active",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthtimehigh",
+            "sortIndex": 10000800,
+            "default": "160px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextaligntimehigh",
+            "sortIndex": 10000900,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textaligntimehigh",
+            "sortIndex": 10001000,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordertimehigh",
+            "sortIndex": 10001100,
+            "default": 20,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: alarm active",
+                "de": "Column settings: alarm active"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: alarm inactive
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "showtimelow",
+            "sortIndex": 10001200,
+            "default": "own",
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "options": [
+                {
+                    "shortName": {
+                        "en": "hidden",
+                        "de": "hidden"
+                    },
+                    "value": "hidden"
+                },
+                {
+                    "shortName": {
+                        "en": "Own column",
+                        "de": "Own column"
+                    },
+                    "value": "own"
+                },
+                {
+                    "shortName": {
+                        "en": "Within active",
+                        "de": "Within active"
+                    },
+                    "value": "active"
+                }
+            ],
+            "description": {
+                "en": "Defines if and where the inactive time of the alarm should be shown.",
+                "de": "Definiert ob und wo die Zeit, als der Alarm inaktiv wurde, angezeigt wird."
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header gap active / inactive
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "activeinactiveheadergap",
+            "sortIndex": 10001300,
+            "default": "2px",
+            "units": "px",
+            "shortName": {
+                "en": "Header gap active / inactive",
+                "de": "Header gap active / inactive"
+            },
+            "description": {
+                "en": "The gap between the active and inactive alarm time header text. Only used if inactive time gets shown at active time column.",
+                "de": "Der Abstand zwischen der mehrzeiligen Spaltenüberschrift für die inaktive und aktive Zeit des Alarms. Wirkt sich nur aus wenn die inaktive Zeit in der Spalte der aktiven Zeit dargestellt werden soll."
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Gap active / inactive
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "activeinactivegap",
+            "sortIndex": 10001400,
+            "default": "5px",
+            "units": "px",
+            "shortName": {
+                "en": "Gap active / inactive",
+                "de": "Gap active / inactive"
+            },
+            "description": {
+                "en": "The gap between the active and inactive alarm time. Only used if inactive time gets shown at active time column.",
+                "de": "Der Abstand zwischen der Zeit wann der Alarm aktiv wurde und der wann der Alarm inaktiv wurde. Wird nur verwendet wenn die inaktive Zeit in der Spalte der aktiven Zeit dargestellt werden soll."
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "timelowheadertext",
+            "sortIndex": 10001500,
+            "dataType": "string",
+            "default": "Alarm Inactive",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthtimelow",
+            "sortIndex": 10001600,
+            "default": "160px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextaligntimelow",
+            "sortIndex": 10001700,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textaligntimelow",
+            "sortIndex": 10001800,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordertimelow",
+            "sortIndex": 10001900,
+            "default": 30,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: alarm inactive",
+                "de": "Column settings: alarm inactive"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: alarm text
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "showshorttext",
+            "sortIndex": 10002000,
+            "default": true,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "shorttextheadertext",
+            "sortIndex": 10002100,
+            "dataType": "string",
+            "default": "Alarm text",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthshorttext",
+            "sortIndex": 10002200,
+            "default": "532px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextalignshorttext",
+            "sortIndex": 10002300,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textalignshorttext",
+            "sortIndex": 10002400,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordershorttext",
+            "sortIndex": 10002500,
+            "default": 40,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Multiline description
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "dataType": "boolean",
+            "propertyType": "variable",
+            "default": false,
+            "name": "descmultiline",
+            "sortIndex": 10002600,
+            "shortName": {
+                "en": "Multiline description",
+                "de": "Multiline description"
+            },
+            "description": {
+                "en": "If true, the description can be multiple lines. In that case the user has to make sure the lines are high enough.",
+                "de": "Wenn diese Option auf true gesetzt ist, kann die Spalte meherere Zeilen hoch sein. Die korrekte Zeilenhöhe muss vom Benutzer eingestellt werden"
+            },
+            "group": {
+                "en": "Column settings: alarm text",
+                "de": "Column settings: alarm text"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: count
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "shownum",
+            "sortIndex": 10002700,
+            "default": false,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "countheadertext",
+            "sortIndex": 10002800,
+            "dataType": "string",
+            "default": "Cnt",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthnum",
+            "sortIndex": 10002900,
+            "default": "60px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextalignnum",
+            "sortIndex": 10003000,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textalignnum",
+            "sortIndex": 10003100,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordernum",
+            "sortIndex": 10003200,
+            "default": 50,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: count",
+                "de": "Column settings: count"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: group
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "showgroup",
+            "sortIndex": 10003300,
+            "default": false,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Filter mode
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "dataType": "string",
+            "propertyType": "variable",
+            "name": "alarmgroupfiltermode",
+            "sortIndex": 10003350,
+            "shortName": {
+                "en": "Filter mode",
+                "de": "Filter mode"
+            },
+            "default": "Exact match",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Exact match",
+                        "de": "Exact match"
+                    },
+                    "value": "Exact match"
+                },
+                {
+                    "shortName": {
+                        "en": "All bits match",
+                        "de": "All bits match"
+                    },
+                    "value": "All bits match"
+                },
+                {
+                    "shortName": {
+                        "en": "Any bit matches",
+                        "de": "Any bit matches"
+                    },
+                    "value": "Any bit matches"
+                }
+            ],
+            "description": {
+                "en": "Mode for alarm group filtering (applies to include and exclude filters):\nExact match .. The group number needs to match exactly the filter value.\nAll bits match .. Bitwise filtering where all set bits of the filter must be set in the group number.\nAny bit matches .. Bitwise filtering where at least one set bit of the filter must also be set in the alarm group.",
+                "de": "Modus für die Alarmgruppenfilterung (gilt für Include- und Exclude-Filter):\nExact match .. Die Gruppennummer muss genau mit dem Filter übereinstimmen.\nAll bits match .. Bitweise Filterung bei der alle gesetzten Bits des Filters auch in der Gruppennummer gesetzt sein müssen.\nAny bit matches .. Bitweise Filterung bei der mindestens ein gesetztes Bit von der Gruppennummer und dem Filter übereinstimmen muss"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },        
+        /*----------------------------------------------------------------------------------------------------
+        // property Include filter
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "dataType": "number",
+            "propertyType": "variable",
+            "default": "",
+            "name": "filter_alarmgroup",
+            "sortIndex": 10003400,
+            "shortName": {
+                "en": "Include filter",
+                "de": "Include filter"
+            },
+            "description": {
+                "en": "A datapoint or constant number to apply an include filter to the alarm group. For filter mode 'Exact match' a negative value signals that no include filter should be used. For bitwise filtering only filter values > 0 will be applied.",
+                "de": "Ein Datenpunkt oder ein konstanter Wert für die Konfiguration eines Include-Filters für die Alarmgruppen. Für den Filtermodus 'Exact match' kann ein negativer Wert verwendet werden, um keinen Include-Filter anzuwenden. Bei einer bitweisen Filterung hingegen werden nur Werte > 0 als Filter angewandt."
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": [
+                10,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                10,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Exclude filter
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "default": "",
+            "name": "excludefilteralarmgroup",
+            "sortIndex": 10003450,
+            "shortName": {
+                "en": "Exclude filter",
+                "de": "Exclude filter"
+            },
+            "description": {
+                "en": "A datapoint or constant number to apply an exclude filter to the alarm group. For filter mode 'Exact match' a negative value signals that no exclude filter should be used. For bitwise filtering only filter values > 0 will be applied.",
+                "de": "Ein Datenpunkt oder ein konstanter Wert für die Konfiguration eines Exclude-Filters für die Alarmgruppen. Für den Filtermodus 'Exact match' kann ein negativer Wert verwendet werden, um keinen Exclude-Filter anzuwenden. Bei einer bitweisen Filterung hingegen werden nur Werte > 0 als Filter angewandt."
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": [
+                10,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                10,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "groupheadertext",
+            "sortIndex": 10003500,
+            "dataType": "string",
+            "default": "Group",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthgroup",
+            "sortIndex": 10003600,
+            "default": "60px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextaligngroup",
+            "sortIndex": 10003700,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textaligngroup",
+            "sortIndex": 10003800,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Space between
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "groupspace",
+            "sortIndex": 10003900,
+            "unit": "px",
+            "default": "10px",
+            "shortName": {
+                "en": "Space between",
+                "de": "Space between"
+            },
+            "description": {
+                "en": "Space between the image and the text if configured in alarmconfig. (px)",
+                "de": "Abstand zwischen dem Bild und dem Text sofern diese in der Alarkonfiguration definiert sind. (px)"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordergroup",
+            "sortIndex": 10004000,
+            "default": 60,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: group",
+                "de": "Column settings: group"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Column settings: symbol
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Visible
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "dataType": "boolean",
+            "name": "showsymbol",
+            "sortIndex": 10004100,
+            "default": false,
+            "shortName": {
+                "en": "Visible",
+                "de": "Visible"
+            },
+            "description": {
+                "en": "If true, the column is shown",
+                "de": "Wenn true, wird die Spalte angezeigt"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "symbolheadertext",
+            "sortIndex": 10004200,
+            "dataType": "string",
+            "default": "Symbol",
+            "shortName": {
+                "en": "Header text",
+                "de": "Header text"
+            },
+            "description": {
+                "en": "Sets the name of the column.",
+                "de": "Setzt den Namen der Spalte"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "widthsymbol",
+            "sortIndex": 10004300,
+            "default": "70px",
+            "units": "px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the column",
+                "de": "Die Breite der Spalte"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Header text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "headertextalignsymbol",
+            "sortIndex": 10004400,
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Header text align",
+                "de": "Header text align"
+            },
+            "description": {
+                "en": "The alignment of the header text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Header Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Text align
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "textalignsymbol",
+            "sortIndex": 10004500,
+            "default": "",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "default",
+                        "de": "default"
+                    },
+                    "value": ""
+                },
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "shortName": {
+                "en": "Text align",
+                "de": "Text align"
+            },
+            "description": {
+                "en": "The alignment of the column text. Default uses whatever is set for the listview",
+                "de": "Die ausrichtung des Spalten Textes. Default verwendet die Einstellungen des listview"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Order
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "ordersymbol",
+            "sortIndex": 10004600,
+            "default": 70,
+            "shortName": {
+                "en": "Order",
+                "de": "Order"
+            },
+            "description": {
+                "en": "The Position where the column should be shown",
+                "de": "Die Position an welcher die Spalte angezeigt wird"
+            },
+            "group": {
+                "en": "Column settings: symbol",
+                "de": "Column settings: symbol"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Columns",
+                "de": "Columns"
+            },
+            "tabIndex": 100
+        },
+        /*****************************************************************************************************
+        // Detail view settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Event to open detail view
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "opendetailviewevent",
+            "sortIndex": 20000000,
+            "dataType": "string",
+            "default": "dontopen",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Don't open",
+                        "de": "Don't open"
+                    },
+                    "value": "dontopen"
+                },
+                {
+                    "shortName": {
+                        "en": "On click",
+                        "de": "On click"
+                    },
+                    "value": "click"
+                },
+                {
+                    "shortName": {
+                        "en": "On double click",
+                        "de": "On double click"
+                    },
+                    "value": "double-click"
+                },
+                {
+                    "shortName": {
+                        "en": "On long press",
+                        "de": "On long press"
+                    },
+                    "value": "long-press"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Event to open detail view",
+                "de": "Event to open detail view"
+            },
+            "description": {
+                "en": "Defines the event on the row, which opens the detail view of the alarm.",
+                "de": "Definiert das Event auf der Zeile, bei welchem die Detailansicht des Alarms geöffnet werden soll."
+            },
+            "group": {
+                "en": "Detail view settings",
+                "de": "Detail view settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Detail",
+                "de": "Detail"
+            },
+            "tabIndex": 200
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Detail window
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "window"
+            ],
+            "dataType": "string",
+            "propertyType": "variable",
+            "name": "detailwindow",
+            "sortIndex": 20000100,
+            "default": "",
+            "shortName": {
+                "en": "Detail window",
+                "de": "Detail window"
+            },
+            "description": {
+                "en": "A window showing the details of the selected Alarm.",
+                "de": "Ein Fenster in dem die Details des Alarms angezeigt werden."
+            },
+            "group": {
+                "en": "Detail view settings",
+                "de": "Detail view settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Detail",
+                "de": "Detail"
+            },
+            "tabIndex": 200
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected alarm id
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "datapoint",
+            "dataType": "number",
+            "propertyType": "variable",
+            "default": "",
+            "name": "selectedalarmid",
+            "sortIndex": 20000200,
+            "shortName": {
+                "en": "Selected alarm id",
+                "de": "Selected alarm id"
+            },
+            "description": {
+                "en": "Variable number of the selected alarm. Can be used to access all the informations of the alarm.",
+                "de": "Variablennummer des selektierten Alarms. Kann verwendet werden um auf die Alarminforamtionen zuzugreifen."
+            },
+            "group": {
+                "en": "Detail view settings",
+                "de": "Detail view settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Detail",
+                "de": "Detail"
+            },
+            "tabIndex": 200
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected alarm number
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "datapoint",
+            "dataType": "number",
+            "propertyType": "variable",
+            "default": "",
+            "name": "selectedalarmnr",
+            "sortIndex": 20000300,
+            "shortName": {
+                "en": "Selected alarm number",
+                "de": "Selected alarm number"
+            },
+            "description": {
+                "en": "Alarm number of the selected alarm is written to this datapoint. Can be used to get further details of alarm.",
+                "de": "Die Alarmnummer des ausgewählten Alarms wird auf diesen Datenpunkt geschrieben. Kann verwendet werden, um auf die Alarmdetails zuzugreifen."
+            },
+            "group": {
+                "en": "Detail view settings",
+                "de": "Detail view settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Detail",
+                "de": "Detail"
+            },
+            "tabIndex": 200
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected alarm description
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "datapoint",
+            "dataType": "string",
+            "propertyType": "variable",
+            "default": "",
+            "name": "selectedalarmdescription",
+            "sortIndex": 20000400,
+            "shortName": {
+                "en": "Selected alarm description",
+                "de": "Selected alarm description"
+            },
+            "description": {
+                "en": "Description of the selected alarm is written to this datapoint. Can be used to display it elsewhere.",
+                "de": "Der Beschreibungstext des ausgewählten Alarms wird auf diesen Datenpunkt geschrieben. Kann verwendet werden, um den Alarmtext an anderer Stelle darzustellen."
+            },
+            "group": {
+                "en": "Detail view settings",
+                "de": "Detail view settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Detail",
+                "de": "Detail"
+            },
+            "tabIndex": 200
+        },
+        /*****************************************************************************************************
+        // Font
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Font style - of sig-element overwrite to hide as it is not used
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "lockStyleCopy": false,
+            "name": "elementMainFont",
+            "shortName": {
+                "en": "Font style",
+                "de": "Font style"
+            },
+            "description": {
+                "en": "The font style of the component.",
+                "de": "Der Schriftstil der Komponente."
+            },
+            "group": {
+                "en": "Font",
+                "de": "Font"
+            },
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Selected alarm font
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "name": "fontalarmselected",
+            "sortIndex": 410000,
+            "shortName": {
+                "en": "Selected alarm font",
+                "de": "Selected alarm font"
+            },
+            "description": {
+                "en": "The font of the selected alarms.",
+                "de": "Die Schrift der ausgewählten Alarme."
+            },
+            "group": {
+                "en": "Font",
+                "de": "Font"
+            },
+            "userLevel": [
+                20,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                20,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // State
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Dragged opacity - of sig-element overwrite to hide as it is not used
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-element-dragged-opacity",
+            "dataType": "number",
+            "validationRule": "/^(0(\\.\\d+)?|1(\\.0+)?)$/",
+            "default": 0.8,
+            "lockStyleCopy": false,
+            "shortName": {
+                "en": "Dragged opacity",
+                "de": "Dragged opacity"
+            },
+            "description": {
+                "en": "The opacity of the component while it is being dragged (0.0 to 1.0).",
+                "de": "Die Opazität der Komponente während sie gezogen wird (0,0 bis 1,0)."
+            },
+            "group": {
+                "en": "State",
+                "de": "State"
+            },
+            "userLevel": -1,
+            "userLevelStyling": -1
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Alarmlist2_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Alarmlist2_EN.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

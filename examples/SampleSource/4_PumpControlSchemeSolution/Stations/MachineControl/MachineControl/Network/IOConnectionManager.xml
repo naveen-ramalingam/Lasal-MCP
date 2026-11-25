@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="2" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="**IOCONN_EMPTY**" Objectsize="284">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection SortIndex="4" KeyName="000006"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActFillLevel" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0431" Server="AI2" ObjClt="PumpControl1" Client="ActFillLevel" IOI="Input" Type="Analog" SortIndex="0" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Pump1" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output1" ObjClt="PumpControl1" Client="Pump" IOI="Output" Type="Digital" SortIndex="2" KeyName="000001"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="WaterTemp" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0431" Server="AI1" ObjClt="PumpControl1" Client="WaterTemp" IOI="Input" Type="Analog" SortIndex="3" KeyName="000005"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="TankNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Tank1"
+			GUID       = "{80007956-8F49-4C19-B1F4-5B900250CBEF}"
+			Class      = "Tank"
+			Position   = "(1020,270)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActFillLevelVisu"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="MaxBorder" Value="40000"/>
+				<Server Name="MinBorder" Value="10000"/>
+				<Server Name="ShowValue"/>
+				<Client Name="ActFillLevel"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Tank1.ActFillLevel" Destination="__IO_Element1" Vertices="(1020,360),(990,360)," IOObject="Potentiometer"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element1" Name="Potentiometer" Position="(690,330)" Client="Tank1.ActFillLevel"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

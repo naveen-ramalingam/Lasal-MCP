@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<File CRC="C19C3190" Version="1.1">
+	<Types>
+		<Type Name="_IMA" Datatype="UDINT" TypeId="ENUM">
+			<Elements>
+				<Type Name="IMA_PICTURE" Value="0"/>
+				<Type Name="IMA_WINDOW" Value="1"/>
+				<Type Name="IMA_GLOBAL" Value="2"/>
+				<Type Name="IMA_POPUP" Value="3"/>
+				<Type Name="IMA_SCREENSAVER" Value="4"/>
+				<Type Name="IMA_TOUCHEDITOR" Value="5"/>
+				<Type Name="IMA_OFF_PICTURE" Value="6"/>
+				<Type Name="IMA_OFF_WINDOW" Value="7"/>
+				<Type Name="IMA_NOTHING" Value="8"/>
+			</Elements>
+		</Type>
+	</Types>
+	<Classes>
+		<Class
+			Name     = "_AlarmDisplay"
+			Datatype = "DINT"
+			Base     = "_ScrollArea"
+			Size     = "440"
+			Guid     = "FC597403-EBE4-11D6-8BC9-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_AlarmX0Para"
+			Datatype = "DINT"
+			Size     = "52"
+			Guid     = "858D5524-F314-4ED8-975A-A123450BF12B">
+			<Servers>
+				<Server Name="ClassSvr" Datatype="DINT" Guid="BE689487-005D-4C4C-8B98-759BCFF5A930" WriteProtected="false" IsAlarm="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Bit32"
+			Datatype = "BDINT"
+			Size     = "12"
+			Guid     = "65E61F61-D785-11D5-8BC6-0048545E8899">
+			<Servers>
+				<Server Name="Data" Datatype="BDINT" Guid="65E61F62-D785-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Global"
+			Datatype = "DINT"
+			Size     = "28"
+			Guid     = "AE55EEC1-6C6D-11D5-8BC6-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_LanguageSelection"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "360"
+			Guid     = "BC506192-0C4D-47B6-B2F3-56341A78235C">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Lse"
+			Datatype = "DINT"
+			Size     = "12328"
+			Guid     = "69AE884A-4EC4-11D5-8991-00902787C19C">
+			<Servers>
+				<Server Name="Lse" Datatype="DINT" Guid="69AE884C-4EC4-11D5-8991-00902787C19C" WriteProtected="true"/>
+				<Server Name="Language" Datatype="DINT" Guid="5A275E6B-60CD-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="LseVersion" Datatype="DINT" Guid="336DB2C2-835E-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="CompilerVersion" Datatype="DINT" Guid="336DB2C3-835E-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="DelayScreenSaver" Datatype="UDINT" Guid="CCBE10A2-A38E-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="CommaSign" Datatype="DINT" Guid="BFACB9E1-AE90-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="AmericanDateFormat" Datatype="DINT" Guid="BFACB9E2-AE90-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="GotAlarm" Datatype="DINT" Guid="D64CF384-ECA3-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="SeekAlgorithm" Datatype="DINT" Guid="D18C0E41-0066-11D7-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="SystemMessage" Datatype="DINT" Guid="18942021-AC79-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="OpSysVersion" Datatype="UDINT" Guid="88B29A81-1128-11D8-8BCB-0048545E8899" WriteProtected="true"/>
+				<Server Name="DirectionOnEnter" Datatype="DINT" Guid="39C27463-199B-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CursorWrapHorizontal" Datatype="DINT" Guid="3F363AA4-20CE-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CursorWrapVertical" Datatype="DINT" Guid="3F363AA5-20CE-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="OfflineMode" Datatype="DINT" Guid="FEDBC901-4B3B-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="NoExternCom" Datatype="DINT" Guid="04FDBB4B-2284-419B-9FCF-4D70757594D9" WriteProtected="false"/>
+				<Server Name="AmericanTimeFormat" Datatype="DINT" Guid="FA0B643A-6BE7-4928-AE60-9739AC13176B" WriteProtected="false"/>
+				<Server Name="ActivateBubbleHelp" Datatype="DINT" Guid="80500B66-87B7-4E40-98F5-AD0F12D50BD1" WriteProtected="false"/>
+				<Server Name="LseProjectRevision" Datatype="HDINT" Guid="012B7219-A4C4-47A3-AF82-AE662F400058" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_MyIO"
+			Datatype = "DINT"
+			Size     = "52"
+			Guid     = "1DFA17C1-8CBB-11D5-8BC6-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_Screen"
+			Datatype = "DINT"
+			Size     = "60"
+			Guid     = "E741BF68-4F63-11D5-8991-00902787C19C">
+		</Class>
+		<Class
+			Name     = "_ScrollArea"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "336"
+			Guid     = "EF59612C-EA4A-11D6-8BC9-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_ScrollArea2"
+			Datatype = "DINT"
+			Base     = "_ScrollArea"
+			Size     = "344"
+			Guid     = "81244ED8-C9B8-42A6-9A2A-BA97C8E4658E">
+		</Class>
+		<Class
+			Name     = "_SyncTimeHMI"
+			Datatype = "DATE_LSL"
+			Size     = "96"
+			Guid     = "861E4EDF-4F06-4F3E-8390-CB2ECE4E815E">
+			<Servers>
+				<Server Name="sSyncDate" Datatype="DATE_LSL" Guid="3D757C3C-6FDA-4992-BF44-5E487B23E66E" WriteProtected="false"/>
+				<Server Name="sSyncTime" Datatype="TIME_LSL" Guid="1369DF3B-1062-4103-A355-B85C08AAC6B1" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_SysDateTime"
+			Datatype = "DATE_LSL"
+			Size     = "76"
+			Guid     = "CBF432E1-D3B3-439C-B706-A16641D03D70">
+			<Servers>
+				<Server Name="SysDate" Datatype="DATE_LSL" Guid="0B477768-BD5B-4C0B-BCA5-9E3AA91B2C1D" WriteProtected="false"/>
+				<Server Name="SysTime" Datatype="TIME_LSL" Guid="01AA06EB-72AD-4AE7-ACC7-2A3FF23A3213" WriteProtected="false"/>
+				<Server Name="DayOfWeek" Datatype="DINT" Guid="9932021F-6C7A-41A0-8E00-CEBE786433C1" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "AlarmDisplayList"
+			Datatype = "DINT"
+			Base     = "_AlarmDisplay"
+			Size     = "4192"
+			Guid     = "B681CDD4-0999-41FE-8CE0-8F1C06B0C4AB">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="SortAlgorithm" Datatype="DINT" Guid="D64CF382-ECA3-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="Acknowledge" Datatype="DINT" Guid="7FFC4C42-F15A-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="Delete" Datatype="DINT" Guid="7FFC4C43-F15A-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="NoActive" Datatype="UDINT" Guid="B3130461-F86D-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="HelpTxt" Datatype="DINT" Guid="156C30AF-766C-4659-986D-16746F8A50A9" WriteProtected="false"/>
+				<Server Name="AlaTxtShort" Datatype="STRING" Guid="A808CD88-615A-4578-ADD8-AC25A24224BF" WriteProtected="false"/>
+				<Server Name="AlaTxtLong" Datatype="STRING" Guid="25E41461-5DFD-4185-8170-7ABA528154D8" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="AlarmTxtLong" Datatype="String" Guid="208F6BFE-2253-4340-BA13-3086C0D6CDF0"/>
+				<Object Name="AlarmTxtShort" Datatype="String" Guid="EF10F060-8F73-4E50-8D5A-6F46839DCA5D"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "AlarmTitleLine"
+			Datatype = "DINT"
+			Base     = "TitleLine"
+			Size     = "168"
+			Guid     = "52FEF266-85A8-4A66-93CA-8314895EDEF2">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "CirleMyIO"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "120"
+			Guid     = "E27C8CEE-B8E6-44FA-A461-980D20CFE327">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="XPos" Datatype="DINT" Guid="7442059E-9BB3-4F5D-A1F6-5DCE5C107983" WriteProtected="false"/>
+				<Server Name="YPos" Datatype="DINT" Guid="A17DEB47-F3E0-4BC6-9C79-E0F4C9A5FA03" WriteProtected="false"/>
+				<Server Name="CircleRadius" Datatype="DINT" Guid="F4DBE44E-E66B-4F6B-9134-931DE8E1F4B3" WriteProtected="false"/>
+				<Server Name="CircleAngle" Datatype="DINT" Guid="FA3CB7C6-DDFA-40F3-8AB4-C235A4B1B3CC" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "DataRecord"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "152"
+			Guid     = "006906DA-A9D7-4311-895F-36A4507325FE">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CoordX" Datatype="DINT" Guid="1499F3FE-4B31-4544-BC3C-DD963045BAEE" WriteProtected="true"/>
+				<Server Name="CoordY" Datatype="DINT" Guid="001F144A-61F6-4473-AFFA-6D094902B11C" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "DataRecordSave"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "240"
+			Guid     = "4C95B574-6E4B-4AAA-B1A7-4E5B8ADFF097">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="Save" Datatype="DINT" Guid="3C9BA341-445E-4207-BBBF-57C891EF2E97" WriteProtected="false"/>
+				<Server Name="Load" Datatype="DINT" Guid="54C6C546-7FCF-4F25-86DC-112A113792BE" WriteProtected="false"/>
+				<Server Name="Clear" Datatype="DINT" Guid="32379D5E-8728-4B4B-BFCE-7AF1BC5F96D2" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "DisplaySettings"
+			Datatype = "DINT"
+			Base     = "USB_DataExchange"
+			Size     = "2964"
+			Guid     = "85D369AD-5E9E-4A68-A5C3-748BD87F05E5">
+			<Servers>
+				<Server Name="State" Datatype="DINT" Guid="AAD64C7E-579C-4AF2-A2A8-C93E4578886B" WriteProtected="true"/>
+				<Server Name="Brightness" Datatype="DINT" Guid="EEE3950E-30E4-49F5-B4F2-F893767931F7" WriteProtected="false"/>
+				<Server Name="SwitchBacklight" Datatype="DINT" Guid="409AFA9E-4086-4DE5-90C4-0C3802E11F4B" WriteProtected="false"/>
+				<Server Name="ClassState" Datatype="DINT" Guid="88CE3435-E608-4737-8A0F-444F8517D9DC" WriteProtected="true"/>
+				<Server Name="LogoRedPWM" Datatype="DINT" Guid="9B430016-E7E2-49FA-9CB3-27B9FC8E9046" WriteProtected="false"/>
+				<Server Name="LogoGreenPWM" Datatype="DINT" Guid="345941A6-9101-41AB-8AFA-E6B2688EC428" WriteProtected="false"/>
+				<Server Name="LogoBluePWM" Datatype="DINT" Guid="5EA035B0-EC12-4C4C-BED6-3019AA65685A" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "FileHandling"
+			Datatype = "FileHandling::t_e_FILE_STEPS"
+			Size     = "460"
+			Guid     = "082C2F11-1C0A-4B3B-8621-16D0CDE06776">
+			<Servers>
+				<Server Name="DriveName1" Datatype="UDINT" Guid="B28AF144-9580-4259-8E45-0322641A3D96" WriteProtected="false"/>
+				<Server Name="FileName1" Datatype="UDINT" Guid="5654030E-9081-4032-A4FD-A7417AB66FAC" WriteProtected="false"/>
+				<Server Name="FileExtension1" Datatype="UDINT" Guid="BC3AB608-9741-4378-B7DD-6C1DC532F98E" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="DriveName" Datatype="StringRAM" Guid="307503CD-C0D3-46D8-BD08-D089626016BF"/>
+				<Object Name="FileExtension" Datatype="StringRAM" Guid="A5BA95BE-726A-4345-8855-FCA9F18CB82D"/>
+				<Object Name="FileName" Datatype="StringRAM" Guid="DC239375-8714-4069-8932-B9547C045A11"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "FileRead"
+			Datatype = "FileRead::t_e_ReadSteps"
+			Size     = "216"
+			Guid     = "0F286425-66A0-4B27-BF81-ACD36F9E8E14">
+			<Servers>
+				<Server Name="StartRead" Datatype="DINT" Guid="B3C1578D-F8C0-4487-91B9-FB85342A7D17" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "Indicator"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "76"
+			Guid     = "8E0B132E-F47B-413D-A463-1B2EA10C00E4">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="IndicatorValue" Datatype="DINT" Guid="7866D3BC-F3A7-4824-AE5A-7B63CF11954C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "InputMyIO"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "92"
+			Guid     = "88979E44-F5E5-4DF0-B4E7-F300B7D082B3">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CoordX" Datatype="DINT" Guid="22C15EAF-3E7F-49CC-9FDF-61E71ACC1226" WriteProtected="false"/>
+				<Server Name="CoordY" Datatype="DINT" Guid="2593B8BD-D343-4564-A0C2-E43382B3438D" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "KeyPadANumStdTemplate"
+			Datatype = "DINT"
+			Base     = "_Screen"
+			Size     = "116"
+			Guid     = "8254FBAE-5118-47E0-85A3-4165B6A13265">
+			<Servers>
+				<Server Name="Screen" Datatype="DINT" Guid="E741BF69-4F63-11D5-8991-00902787C19C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "KeyPadNumStdTemplate"
+			Datatype = "DINT"
+			Base     = "_Screen"
+			Size     = "84"
+			Guid     = "41760293-5BB3-49DF-A348-439291B77F54">
+			<Servers>
+				<Server Name="Screen" Datatype="DINT" Guid="E741BF69-4F63-11D5-8991-00902787C19C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyCarousel"
+			Datatype = "DINT"
+			Base     = "_Screen"
+			Size     = "1068"
+			Guid     = "248720FD-ED73-46BC-98CE-543465D85741">
+			<Servers>
+				<Server Name="Screen" Datatype="DINT" Guid="E741BF69-4F63-11D5-8991-00902787C19C" WriteProtected="false"/>
+				<Server Name="LasalObjectName" Datatype="STRING" Guid="FA088058-4D34-4686-A9E2-2F4176715A7C" WriteProtected="false"/>
+				<Server Name="LSEObjectName" Datatype="STRING" Guid="09CAF155-C0A3-45A7-A52C-5CB97F27A9A7" WriteProtected="false"/>
+				<Server Name="ShowActive" Datatype="DINT" Guid="0CDB666A-E105-4872-95D6-615A3EA937E7" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="LasalObjName" Datatype="StringRAM" Guid="DD3EB94F-DF90-439F-939E-8B216C1F0329"/>
+				<Object Name="LSEObjName" Datatype="StringRAM" Guid="D506CAEC-DCA0-49A5-8EBE-6DCEA2351F3C"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "MyColorBar"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "168"
+			Guid     = "14F2B912-6B2E-43D6-A8EE-93F76899C176">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyFirstMyIO"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "76"
+			Guid     = "371EAA09-EC63-4528-87EA-FD03819E01E3">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyHeader"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "356"
+			Guid     = "DCAABD5F-F562-405A-8913-91FA756D5EB7">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyKeyboardCode"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "40"
+			Guid     = "2A02C9EE-37CF-4E59-971A-94AE9862B230">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="KeyCode" Datatype="DINT" Guid="3D555B9E-C4A4-4930-A4CC-C06B613A4BAE" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyRecalculate"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "40"
+			Guid     = "583320D4-AFD6-4362-A68A-D26056C69F5A">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Length" Datatype="REAL" Guid="4B37FF80-CA81-422C-B415-DEA0F694704C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyScrollList"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "376"
+			Guid     = "1D90F338-89EA-4CE4-A39B-6D6719E2588C">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyUserCall"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "52"
+			Guid     = "96F81679-1F87-4102-8071-F82F97D2A5E8">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Counter" Datatype="DINT" Guid="73BEE481-4FE5-42EA-BADA-044BF473F972" WriteProtected="true"/>
+				<Server Name="Screen" Datatype="DINT" Guid="4877986D-0E59-44C6-98B9-DAB198958033" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MyValues"
+			Datatype = "DINT"
+			Size     = "60"
+			Guid     = "ADDDC806-A5F4-4635-87DD-F27E0C188FC2">
+			<Servers>
+				<Server Name="Value1" Datatype="DINT" Guid="53866753-2632-4579-B13D-0855C3500CF6" WriteProtected="false"/>
+				<Server Name="Value2" Datatype="DINT" Guid="9916DF01-466E-48BC-B9BC-00DF1BE9F566" WriteProtected="false"/>
+				<Server Name="Value3" Datatype="DINT" Guid="FA823119-74C2-4AC4-8AFE-EC6A0CB657EC" WriteProtected="false"/>
+				<Server Name="Active" Datatype="DINT" Guid="AF7AFB8C-CD99-4BB1-A340-4020D12F6EA5" WriteProtected="false"/>
+				<Server Name="ID" Datatype="DINT" Guid="35359054-FAB3-467A-978D-AE1076570A8B" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "ProjectGlobal"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "344"
+			Guid     = "32CE6A2A-4575-47CD-8859-2C4DBEC739BB">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActScreen" Datatype="UDINT" Guid="1342D1AE-314F-4B0F-B51F-58F3FCDB408E" WriteProtected="true"/>
+				<Server Name="ActWindow" Datatype="UDINT" Guid="72DAFE04-32FA-4626-B614-883E53F3DA1F" WriteProtected="true"/>
+				<Server Name="ActIma" Datatype="_IMA" Guid="0D9D98DB-0C25-4949-AB9B-798A21434FFB" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="OffDate" Datatype="Ram" Guid="98FA88F6-930B-4CC6-8AE9-F02D5DB59415"/>
+				<Object Name="OffTime" Datatype="Ram" Guid="174EEAFB-6D7C-4C2C-84EA-F68038040918"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "Ram"
+			Datatype = "DINT"
+			Size     = "20"
+			Guid     = "67843DDE-277A-11D4-83FF-00902787C17B">
+			<Servers>
+				<Server Name="Data" Datatype="DINT" Guid="67843DDF-277A-11D4-83FF-00902787C17B" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "ScreenSaver"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "100"
+			Guid     = "095A2B2F-C915-4CBE-BC87-32FC19973850">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="sDelayScreenSaver" Datatype="UDINT" Guid="E0810584-0BA8-4A6A-8B5F-F8DF4FA3A4C7" WriteProtected="false"/>
+				<Server Name="sDelayBacklight" Datatype="UDINT" Guid="C7331A94-E56D-4651-A3C1-087A1FAA3F24" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="DisplaySettings" Datatype="DisplaySettings" Guid="610B353F-145A-4A20-9B3B-E85D152B9433"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "String"
+			Datatype = "UDINT"
+			Base     = "StringInternal"
+			Size     = "60"
+			Guid     = "26C84422-A6E4-4372-A53C-A964595DA01D">
+			<Servers>
+				<Server Name="Data" Datatype="STRING" Guid="81990015-D505-4977-9326-733789F9FEAA" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "StringInternal"
+			Datatype = "UDINT"
+			Base     = "VirtualBaseInit"
+			Size     = "48"
+			Guid     = "2C12408A-7CCA-458A-912B-98C634EE4BD9">
+		</Class>
+		<Class
+			Name     = "StringRAM"
+			Datatype = "UDINT"
+			Base     = "StringInternal"
+			Size     = "60"
+			Guid     = "98E72A8A-307A-4EB2-9A52-A75C6DC58534">
+			<Servers>
+				<Server Name="Data" Datatype="STRING" Guid="81990015-D505-4977-9326-733789F9FEAA" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "SystemLogging"
+			Datatype = "DINT"
+			Size     = "96"
+			Guid     = "1C76D14C-2FF2-49B0-A195-51D42B5A2F0E">
+			<Servers>
+				<Server Name="ExtLoggingActive" Datatype="DINT" Guid="E458EE41-51F9-468A-9AF2-9A7CDE56DEDC" WriteProtected="false"/>
+				<Server Name="ErrorCnt" Datatype="UDINT" Guid="3A0CB576-5F2E-43DF-8C63-B34FFE12CB27" WriteProtected="true"/>
+				<Server Name="WarningCnt" Datatype="UDINT" Guid="1B4B9142-19DF-472A-8E60-2CE51E0ACD54" WriteProtected="true"/>
+				<Server Name="DebugCnt" Datatype="UDINT" Guid="761F26BF-6F0B-48CF-BAF7-E72478326DAD" WriteProtected="true"/>
+				<Server Name="InfoCnt" Datatype="UDINT" Guid="0856D59F-18B4-4985-BEE4-E0E2B1613E72" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "TCPCommunicationLogViewer"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "1460"
+			Guid     = "14F2219D-3F51-4BAB-A2B6-A091BF152E6A">
+			<Types>
+				<Type Name="t_e_ExportState" Datatype="UDINT" TypeId="ENUM">
+					<Elements>
+						<Type Name="ExportState_NoAction" Value="0"/>
+						<Type Name="ExportState_Start" Value="1"/>
+						<Type Name="ExportState_Ready" Value="2"/>
+						<Type Name="ExportState_WaitTouch" Value="3"/>
+						<Type Name="ExportState_Error" Value="4"/>
+						<Type Name="ExportState_WaitTouch2" Value="5"/>
+					</Elements>
+				</Type>
+			</Types>
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+				<Server Name="TimeStampRelative" Datatype="DINT" Guid="9830934A-280E-46ED-B5F9-7F83982383BC" WriteProtected="false"/>
+				<Server Name="ExportToUSB" Datatype="TCPCommunicationLogViewer::t_e_ExportState" Guid="DE3D52C7-AFE5-42C1-9438-966763768FD0" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "TitleLine"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "168"
+			Guid     = "43A4D0E6-06B3-4310-8B73-4E23587D5F67">
+		</Class>
+		<Class
+			Name     = "TouchCalib"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "252"
+			Guid     = "7EC29653-88B4-4828-8414-BBEB9EB15527">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="State" Datatype="DINT" Guid="C7AAF6ED-4FEB-4830-8B03-90902288CDB9" WriteProtected="true"/>
+				<Server Name="SelectOrderNo" Datatype="DINT" Guid="7B24A7B4-5A21-4CA6-BB49-ECCC2B842DC2" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "USB_DataExchange"
+			Datatype = "DINT"
+			Size     = "2752"
+			Guid     = "149A4171-9004-41E5-BB80-6A454CB38E21">
+		</Class>
+		<Class
+			Name     = "USBDetection"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "136"
+			Guid     = "6F90B4C9-9883-4D43-BB9A-1E6758F62D93">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="USBdetected" Datatype="DINT" Guid="DC2ADB7E-DF1C-4F2F-92B9-FD6715CDF71C" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="USBDriveLetter" Datatype="String" Guid="1C411560-E619-459A-981E-49A8E0D9D73D"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "UseImageScheme"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "96"
+			Guid     = "370BBE58-B989-4EB0-8D22-A7E4706D5545">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="DelayTime" Datatype="UDINT" Guid="3D90B7A4-BBF4-43DD-83D3-5905B3E51AD3" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "VirtualBaseInit"
+			Datatype = "UDINT"
+			Size     = "12"
+			Guid     = "9FBB5A34-CCCF-441F-A614-0CCECBD76648">
+		</Class>
+	</Classes>
+	<Objects>
+		<Object Name="_BitAlarmTitle" Datatype="_Bit32" Guid="2094671E-A3ED-4628-B4A3-57B86116AB0C"/>
+		<Object Name="_LanguageSelection1" Datatype="_LanguageSelection" Guid="304A4FA2-6419-4F1E-88BD-174E69ACF01E"/>
+		<Object Name="AlarmCommunication_HMI" Datatype="_AlarmX0Para" Guid="D4A37546-FE6A-40FE-ABA2-DA6D1EFB2A14"/>
+		<Object Name="AlarmDisplayList" Datatype="AlarmDisplayList" Guid="82C16D43-2CD8-42F0-85DD-E06E84AB20D9"/>
+		<Object Name="AlarmTitle" Datatype="AlarmTitleLine" Guid="CF4097D7-B39A-4ACD-A972-C2EF022CFC31"/>
+		<Object Name="CirleMyIO1" Datatype="CirleMyIO" Guid="C9272C39-67E1-408F-A3A3-D9D57AB5C7A7"/>
+		<Object Name="CleanScreenTime" Datatype="Ram" Guid="C962473B-7DBE-4C34-854E-1558A9515346"/>
+		<Object Name="DataRecord1" Datatype="DataRecord" Guid="224C5EAE-8F42-4BD1-AFF5-EEF6F131DBF3"/>
+		<Object Name="DataRecordSave1" Datatype="DataRecordSave" Guid="7B596B7C-E276-4DA1-8F8B-15A1392548D8"/>
+		<Object Name="FileHandling1" Datatype="FileHandling" Guid="7CBB6C4E-B8F4-419F-B086-157B81E9B5C3"/>
+		<Object Name="FileRead1" Datatype="FileRead" Guid="22FD16DD-B22C-47AB-8A0E-A831AD3B28CE"/>
+		<Object Name="GlobalScreen1" Datatype="ProjectGlobal" Guid="206CFC57-2AB0-4362-9A36-EF246C884072"/>
+		<Object Name="Indicator1" Datatype="Indicator" Guid="46A48E4B-B072-46BD-8D13-B9579FCD878D"/>
+		<Object Name="InputMyIO1" Datatype="InputMyIO" Guid="34D26550-78A9-43F5-8559-BFF97F15B676"/>
+		<Object Name="KeyPadANumStdTemplate" Datatype="KeyPadANumStdTemplate" Guid="C8074AFC-739E-4193-A138-7788DA672E6F"/>
+		<Object Name="KeyPadNumStdTemplate" Datatype="KeyPadNumStdTemplate" Guid="3B59F321-6931-43C7-8488-5DAB5333D8EF"/>
+		<Object Name="Lse" Datatype="_Lse" Guid="1BAB91AD-314E-468B-AFDB-0708C6E2B4A0"/>
+		<Object Name="MyCarousel1" Datatype="MyCarousel" Guid="49D3BD7B-5DC0-41CA-838C-3BADA20A6E9E"/>
+		<Object Name="MyColorBar1" Datatype="MyColorBar" Guid="EC0D5ACF-703E-49F5-9847-5B30A900770C"/>
+		<Object Name="MyFirstMyIO1" Datatype="MyFirstMyIO" Guid="A3806FB0-0D14-4A97-94CA-B12E2924E025"/>
+		<Object Name="MyHeader1" Datatype="MyHeader" Guid="92FA6CFD-2E6A-4C48-BA73-BA03E3FDCA66"/>
+		<Object Name="MyKeyboardCode1" Datatype="MyKeyboardCode" Guid="545DA2C2-6048-463A-A3A5-B036D23D0399"/>
+		<Object Name="MyRecalculate1" Datatype="MyRecalculate" Guid="5BE8C43F-AB70-4BC2-919F-42C1A17746C9"/>
+		<Object Name="MyScrollList1" Datatype="MyScrollList" Guid="8E460C6B-3CA1-439A-B0BD-0967FC5FBA3C"/>
+		<Object Name="MyUserCall1" Datatype="MyUserCall" Guid="584D7A1D-0083-4E1E-8B3C-5F8AEED5010A"/>
+		<Object Name="MyValues1" Datatype="MyValues" Guid="725189B8-4D6D-4D55-8A93-63A6AC9EB208"/>
+		<Object Name="MyValues10" Datatype="MyValues" Guid="6E7930DE-023E-499A-847E-EF92A1F93046"/>
+		<Object Name="MyValues11" Datatype="MyValues" Guid="B6630908-966E-493D-B380-F854D895E6F2"/>
+		<Object Name="MyValues12" Datatype="MyValues" Guid="13512AA8-92D8-4307-A59D-84A71EDF45F0"/>
+		<Object Name="MyValues13" Datatype="MyValues" Guid="4F7D80A9-FF60-41DB-A5BD-1C5622EC6A12"/>
+		<Object Name="MyValues14" Datatype="MyValues" Guid="2458F05B-04F5-4532-B116-AD67679E0D61"/>
+		<Object Name="MyValues15" Datatype="MyValues" Guid="211159A5-D936-4130-9B10-71F0BDF5CB5E"/>
+		<Object Name="MyValues16" Datatype="MyValues" Guid="DA222001-6D5F-4399-90C7-5B5791D7F1C7"/>
+		<Object Name="MyValues17" Datatype="MyValues" Guid="E7F1D1B1-484D-4517-AF63-B62F1992E861"/>
+		<Object Name="MyValues18" Datatype="MyValues" Guid="904D56EA-95A7-4510-9D12-E4EAC76009F0"/>
+		<Object Name="MyValues19" Datatype="MyValues" Guid="756D692C-BFC4-4C85-A8F3-183A3CCA8132"/>
+		<Object Name="MyValues2" Datatype="MyValues" Guid="DB682069-DC41-4218-9F7C-13E2DE8EDFA8"/>
+		<Object Name="MyValues20" Datatype="MyValues" Guid="6C03D29E-C739-4531-9093-5DB409F0E8B5"/>
+		<Object Name="MyValues3" Datatype="MyValues" Guid="EA2A8782-8DB6-4FF5-8359-D22DB560B836"/>
+		<Object Name="MyValues4" Datatype="MyValues" Guid="ABC29AB4-840E-4983-B12F-69BF6544407C"/>
+		<Object Name="MyValues5" Datatype="MyValues" Guid="64982F47-D6EC-443E-951F-B2E7FCE01B46"/>
+		<Object Name="MyValues6" Datatype="MyValues" Guid="3A87BD49-AEAB-434D-8CC3-0342D07D8555"/>
+		<Object Name="MyValues7" Datatype="MyValues" Guid="00355419-6637-4B70-A20B-9982432C356D"/>
+		<Object Name="MyValues8" Datatype="MyValues" Guid="C222CBD3-FD7D-4417-9BCC-EEC983949A6B"/>
+		<Object Name="MyValues9" Datatype="MyValues" Guid="947F5B4A-9B95-40A0-BB92-282CD06A575C"/>
+		<Object Name="ScreenSaver1" Datatype="ScreenSaver" Guid="CF28FFE3-C049-4A8B-A7BE-45836E9592B7"/>
+		<Object Name="STDTCPCommunicationLogViewer1" Datatype="TCPCommunicationLogViewer" Guid="1ED6B09D-B693-48EA-9082-62EE7AF79F22"/>
+		<Object Name="StringRAM1" Datatype="StringRAM" Guid="1AFEEAE3-42DC-4047-A477-3BB515270425"/>
+		<Object Name="SyncTimeHMI" Datatype="_SyncTimeHMI" Guid="C34E219B-F9BC-4722-B2DC-94BF36612973"/>
+		<Object Name="SysDateTime" Datatype="_SysDateTime" Guid="0807F2D5-CFA0-4CAE-B6B2-25B6103F551B"/>
+		<Object Name="SystemLogging1" Datatype="SystemLogging" Guid="72200FE4-7DEC-403E-B956-4C7CE2910354"/>
+		<Object Name="TouchCalib1" Datatype="TouchCalib" Guid="721642B9-BB65-48B8-9ACE-815955B26E54"/>
+		<Object Name="USBDetection1" Datatype="USBDetection" Guid="3624207A-5551-4231-8D3C-55F1B65B8246"/>
+		<Object Name="UseImageScheme1" Datatype="UseImageScheme" Guid="88345DF1-9EC9-4D21-AD5A-358688EF2525"/>
+	</Objects>
+	<UnitDefinitions>
+		<UnitGrp Name="Acceleration">
+			<Units>
+				<Unit Name="mmPsec2" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Units>
+				<Unit Name="deg" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Units>
+				<Unit Name="mm2" Factor="1" Divisor="10"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Units>
+				<Unit Name="kN" Factor="1" Divisor="1000" Base="N"/>
+				<Unit Name="N" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Units>
+				<Unit Name="m" Factor="1" Divisor="1000" Base="mm"/>
+				<Unit Name="mm" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Units>
+				<Unit Name="GB" Factor="1" Divisor="1024" Base="MB"/>
+				<Unit Name="kB" Factor="1" Divisor="1024"/>
+				<Unit Name="MB" Factor="1" Divisor="1024" Base="kB"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Units>
+				<Unit Name="bar" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Units>
+				<Unit Name="RPM" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Units>
+				<Unit Name="mlpmin" Factor="1" Divisor="1"/>
+				<Unit Name="mmpsec" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Units>
+				<Unit Name="hours" Factor="1" Divisor="60" Base="min"/>
+				<Unit Name="min" Factor="1" Divisor="60" Base="secs"/>
+				<Unit Name="ms" Factor="1" Divisor="1"/>
+				<Unit Name="sec" Factor="1" Divisor="1000"/>
+				<Unit Name="secs" Factor="1" Divisor="1000" Base="ms"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Units>
+				<Unit Name="ccm" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+	</UnitDefinitions>
+</File>

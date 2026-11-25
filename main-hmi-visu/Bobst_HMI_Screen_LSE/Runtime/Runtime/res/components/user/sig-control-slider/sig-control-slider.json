@@ -1,0 +1,1545 @@
+{
+    "name": "sig-control-slider",
+    "shortName": {
+        "en": "Slider",
+        "de": "Slider"
+    },
+    "controlType": {
+        "en": "Input",
+        "de": "Input"
+    },
+    "version": "03.00.002",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a slider component as a polymer custom element.",
+        "de": "Implementiert eine Slider-Komponente als benutzerdefiniertes Polymer-Element."
+    },
+    "main": [
+        "sig-control-slider.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-slider.html",
+    "private": true,
+    "baseComponent": "sig-element",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-slider-css.js"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "250px",
+        "height": "50px"
+    },
+    "toolbox": true,
+    "slotted": false,
+    "usableInShadowDom": true,
+    "styleClassEditor": true,
+    "moduleImport": {
+        "importType": "dynamic",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "placementTemplates": [
+        {
+            "default": true,
+            "name": "place-datapoint-default",
+            "shortName": {
+                "en": "Slider",
+                "de": "Slider"
+            },
+            "typeId": "datapoint",
+            "value": []
+        }
+    ],
+    "properties": [
+        /*****************************************************************************************************
+        // Hide properties from the base
+        *****************************************************************************************************/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-element-dragged-opacity",
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "name": "elementMainFont",
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*****************************************************************************************************
+        // State
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Access number
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "accessNumber"
+            ],
+            "propertyType": "none",
+            "name": "accessNumber",
+            "sortIndex": 200500,
+            "dataType": "number",
+            "shortName": {
+                "en": "Access number",
+                "de": "Access number"
+            },
+            "description": {
+                "en": "The access number needed to use this control.",
+                "de": "Die benötigte Zugriffsnummer, um die Komponente verwenden zu können."
+            },
+            "group": {
+                "en": "State",
+                "de": "State"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Data
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "dataPoint",
+                "dataPointScheme"
+            ],
+            "propertyType": "variable",
+            "name": "value",
+            "sortIndex": 150000,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "default": "",
+            "shortName": {
+                "en": "Value",
+                "de": "Value"
+            },
+            "description": {
+                "en": "Sets the value of the slider.",
+                "de": "Setzt den Wert des Sliders."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Min. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "dataPointScheme"
+            ],
+            "propertyType": "variable",
+            "name": "limitlowlvd",
+            "sortIndex": 150100,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "default": "",
+            "shortName": {
+                "en": "Min. value",
+                "de": "Min. value"
+            },
+            "description": {
+                "en": "Sets the minimum value of the slider. If no value is set, the lower limit of the value-datapoint is used.",
+                "de": "Setzt das Minimum des Sliders. Wenn kein Wert gesetzt ist, wird das untere Limit des value-Datenpunkts verwendet."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Max. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "dataPointScheme"
+            ],
+            "propertyType": "variable",
+            "name": "limithighlvd",
+            "sortIndex": 150200,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "default": "",
+            "shortName": {
+                "en": "Max. value",
+                "de": "Max. value"
+            },
+            "description": {
+                "en": "Sets the maximum value of the slider. If no value is set, the upper limit of the value-datapoint is used.",
+                "de": "Setzt das Maximum des Sliders. Wenn kein Wert gesetzt ist, wird das obere Limit des value-Datenpunkts verwendet."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Inverse direction
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "inversedirection",
+            "sortIndex": 160000,
+            "dataType": "boolean",
+            "lockStyleCopy": true,
+            "default": false,
+            "shortName": {
+                "en": "Inverse direction",
+                "de": "Inverse direction"
+            },
+            "description": {
+                "en": "If true, the direction of the slider will be reversed.",
+                "de": "Wenn auf True gesetzt, wird die Richtung des Sliders umgedreht."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Hotspot area padding
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-hotspotarea-padding",
+            "sortIndex": 160100,
+            "dataType": "string",
+            "lockStyleCopy": true,
+            "units": "px",
+            "default": "15px",
+            "shortName": {
+                "en": "Hotspot area padding",
+                "de": "Hotspot area padding"
+            },
+            "description": {
+                "en": "The inner padding of the hotsport area.",
+                "de": "Der innere Padding des Hotspot-Bereiches."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Stepsize on tap
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "dataPointScheme"
+            ],
+            "propertyType": "variable",
+            "name": "stepsizeontap",
+            "sortIndex": 160200,
+            "dataType": "number",
+            "lockStyleCopy": true,
+            "default": 0,
+            "shortName": {
+                "en": "Stepsize on tap",
+                "de": "Stepsize on tap"
+            },
+            "description": {
+                "en": "The current value is increased/decreased by this value, when the user touches/clicks beside the handle of the slider. If no value is specified, the handle jumps directly to the position of the touch/click.",
+                "de": "Der aktuelle Wert wird bei einem Touch/Click neben dem Handle, um die angegebene Schrittweite verkleinert oder vergrößert. Wenn kein Wert angegeben ist springt der Slider direkt an die Position der Betätigung."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Step interval
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "variable",
+            "name": "stepinterval",
+            "sortIndex": 160300,
+            "dataType": "number",
+            "lockStyleCopy": true,
+            "default": 100,
+            "shortName": {
+                "en": "Step interval",
+                "de": "Step interval"
+            },
+            "description": {
+                "en": "The interval time the value is incremented/decremented in when pressing and holding the track. If the value is set to 0, no interval is created.",
+                "de": "Die Intervallzeit in der der Wert vergrößert/verkleinert wird, wenn der Balken gedrückt gehalten wird. Wenn der Wert auf 0 gesetzt wird, wird kein Intervall erstellt."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Preview settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Show hotspot area
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constBool",
+            "propertyType": "variable",
+            "name": "showhotspotarea",
+            "sortIndex": 170000,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Show hotspot area",
+                "de": "Show hotspot area"
+            },
+            "description": {
+                "en": "Only applies at design time. If true, the hotpot area is shown.",
+                "de": "Gilt nur zur Designzeit. Wenn dies zutrifft, wird der Hotpot-Bereich angezeigt."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-background-color",
+            "sortIndex": 500000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "Die Hintergrundfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-border-color",
+            "sortIndex": 500100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the component.",
+                "de": "Die Rahmenfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-border-width",
+            "sortIndex": 500200,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component. This value can be set as shorthand property.",
+                "de": "Die Rahmenbreite der Komponente. Dieser Wert kann als shorthand property angegeben werden."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-border-style",
+            "sortIndex": 500300,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "The border style of the component.",
+                "de": "Die Rahmenart der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-border-radius",
+            "sortIndex": 500400,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component. This value can be set as shorthand property.",
+                "de": "Der Rahmenradius der Komponente. Dieser Wert kann als shorthand property angegeben werden."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Handle styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-width",
+            "sortIndex": 500500,
+            "dataType": "string",
+            "units": "px,%",
+            "default": "16px",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the slider handle.",
+                "de": "Die Breite des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Height
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-height",
+            "sortIndex": 500600,
+            "dataType": "string",
+            "units": "px,%",
+            "default": "16px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the slider handle.",
+                "de": "Die Höhe des Slider-Griffes"
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-background-color",
+            "sortIndex": 500700,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The color of the slider handle.",
+                "de": "Die Farbe des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Color stop
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-background-color-stop",
+            "sortIndex": 500800,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color stop",
+                "de": "Color stop"
+            },
+            "description": {
+                "en": "The stop color of the gradient.",
+                "de": "Die Stopfarbe des Farbverlaufes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Gradient direction
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-background-color-direction",
+            "sortIndex": 500900,
+            "dataType": "string",
+            "default": "to bottom",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "to bottom",
+                        "de": "to bottom"
+                    },
+                    "value": "to bottom"
+                },
+                {
+                    "shortName": {
+                        "en": "to top",
+                        "de": "to top"
+                    },
+                    "value": "to top"
+                },
+                {
+                    "shortName": {
+                        "en": "to left",
+                        "de": "to left"
+                    },
+                    "value": "to left"
+                },
+                {
+                    "shortName": {
+                        "en": "to right",
+                        "de": "to right"
+                    },
+                    "value": "to right"
+                },
+                {
+                    "shortName": {
+                        "en": "to right bottom",
+                        "de": "to right bottom"
+                    },
+                    "value": "to right bottom"
+                },
+                {
+                    "shortName": {
+                        "en": "to left bottom",
+                        "de": "to left bottom"
+                    },
+                    "value": "to left bottom"
+                },
+                {
+                    "shortName": {
+                        "en": "to right top",
+                        "de": "to right top"
+                    },
+                    "value": "to right top"
+                },
+                {
+                    "shortName": {
+                        "en": "to left top",
+                        "de": "to left top"
+                    },
+                    "value": "to left top"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Gradient direction",
+                "de": "Gradient direction"
+            },
+            "description": {
+                "en": "The direction of the gradient.",
+                "de": "Die Richtung der Farbverlaufs."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Pressed color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-moving-background-color",
+            "sortIndex": 501000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Pressed color",
+                "de": "Pressed color"
+            },
+            "description": {
+                "en": "The color of the slider handle while pressed.",
+                "de": "Die Farbe des Slider-Griffes im gedrückten Zustand."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Pressed color stop
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-moving-background-color-stop",
+            "sortIndex": 501100,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Pressed color stop",
+                "de": "Pressed color stop"
+            },
+            "description": {
+                "en": "The stop color of the gradient while pressed.",
+                "de": "Die Stopfarbe des Farbverlaufes im gedrückten Zustand."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-border-color",
+            "sortIndex": 501200,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the slider handle.",
+                "de": "Die Rahmenfarbe des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-border-width",
+            "sortIndex": 501300,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the slider handle.",
+                "de": "Die Rahmenbreite des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-border-style",
+            "sortIndex": 501400,
+            "dataType": "string",
+            "default": "solid",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "The border style of the slider handle.",
+                "de": "Die Rahmenart des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-handle-border-radius",
+            "sortIndex": 501500,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "10px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the slider handle.",
+                "de": "Der Rahmenradius des Slider-Griffes."
+            },
+            "group": {
+                "en": "Handle styling",
+                "de": "Handle styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Bar styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Height
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-bar-height",
+            "sortIndex": 501600,
+            "dataType": "string",
+            "units": "px",
+            "default": "12px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the slider bar.",
+                "de": "Die Höhe der Slider-Bar."
+            },
+            "group": {
+                "en": "Bar styling",
+                "de": "Bar styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-bar-background-color",
+            "sortIndex": 501700,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The color of the slider bar.",
+                "de": "Die Farbe der Slider-Bar."
+            },
+            "group": {
+                "en": "Bar styling",
+                "de": "Bar styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-bar-border-radius",
+            "sortIndex": 501800,
+            "dataType": "string",
+            "units": "px",
+            "default": "6px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the slider bar.",
+                "de": "Der Rahmenradius der Slider-Bar."
+            },
+            "group": {
+                "en": "Bar styling",
+                "de": "Bar styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Track styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Height
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-track-height",
+            "sortIndex": 501900,
+            "dataType": "string",
+            "units": "px",
+            "default": "12px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the slider track.",
+                "de": "Die Höhe der Slider-Spur."
+            },
+            "group": {
+                "en": "Track styling",
+                "de": "Track styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-track-background-color",
+            "sortIndex": 502000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The color of the slider track.",
+                "de": "Die Farbe der Slider-Spur."
+            },
+            "group": {
+                "en": "Track styling",
+                "de": "Track styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-slider-track-border-radius",
+            "sortIndex": 502100,
+            "dataType": "string",
+            "units": "px",
+            "default": "6px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the slider track.",
+                "de": "Der Rahmenradius der Slider-Spur."
+            },
+            "group": {
+                "en": "Track styling",
+                "de": "Track styling"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Function block
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property On updated
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "lockStyleCopy": true,
+            "name": "sig-control-slider-value-update",
+            "sortIndex": 150600,
+            "shortName": {
+                "en": "On updated",
+                "de": "On updated"
+            },
+            "description": {
+                "en": "This function block is executed, when the slider value gets updated by moving and releasing the handle or the value is changed via the value property.",
+                "de": "Dieser function block wird ausgeführt, wenn der Wert des Sliders durch Verschieben und Loslassen des Griffes aktualisiert wird oder der Wert über die Value-Eigenschaft verändert wird."
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property On tracking started
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "lockStyleCopy": true,
+            "name": "sig-control-slider-tracking-start",
+            "sortIndex": 150700,
+            "shortName": {
+                "en": "On tracking started",
+                "de": "On tracking started"
+            },
+            "description": {
+                "en": "This function block is executed, when the slider starts moving.",
+                "de": "Dieser function block wird ausgeführt, wenn der Slider beginnt, sich zu bewegen."
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property On tracking stopped
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "lockStyleCopy": true,
+            "name": "sig-control-slider-tracking-stop",
+            "sortIndex": 150800,
+            "shortName": {
+                "en": "On tracking stopped",
+                "de": "On tracking stopped"
+            },
+            "description": {
+                "en": "This function block is executed, when the slider stops moving.",
+                "de": "Dieser function block wird ausgeführt, wenn der Slider aufhört, sich zu bewegen."
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 20,
+            "userLevelStyling": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Slider_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Slider_EN.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

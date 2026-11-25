@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="PumpControlNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "PumpControl1"
+			GUID       = "{39A38DB2-C1EA-4A97-B354-FC34A5CC1370}"
+			Class      = "PumpControl"
+			Position   = "(540,210)"
+			Visualized = "true"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ActFillLevelVisu"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="MaxBorder"/>
+				<Server Name="MinBorder"/>
+				<Server Name="PumpVisu"/>
+				<Client Name="ActFillLevel"/>
+				<Client Name="Pump"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="PumpControl1.Pump" Destination="__IO_Element1" Vertices="(540,300),(510,300)," IOObject="Pump"/>
+		<Connection Source="PumpControl1.ActFillLevel" Destination="__IO_Element01" Vertices="(540,360),(510,360)," IOObject="ActFillLevel"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element01" Name="ActFillLevel" Position="(210,330)" Client="PumpControl1.ActFillLevel"/>
+		<IOObject KeyName="__IO_Element1" Name="Pump" Position="(210,270)" Client="PumpControl1.Pump"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

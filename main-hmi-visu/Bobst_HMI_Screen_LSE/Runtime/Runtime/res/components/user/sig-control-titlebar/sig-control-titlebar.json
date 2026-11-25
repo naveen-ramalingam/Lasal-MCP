@@ -1,0 +1,626 @@
+{
+    "name": "sig-control-titlebar",
+    "shortName": {
+        "en": "Titlebar",
+        "de": "Titlebar "
+    },
+    "controlType": {
+        "en": "Utilities",
+        "de": "Utilities"
+    },
+    "version": "01.03.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a title bar as a polymer custom element.",
+        "de": "Implements a title bar as a polymer custom element."
+    },
+    "main": [
+        "sig-control-titlebar.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-titlebar.html",
+    "private": true,
+    "baseComponent": "sig-element",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-titlebar-css.js"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "200px",
+        "height": "26px"
+    },
+    "slotted": false,
+    "usableInShadowDom": true,
+    "styleClassEditor": true,
+    "defaultStyleOnly": false,
+    "moduleImport": {
+        "importType": "dynamic",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "toolbox": false,
+    "properties": [
+        {
+            "valueSourceTypes": [
+                "text",
+                "textScheme"
+            ],
+            "propertyType": "variable",
+            "name": "value",
+            "dataType": "string",
+            "default": "",
+            "shortName": {
+                "en": "Text",
+                "de": "Text"
+            },
+            "description": {
+                "en": "The title text of the titlebar.",
+                "de": "The title text of the titlebar."
+            },
+            "lockStyleCopy": true,
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-value-align",
+            "dataType": "string",
+            "default": "center",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Text align horizontal",
+                "de": "Text align horizontal"
+            },
+            "description": {
+                "en": "Defines the horizontal alignment of the title.",
+                "de": "Defines the horizontal alignment of the title."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-value-vertical-align",
+            "dataType": "string",
+            "default": "middle",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "top",
+                        "de": "top"
+                    },
+                    "value": "top"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "middle"
+                },
+                {
+                    "shortName": {
+                        "en": "bottom",
+                        "de": "bottom"
+                    },
+                    "value": "bottom"
+                }
+            ],
+            "multiSelect": false,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Text align vertical",
+                "de": "Text align vertical"
+            },
+            "description": {
+                "en": "Defines the vertical alignment of the title.",
+                "de": "Defines the vertical alignment of the title."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-value-padding-horizontal",
+            "dataType": "string",
+            "default": "5px",
+            "units": "px",
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Padding horizontal",
+                "de": "Padding horizontal"
+            },
+            "description": {
+                "en": "Defines the horizontal (left & right) padding of the title.",
+                "de": "Defines the horizontal (left & right) padding of the title."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-value-padding-vertical",
+            "dataType": "string",
+            "default": "2px",
+            "units": "px",
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Padding vertical",
+                "de": "Padding vertical"
+            },
+            "description": {
+                "en": "Defines the vertical (top & bottom) padding of the title.",
+                "de": "Defines the vertical (top & bottom) padding of the title."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-color",
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 255, 255, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of the component.",
+                "de": "The text color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-background-color",
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(102, 102, 102, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "The background color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-color",
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "transparent",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the component.",
+                "de": "The border color of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-width",
+            "dataType": "string",
+            "units": "px",
+            "default": "1px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component.",
+                "de": "The border width of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-style",
+            "dataType": "string",
+            "default": "solid",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "Defines the border style of the component.",
+                "de": "Defines the border style of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-radius",
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component.",
+                "de": "The border radius of the component."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "shadowactive",
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Border shadow",
+                "de": "Border shadow"
+            },
+            "description": {
+                "en": "Activates the border shadow.",
+                "de": "Activates the border shadow."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-shadow-size",
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border shadow size",
+                "de": "Border shadow size"
+            },
+            "description": {
+                "en": "Defines the size of the border shadow.",
+                "de": "Defines the size of the border shadow."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-titlebar-border-shadow-color",
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(0, 0, 0, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border shadow color",
+                "de": "Border shadow color"
+            },
+            "description": {
+                "en": "Defines the color of the border shadow.",
+                "de": "Defines the color of the border shadow."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "applybordereffect",
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Border effect",
+                "de": "Border effect"
+            },
+            "description": {
+                "en": "Applies the newage design border effect. If applied the border and shadow properties are ignored.",
+                "de": "Applies the newage design border effect. If applied the border and shadow properties are ignored."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "previewtext",
+            "dataType": "string",
+            "default": "-- Titlebar --",
+            "shortName": {
+                "en": "Preview text",
+                "de": "Preview text"
+            },
+            "description": {
+                "en": "The preview text of the component in the style class editor.",
+                "de": "The preview text of the component in the style class editor."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 20,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Core\LASAL.HMI.Converter.Core.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Models\LASAL.HMI.Converter.Models.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Infrastructure\LASAL.HMI.Converter.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<MultiMasterMgr>
+	<RemoteStations>
+		<RemoteStation
+			Name          = "MachineControl"
+			Name_DESC     = "World name of the station"
+			PrjRev        = "0.0"
+			PrjRev_DESC   = "Version of the project"
+			Project       = "MachineControl"
+			Project_DESC  = "Name of the project"
+			IP            = "10.100.3.200"
+			IP_DESC       = "IP address of this station"
+			Filename      = ".\MachineControl\MachineControl\MachineControl.lcp"
+			Filename_DESC = "File name to project">
+			<RemoteServers>
+				<RemoteServer Name="SyncTimePLC.SyncDate" Name_DESC="Name" GUID_Svr="{2AF2D155-09B5-4068-B68C-C099CF73156D}" GUID_Svr_DESC="GUID of the server" DataType="HDINT" DataType_DESC="DataType" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" GUID_Obj_DESC="GUID of the object" Comment="source date (for input)" Comment_DESC="Comment of server"/>
+				<RemoteServer Name="SyncTimePLC.SyncTime" Name_DESC="Name" GUID_Svr="{F191E791-F1DE-4A48-8893-FE7C6584A1E9}" GUID_Svr_DESC="GUID of the server" DataType="HDINT" DataType_DESC="DataType" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" GUID_Obj_DESC="GUID of the object" Comment="source time (for input)" Comment_DESC="Comment of server"/>
+			</RemoteServers>
+		</RemoteStation>
+	</RemoteStations>
+</MultiMasterMgr>

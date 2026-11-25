@@ -1,0 +1,2861 @@
+{
+	"type": "ComponentStyles",
+	"version": "0.0.97",
+	"componentStyles": [
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "09f3d4b5-0a88-4ff2-8b60-4d4ca2958a64",
+			"componentId": "sig-dependency-loader",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isDefaultStyleOnly": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-dependency-loader-background-color",
+					"value": "_SigmatekDefaultColors:DeepBlueTheme_BackgroundColor",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "bd2f523b-303d-4b97-9bef-3d6182451586"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-color",
+					"value": "_SigmatekDefaultColors:sig-tab-inactive-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a47b2348-bcbc-49a9-90b2-312ad1e6028b"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-logo-color",
+					"value": "_SigmatekDefaultColors:sig-logo",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "2df07626-b685-4c08-8778-ef29a627cde8"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-color-count",
+					"value": "_SigmatekDefaultColors:sig-tab-inactive-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a47b2348-bcbc-49a9-90b2-312ad1e6028b"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-progress-bar-background-color",
+					"value": "_SigmatekDefaultColors:sig-bar-inactive-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "551e86d5-7815-4200-87dc-dec230331be1"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-progress-finished-background-color",
+					"value": "_SigmatekDefaultColors:sig-bar-fill-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "fbe98e4a-0f03-413d-9984-dffff8bcc6d3"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-reload-color",
+					"value": "_SigmatekDefaultColors:sig-logo",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "2df07626-b685-4c08-8778-ef29a627cde8"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-color-info",
+					"value": "_SigmatekDefaultColors:sig-tab-inactive-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a47b2348-bcbc-49a9-90b2-312ad1e6028b"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-color-warn",
+					"value": "_SigmatekDefaultColors:sig-warning",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8f7214c2-71d5-48be-99a8-add130a23357"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-color-error",
+					"value": "_SigmatekDefaultColors:sig-alarm-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ba11eaf7-7ad6-4c9a-8fc6-e48fc7e202f7"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-critical-error-background-color",
+					"value": "_SigmatekDefaultColors:sig-alarm-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ba11eaf7-7ad6-4c9a-8fc6-e48fc7e202f7"
+				},
+				{
+					"name": "--theme-sig-dependency-loader-critical-error-color",
+					"value": "_SigmatekDefaultColors:sig-general-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "deb5fd92-9f39-47d5-8851-fd98a7b834bf"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "755ad720-d0d0-4b63-aeef-92b294465a3c",
+			"componentId": "sig-window-container-keyboard",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [
+				{
+					"type": "ComponentStyle",
+					"name": "AlphaKeyboardContainer",
+					"designTimeId": "32db586e-4272-447c-b0d1-8e94967a454a",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "905px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "390px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "NumericKeyboardContainer",
+					"designTimeId": "3635b631-300e-46ea-98ef-a9206403bd6c",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "385px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "DateKeyboardContainer",
+					"designTimeId": "937f7068-1131-48fd-b24e-f4fee3048f08",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "360px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "HexKeyboardContainer",
+					"designTimeId": "ffaf7ceb-40a8-462c-bd1b-c33a8619cb3d",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "370px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "360px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "Ipv4KeyboardContainer",
+					"designTimeId": "e3fe4127-3e69-4115-9e5a-bcad47df491e",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "360px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "TimeKeyboardContainer",
+					"designTimeId": "639775dd-18a0-460f-8f86-e3c92c0ddecf",
+					"componentId": "sig-window-container-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "365px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-window-panel-content-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "301a9762-9ed7-43dc-bdc0-49f3487dd20e"
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "_SigmatekDefaultColors:sig-title-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "33d1e7b3-2144-4b25-92fc-0ed3aedf49b3"
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-color",
+					"value": "_SigmatekDefaultColors:sig-title-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "879e8f41-2f36-48ba-9d75-d12eea90d2fd"
+				},
+				{
+					"name": "jsPanelIconClose",
+					"value": "Resources\\Images\\close-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "8c245c8e-5daf-4eb1-8c46-5b659be0233e"
+				},
+				{
+					"name": "--theme-sig-window-panel-icon-size",
+					"value": "30px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-content-border-top-height",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-window-panel-content-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "10f8019a-4698-4308-8eec-22cf3dbfc244",
+			"componentId": "sig-window-container-system",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [
+				{
+					"type": "ComponentStyle",
+					"name": "SystemWindowContainerError",
+					"designTimeId": "20018a7c-279a-4d04-b169-92fca73714a1",
+					"componentId": "sig-window-container-system",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-window-panel-hdr-background-color",
+							"value": "_SigmatekDefaultColors:sig-alarm-background-color",
+							"typeId": 9,
+							"propTypeId": 2,
+							"refId": "ba11eaf7-7ad6-4c9a-8fc6-e48fc7e202f7"
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "SystemWindowContainerWarning",
+					"designTimeId": "e868dd61-0df4-4719-acda-cb91e3e465db",
+					"componentId": "sig-window-container-system",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-window-panel-hdr-background-color",
+							"value": "_SigmatekDefaultColors:sig-warning",
+							"typeId": 9,
+							"propTypeId": 2,
+							"refId": "8f7214c2-71d5-48be-99a8-add130a23357"
+						},
+						{
+							"name": "--theme-sig-window-panel-hdr-color",
+							"value": "_SigmatekDefaultColors:sig-warning-text-color",
+							"typeId": 9,
+							"propTypeId": 2,
+							"refId": "bf2e9467-b916-4d2d-af15-164f168954ee"
+						},
+						{
+							"name": "jsPanelIconClose",
+							"value": "Resources\\Images\\close-icon-black.svg",
+							"typeId": 15,
+							"propTypeId": 9,
+							"refId": "50e41fb7-0f87-4967-808b-f5af27da2ada"
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "SystemWindowContainerInfo",
+					"designTimeId": "fa544ed9-97b3-472e-ae8a-982b81fd35ca",
+					"componentId": "sig-window-container-system",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					}
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-window-panel-content-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "301a9762-9ed7-43dc-bdc0-49f3487dd20e"
+				},
+				{
+					"name": "--theme-sig-window-panel-modal-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-modal-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "2e0680d0-7509-478c-8d8b-acf08a36241f"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-window-panel-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-window-panel-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-content-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "_SigmatekDefaultColors:sig-title-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "33d1e7b3-2144-4b25-92fc-0ed3aedf49b3"
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-color",
+					"value": "_SigmatekDefaultColors:sig-title-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "879e8f41-2f36-48ba-9d75-d12eea90d2fd"
+				},
+				{
+					"name": "jsPanelIconClose",
+					"value": "Resources\\Images\\close-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "8c245c8e-5daf-4eb1-8c46-5b659be0233e"
+				},
+				{
+					"name": "--theme-sig-window-panel-icon-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "85bc7058-b7a5-4401-95d4-350bbe9a3962",
+			"componentId": "sig-window-container",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-window-panel-hdr-color",
+					"value": "_SigmatekDefaultColors:sig-title-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "879e8f41-2f36-48ba-9d75-d12eea90d2fd"
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "720px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-window-panel-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-content-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "301a9762-9ed7-43dc-bdc0-49f3487dd20e"
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "610px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-content-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "_SigmatekDefaultColors:sig-title-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "33d1e7b3-2144-4b25-92fc-0ed3aedf49b3"
+				},
+				{
+					"name": "--theme-sig-window-panel-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "jsPanelIconClose",
+					"value": "Resources\\Images\\close-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "8c245c8e-5daf-4eb1-8c46-5b659be0233e"
+				},
+				{
+					"name": "jsPanelIconMaximize",
+					"value": "Resources\\Images\\maximize-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "25334573-4c12-4643-8686-faea4dcf631a"
+				},
+				{
+					"name": "jsPanelIconMinimize",
+					"value": "Resources\\Images\\minimize-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "eec61266-4cc6-4fdd-a050-ce3509823a1c"
+				},
+				{
+					"name": "jsPanelIconNormalize",
+					"value": "Resources\\Images\\normalize-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "93d3ef78-cc4b-4fe7-8d89-c8425cfed0ee"
+				},
+				{
+					"name": "jsPanelIconSmallify",
+					"value": "Resources\\Images\\smallify-icon.svg",
+					"typeId": 15,
+					"propTypeId": 9,
+					"refId": "969bfbe6-7e09-47bb-b006-40f10b31ccc8"
+				},
+				{
+					"name": "--theme-sig-window-panel-icon-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-window-panel-modal-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-modal-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "2e0680d0-7509-478c-8d8b-acf08a36241f"
+				},
+				{
+					"name": "--theme-sig-window-panel-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "1bd87d6f-20a5-4b67-b2e0-473f3d6356db",
+			"componentId": "sig-composite-container",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "b26e6ab7-15aa-44b3-89d9-6eee1c5bf62f",
+			"componentId": "sig-control-button",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [
+				{
+					"type": "ComponentStyle",
+					"name": "FileManagerButtons",
+					"designTimeId": "cc73f6ea-387b-4a6d-8cdd-b054d901fa1f",
+					"componentId": "sig-control-button",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "50px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_start",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "cb599eb2-c08b-4ecc-8171-222bc0b93cda"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "_SigmatekDefaultColors:sig-button-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "08fb6cc9-f0c0-4fe3-8151-f65fa1e6edfb"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-color",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_active_start",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6c8e1561-a366-4284-a2f5-6bd09a7d33cb"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-color",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-border-color",
+					"value": "_SigmatekDefaultColors:sig-button-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "08fb6cc9-f0c0-4fe3-8151-f65fa1e6edfb"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-button-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "08fb6cc9-f0c0-4fe3-8151-f65fa1e6edfb"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "100px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-color-stop",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_active_stop",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "829f4dc2-6bca-42cf-8403-d86b54ca5d24"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_stop",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f86a1fba-cb49-49fc-bd93-1b3b1b1c8392"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "cf874ff4-fa80-4fb3-9ded-37c7a4e9f51f",
+			"componentId": "sig-control-datapoint-text",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-datapoint-text-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular22",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "1700dabf-7dad-42c1-8679-d29c1e4bac69"
+				},
+				{
+					"name": "--theme-sig-control-datapoint-text-color",
+					"value": "_SigmatekDefaultColors:sig-general-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "deb5fd92-9f39-47d5-8851-fd98a7b834bf"
+				},
+				{
+					"name": "--theme-sig-control-datapoint-text-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "bc7c4175-0d7e-4f1d-bdaa-6749bd22c3e8",
+			"componentId": "sig-control-image",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-image-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-image-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "1df7dd01-1b5f-4135-92d9-8c59c20ed92a",
+			"componentId": "sig-control-input",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular22",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "1700dabf-7dad-42c1-8679-d29c1e4bac69"
+				},
+				{
+					"name": "--theme-sig-control-input-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-input-color",
+					"value": "_SigmatekDefaultColors:sig-input-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "7392cdb4-0e68-4691-8561-00f6809ffa37"
+				},
+				{
+					"name": "label",
+					"publishName": "#label",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-control-input-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-input-border-style",
+					"value": "none",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-input-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-input-value-active-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-active-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "80809b3f-121a-4c0c-8da1-ebd2821fc69d"
+				},
+				{
+					"name": "--theme-sig-control-input-activ-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-input-background-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-input-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-input-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				},
+				{
+					"name": "--theme-sig-control-input-value-active-background-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-input-value-active-color",
+					"value": "_SigmatekDefaultColors:sig-input-active-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "84587e1c-29f3-40cd-b9a0-f7eaccd377b2"
+				},
+				{
+					"name": "--theme-sig-control-input-activ-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-input-pressed-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "5f6e9f77-0731-449a-b32f-f2f47ac7f201",
+			"componentId": "sig-control-led",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-led-background-color",
+					"value": "_SigmatekDefaultColors:sig-led-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "b4d8259a-14d9-49a6-a74c-6709d1021296"
+				},
+				{
+					"name": "--theme-sig-control-led-pressed-background-color",
+					"value": "_SigmatekDefaultColors:sig-led-background-color-active",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "7142a6cd-87e5-41bb-ba97-0bf9be94792f"
+				},
+				{
+					"name": "--theme-sig-control-led-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "1d29e6fc-d219-4088-8b06-ed029d53049f",
+			"componentId": "sig-control-mediacontainer",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-mediacontainer-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-mediacontainer-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "4393e003-f845-47f0-8259-1571c8bf1cd7",
+			"componentId": "sig-control-menu-input",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-menu-input-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-caretdown-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-caretdown-pressed-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-color",
+					"value": "_SigmatekDefaultColors:sig-input-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "7392cdb4-0e68-4691-8561-00f6809ffa37"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-pressed-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-pressed-color",
+					"value": "_SigmatekDefaultColors:sig-input-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "7392cdb4-0e68-4691-8561-00f6809ffa37"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-pressed-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-pressed-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-menu-input-pressed-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "824540df-5144-4dc0-b032-7e9b0b12af5f",
+			"componentId": "sig-control-menu",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "selectOnDoubleTap",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
+					"name": "--theme-sig-control-menu-li-color",
+					"value": "_SigmatekDefaultColors:sig-list-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "5e4cb3ed-2c20-4c81-995c-6a185feb6e5e"
+				},
+				{
+					"name": "--theme-sig-control-menu-li-selected-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "229e3510-02b4-44ec-b2a4-290a40857a48"
+				},
+				{
+					"name": "--theme-sig-control-submenu-li-selected-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "229e3510-02b4-44ec-b2a4-290a40857a48"
+				},
+				{
+					"name": "--theme-sig-control-menu-li-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d2202830-f67f-4710-a10c-52d33abbfa67"
+				},
+				{
+					"name": "--theme-sig-control-menu-li-selected-background-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ca7805db-7a16-44f3-a04a-1c4a2dc60bc9"
+				},
+				{
+					"name": "--theme-sig-control-submenu-li-selected-background-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ca7805db-7a16-44f3-a04a-1c4a2dc60bc9"
+				},
+				{
+					"name": "--theme-sig-control-menu-ul-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "301a9762-9ed7-43dc-bdc0-49f3487dd20e"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "250px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-menu-min-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-menu-li-line-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-menu-ul-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-window-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "bcf109e4-25a7-4090-9532-93ebd072c0af"
+				},
+				{
+					"name": "--theme-sig-control-menu-li-inactive-background-color",
+					"value": "_SigmatekDefaultColors:sig-list-inactive-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a8ccf1af-f29a-44e4-87e2-b61c73792c3a"
+				},
+				{
+					"name": "--theme-sig-control-menu-li-inactive-color",
+					"value": "_SigmatekDefaultColors:sig-list-inactive-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "2e16a1da-5d41-4e51-9755-1d0da3d94e34"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "263da0dd-1ecd-4f49-9d4f-4cbe8d8b4183",
+			"componentId": "sig-control-output",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular22",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "1700dabf-7dad-42c1-8679-d29c1e4bac69"
+				},
+				{
+					"name": "--theme-sig-control-output-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-output-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-output-color",
+					"value": "_SigmatekDefaultColors:sig-output-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d02dc0ef-baf5-46f5-aa10-eb454e5947b8"
+				},
+				{
+					"name": "--theme-sig-control-output-border-color",
+					"value": "_SigmatekDefaultColors:sig-output-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "1b2e0783-a602-4ec0-99bd-42e2788e8944"
+				},
+				{
+					"name": "--theme-sig-control-output-unit-color",
+					"value": "_SigmatekDefaultColors:sig-output-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d02dc0ef-baf5-46f5-aa10-eb454e5947b8"
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "label",
+					"publishName": "#label",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color",
+					"value": "_SigmatekDefaultColors:sig-output-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a3ea07b8-28da-42dd-b2fd-c220595c8db7"
+				},
+				{
+					"name": "--theme-sig-control-output-background-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-output-border-color-stop",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-output-shadow-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "5ed8071c-0871-4408-a1cc-7159b31919f6",
+			"componentId": "sig-control-rectangle",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-rectangle-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "_SigmatekDefaultColors:sig-drawing-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "76c3fea2-9b84-4d2c-8595-17e2eb54e6fa"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "f95e1b2c-9aa6-4efc-9f72-07d9d53e587a",
+			"componentId": "sig-control-scrollbar",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isDefaultStyleOnly": true,
+			"styleClassPrefix": "scrollbar-",
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-scrollbar-track-active-border-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-track-border-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-button-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-button-active-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-active-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-thumb-selected",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "105a9232-b776-4603-aec6-2f16e35f172b"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "bb4449e7-28c1-4eea-807b-e66ad6a0ba0a"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-track-active-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-track-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "398639f4-9f03-413e-9ea9-64bf67d248df"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-track-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-track-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "398639f4-9f03-413e-9ea9-64bf67d248df"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-button-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-track-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "398639f4-9f03-413e-9ea9-64bf67d248df"
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "170px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "200px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-width",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-button-height",
+					"value": "45px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-left-width",
+					"value": "12px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-right-width",
+					"value": "12px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-track-border-left-width",
+					"value": "12px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-track-border-right-width",
+					"value": "12px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-active-border-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-bottom-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-top-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-thumb-border-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-button-active-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-track-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "398639f4-9f03-413e-9ea9-64bf67d248df"
+				},
+				{
+					"name": "--theme-sig-control-scrollbar-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "22d6c911-c1bb-41b9-9b30-e297688bde2f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "9580f397-2535-4345-a275-65761df3c95f",
+			"componentId": "sig-control-splash-screen",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isDefaultStyleOnly": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-splash-screen-background-color",
+					"value": "_SigmatekDefaultColors:sig-splash-background",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "76402181-db56-45d4-9d68-22609563a02d"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-spinner-color",
+					"value": "_SigmatekDefaultColors:sig-splash-stroke",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "5a92128e-cce4-455b-97ea-a25387a6c679"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-reload-button-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-reload-button-color",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "forceanimation",
+					"value": true,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-msg-warning-background-color",
+					"value": "_SigmatekDefaultColors:sig-warning",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8f7214c2-71d5-48be-99a8-add130a23357"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-msg-error-background-color",
+					"value": "_SigmatekDefaultColors:sig-alarm-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ba11eaf7-7ad6-4c9a-8fc6-e48fc7e202f7"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-msg-error-color",
+					"value": "_SigmatekDefaultColors:sig-list-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "5e4cb3ed-2c20-4c81-995c-6a185feb6e5e"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-message-font-size",
+					"value": "16px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-reload-button-size",
+					"value": "200px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-font-size",
+					"value": "18px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-reload-button-background-color",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_start",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "cb599eb2-c08b-4ecc-8171-222bc0b93cda"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-reload-button-border-color",
+					"value": "_SigmatekDefaultColors:sig-button-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "08fb6cc9-f0c0-4fe3-8151-f65fa1e6edfb"
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-msg-info-color",
+					"value": "_SigmatekDefaultColors:sig-list-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "5e4cb3ed-2c20-4c81-995c-6a185feb6e5e"
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-splash-screen-msg-warning-color",
+					"value": "_SigmatekDefaultColors:sig-warning-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "bf2e9467-b916-4d2d-af15-164f168954ee"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "e1fc0c54-4edc-43c2-bed7-2df5e666ae47",
+			"componentId": "sig-control-text",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-color",
+					"value": "_SigmatekDefaultColors:sig-general-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "deb5fd92-9f39-47d5-8851-fd98a7b834bf"
+				},
+				{
+					"name": "--theme-sig-control-text-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-control-text-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "6fcf9217-6ccb-453c-abc1-4aa70adfcfd1",
+			"componentId": "sig-control-title",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-title-color",
+					"value": "_SigmatekDefaultColors:sig-title-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "879e8f41-2f36-48ba-9d75-d12eea90d2fd"
+				},
+				{
+					"name": "elementMainFont",
+					"value": "RobotoRegular18",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "8a9b0e98-5f96-4fbf-a279-864ecbdaae01"
+				},
+				{
+					"name": "--theme-sig-control-title-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-title-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "30f1d1e2-3113-49e3-972d-10bbefc1c2cb",
+			"componentId": "sig-control-video",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-control-video-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-control-video-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "35681d7e-91b4-48b5-beca-3eca7b1dac16",
+			"componentId": "sig-keyboard",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [
+				{
+					"type": "ComponentStyle",
+					"name": "AlphaKeyboard",
+					"designTimeId": "b4bbbffc-963b-4e6f-8522-350831c8aa27",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "--theme-sig-element-width",
+							"value": "900px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "380px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "NumericKeyboard",
+					"designTimeId": "6dd82a4f-0e69-4b45-bae1-c1e813ef80b5",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "keyboardtype",
+							"value": "numeric",
+							"typeId": 0,
+							"propTypeId": 1
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "380px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-height",
+							"value": "62px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-width",
+							"value": "65px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-info-font-size",
+							"value": "20px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "DateKeyboard",
+					"designTimeId": "b855a110-b1f9-419e-9133-fff18bf25d06",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "keyboardtype",
+							"value": "date",
+							"typeId": 0,
+							"propTypeId": 1
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "340px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-height",
+							"value": "62px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-width",
+							"value": "65px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-info-font-size",
+							"value": "20px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "HexKeyboard",
+					"designTimeId": "07ee526a-1723-40fc-af74-d8bca6758c94",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "keyboardtype",
+							"value": "hex",
+							"typeId": 0,
+							"propTypeId": 1
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "370px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "340px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-height",
+							"value": "62px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-width",
+							"value": "65px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-info-font-size",
+							"value": "20px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "Ipv4Keyboard",
+					"designTimeId": "8d2b87c9-cab0-470d-95a5-f58bd2704e41",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "keyboardtype",
+							"value": "ipv4",
+							"typeId": 0,
+							"propTypeId": 1
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "340px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-height",
+							"value": "62px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-width",
+							"value": "65px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-info-font-size",
+							"value": "20px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "ComponentStyle",
+					"name": "TimeKeyboard",
+					"designTimeId": "103d5d95-6e5e-41c2-87e4-a08a5357fdfa",
+					"componentId": "sig-keyboard",
+					"children": [],
+					"revision": {
+						"type": "Revision"
+					},
+					"properties": [
+						{
+							"name": "keyboardtype",
+							"value": "date",
+							"typeId": 0,
+							"propTypeId": 1
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "300px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "340px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-height",
+							"value": "62px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-key-min-width",
+							"value": "65px",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-keyboard-info-font-size",
+							"value": "20px",
+							"typeId": 0,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			},
+			"properties": [
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-border-left-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-border-right-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-border-right-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-border-left-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-border-right-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-border-left-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-border-right-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-border-left-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-border-right-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-border-left-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-border-top-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9ca6e302-eabd-413d-acaf-aa95fb3c2339"
+				},
+				{
+					"name": "--theme-sig-keyboard-background-color",
+					"value": "_SigmatekDefaultColors:sig-window-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "301a9762-9ed7-43dc-bdc0-49f3487dd20e"
+				},
+				{
+					"name": "--theme-sig-keyboard-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "3aa375ff-ff25-46ef-a3ed-2fe4a319e46c"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-inactive-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9f4b4eea-215a-445f-b712-6f3069f05396"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-inactive-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "0f4a65c7-7b4d-4570-8462-37bf21403e9e"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-inactive-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f448d779-70ac-4ed3-a562-13a8f67f5178"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "9f4b4eea-215a-445f-b712-6f3069f05396"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "0f4a65c7-7b4d-4570-8462-37bf21403e9e"
+				},
+				{
+					"name": "--theme-sig-keyboard-info-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "0f4a65c7-7b4d-4570-8462-37bf21403e9e"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "45e1e536-3948-4d61-8e21-3438a846b70d"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-pressed-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "79f8d5fd-0590-40e6-b8e9-9113cab0bb2f"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-pressed-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-accept-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-accept-key-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "510e60a9-b4df-4758-b007-be8c7827f2aa"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-cancel-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-cancel-background-",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f2edff12-9419-48d9-9e53-78fa97e2fe20"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-accept-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-cancel-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-margin-right",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-margin-bottom",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-min-width",
+					"value": "55px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-line-height",
+					"value": "55px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-font-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-info-font-size",
+					"value": "16px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-input-min-height",
+					"value": "45px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-input-font-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-input-unit-font-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "920px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "45e1e536-3948-4d61-8e21-3438a846b70d"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-invalid-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-invalid-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "79de2cc9-d2d7-46d3-993b-fb4fa7c12286"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-invalid-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-input-field-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "0f4a65c7-7b4d-4570-8462-37bf21403e9e"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-off-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-pressed-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "79f8d5fd-0590-40e6-b8e9-9113cab0bb2f"
+				},
+				{
+					"name": "--theme-sig-keyboard-border-radius",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "keyshadowactive",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
+					"name": "keypressedshadowactive",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
+					"name": "--theme-sig-keyboard-info-tag-color",
+					"value": "_SigmatekDefaultColors:sig-tab-inactive-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a47b2348-bcbc-49a9-90b2-312ad1e6028b"
+				},
+				{
+					"name": "--theme-sig-keyboard-info-tag-span-color",
+					"value": "_SigmatekDefaultColors:sig-output-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "d02dc0ef-baf5-46f5-aa10-eb454e5947b8"
+				},
+				{
+					"name": "--theme-sig-keyboard-info-tag-background-color",
+					"value": "_SigmatekDefaultColors:sig-model-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "967aa10b-0800-4b2c-afe0-8294ba665fed"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-border-bottom-color",
+					"value": "_SigmatekDefaultColors:sig-general-border-shadow-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "f9696ed5-30b3-4bbb-bc64-c2593641613a"
+				},
+				{
+					"name": "--theme-sig-keyboard-input-invalid-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-invalid-background",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "76d727b5-1d89-4fe5-a1d8-e2c51a6c1946"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-background-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ca7805db-7a16-44f3-a04a-1c4a2dc60bc9"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-special-selected-color",
+					"value": "_SigmatekDefaultColors:sig-list-selected-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "229e3510-02b4-44ec-b2a4-290a40857a48"
+				},
+				{
+					"name": "--theme-sig-keyboard-disabled-overlay-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-disabled-background",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "e5e486f0-99ba-4c48-ae4a-d7028c352b64"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-background-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "45e1e536-3948-4d61-8e21-3438a846b70d"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-border-color",
+					"value": "_SigmatekDefaultColors:sig-button-border-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "08fb6cc9-f0c0-4fe3-8151-f65fa1e6edfb"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-scrollbar-background-color",
+					"value": "_SigmatekDefaultColors:sig-scrollbar-thumb-selected",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "105a9232-b776-4603-aec6-2f16e35f172b"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-color",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-color-hover",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-background-color-hover",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_start",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "cb599eb2-c08b-4ecc-8171-222bc0b93cda"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-border-color-hover",
+					"value": "_SigmatekDefaultColors:sig-button-background-color_start",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "cb599eb2-c08b-4ecc-8171-222bc0b93cda"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-color-selected",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-background-color-selected",
+					"value": "_SigmatekDefaultColors:sig-list-selected-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ca7805db-7a16-44f3-a04a-1c4a2dc60bc9"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-border-color-selected",
+					"value": "_SigmatekDefaultColors:sig-list-selected-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "ca7805db-7a16-44f3-a04a-1c4a2dc60bc9"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-color",
+					"value": "_SigmatekDefaultColors:sig-general-placeholder-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "338173bf-2813-4e32-b4f4-6da55eee5d0a"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-background-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-border-color",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-color-hover",
+					"value": "_SigmatekDefaultColors:sig-button-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "c0232b0f-6b92-490c-9510-7354e710fbf0"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-background-color-hover",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-border-color-hover",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-color-disabled",
+					"value": "_SigmatekDefaultColors:sig-keyboard-suggestions-navigation-disabled",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "33fd37e9-0cbb-413b-8f6c-b249dfa89759"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-background-color-disabled",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-border-color-disabled",
+					"value": "_SigmatekDefaultColors:sig-general-transparent",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "6beb88c0-331d-4046-96de-d7da46c98d0f"
+				},
+				{
+					"name": "--theme-sig-keyboard-grid-column-gap",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-grid-row-gap",
+					"value": "3px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-border-style",
+					"value": "none",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-border-radius",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-button-font-size",
+					"value": "25px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "390px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-margin-vertical",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-padding-horizontal",
+					"value": "16px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-padding-vertical",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-margin-horizontal",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-sb-suggestion-border-radius",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-keyboard-key-accept-phrase-active-color",
+					"value": "_SigmatekDefaultColors:sig-keyboard-key-text-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "8ca93c1e-d188-4fb4-8911-3c5748111edd"
+				},
+				{
+					"name": "--theme-sig-keyboard-key-accept-phrase-active-background-color",
+					"value": "_SigmatekDefaultColors:sig-input-active-background-color",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "80809b3f-121a-4c0c-8da1-ebd2821fc69d"
+				}
+			]
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "ef8ef628-de28-405a-9112-220bc1fc90c8",
+			"componentId": "sig-control-alarmlist2",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "09a6e9a2-fd78-40d2-9839-6f95eddfbb13",
+			"componentId": "sig-control-bar-straight",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "ec8ca306-422b-4389-b2fe-57d61a8d943d",
+			"componentId": "sig-control-ellipse",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "b84e1052-744b-4672-a648-43d0aa5767fa",
+			"componentId": "sig-control-enum-list",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "aff73e67-1ef3-4312-b098-c92b0affe320",
+			"componentId": "sig-control-enum",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "1f06b715-38e4-4b22-b4b3-4430ce07980e",
+			"componentId": "sig-control-line-simple",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "052f004d-c29d-4c77-80e3-28be9d655abe",
+			"componentId": "sig-control-listview",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "a1ea949c-d5d3-4a15-a3f6-4afd0c2532dc",
+			"componentId": "sig-control-numeric-input",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "9da1760e-2519-4cc2-859f-d8d8f2d7c2ec",
+			"componentId": "sig-control-slider",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "11bd232d-a24b-4d31-928b-4cc926c7789c",
+			"componentId": "sig-control-svg-container",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "ComponentStyle",
+			"designTimeId": "1b547a58-d429-4030-9ba7-73e6848deff6",
+			"componentId": "sig-control-titlebar",
+			"showInDefaultStyling": true,
+			"defaultStyleOnCreate": true,
+			"isBaseStyle": true,
+			"children": [],
+			"revision": {
+				"type": "Revision"
+			}
+		}
+	]
+}

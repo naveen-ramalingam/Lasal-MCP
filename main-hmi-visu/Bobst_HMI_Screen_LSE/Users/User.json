@@ -1,0 +1,55 @@
+{
+	"type": "users",
+	"version": "0.0.96",
+	"users": [
+		{
+			"type": "User",
+			"designTimeId": "40536967-7375-7065-7275-736572757365",
+			"name": "superuser",
+			"password": "sigmatek",
+			"firstName": "Super",
+			"lastName": "User",
+			"description": "It can do everything",
+			"accessNumber": 65535,
+			"roles": [
+				{
+					"type": "UserEntry",
+					"role": {
+						"value": "superuser",
+						"typeId": 46,
+						"propTypeId": 1,
+						"refId": "40536967-7375-7065-7275-736572726f6c"
+					},
+					"designTimeId": "254c6291-1ef5-4b2b-9a5f-c6ea2fb484ab"
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "User",
+			"designTimeId": "40536967-4465-6661-756c-745573657200",
+			"name": "@SigClient",
+			"firstName": "Default",
+			"lastName": "User",
+			"description": "Default user which is used when no user is logged in",
+			"accessNumber": 65535,
+			"roles": [
+				{
+					"type": "UserEntry",
+					"role": {
+						"value": "@SigDefaultClientRole",
+						"typeId": 46,
+						"propTypeId": 1,
+						"refId": "40536967-4465-6661-756c-74526f6c6500"
+					},
+					"designTimeId": "52297580-6a50-40b1-b9e6-abba611cbdd0"
+				}
+			],
+			"revision": {
+				"type": "Revision"
+			}
+		}
+	]
+}

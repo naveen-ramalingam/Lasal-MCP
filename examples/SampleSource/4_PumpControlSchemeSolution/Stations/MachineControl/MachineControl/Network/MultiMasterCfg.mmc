@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<MultiMasterMgr>
+	<RemoteStations>
+		<RemoteStation
+			Name     = "Terminal"
+			PrjRev   = "0.0"
+			Project  = "HMI"
+			IP       = "192.168.111.1"
+			Filename = ".\Terminal\HMI\HMI.lcp">
+			<RemoteServers>
+				<RemoteServer Name="SyncTimeHMI.sSyncDate" GUID_Svr="{3D757C3C-6FDA-4992-BF44-5E487B23E66E}" Class="_SyncTimeHMI" DataType="HDINT" GUID_Obj="{C34E219B-F9BC-4722-B2DC-94BF36612973}" Type="Object Channel" WriteProtected="true" Comment="server for sync date"/>
+				<RemoteServer Name="SyncTimeHMI.sSyncTime" GUID_Svr="{1369DF3B-1062-4103-A355-B85C08AAC6B1}" DataType="HDINT" GUID_Obj="{C34E219B-F9BC-4722-B2DC-94BF36612973}" WriteProtected="true" Comment="server for sync time"/>
+			</RemoteServers>
+		</RemoteStation>
+	</RemoteStations>
+</MultiMasterMgr>

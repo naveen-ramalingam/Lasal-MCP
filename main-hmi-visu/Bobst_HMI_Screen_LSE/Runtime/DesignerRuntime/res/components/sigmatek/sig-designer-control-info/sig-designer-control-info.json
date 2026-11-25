@@ -1,0 +1,45 @@
+{
+    "name": "sig-designer-control-info",
+    "shortName": {
+        "en": "Designer Control Info",
+        "de": "Designer Control Info"
+    },
+    "controlType": "Designer",
+    "version": "01.00.001",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "This component is used internally by the designer and shows information about the selected Master control.",
+        "de": "Diese Komponente wird intern vom Designer verwendet und zeigt Informationen über das ausgewählte Master-Control an."
+    },
+    "main": "sig-designer-control-info.js",
+    "moduleType": "es6",
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-designer-control-info.html",
+    "private": true,
+    "dependencies": {
+        "sig-element": "components/sig-element#^1.2.0",
+        "polymer": "Polymer/polymer#3.3.0"
+    },
+    "baseComponent": "sig-element",
+    "toolbox": false,
+    "styleEditor": false,
+    "slotted": false,
+    "usableInShadowDom": false,
+    "moduleImport": {
+        "importType": "static",
+        "area": [
+            "designer"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-designer-control-info-css.js"
+        }
+    ],
+    "properties": []
+}

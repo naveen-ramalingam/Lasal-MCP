@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Core\LASAL.HMI.Converter.Core.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Models\LASAL.HMI.Converter.Models.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Infrastructure\LASAL.HMI.Converter.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.ComBridge\LASAL.HMI.Converter.ComBridge.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Source.LASALScreen\LASAL.HMI.Converter.Source.LASALScreen.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Class2\LASAL.HMI.Converter.Class2.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Assets\LASAL.HMI.Converter.Assets.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Mapping\LASAL.HMI.Converter.Mapping.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Logic\LASAL.HMI.Converter.Logic.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.PythonBridge\LASAL.HMI.Converter.PythonBridge.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Target.VISUDesigner\LASAL.HMI.Converter.Target.VISUDesigner.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Validation\LASAL.HMI.Converter.Validation.csproj" />
+    <ProjectReference Include="..\..\src\LASAL.HMI.Converter.Reporting\LASAL.HMI.Converter.Reporting.csproj" />
+  </ItemGroup>
+
+</Project>

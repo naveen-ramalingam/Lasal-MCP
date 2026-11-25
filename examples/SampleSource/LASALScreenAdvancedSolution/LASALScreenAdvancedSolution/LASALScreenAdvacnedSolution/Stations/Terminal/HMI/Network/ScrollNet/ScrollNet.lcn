@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="ScrollNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "MyHeader1"
+			GUID       = "{92FA6CFD-2E6A-4C48-BA73-BA03E3FDCA66}"
+			Class      = "MyHeader"
+			Position   = "(210,180)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ActPos"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="LineWidth" Value="500"/>
+				<Client Name="Lse"/>
+				<Client Name="VerticalLevel"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{C0F09667-2DB8-46DC-A7BA-A08ADD25437C}" Class="_ScrollArea2">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness"/>
+								<Client Name="LineWidth" Value="500"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{320FDD86-597C-43AD-A600-2F311A5C5FC2}" Class="_ScrollArea">
+											<Channels>
+												<Server Name="ActPos"/>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="ExtendedScrollBar" Value="0"/>
+												<Client Name="LineHighness"/>
+												<Client Name="LineWidth" Value="500"/>
+												<Client Name="Lse"/>
+												<Client Name="VerticalLevel"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+															<Channels>
+																<Server Name="Refresh"/>
+																<Server Name="Server0"/>
+																<Client Name="Graphic"/>
+																<Client Name="Lse"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyScrollList1"
+			GUID       = "{8E460C6B-3CA1-439A-B0BD-0967FC5FBA3C}"
+			Class      = "MyScrollList"
+			Position   = "(1140,180)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ActPos"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="LineWidth" Value="500"/>
+				<Client Name="Lse"/>
+				<Client Name="SigCLib"/>
+				<Client Name="VerticalLevel" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{68403AFC-4282-4058-A38F-B3CE688B4BBC}" Class="_ScrollArea2">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness"/>
+								<Client Name="LineWidth" Value="500"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{320FDD86-597C-43AD-A600-2F311A5C5FC2}" Class="_ScrollArea">
+											<Channels>
+												<Server Name="ActPos"/>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="ExtendedScrollBar" Value="0"/>
+												<Client Name="LineHighness"/>
+												<Client Name="LineWidth" Value="500"/>
+												<Client Name="Lse"/>
+												<Client Name="VerticalLevel" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+															<Channels>
+																<Server Name="Refresh"/>
+																<Server Name="Server0"/>
+																<Client Name="Graphic"/>
+																<Client Name="Lse"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="MyScrollList1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="MyHeader1.Lse" Destination="Lse.Lse"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

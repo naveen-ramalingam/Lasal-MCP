@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="MyIONet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "CirleMyIO1"
+			GUID       = "{C9272C39-67E1-408F-A3A3-D9D57AB5C7A7}"
+			Class      = "CirleMyIO"
+			Position   = "(1230,450)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="CircleAngle" Value="3600"/>
+				<Server Name="CircleRadius" Value="80"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Server Name="XPos" Value="60"/>
+				<Server Name="YPos" Value="60"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{140E6348-909F-45EF-958D-3F9227895717}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "InputMyIO1"
+			GUID       = "{34D26550-78A9-43F5-8559-BFF97F15B676}"
+			Class      = "InputMyIO"
+			Position   = "(300,810)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="CoordX"/>
+				<Server Name="CoordY"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{001CDF66-47F3-4883-B240-FD13377B7555}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyColorBar1"
+			GUID       = "{EC0D5ACF-703E-49F5-9847-5B30A900770C}"
+			Class      = "MyColorBar"
+			Position   = "(1230,150)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="IntError"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{580D545C-CBF4-4A1E-95E2-07D5410112EA}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyFirstMyIO1"
+			GUID       = "{A3806FB0-0D14-4A97-94CA-B12E2924E025}"
+			Class      = "MyFirstMyIO"
+			Position   = "(300,150)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Number"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{9FAF0510-CA97-4399-BDAA-C1C3862B9278}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "UseImageScheme1"
+			GUID       = "{88345DF1-9EC9-4D21-AD5A-358688EF2525}"
+			Class      = "UseImageScheme"
+			Position   = "(300,450)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="DelayTime" Value="500"/>
+				<Server Name="IntError"/>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="_Grafix"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{680ABC58-F8D7-4308-9E20-EA107F38DBFA}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="MyFirstMyIO1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="UseImageScheme1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="InputMyIO1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="MyColorBar1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="CirleMyIO1.Lse" Destination="Lse.Lse"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

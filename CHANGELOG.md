@@ -1,71 +1,22 @@
-# Changelog
+# Changelog — LASAL HMI Converter
 
-All notable changes to this project are documented here. The format follows
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
-[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [0.4.0] - 2026-11-11
+## [1.0.0] — 2026-11-16
 
 ### Added
-
-- Action-catalog preview with `lasal_find_action` and `lasal_execute_action`.
-- Five domain entrypoints: `lasal-class2-mcp`, `lasal-visu-mcp`,
-  `lasal-screen-mcp`, `lasal-lars-mcp` and `lasal-solution-mcp`.
-- 90 catalog actions across CLASS 2, VISUDesigner, LASAL SCREEN, LARS,
-  deploy/MachineManager and shared project operations.
-- Request-scoped project context, `--project` pinning, a cross-process project
-  write lock, file stamps for class-source writes, destructive/deploy
-  confirmation and an audit log.
-- LARS workspace parity actions: `get`, `create`, `clone`, `validate`, `export`
-  and `import`.
-- LARS instance actions: `list`, `status`, `restart` and `logs`.
-- Lossless LARS config export/import with validation, `.bak` backups and a
-  confirmation gate for full replacement.
-- LARS compatibility reporting: detected build version, configured vs effective
-  ports, unmodeled config elements and per-build notes
-  (`docs/LARS_COMPATIBILITY.md`).
-- Scenario support for named `saveAs` reads, DataAnalyzer `trace_start` /
-  `trace_stop`, LARS window screenshots, JUnit XML output and per-run artifacts.
-- `lasal-mcp-init` project scanner / MCP config generator.
-- Generated action reference (`docs/ACTIONS.md`), catalog preview guide
-  (`docs/CATALOG_PREVIEW.md`) and implementation plan
-  (`docs/IMPLEMENTATION_PLAN.md`).
-
-### Changed
-
-- LARS workspace updates now share validation for ports, data roots, drive
-  maps, memory sizes and screen paths.
-- `lars.doctor` reports both configured and effective online ports, detects
-  unknown config fields and includes build compatibility information.
-- LARS config writes continue to preserve unknown XML elements and attributes.
-- Code formatting was normalized across the repository.
-
-### Fixed
-
-- LARS station targeting never trusts a recorded online port from a stopped
-  instance.
-- LARS shutdown is graceful where possible, preserving retained variables in the
-  SRAM image.
-- LARS instance records merge instead of replacing each other.
-- HMI runtime starts from another project are refused instead of killing the
-  existing runtime.
-
-### Known limitations
-
-- The lab suite requires a Windows workstation with the LASAL suite installed
-  and was not run as part of this release.
-- Multi-instance HMI DataService support is not implemented.
-- Preflight ST linter, solution knowledge graph and fast telemetry are not
-  implemented yet.
-- The original `lasal-mcp` entrypoint still exposes the 23 static tools; the
-  action catalog is an opt-in preview.
-
-## Earlier releases
-
-- [v0.3.2](https://github.com/Svel26/Lasal-MCP/releases/tag/v0.3.2)
-- [v0.3.1](https://github.com/Svel26/Lasal-MCP/releases/tag/v0.3.1)
-- [v0.3.0](https://github.com/Svel26/Lasal-MCP/releases/tag/v0.3.0)
-- [v0.2.0](https://github.com/Svel26/Lasal-MCP/releases/tag/v0.2.0)
-- [v0.1.0](https://github.com/Svel26/Lasal-MCP/releases/tag/v0.1.0)
-
-[0.4.0]: https://github.com/Svel26/Lasal-MCP/compare/v0.3.2...v0.4.0
+- **Complete Solution Architecture (`LASAL.HMI.Converter.sln`)**:
+  - 13 core library & application projects (`Models`, `Infrastructure`, `ComBridge`, `Source.LASALScreen`, `Class2`, `Assets`, `Mapping`, `Logic`, `PythonBridge`, `Target.VISUDesigner`, `Validation`, `Reporting`, `Core`, `App`).
+  - 3 CLI diagnostic and inspection tools (`Diagnostic`, `ManualIndexer`, `ProjectInspector`).
+  - 6 automated xUnit test suites (`UnitTests`, `MappingTests`, `ComBridgeTests`, `VisuDesignerTests`, `IntegrationTests`, `RegressionTests`).
+- **Breakthrough Headless LASAL SCREEN Extraction (`LASAL.HMI.Converter.ComBridge` & `Source.LASALScreen`)**:
+  - Unlocked headless `IProject2.ExportToXML` in LASAL SCREEN `01.01.197` by invoking `ExportLanguagesToXML()`, `ExportTextListsToXML()`, and `AddContainerInfo(true)` prior to `ExportToXML(path, true)`.
+  - Added automatic short-path staging (`MAX_PATH` protection) and Win32 `#32770` modal dialog watchdog for `LSE_Modeless.exe`.
+  - Implemented full `Runtime\*.MPC` binary parser (`LSE.MPC`, `GS0000.MPC`, `LC*.MPC`, `LW*.MPC`, `LS0000.MPC`..`LS0020.MPC`) verified against the SIGMATEK C++ runtime kernel (`T_file.cpp`, `T_picsub.cpp`, `T_init.cpp`, `T_types.h`) plus `.lsn`/`.lwn`/`.lse` inspection.
+- **Hybrid VISUDesigner Project Generator (`LASAL.HMI.Converter.PythonBridge` & `Target.VISUDesigner`)**:
+  - Combines official `VISUDesigner.exe --script` (`sigmatek.lasal.lvd` Python 3.12 API) with direct tab-indented UTF-8 JSON database authoring for `Dashboards`, `GlobalDashboards`, `Window`, `ControlTemplate`, `View/Default.json`, `Datapoints`, `Stations`, `Localization`, `Textlists`, `Schemes`, `FontStyles`, `Units`, `Alarms`, `Menu`, `Functionblocks`, `CodeModules`, and `ColorPalettes`, followed by `lvd` index synchronization and `PublishProject` (`Publish\webroot`).
+- **Asset, Logic, Validation & Reporting Engines**:
+  - Automatic BMP transparent key RGB (`#FF00FF` or custom key) to 32-bit RGBA PNG alpha conversion via SixLabors.ImageSharp.
+  - LSE `_INTER_NEU` FunctionBlock and button/screen event translator to VISUDesigner FunctionBlocks and JavaScript CodeModules.
+  - Visual layout and structural comparison validator using OpenCVSharp4 and ImageSharp.
+  - 17-section Conversion Report generator supporting HTML, JSON, CSV, and Excel (`.xlsx`).
+- **Windows Desktop Engineering UI (`LASAL.HMI.Converter.App`)**:
+  - .NET 9 WPF MVVM desktop application featuring dark/light industrial theme, 11 navigation views, and a 6-step New Conversion wizard.

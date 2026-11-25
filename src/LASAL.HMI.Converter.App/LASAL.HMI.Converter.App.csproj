@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <AssemblyName>LASAL.HMI.Converter</AssemblyName>
+    <RootNamespace>LASAL.HMI.Converter.App</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LASAL.HMI.Converter.Core\LASAL.HMI.Converter.Core.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Models\LASAL.HMI.Converter.Models.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Infrastructure\LASAL.HMI.Converter.Infrastructure.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Source.LASALScreen\LASAL.HMI.Converter.Source.LASALScreen.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Mapping\LASAL.HMI.Converter.Mapping.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Validation\LASAL.HMI.Converter.Validation.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Reporting\LASAL.HMI.Converter.Reporting.csproj" />
+  </ItemGroup>
+
+</Project>

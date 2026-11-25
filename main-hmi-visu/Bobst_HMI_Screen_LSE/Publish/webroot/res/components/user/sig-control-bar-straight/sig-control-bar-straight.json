@@ -1,0 +1,1013 @@
+{
+    "name": "sig-control-bar-straight",
+    "shortName": {
+        "en": "Bar Straight",
+        "de": "Bar Straight"
+    },
+    "controlType": {
+        "en": "Bar",
+        "de": "Bar"
+    },
+    "version": "04.00.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "A control where a value is displayed via a bar",
+        "de": "Eine Komponente die einen Wert auf einem Balken darstellt"
+    },
+    "main": [
+        "sig-control-bar-straight.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-bar-straight.html",
+    "private": true,
+    "baseComponent": "sig-element-light",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element-light#^1.1.1",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-bar-straight-css.js"
+        }
+    ],
+    "defaultDimensions": {
+        "width": "180px",
+        "height": "25px"
+    },
+    "toolbox": true,
+    "slotted": false,
+    "styleClassEditor": true,
+    "usableInShadowDom": true,
+    "moduleImport": {
+        "importType": "dynamic",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "placementTemplates": [
+        {
+            "default": true,
+            "name": "place-datapoint-default",
+            "shortName": {
+                "en": "Bar Straight",
+                "de": "Bar Straight"
+            },
+            "typeId": "datapoint",
+            "value": []
+        }
+    ],
+    "properties": [
+        /*****************************************************************************************************
+        // Hide properties from the base
+        *****************************************************************************************************/
+        {
+            "valueSourceTypes": [
+                "constNumber"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-element-dragged-opacity",
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*****************************************************************************************************
+        // Font
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Font style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "lockStyleCopy": false,
+            "name": "elementMainFont",
+            "shortName": {
+                "en": "Font style",
+                "de": "Font style"
+            },
+            "description": {
+                "en": "The font style of the component.",
+                "de": "The font style of the component."
+            },
+            "group": {
+                "en": "Font",
+                "de": "Font"
+            },
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*****************************************************************************************************
+        // Data
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "datapoint",
+                "datapointScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "number",
+            "name": "value",
+            "sortIndex": 150000,
+            "default": "",
+            "shortName": {
+                "en": "Value",
+                "de": "Value"
+            },
+            "description": {
+                "en": "The value of the component.",
+                "de": "Der Wert der Komponente."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                0,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Min. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "dataType": "number",
+            "propertyType": "variable",
+            "name": "minvalue",
+            "sortIndex": 150100,
+            "default": 0,
+            "shortName": {
+                "en": "Min. value",
+                "de": "Min. value"
+            },
+            "description": {
+                "en": "The minimum value of the component.",
+                "de": "Der Minimalwert der Komponente."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                0,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Max. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "dataType": "number",
+            "propertyType": "variable",
+            "name": "maxvalue",
+            "sortIndex": 150200,
+            "default": 100,
+            "shortName": {
+                "en": "Max. value",
+                "de": "Max. value"
+            },
+            "description": {
+                "en": "The maximum value of the component.",
+                "de": "Der Maximalwert der Komponente."
+            },
+            "group": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "userLevel": [
+                0,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                0,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Range
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Range lower limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "dataType": "number",
+            "propertyType": "variable",
+            "name": "mincolorlimit",
+            "sortIndex": 500000,
+            "default": "",
+            "shortName": {
+                "en": "Lower limit",
+                "de": "Lower limit"
+            },
+            "description": {
+                "en": "The lower limit to display the bar in differently colored parts depending on the value.",
+                "de": "Die Grenze des unteren Bereichs um den Balken abhängig von Wertebereichen verschieden zu färben."
+            },
+            "group": {
+                "en": "Range",
+                "de": "Range"
+            },
+            "userLevel": [
+                0,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                0,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Range upper limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constNumber",
+                "datapoint",
+                "datapointScheme"
+            ],
+            "dataType": "number",
+            "propertyType": "variable",
+            "name": "maxcolorlimit",
+            "sortIndex": 500100,
+            "default": "",
+            "shortName": {
+                "en": "Upper limit",
+                "de": "Upper limit"
+            },
+            "description": {
+                "en": "The upper limit to display the bar in differently colored parts depending on the value.",
+                "de": "Die Grenze des oberen Bereichs um den Balken abhängig von Wertebereichen verschieden zu färben."
+            },
+            "group": {
+                "en": "Range",
+                "de": "Range"
+            },
+            "userLevel": [
+                0,
+                20,
+                20
+            ],
+            "userLevelStyling": [
+                0,
+                20,
+                20
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Range color lower limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "default": "DefaultColors:color232",
+            "units": "#, rgba",
+            "name": "bgcolorrangeminvalue",
+            "sortIndex": 500200,
+            "shortName": {
+                "en": "Color lower limit",
+                "de": "Color lower limit"
+            },
+            "description": {
+                "en": "The color of the bar from start to 'Lower limit'.",
+                "de": "Die Farbe des Balkens vom Anfang bis 'Lower limit'."
+            },
+            "group": {
+                "en": "Range",
+                "de": "Range"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Range color upper limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "default": "DefaultColors:color234",
+            "units": "#, rgba",
+            "name": "bgcolorrangemaxvalue",
+            "sortIndex": 500300,
+            "shortName": {
+                "en": "Color upper limit",
+                "de": "Color upper limit"
+            },
+            "description": {
+                "en": "The color of the bar from 'Upper limit' to end.",
+                "de": "Die Farbe des Balkens von 'Upper limit' bis zum Ende."
+            },
+            "group": {
+                "en": "Range",
+                "de": "Range"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*****************************************************************************************************
+        // Preview settings
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Preview value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "previewvalue",
+            "sortIndex": 150300,
+            "dataType": "number",
+            "default": 50,
+            "shortName": {
+                "en": "Preview value",
+                "de": "Preview value"
+            },
+            "description": {
+                "en": "Sets a preview value used in design mode between Preview min. value and Preview max. value.",
+                "de": "Setzt einen Vorschauwert für den Designmodus zwischen Preview min. value und Preview max. value."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Preview min. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "previewmin",
+            "sortIndex": 150400,
+            "dataType": "number",
+            "default": 0,
+            "shortName": {
+                "en": "Preview min. value",
+                "de": "Preview min. value"
+            },
+            "description": {
+                "en": "Sets the minimum for the preview value used in design mode.",
+                "de": "Setzt das Minimum für den Vorschauwert im Designmodus."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Preview max. value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "previewmax",
+            "sortIndex": 150500,
+            "dataType": "number",
+            "default": 100,
+            "shortName": {
+                "en": "Preview max. value",
+                "de": "Preview max. value"
+            },
+            "description": {
+                "en": "Sets the maximum for the preview value used in design mode.",
+                "de": "Setzt das Maximum für den  Vorschauwert im Designmodus."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Preview lower limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "previewminlimit",
+            "sortIndex": 150600,
+            "dataType": "number",
+            "default": "",
+            "shortName": {
+                "en": "Preview lower limit",
+                "de": "Preview lower limit"
+            },
+            "description": {
+                "en": "Preview value for the lower limit to display the bar in differently colored parts depending on the value.",
+                "de": "Vorschauwert für die Grenze des unteren Bereichs um den Balken abhängig von Wertebereichen verschieden zu färben."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Preview upper limit
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constNumber",
+            "propertyType": "variable",
+            "name": "previewmaxlimit",
+            "sortIndex": 150700,
+            "dataType": "number",
+            "default": "",
+            "shortName": {
+                "en": "Preview upper limit",
+                "de": "Preview upper limit"
+            },
+            "description": {
+                "en": "Preview value for the upper limit to display the bar in differently colored parts depending on the value.",
+                "de": "Vorschauwert für die Grenze des oberen Bereichs um den Balken abhängig von Wertebereichen verschieden zu färben."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "dataType": "string",
+            "name": "--theme-sig-control-bar-straight-border-style",
+            "sortIndex": 500400,
+            "default": "none",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "none",
+                        "de": "none"
+                    },
+                    "value": "none"
+                },
+                {
+                    "shortName": {
+                        "en": "dotted",
+                        "de": "dotted"
+                    },
+                    "value": "dotted"
+                },
+                {
+                    "shortName": {
+                        "en": "dashed",
+                        "de": "dashed"
+                    },
+                    "value": "dashed"
+                },
+                {
+                    "shortName": {
+                        "en": "solid",
+                        "de": "solid"
+                    },
+                    "value": "solid"
+                },
+                {
+                    "shortName": {
+                        "en": "double",
+                        "de": "double"
+                    },
+                    "value": "double"
+                },
+                {
+                    "shortName": {
+                        "en": "groove",
+                        "de": "groove"
+                    },
+                    "value": "groove"
+                },
+                {
+                    "shortName": {
+                        "en": "ridge",
+                        "de": "ridge"
+                    },
+                    "value": "ridge"
+                },
+                {
+                    "shortName": {
+                        "en": "inset",
+                        "de": "inset"
+                    },
+                    "value": "inset"
+                },
+                {
+                    "shortName": {
+                        "en": "outset",
+                        "de": "outset"
+                    },
+                    "value": "outset"
+                }
+            ],
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "The border style of the component.",
+                "de": "Der Rahmenstil der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-bar-straight-border-width",
+            "sortIndex": 500500,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component. This value can be set as shorthand property.",
+                "de": "Die Rahmenbreite der Komponente. Dieser Wert kann als shorthand property angegeben werden."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "dataType": "string",
+            "propertyType": "css",
+            "name": "--theme-sig-control-bar-straight-border-color",
+            "sortIndex": 500600,
+            "editor": "colorpicker",
+            "default": "inherit",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the component.",
+                "de": "Die Rahmenfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-bar-straight-border-radius",
+            "sortIndex": 500700,
+            "dataType": "string",
+            "validationRule": "/^\\d+px(?:\\s\\d+px){0,3}$/",
+            "units": "px",
+            "default": "3px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component. This value can be set as shorthand property.",
+                "de": "Der Radius, mit dem die Ecken der Komponente abgerundet werden. Dieser Wert kann als shorthand property angegeben werden."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Fill color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "default": "DefaultColors:color229",
+            "units": "#, rgba",
+            "name": "bgcolorvalue",
+            "sortIndex": 500800,
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Fill color",
+                "de": "Fill color"
+            },
+            "description": {
+                "en": "The fill color of the bar.",
+                "de": "Die Füllfarbe des Balkens."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Fill color stop
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "default": "inherit",
+            "units": "#, rgba",
+            "name": "bgcolorvaluestop",
+            "sortIndex": 500900,
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Fill color stop",
+                "de": "Fill color stop"
+            },
+            "description": {
+                "en": "The stop color of the fill gradient of the bar.",
+                "de": "Die Stopp-Farbe des Füll-Farbverlaufes des Balkens."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "default": "DefaultColors:color231",
+            "units": "#, rgba",
+            "name": "bgcolorhide",
+            "sortIndex": 501000,
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The color of the background.",
+                "de": "Die Farbe des Hintergrundes."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Background image
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "mediaItem",
+                "mediaItemScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "imghide",
+            "sortIndex": 501100,
+            "default": "none",
+            "shortName": {
+                "en": "Background image",
+                "de": "Background image"
+            },
+            "description": {
+                "en": "The image used as background for the bar.",
+                "de": "Das Bild das als Hintergrund für den Hintergrund verwendet wird."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Bar image
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "mediaItem",
+                "mediaItemScheme"
+            ],
+            "propertyType": "variable",
+            "dataType": "string",
+            "name": "imgvalue",
+            "sortIndex": 501200,
+            "default": "none",
+            "shortName": {
+                "en": "Bar image",
+                "de": "Bar image"
+            },
+            "description": {
+                "en": "The image used in the foreground for the bar. It will cover the background step by step depending on the current bar value. Cannot be used in combination with the range limits. If a bar image is selected, the range limit settings will be ignored.",
+                "de": "Das Bild das im Vordergrund für den Balken verwendet wird. Es wird abhängig vom Balkenwert schrittweise den Hintergrund überdecken. Diese Einstellung kann nicht in Kombination mit den range limits verwendet werden. Sobald ein Bar Image ausgewählt wurde, werden die range limit Einstellungen ignoriert."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Bar Straight_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Bar Straight_EN.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

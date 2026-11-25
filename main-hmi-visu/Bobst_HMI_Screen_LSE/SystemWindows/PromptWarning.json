@@ -1,0 +1,319 @@
+{
+	"type": "systemWindow",
+	"version": "1.0.9",
+	"systemWindowType": 2,
+	"systemWindowStatus": 1,
+	"isDefault": true,
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "aec6a8f8-a3d7-4005-b4d0-854e912f0168",
+	"name": "PromptWarning",
+	"instanceId": "systemWindow_prompt_warning",
+	"controlId": "sig-window-container-system",
+	"properties": [
+		{
+			"name": "--theme-sig-element-height",
+			"value": "220px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "--theme-sig-element-width",
+			"value": "400px",
+			"typeId": 17,
+			"propTypeId": 2
+		},
+		{
+			"name": "elementMainClass",
+			"value": "SystemWindowContainerWarning",
+			"typeId": 34,
+			"propTypeId": 14,
+			"refId": "e868dd61-0df4-4719-acda-cb91e3e465db"
+		}
+	],
+	"controls": [
+		{
+			"type": "control",
+			"designTimeId": "6073aba7-1969-4a56-bb58-f324e2a23603",
+			"name": "okButton",
+			"instanceId": "okButton_systemWindow_prompt_warning",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "290px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "160px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "100px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "sigbtntext",
+					"value": "SystemTexts:ok",
+					"typeId": 5,
+					"propTypeId": 1,
+					"refId": "1fae7fa9-c2c7-44c8-a803-b067fe832345"
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sig-control-button-tap-event",
+					"value": "SYSWIN_CONFIRM",
+					"typeId": 2,
+					"propTypeId": 3,
+					"refId": "27e4c990-f901-40c7-94e7-b07fbf666572"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "f27fd2f4-30a4-4cd8-9a57-4ca7dfa26746",
+			"name": "cancelButton",
+			"instanceId": "cancelButton_systemWindow_prompt_warning",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "180px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "160px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "100px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "sigbtntext",
+					"value": "SystemTexts:cancel",
+					"typeId": 5,
+					"propTypeId": 1,
+					"refId": "ed9d7493-960d-4a1b-bf17-d4a322e207e5"
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sig-control-button-tap-event",
+					"value": "SYSWIN_CANCEL",
+					"typeId": 2,
+					"propTypeId": 3,
+					"refId": "b23519d1-dc03-49cb-8972-3a86e37ff4a0"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "38c0b641-02b6-431c-bb8b-b9bcd30427c8",
+			"name": "Text",
+			"instanceId": "Text_systemWindow_prompt_warning",
+			"controlId": "sig-control-text",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "3px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "97px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "380px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-control-text-value-align",
+					"value": "left",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "103",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-right",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-left",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "712b99cc-59d9-416e-a2b0-7f91096d45a1",
+			"name": "Rectangle",
+			"instanceId": "Rectangle_systemWindow_prompt_warning",
+			"controlId": "sig-control-rectangle",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "150px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "1px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "DefaultColors:color027",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "eb1fe654-1603-4647-8129-b8f4d7fa07e1"
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "104",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "774c7124-820f-4c6f-bbf4-837af23805ce",
+			"name": "Input",
+			"instanceId": "Input_systemWindow_prompt_warning",
+			"controlId": "sig-control-input",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "110px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "380px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "105",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		}
+	]
+}

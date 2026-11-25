@@ -1,0 +1,200 @@
+{
+	"type": "controlTemplate",
+	"version": "0.0.96",
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "961722ac-a164-4ba9-b94d-ad0bf75d0ed0",
+	"name": "HSC_RL_Keyence_setzero",
+	"instanceId": "design_03cecd7280d14376a8a900dbc4c67587",
+	"controlId": "sig-dashboard",
+	"properties": [
+		{
+			"name": "position",
+			"value": "absolute",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "top",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "left",
+			"value": "0px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "height",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "width",
+			"value": "100px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "overflow",
+			"value": "visible",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "background",
+			"value": "transparent",
+			"typeId": 0,
+			"propTypeId": 2
+		}
+	],
+	"dashboardelements": [
+		{
+			"type": "control",
+			"designTimeId": "227c312f-0f0d-45c9-9851-f62e3bdcc1f8",
+			"name": "Image_0_0",
+			"instanceId": "lvd28ed3bd02d1a478f8e6482b8dcdf61ea",
+			"controlId": "sig-control-image",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "82px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "90px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-color",
+					"value": "MigratedColors:MigratedColor_224",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\conveyor_hoogteregeling_expl.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "3b0d73f9-9d45-4019-9375-8951ea6d81f6"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "de35a3da-9aef-464a-b571-a9f27858b70d",
+			"name": "Btn_0_1",
+			"instanceId": "lvd93487f37fe934e3f837ae9f882675142",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "52px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "5px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "30px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "elementMainFont",
+					"value": "LCD_36",
+					"typeId": 26,
+					"propTypeId": 6,
+					"refId": "b8e63759-9b3f-4fe0-b526-c9b2c0a65677"
+				},
+				{
+					"name": "sigbtntext",
+					"value": "TextList_42:Text_0",
+					"typeId": 5,
+					"propTypeId": 1,
+					"refId": "9a068e0b-5b98-4f2a-9e7a-7b36e9dda671"
+				},
+				{
+					"name": "value",
+					"value": "255:S12_Conveyor_Master_Main_01Conveyor_Master1.Set_Hoogte_Set_Value",
+					"typeId": 4,
+					"propTypeId": 1,
+					"refId": "a9d7f651-85f5-4f26-be47-5a8e3b4f5838"
+				},
+				{
+					"name": "--theme-sig-control-button-background-color",
+					"value": "MigratedColors:MigratedColor_226",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a06b21fe-3577-48db-86d0-e94fccced82b"
+				},
+				{
+					"name": "--theme-sig-control-button-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+				}
+			]
+		}
+	]
+}

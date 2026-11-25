@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="GlobalNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "MyKeyboardCode1"
+			GUID       = "{545DA2C2-6048-463A-A3A5-B036D23D0399}"
+			Class      = "MyKeyboardCode"
+			Position   = "(390,480)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="KeyCode"/>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{2DD43D3F-4B0B-4CA2-AD21-CF24FF11C68F}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyRecalculate1"
+			GUID       = "{5BE8C43F-AB70-4BC2-919F-42C1A17746C9}"
+			Class      = "MyRecalculate"
+			Position   = "(390,780)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Length"/>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{80AB2AE0-D73F-4CDE-B2BC-B5E44CDF3B22}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyUserCall1"
+			GUID       = "{584D7A1D-0083-4E1E-8B3C-5F8AEED5010A}"
+			Class      = "MyUserCall"
+			Position   = "(390,120)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Counter"/>
+				<Server Name="Screen"/>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{83D97D42-AB78-4548-8048-A744E5EC1414}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="MyUserCall1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="MyKeyboardCode1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="MyRecalculate1.Lse" Destination="Lse.Lse"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

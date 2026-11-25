@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="PumpControlNet" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "ButtonStates1"
+			GUID       = "{5A5D24A7-E462-4E24-A427-A0E7D891F437}"
+			Class      = "ButtonStates"
+			Position   = "(1680,270)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="DataSvrScheme"/>
+				<Server Name="ObjectScheme"/>
+				<Server Name="UnitScheme"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "PumpControl1"
+			GUID       = "{9F1625F7-9C6B-4FE2-886F-9B9CC369ADA8}"
+			Class      = "PumpControl"
+			Position   = "(870,270)"
+			Visualized = "true"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ActFillLevelVisu"/>
+				<Server Name="MaxAlarm" Value="45000"/>
+				<Server Name="MaxBorder" Value="40000"/>
+				<Server Name="MinAlarm" Value="5000"/>
+				<Server Name="MinBorder" Value="10000"/>
+				<Server Name="PumpControlName"/>
+				<Server Name="PumpVisu"/>
+				<Server Name="WaterTempVisu"/>
+				<Client Name="ActFillLevel"/>
+				<Client Name="Pump"/>
+				<Client Name="WaterTemp"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_AlarmX1Para1" GUID="{DEDE3322-40AB-49C4-9AC9-1C7AC2D665EC}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX1Para2" GUID="{AB265910-93AC-4AA9-9811-EB4744641984}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX2Para1" GUID="{89F03244-727D-4B49-83BC-A7F3276DC350}" Class="_AlarmX2Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1" Value="0"/>
+								<Client Name="Para2"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6F5C7B28-CB5A-4A9A-8EBE-927D0B18A641}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StringRAM1" GUID="{A248ED38-3CE0-47C5-BB3B-D0B61980D2FA}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+						<Connection Source="_AlarmX1Para1.Para1" Destination="PumpControl1.MaxAlarm"/>
+						<Connection Source="_AlarmX1Para2.Para1" Destination="PumpControl1.MinAlarm"/>
+						<Connection Source="_AlarmX2Para1.Para1" Destination="PumpControl1.MaxBorder"/>
+						<Connection Source="_AlarmX2Para1.Para2" Destination="PumpControl1.MinBorder"/>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "PumpControl2"
+			GUID       = "{D3D030DE-862C-4136-AE41-BF3615B7063B}"
+			Class      = "PumpControl"
+			Position   = "(870,900)"
+			Visualized = "true"
+			CyclicTime = "1 ms">
+			<Channels>
+				<Server Name="ActFillLevelVisu"/>
+				<Server Name="MaxAlarm" Value="45000"/>
+				<Server Name="MaxBorder" Value="40000"/>
+				<Server Name="MinAlarm" Value="5000"/>
+				<Server Name="MinBorder" Value="10000"/>
+				<Server Name="PumpControlName"/>
+				<Server Name="PumpVisu"/>
+				<Server Name="WaterTempVisu"/>
+				<Client Name="ActFillLevel"/>
+				<Client Name="Pump"/>
+				<Client Name="WaterTemp"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_AlarmX1Para1" GUID="{DEDE3322-40AB-49C4-9AC9-1C7AC2D665EC}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX1Para2" GUID="{AB265910-93AC-4AA9-9811-EB4744641984}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX2Para1" GUID="{89F03244-727D-4B49-83BC-A7F3276DC350}" Class="_AlarmX2Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1" Value="0"/>
+								<Client Name="Para2"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6F5C7B28-CB5A-4A9A-8EBE-927D0B18A641}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StringRAM1" GUID="{A248ED38-3CE0-47C5-BB3B-D0B61980D2FA}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+						<Connection Source="_AlarmX1Para1.Para1" Destination="PumpControl2.MaxAlarm"/>
+						<Connection Source="_AlarmX1Para2.Para1" Destination="PumpControl2.MinAlarm"/>
+						<Connection Source="_AlarmX2Para1.Para1" Destination="PumpControl2.MaxBorder"/>
+						<Connection Source="_AlarmX2Para1.Para2" Destination="PumpControl2.MinBorder"/>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "PumpControl3"
+			GUID       = "{D683B168-AC88-422A-88F5-9F33845C4423}"
+			Class      = "PumpControl"
+			Position   = "(870,1530)"
+			Visualized = "true"
+			CyclicTime = "1 ms">
+			<Channels>
+				<Server Name="ActFillLevelVisu"/>
+				<Server Name="MaxAlarm" Value="45000"/>
+				<Server Name="MaxBorder" Value="40000"/>
+				<Server Name="MinAlarm" Value="5000"/>
+				<Server Name="MinBorder" Value="10000"/>
+				<Server Name="PumpControlName"/>
+				<Server Name="PumpVisu"/>
+				<Server Name="WaterTempVisu"/>
+				<Client Name="ActFillLevel"/>
+				<Client Name="Pump"/>
+				<Client Name="WaterTemp"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_AlarmX1Para1" GUID="{DEDE3322-40AB-49C4-9AC9-1C7AC2D665EC}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX1Para2" GUID="{AB265910-93AC-4AA9-9811-EB4744641984}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="_AlarmX2Para1" GUID="{89F03244-727D-4B49-83BC-A7F3276DC350}" Class="_AlarmX2Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1" Value="0"/>
+								<Client Name="Para2"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6F5C7B28-CB5A-4A9A-8EBE-927D0B18A641}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StringRAM1" GUID="{A248ED38-3CE0-47C5-BB3B-D0B61980D2FA}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+						<Connection Source="_AlarmX1Para1.Para1" Destination="PumpControl3.MaxAlarm"/>
+						<Connection Source="_AlarmX1Para2.Para1" Destination="PumpControl3.MinAlarm"/>
+						<Connection Source="_AlarmX2Para1.Para1" Destination="PumpControl3.MaxBorder"/>
+						<Connection Source="_AlarmX2Para1.Para2" Destination="PumpControl3.MinBorder"/>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "PumpControlSimu1"
+			GUID       = "{0C15DA71-30A8-486E-A760-EE857EE5C29B}"
+			Class      = "PumpControlSimu"
+			Position   = "(390,900)"
+			Visualized = "true"
+			RealTime   = "1 ms"
+			CyclicTime = "1 ms">
+			<Channels>
+				<Server Name="FillLevel"/>
+				<Server Name="Pump"/>
+				<Server Name="SimuSpeed"/>
+				<Server Name="SimuStart"/>
+				<Server Name="WaterTemp"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "PumpControlSimu2"
+			GUID       = "{222912FE-4ED3-43B5-93BD-A498F82BA0DC}"
+			Class      = "PumpControlSimu"
+			Position   = "(390,1530)"
+			Visualized = "true"
+			RealTime   = "1 ms"
+			CyclicTime = "1 ms">
+			<Channels>
+				<Server Name="FillLevel"/>
+				<Server Name="Pump"/>
+				<Server Name="SimuSpeed"/>
+				<Server Name="SimuStart"/>
+				<Server Name="WaterTemp"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="PumpControl1.ActFillLevel" Destination="__IO_Element1" Vertices="(870,360),(840,360)," IOObject="ActFillLevel"/>
+		<Connection Source="PumpControl1.Pump" Destination="__IO_Element01" Vertices="(870,420),(840,420)," IOObject="Pump1"/>
+		<Connection Source="PumpControl2.ActFillLevel" Destination="PumpControlSimu1.FillLevel" Vertices="(870,990),(786,990),"/>
+		<Connection Source="PumpControl2.Pump" Destination="PumpControlSimu1.Pump" Vertices="(870,1050),(786,1050),"/>
+		<Connection Source="PumpControl3.Pump" Destination="PumpControlSimu2.Pump" Vertices="(870,1680),(786,1680),"/>
+		<Connection Source="PumpControl3.ActFillLevel" Destination="PumpControlSimu2.FillLevel" Vertices="(870,1620),(786,1620),"/>
+		<Connection Source="PumpControl1.WaterTemp" Destination="__IO_Element2" Vertices="(870,480),(840,480)," IOObject="WaterTemp"/>
+		<Connection Source="PumpControl2.WaterTemp" Destination="PumpControlSimu1.WaterTemp" Vertices="(870,1110),(786,1110),"/>
+		<Connection Source="PumpControl3.WaterTemp" Destination="PumpControlSimu2.WaterTemp" Vertices="(870,1740),(786,1740),"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element01" Name="Pump1" Position="(540,390)" Client="PumpControl1.Pump"/>
+		<IOObject KeyName="__IO_Element1" Name="ActFillLevel" Position="(540,330)" Client="PumpControl1.ActFillLevel"/>
+		<IOObject KeyName="__IO_Element2" Name="WaterTemp" Position="(540,450)" Client="PumpControl1.WaterTemp"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

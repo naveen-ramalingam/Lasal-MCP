@@ -1,0 +1,1991 @@
+{
+	"type": "SystemWindowDefaults",
+	"version": "1.0.0",
+	"defaultSystemWindow": {
+		"type": "systemWindow",
+		"controls": [],
+		"controlId": "sig-window-container-system",
+		"version": "1.0.6"
+	},
+	"systemWindows": [
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "AlertInfo",
+			"instanceId": "systemWindow_alert_info",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 0,
+			"systemWindowStatus": 0,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_alert_info",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_alert_info",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_alert_info",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "AlertWarning",
+			"instanceId": "systemWindow_alert_warning",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 0,
+			"systemWindowStatus": 1,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_alert_warning",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_alert_warning",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_alert_warning",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FFFF00",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "AlertError",
+			"instanceId": "systemWindow_alert_error",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 0,
+			"systemWindowStatus": 2,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_alert_error",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_alert_error",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_alert_error",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FF0000",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "ConfirmInfo",
+			"instanceId": "systemWindow_confirm_info",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 1,
+			"systemWindowStatus": 0,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_confirm_info",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_confirm_info",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_confirm_info",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_confirm_info",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "ConfirmWarning",
+			"instanceId": "systemWindow_confirm_warning",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 1,
+			"systemWindowStatus": 1,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_confirm_warning",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_confirm_warning",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_confirm_warning",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_confirm_warning",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FFFF00",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"name": "ConfirmError",
+			"instanceId": "systemWindow_confirm_error",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 1,
+			"systemWindowStatus": 2,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_confirm_error",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_confirm_error",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_confirm_error",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "140px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_confirm_error",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FF0000",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "PromptInfo",
+			"instanceId": "systemWindow_prompt_info",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 2,
+			"systemWindowStatus": 0,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_prompt_info",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_prompt_info",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_prompt_info",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "37px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_prompt_info",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Input",
+					"instanceId": "Input_systemWindow_prompt_info",
+					"controlId": "sig-control-input",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "10px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "50px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "380px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "PromptWarning",
+			"instanceId": "systemWindow_prompt_warning",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 2,
+			"systemWindowStatus": 1,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_prompt_warning",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_prompt_warning",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_prompt_warning",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "37px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_prompt_warning",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Input",
+					"instanceId": "Input_systemWindow_prompt_warning",
+					"controlId": "sig-control-input",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "10px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "50px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "380px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FFFF00",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "systemWindow",
+			"version": "1.0.6",
+			"name": "PromptError",
+			"instanceId": "systemWindow_prompt_error",
+			"controlId": "sig-window-container-system",
+			"systemWindowType": 2,
+			"systemWindowStatus": 2,
+			"isDefault": true,
+			"controls": [
+				{
+					"type": "control",
+					"name": "okButton",
+					"instanceId": "okButton_systemWindow_prompt_error",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "330px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "60px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CONFIRM",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_ok",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "cancelButton",
+					"instanceId": "cancelButton_systemWindow_prompt_error",
+					"controlId": "sig-control-button",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "230px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "160px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "90px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "sig-control-button-tap-event",
+							"value": "SYSWIN_CANCEL",
+							"typeId": 2,
+							"propTypeId": 3
+						},
+						{
+							"name": "sigbtntext",
+							"value": "SystemTexts:systemWindows_cancel",
+							"typeId": 5,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Text",
+					"instanceId": "Text_systemWindow_prompt_error",
+					"controlId": "sig-control-text",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "3px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "37px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-text-value-align",
+							"value": "left",
+							"typeId": 0,
+							"propTypeId": 2
+						},
+						{
+							"name": "rendermanualbreaks",
+							"value": true,
+							"typeId": 0,
+							"propTypeId": 1
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Rectangle",
+					"instanceId": "Rectangle_systemWindow_prompt_error",
+					"controlId": "sig-control-rectangle",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "0px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "150px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "1px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "400px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						},
+						{
+							"name": "--theme-sig-control-rectangle-border-color",
+							"value": "#A0A0A0",
+							"typeId": 9,
+							"propTypeId": 2
+						}
+					]
+				},
+				{
+					"type": "control",
+					"name": "Input",
+					"instanceId": "Input_systemWindow_prompt_error",
+					"controlId": "sig-control-input",
+					"properties": [
+						{
+							"name": "--theme-sig-element-left",
+							"value": "10px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-top",
+							"value": "50px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-height",
+							"value": "30px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "--theme-sig-element-width",
+							"value": "380px",
+							"typeId": 17,
+							"propTypeId": 2
+						},
+						{
+							"name": "rotation",
+							"value": 0.0,
+							"typeId": 17,
+							"propTypeId": 12
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "--theme-sig-element-height",
+					"value": "210px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 9
+				},
+				{
+					"name": "--theme-sig-window-panel-hdr-background-color",
+					"value": "#FF0000",
+					"typeId": 9,
+					"propTypeId": 2
+				}
+			]
+		}
+	]
+}

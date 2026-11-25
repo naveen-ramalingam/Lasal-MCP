@@ -1,0 +1,203 @@
+{
+	"type": "systemWindow",
+	"version": "1.0.9",
+	"systemWindowType": 0,
+	"systemWindowStatus": 0,
+	"isDefault": true,
+	"gridWidth": "10px",
+	"gridHeight": "10px",
+	"gridColor": "#000000",
+	"gridStyle": "dotgrid",
+	"revision": {
+		"type": "Revision"
+	},
+	"designTimeId": "91c6efc0-e95d-46a4-9576-5b8b98fec33d",
+	"name": "AlertInfo",
+	"instanceId": "systemWindow_alert_info",
+	"controlId": "sig-window-container-system",
+	"properties": [
+		{
+			"name": "--theme-sig-element-height",
+			"value": "220px",
+			"typeId": 0,
+			"propTypeId": 2
+		},
+		{
+			"name": "--theme-sig-element-width",
+			"value": "400px",
+			"typeId": 17,
+			"propTypeId": 2
+		},
+		{
+			"name": "elementMainClass",
+			"value": "SystemWindowContainerInfo",
+			"typeId": 34,
+			"propTypeId": 14,
+			"refId": "fa544ed9-97b3-472e-ae8a-982b81fd35ca"
+		}
+	],
+	"controls": [
+		{
+			"type": "control",
+			"designTimeId": "32c67685-cfeb-4c5f-b54c-e8f14f824c18",
+			"name": "okButton",
+			"instanceId": "okButton_systemWindow_alert_info",
+			"controlId": "sig-control-button",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "290px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "160px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "50px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "100px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "sigbtntext",
+					"value": "SystemTexts:ok",
+					"typeId": 5,
+					"propTypeId": 1,
+					"refId": "1fae7fa9-c2c7-44c8-a803-b067fe832345"
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "101",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sig-control-button-tap-event",
+					"value": "SYSWIN_CONFIRM",
+					"typeId": 2,
+					"propTypeId": 3,
+					"refId": "27e4c990-f901-40c7-94e7-b07fbf666572"
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "b13ba3db-59d0-4143-95a3-84271aee79da",
+			"name": "Text",
+			"instanceId": "Text_systemWindow_alert_info",
+			"controlId": "sig-control-text",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "10px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "3px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "140px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "380px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-control-text-value-align",
+					"value": "left",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "102",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		},
+		{
+			"type": "control",
+			"designTimeId": "e125c85d-d25d-4398-9081-30c161d46f14",
+			"name": "Rectangle",
+			"instanceId": "Rectangle_systemWindow_alert_info",
+			"controlId": "sig-control-rectangle",
+			"properties": [
+				{
+					"name": "--theme-sig-element-left",
+					"value": "0px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-top",
+					"value": "150px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-height",
+					"value": "1px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-element-width",
+					"value": "400px",
+					"typeId": 17,
+					"propTypeId": 2
+				},
+				{
+					"name": "rotation",
+					"value": 0.0,
+					"typeId": 17,
+					"propTypeId": 12
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "DefaultColors:color027",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "eb1fe654-1603-4647-8129-b8f4d7fa07e1"
+				},
+				{
+					"name": "--theme-sig-element-zindex",
+					"value": "103",
+					"typeId": 0,
+					"propTypeId": 2
+				}
+			]
+		}
+	]
+}

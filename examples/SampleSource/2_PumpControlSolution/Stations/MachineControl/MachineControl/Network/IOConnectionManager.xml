@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="2" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="ActFillLevel" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0431" Server="AI2" ObjClt="PumpControl1" Client="ActFillLevel" IOI="Input" Type="Analog" SortIndex="0" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Pump" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DM1611" Server="Output1" ObjClt="PumpControl1" Client="Pump" IOI="Output" Type="Digital" SortIndex="1" KeyName="000001"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

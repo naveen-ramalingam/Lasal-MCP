@@ -1,0 +1,506 @@
+{
+    "name": "sig-control-svg-container",
+    "shortName": {
+        "en": "SVG Container",
+        "de": "SVG Container"
+    },
+    "controlType": {
+        "en": "SVG Container",
+        "de": "SVG Container"
+    },
+    "version": "02.00.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a svg container as a Polymer Custom Element.",
+        "de": "Implementiert einen SVG Container als Polymer Custom Element"
+    },
+    "main": [
+        "sig-control-svg-container.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-svg-container.html",
+    "private": true,
+    "baseComponent": "sig-element",
+    "dependencies": {
+        "sig-element": "components/sig-element#^0.0.1",
+        "polymer": "Polymer/polymer#^2.0.0-rc.1"
+    },
+    "defaultDimensions": {
+        "width": "50px",
+        "height": "50px"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./preview.svg"
+        }
+    ],
+    "styleClassEditor": true,
+    "usableInShadowDom": true,
+    "toolbox": true,
+    "slotted": false,
+    "properties": [
+        /*****************************************************************************************************
+        // SVG source
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property SVG source
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "mediaItem",
+                "mediaItemScheme"
+            ],
+            "propertyType": "variable",
+            "name": "svgsource",
+            "sortIndex": 150000,
+            "dataType": "string",
+            "default": "",
+            "shortName": {
+                "en": "SVG source",
+                "de": "SVG source"
+            },
+            "editor": "urlpicker",
+            "description": {
+                "en": "The source of the displayed svg",
+                "de": "Quelle des dargestellten SVG"
+            },
+            "group": {
+                "en": "SVG source",
+                "de": "SVG source"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // SVG attributes
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property SVG id
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "svgid",
+            "sortIndex": 150100,
+            "dataType": "string",
+            "default": "",
+            "shortName": {
+                "en": "SVG id",
+                "de": "SVG id"
+            },
+            "description": {
+                "en": "The id of the svg element which should be changed",
+                "de": "Die Kennung des SVG Elementes welches verändert werden soll"
+            },
+            "group": {
+                "en": "SVG attributes",
+                "de": "SVG attributes"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property SVG attribute name
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "svgattributename",
+            "sortIndex": 150200,
+            "dataType": "string",
+            "default": "",
+            "shortName": {
+                "en": "SVG attribute name",
+                "de": "SVG attribute name"
+            },
+            "description": {
+                "en": "The name of the SVG attribute which will be changed",
+                "de": "Der Name des SVG Attributes welches geändert wird"
+            },
+            "group": {
+                "en": "SVG attributes",
+                "de": "SVG attributes"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property SVG attribute value
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString",
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "variable",
+            "name": "svgattributevalue",
+            "sortIndex": 150300,
+            "dataType": "string",
+            "default": "",
+            "shortName": {
+                "en": "SVG attribute value",
+                "de": "SVG attribute value"
+            },
+            "description": {
+                "en": "The value of the SVG attribute which is changed",
+                "de": "Der Wert des SVG Attributes welcher verwendet werden soll"
+            },
+            "group": {
+                "en": "SVG attributes",
+                "de": "SVG attributes"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // Function block
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property SVG down
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "name": "sig-control-svg-container-mousedown",
+            "sortIndex": 150400,
+            "shortName": {
+                "en": "SVG down",
+                "de": "SVG down"
+            },
+            "description": {
+                "en": "This event is fired, when the svg is pressed (Mouse down)",
+                "de": "Dieses Event wird gefeuert wenn das SVG gedrückt wird (Taste gedrückt)"
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property SVG up
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "name": "sig-control-svg-container-mouseup",
+            "sortIndex": 150500,
+            "shortName": {
+                "en": "SVG up",
+                "de": "SVG up"
+            },
+            "description": {
+                "en": "This event is fired, when the svg is released (Mouse up)",
+                "de": "Dieses Event wird gefeuert wenn das SVG losgelassen wird (Taste nicht gedrückt)"
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property SVG tap
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "functionBlock",
+            "propertyType": "event",
+            "name": "sig-control-svg-container-tap",
+            "sortIndex": 150600,
+            "shortName": {
+                "en": "SVG tap",
+                "de": "SVG tap"
+            },
+            "description": {
+                "en": "This event is fired after the svg is pressed and released (Tap)",
+                "de": "Dieses Event wird gefeuert nachdem das SVG gedrückt und losgelassen wurde"
+            },
+            "group": {
+                "en": "Function block",
+                "de": "Function block"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Background color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-svg-container-background-color",
+            "sortIndex": 500000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "transparent",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the control",
+                "de": "Der Haupthintergundfarbe der Komponente"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": [
+                0,
+                10,
+                10
+            ],
+            "userLevelStyling": [
+                0,
+                10,
+                10
+            ],
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-svg-container-border-width",
+            "sortIndex": 500100,
+            "dataType": "string",
+            "units": "px",
+            "default": "inherit",
+            "shortName": {
+                "en": "Border width",
+                "de": "Border width"
+            },
+            "description": {
+                "en": "The border width of the component",
+                "de": "Die Rahmenbreite der Komponente"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border radius
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-svg-container-border-radius",
+            "sortIndex": 500200,
+            "dataType": "string",
+            "units": "px,%",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "The border radius of the component",
+                "de": "Der Radius mit dem die Ecken abgerundet werden"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-control-svg-container-border-color",
+            "sortIndex": 500300,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "inherit",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Border color",
+                "de": "Border color"
+            },
+            "description": {
+                "en": "The border color of the control",
+                "de": "Die Rahmenfarbe der Komponente"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Border style
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-control-svg-container-border-style",
+            "sortIndex": 500400,
+            "dataType": "string",
+            "default": "none",
+            "options": [
+                {
+                    "shortName": "None",
+                    "value": "none"
+                },
+                {
+                    "shortName": "Dotted",
+                    "value": "dotted"
+                },
+                {
+                    "shortName": "Dashed",
+                    "value": "dashed"
+                },
+                {
+                    "shortName": "Solid",
+                    "value": "solid"
+                },
+                {
+                    "shortName": "Double Lines",
+                    "value": "double"
+                },
+                {
+                    "shortName": "Groove",
+                    "value": "groove"
+                },
+                {
+                    "shortName": "Ridge",
+                    "value": "ridge"
+                },
+                {
+                    "shortName": "Inset",
+                    "value": "inset"
+                },
+                {
+                    "shortName": "Outset",
+                    "value": "outset"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Border style",
+                "de": "Border style"
+            },
+            "description": {
+                "en": "Defines the border style of the main component",
+                "de": "Definiert den Rahmenstil der Komponente"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "SVG Container_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "SVG Container_EN.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

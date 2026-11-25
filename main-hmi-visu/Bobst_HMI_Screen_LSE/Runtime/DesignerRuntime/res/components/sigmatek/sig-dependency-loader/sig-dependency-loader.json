@@ -1,0 +1,1898 @@
+{
+    "name": "sig-dependency-loader",
+    "shortName": {
+        "en": "Dependency Loader",
+        "de": "Dependency Loader"
+    },
+    "controlType": {
+        "en": "System",
+        "de": "System"
+    },
+    "version": "01.00.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements an dependency loader as a (Polymer) custom element",
+        "de": "Implementiert eine Komponente zum Laden von Abhängigkeiten als (Polymer) Custom Element."
+    },
+    "main": [
+        "sig-dependency-loader.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-depenency-loader.html",
+    "private": true,
+    "dependencies": {
+        "sig-element": "components/sig-element#^1.2.0",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "defaultDimensions": {
+        "width": "400px",
+        "height": "400px"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-dependency-loader-rt.js"
+        },
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-dependency-loader-css.js"
+        }
+    ],
+    "toolbox": false,
+    "styleClassEditor": true,
+    "slotted": false,
+    "usableInShadowDom": false,
+    "hideInLibraryToolbox": true,
+    "defaultStyleOnly": true,
+    "isPlaceable": false,
+    "moduleImport": {
+        "importType": "static",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "top"
+    },
+    "properties": [
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "hidelogo",
+            "sortIndex": 150000,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Hide logo",
+                "de": "Hide logo"
+            },
+            "description": {
+                "en": "Hides the logo.",
+                "de": "Blendet das Logo aus."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "hideprogresscount",
+            "sortIndex": 150010,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Hide progress count",
+                "de": "Hide progress count"
+            },
+            "description": {
+                "en": "Hides the progress counter.",
+                "de": "Blendet den Fortschrittszähler aus."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "hideprogressbar",
+            "sortIndex": 150020,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Hide progress bar",
+                "de": "Hide progress bar"
+            },
+            "description": {
+                "en": "Hides the progress bar.",
+                "de": "Blendet den Fortschrittsbalken aus."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "hidemessages",
+            "sortIndex": 150030,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Hide messages",
+                "de": "Hide messages"
+            },
+            "description": {
+                "en": "Hides all messages completely. If set to 'true', error messages are also suppressed.",
+                "de": "Blendet alle Meldungen vollständig aus. Bei der Einstellung 'true' werden somit auch Fehlermeldungen unterdrückt."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "variable",
+            "name": "loglevel",
+            "sortIndex": 150040,
+            "dataType": "string",
+            "default": "2",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "Info",
+                        "de": "Info"
+                    },
+                    "value": "0"
+                },
+                {
+                    "shortName": {
+                        "en": "Warning",
+                        "de": "Warning"
+                    },
+                    "value": "1"
+                },
+                {
+                    "shortName": {
+                        "en": "Error",
+                        "de": "Error"
+                    },
+                    "value": "2"
+                }
+            ],
+            "multiSelect": false,
+            "lockStyleCopy": true,
+            "shortName": {
+                "en": "Loglevel",
+                "de": "Loglevel"
+            },
+            "description": {
+                "en": "Sets the loglevel. ",
+                "de": "Setzt die Protokollebene."
+            },
+            "group": {
+                "en": "Settings",
+                "de": "Settings"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "showreloadicon",
+            "sortIndex": 160000,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Show reload icon",
+                "de": "Show reload icon"
+            },
+            "description": {
+                "en": "Shows the reload icon at design time. At runtime the reload icon is only shown if an error occurs.",
+                "de": "Zeigt das Symbol zum Neuladen während der Entwurfsphase an. Das Symbol zum erneuten Laden wird zur Laufzeit nur angezeigt, wenn ein Fehler auftritt."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constBool"
+            ],
+            "propertyType": "variable",
+            "name": "showcriticalerror",
+            "sortIndex": 160010,
+            "dataType": "boolean",
+            "default": false,
+            "shortName": {
+                "en": "Show critical error",
+                "de": "Show critical error"
+            },
+            "description": {
+                "en": "Shows the message box at design time which is displayed when a critical error occurs.",
+                "de": "Zeigt die Meldung während der Entwurfszeit an, die angezeigt wird, wenn ein kritischer Fehler auftritt."
+            },
+            "group": {
+                "en": "Preview settings",
+                "de": "Preview settings"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Data",
+                "de": "Data"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-background-color",
+            "sortIndex": 170000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(47, 47, 47, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the component.",
+                "de": "Die Hintergrundfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-color",
+            "sortIndex": 170010,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(160, 160, 160, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of the component.",
+                "de": "Die Schriftfarbe der Komponente."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-font-family",
+            "sortIndex": 170020,
+            "dataType": "string",
+            "default": "'Roboto', sans-serif",
+            "shortName": {
+                "en": "Font family",
+                "de": "Font family"
+            },
+            "description": {
+                "en": "The font family applied to the component. Must be a system or preloaded font.",
+                "de": "Die auf die Komponente angewendete Schriftfamilie. Es muss eine System- oder vorrausgeladene Schriftart angegeben werden."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-font-size",
+            "sortIndex": 170030,
+            "dataType": "string",
+            "units": "px",
+            "default": "14px",
+            "shortName": {
+                "en": "Font size",
+                "de": "Font size"
+            },
+            "description": {
+                "en": "The font size applied to the component.",
+                "de": "Die auf die Komponente angewendete Schriftgröße."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-width",
+            "sortIndex": 170040,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "50%",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the content area relative to the browser viewport size.",
+                "de": "Die Breite des Inhaltsbereichs im Verhältnis zur Größe des Browser-Viewports."
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-color",
+            "sortIndex": 180000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(0, 127, 197, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The color used for the internally hard-coded Logo image.",
+                "de": "Die Farbe, welche für das intern fest codierte Logo verwendet wird."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "mediaImage"
+            ],
+            "propertyType": "variable",
+            "name": "bootlogo",
+            "sortIndex": 180010,
+            "dataType": "string",
+            "units": "url",
+            "default": "",
+            "editor": "urlpicker",
+            "shortName": {
+                "en": "Image",
+                "de": "Image"
+            },
+            "description": {
+                "en": "The image which is displayed while loading the dependencies.",
+                "de": "Das Bild, welches während dem Laden der Abhängigkeiten angezeigt wird."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-text-align",
+            "sortIndex": 180015,
+            "dataType": "string",
+            "default": "center",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Align",
+                "de": "Align"
+            },
+            "description": {
+                "en": "The horizontal alignment of the image.",
+                "de": "Die horizontale Ausrichtung des Bildes."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-height",
+            "sortIndex": 180020,
+            "dataType": "string",
+            "units": "px",
+            "default": "auto",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the logo.",
+                "de": "Die Höhe des Logos."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-width",
+            "sortIndex": 180030,
+            "dataType": "string",
+            "units": "px",
+            "default": "auto",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the logo.",
+                "de": "Die Breite des Logos."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-margin-top",
+            "sortIndex": 180040,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Container top margin",
+                "de": "Container top margin"
+            },
+            "description": {
+                "en": "The top margin of the logo container.",
+                "de": "Der obere Abstand des Logo Containers."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-margin-bottom",
+            "sortIndex": 180050,
+            "dataType": "string",
+            "units": "px",
+            "default": "4px",
+            "shortName": {
+                "en": "Container bottom margin",
+                "de": "Container bottom margin"
+            },
+            "description": {
+                "en": "The bottom margin of the logo container.",
+                "de": "Der untere Abstand des Logo-Containers."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-logo-container-width",
+            "sortIndex": 180060,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Container width",
+                "de": "Container width"
+            },
+            "description": {
+                "en": "The width of the logo container. If set to 'auto' the width defined in group 'General styling' will be applied.",
+                "de": "Die Breite des Logo Containers. Wenn der Wert auf 'auto' gesetzt wird,  wird die in der Gruppe 'General styling' angegebene Breite angewendet."
+            },
+            "group": {
+                "en": "Logo",
+                "de": "Logo"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-color-count",
+            "sortIndex": 190000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(229, 242, 248, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of the progress counter.",
+                "de": "Die Schriftfarbe des Fortschrittszählers."
+            },
+            "group": {
+                "en": "Progress counter",
+                "de": "Progress counter"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-count-text-align",
+            "sortIndex": 190005,
+            "dataType": "string",
+            "default": "center",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Align",
+                "de": "Align"
+            },
+            "description": {
+                "en": "The horizontal alignment of the progress counter.",
+                "de": "Die horizontale Ausrichtung des Fortschrittszahlers."
+            },
+            "group": {
+                "en": "Progress counter",
+                "de": "Progress counter"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-count-margin-top",
+            "sortIndex": 190010,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Container top margin",
+                "de": "Container top margin"
+            },
+            "description": {
+                "en": "The top margin of the progress counter.",
+                "de": "Der obere Abstand des Fortschrittszahlers."
+            },
+            "group": {
+                "en": "Progress counter",
+                "de": "Progress counter"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-count-margin-bottom",
+            "sortIndex": 190020,
+            "dataType": "string",
+            "units": "px",
+            "default": "4px",
+            "shortName": {
+                "en": "Container bottom margin",
+                "de": "Container bottom margin"
+            },
+            "description": {
+                "en": "The bottom margin of the progress counter.",
+                "de": "Der untere Abstand des Fortschrittszahlers."
+            },
+            "group": {
+                "en": "Progress counter",
+                "de": "Progress counter"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-count-container-width",
+            "sortIndex": 190030,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Container width",
+                "de": "Container width"
+            },
+            "description": {
+                "en": "The width of the progress counter container. If set to 'auto' the width defined in group 'General styling' will be applied.",
+                "de": "Die Breite des Fortschrittszähler-Containers. Wenn der Wert auf 'auto' gesetzt wird,  wird die in der Gruppe 'General styling' angegebene Breite angewendet."
+            },
+            "group": {
+                "en": "Progress counter",
+                "de": "Progress counter"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-background-color",
+            "sortIndex": 200000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(64, 66, 71, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of the progress bar.",
+                "de": "Die Hintergrundfarbe des Fortschrittsbalkens."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-finished-background-color",
+            "sortIndex": 200010,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(174, 200, 26, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Foreground color",
+                "de": "Foreground color"
+            },
+            "description": {
+                "en": "The foreground color of the progress bar.",
+                "de": "Die Vordergrundfarbe des Fortschrittsbalkens."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-width",
+            "sortIndex": 200020,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "Determines the width of the progress bar. If set to 'auto' it defaults to the container width. If set to a percentage value, the bar width is calculated relative to the container width.",
+                "de": "Legt die Breite des Fortschrittsbalkens fest. Wird 'auto' angegeben, wird standardmäßig die Breite des Containers. Wenn ein Prozentwert gesetzt wird, wir die Breite des Balkens relative zur Breite des Container berechnet."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-height",
+            "sortIndex": 200025,
+            "dataType": "string",
+            "units": "px",
+            "default": "20px",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "Determines the height of the progress bar.",
+                "de": "Legt die Höhe des Fortschrittsbalkens fest."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-border-radius",
+            "sortIndex": 200030,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Border radius",
+                "de": "Border radius"
+            },
+            "description": {
+                "en": "Determines the border radius of the progress bar.",
+                "de": "Legt den Radius der Ecken des Fortschrittsbalkens fest."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-text-align",
+            "sortIndex": 200040,
+            "dataType": "string",
+            "default": "center",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Align",
+                "de": "Align"
+            },
+            "description": {
+                "en": "The horizontal alignment of the progess bar, if the bar width is not set to 'auto'.",
+                "de": "Die horizontale Ausrichtung des Fortschrittsbalkens, wenn für die Breite des Balkens nicht 'auto' angegeben ist."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-margin-top",
+            "sortIndex": 200040,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Container top margin",
+                "de": "Container top margin"
+            },
+            "description": {
+                "en": "The top margin of the progress bar container.",
+                "de": "Der obere Abstand des Fortschrittbalken-Containers."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-margin-bottom",
+            "sortIndex": 200050,
+            "dataType": "string",
+            "units": "px",
+            "default": "10px",
+            "shortName": {
+                "en": "Container bottom margin",
+                "de": "Container bottom margin"
+            },
+            "description": {
+                "en": "The bottom margin of the progress bar container.",
+                "de": "Der untere Abstand des Fortschrittbalken-Containers."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-progress-bar-container-width",
+            "sortIndex": 200060,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Container width",
+                "de": "Container width"
+            },
+            "description": {
+                "en": "The width of the progress bar container. If set to 'auto' the width defined in group 'General styling' will be applied.",
+                "de": "Die Breite des Fortschrittsbalken-Containers. Wenn der Wert auf 'auto' gesetzt wird,  wird die in der Gruppe 'General styling' angegebene Breite angewendet."
+            },
+            "group": {
+                "en": "Progress bar",
+                "de": "Progress bar"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-color",
+            "sortIndex": 210000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(0, 127, 197, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The color used for the internally hard-coded reload icon.",
+                "de": "Die Farbe, welche für das intern fest codierte Neuladen Symbol verwendet wird."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "mediaImage"
+            ],
+            "propertyType": "variable",
+            "name": "reloadicon",
+            "sortIndex": 210010,
+            "dataType": "string",
+            "units": "url",
+            "default": "",
+            "editor": "urlpicker",
+            "shortName": {
+                "en": "Image",
+                "de": "Image"
+            },
+            "description": {
+                "en": "The image which is displayed as the reload icon. If the image is not defined, the internally hard-coded image is used.",
+                "de": "Das Bild, das als Symbol für das Neuladen angezeigt wird. Wenn das Bild nicht definiert ist, wird das intern fest codierte Bild verwendet."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 10
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-height",
+            "sortIndex": 210020,
+            "dataType": "string",
+            "units": "px",
+            "default": "auto",
+            "shortName": {
+                "en": "Height",
+                "de": "Height"
+            },
+            "description": {
+                "en": "The height of the reload icon.",
+                "de": "Die Höhe des Neuladen-Symbols."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-width",
+            "sortIndex": 210030,
+            "dataType": "string",
+            "units": "px",
+            "default": "auto",
+            "shortName": {
+                "en": "Width",
+                "de": "Width"
+            },
+            "description": {
+                "en": "The width of the reload icon.",
+                "de": "Die Breite des Neuladen-Symbols."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-text-align",
+            "sortIndex": 210035,
+            "dataType": "string",
+            "default": "center",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Align",
+                "de": "Align"
+            },
+            "description": {
+                "en": "The horizontal alignment of the image.",
+                "de": "Die horizontale Ausrichtung des Bildes."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-margin-top",
+            "sortIndex": 210040,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Container top margin",
+                "de": "Container top margin"
+            },
+            "description": {
+                "en": "The top margin of the reload icon container.",
+                "de": "Der obere Abstand des Neuladen-Symbol Containers."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-margin-bottom",
+            "sortIndex": 210050,
+            "dataType": "string",
+            "units": "px",
+            "default": "4px",
+            "shortName": {
+                "en": "Container bottom margin",
+                "de": "Container bottom margin"
+            },
+            "description": {
+                "en": "The bottom margin of the reload icon container.",
+                "de": "Der untere Abstand des Neuladen-Symbol Containers."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-reload-container-width",
+            "sortIndex": 210060,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Container width",
+                "de": "Container width"
+            },
+            "description": {
+                "en": "The width of the reload icon container. If set to 'auto' the width defined in group 'General styling' will be applied.",
+                "de": "Die Breite des Neuladen-Symbol Containers. Wenn der Wert auf 'auto' gesetzt wird,  wird die in der Gruppe 'General styling' angegebene Breite angewendet."
+            },
+            "group": {
+                "en": "Reload icon",
+                "de": "Reload icon"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-color-info",
+            "sortIndex": 220000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(160, 160, 160, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Into text color",
+                "de": "Color"
+            },
+            "description": {
+                "en": "The text color of a message of type 'info'.",
+                "de": "Die Textfarbe einer Nachricht des Typs 'Info'."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-color-warn",
+            "sortIndex": 220010,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(222, 247, 85, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Warning text color",
+                "de": "Warning text color"
+            },
+            "description": {
+                "en": "The text color of a message of type 'warn'.",
+                "de": "Die Textfarbe einer Nachricht des Typs 'warn'."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-color-error",
+            "sortIndex": 220020,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 0, 0, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Error text color",
+                "de": "Error text color"
+            },
+            "description": {
+                "en": "The text color of a message of type 'error'.",
+                "de": "Die Textfarbe einer Nachricht des Typs 'error'."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-messages-font-family",
+            "sortIndex": 220025,
+            "dataType": "string",
+            "default": "inherit",
+            "shortName": {
+                "en": "Font family",
+                "de": "Font family"
+            },
+            "description": {
+                "en": "The font family applied to the messages. Must be a system or preloaded font.",
+                "de": "Die auf die Nachrichten angewendete Schriftfamilie. Es muss eine System- oder vorrausgeladene Schriftart angegeben werden."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-messages-font-size",
+            "sortIndex": 220030,
+            "dataType": "string",
+            "units": "px",
+            "default": "12px",
+            "shortName": {
+                "en": "Font size",
+                "de": "Font size"
+            },
+            "description": {
+                "en": "The font size applied to a message",
+                "de": "Die auf eine Meldung angewendete Schriftgröße."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-message-text-align",
+            "sortIndex": 220040,
+            "dataType": "string",
+            "default": "left",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "left",
+                        "de": "left"
+                    },
+                    "value": "left"
+                },
+                {
+                    "shortName": {
+                        "en": "center",
+                        "de": "center"
+                    },
+                    "value": "center"
+                },
+                {
+                    "shortName": {
+                        "en": "right",
+                        "de": "right"
+                    },
+                    "value": "right"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Align",
+                "de": "Align"
+            },
+            "description": {
+                "en": "The horizontal alignment of the message text.",
+                "de": "Die horizontale Ausrichtung des Nachrichtentextes."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": "constString",
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-message-white-space",
+            "sortIndex": 220050,
+            "dataType": "string",
+            "default": "wrap",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "wrap",
+                        "de": "wrap"
+                    },
+                    "value": "wrap"
+                },
+                {
+                    "shortName": {
+                        "en": "nowrap",
+                        "de": "nowrap"
+                    },
+                    "value": "nowrap"
+                }
+            ],
+            "multiSelect": false,
+            "shortName": {
+                "en": "Text wrap",
+                "de": "Text wrap"
+            },
+            "description": {
+                "en": "Determines whether the text is wrapped or not.",
+                "de": "Legt fest ob der Text umgebrochen wird oder nicht."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-message-line-height",
+            "sortIndex": 220060,
+            "dataType": "string",
+            "units": "%",
+            "default": "115%",
+            "shortName": {
+                "en": "Line height",
+                "de": "Line height"
+            },
+            "description": {
+                "en": "Determines the line height of a message.",
+                "de": "Legt die Zeilenhöhe einer Nachricht fest."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-message-margin-bottom",
+            "sortIndex": 220070,
+            "dataType": "string",
+            "units": "px",
+            "default": "4px",
+            "shortName": {
+                "en": "Bottom margin",
+                "de": "Bottom margin"
+            },
+            "description": {
+                "en": "Determines bottom margin of a message.",
+                "de": "Legt den unteren Rand einer Nachricht fest."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-messages-margin-top",
+            "sortIndex": 220080,
+            "dataType": "string",
+            "units": "px",
+            "default": "0px",
+            "shortName": {
+                "en": "Container top margin",
+                "de": "Container top margin"
+            },
+            "description": {
+                "en": "The top margin of the messages container.",
+                "de": "Der obere Abstand des Meldungs-Containers."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-messages-margin-bottom",
+            "sortIndex": 220090,
+            "dataType": "string",
+            "units": "px",
+            "default": "10px",
+            "shortName": {
+                "en": "Container bottom margin",
+                "de": "Container bottom margin"
+            },
+            "description": {
+                "en": "The bottom margin of the messages container.",
+                "de": "Der untere Abstand des Meldungs-Containers."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-messages-container-width",
+            "sortIndex": 220100,
+            "dataType": "string",
+            "units": "%,px",
+            "default": "auto",
+            "shortName": {
+                "en": "Container width",
+                "de": "Container width"
+            },
+            "description": {
+                "en": "The width of the messages container. If set to 'auto' the width defined in group 'General styling' will be applied.",
+                "de": "Die Breite des Nachrichten-Containers. Wenn der Wert auf 'auto' gesetzt wird,  wird die in der Gruppe 'General styling' angegebene Breite angewendet."
+            },
+            "group": {
+                "en": "Messages",
+                "de": "Messages"
+            },
+            "userLevel": 10,
+            "userLevelStyling": 10,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-critical-error-background-color",
+            "sortIndex": 230000,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255, 0, 0, 1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Background color",
+                "de": "Background color"
+            },
+            "description": {
+                "en": "The background color of a critical error.",
+                "de": "Die Hintergrundfarbe eines kritischen Fehlers."
+            },
+            "group": {
+                "en": "Critical error",
+                "de": "Critical error"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        {
+            "valueSourceTypes": [
+                "color"
+            ],
+            "propertyType": "css",
+            "name": "--theme-sig-dependency-loader-critical-error-color",
+            "sortIndex": 230010,
+            "dataType": "string",
+            "units": "#,rgba",
+            "default": "rgba(255,255,255,1)",
+            "editor": "colorpicker",
+            "shortName": {
+                "en": "Text color",
+                "de": "Text color"
+            },
+            "description": {
+                "en": "The text color of a critical error.",
+                "de": "Die Schriftfarbe eines kritischen Fehlers."
+            },
+            "group": {
+                "en": "Critical error",
+                "de": "Critical error"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

@@ -1,0 +1,232 @@
+{
+    "name": "sig-control-line-simple",
+    "shortName": {
+        "en": "Line Simple",
+        "de": "Line Simple"
+    },
+    "controlType": {
+        "en": "Drawing",
+        "de": "Drawing"
+    },
+    "version": "02.00.000",
+    "authors": [
+        "SIGMATEK GmbH & Co KG"
+    ],
+    "description": {
+        "en": "Implements a line as a polymer custom element.",
+        "de": "Implementiert eine Linie als benutzerdefiniertes Polymer-Element."
+    },
+    "main": [
+        "sig-control-line-simple.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "license": "http://www.sigmatek-automation.com/LICENSE.txt",
+    "homepage": "http://www.sigmatek-automation.com/sig-control-line-simple.html",
+    "private": true,
+    "baseComponent": "sig-element-light",
+    "dependencies": {
+        "sig-element": "components/sigmatek/sig-element-light#^1.1.1",
+        "polymer": "Polymer/polymer#^3.3.0"
+    },
+    "defaultDimensions": {
+        "width": "100px",
+        "height": "20px"
+    },
+    "resources": [
+        {
+            "designerAction": "addToPublish",
+            "path": "./sig-control-line-simple-css.js"
+        }
+    ],
+    "toolbox": true,
+    "slotted": false,
+    "styleClassEditor": true,
+    "usableInShadowDom": true,
+    "moduleImport": {
+        "importType": "dynamic",
+        "area": [
+            "index",
+            "designer",
+            "designerToolbox"
+        ],
+        "section": "head",
+        "position": "bottom"
+    },
+    "placementTemplates": [],
+    "properties": [
+        /*****************************************************************************************************
+        // Hide properties from the base
+        *****************************************************************************************************/
+        {
+            "valueSourceTypes": [
+                "font",
+                "fontScheme"
+            ],
+            "propertyType": "font",
+            "name": "elementMainFont",
+            "userLevel": -1,
+            "userLevelStyling": -1
+        },
+        /*****************************************************************************************************
+        // General styling
+        *****************************************************************************************************/
+		/*----------------------------------------------------------------------------------------------------
+        // property Line color
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "color",
+                "colorScheme"
+            ],
+            "name": "--theme-sig-control-line-simple-line-color",
+            "sortIndex": 500000,
+            "propertyType": "css",
+            "datatype": "string",
+            "default": "inherit",
+            "shortName": {
+                "en": "Line color",
+                "de": "Line color"
+            },
+            "description": {
+                "en": "The color of the line",
+                "de": "Die Linienfarbe"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Direction
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "name": "direction",
+            "sortIndex": 500100,
+            "default": "horizontal",
+            "propertyType": "variable",
+            "datatype": "string",
+            "options": [
+                {
+                    "shortName": {
+                        "en": "horizontal",
+                        "de": "horizontal"
+                    },
+                    "value": "horizontal"
+                },
+                {
+                    "shortName": {
+                        "en": "vertical",
+                        "de": "vertical"
+                    },
+                    "value": "vertical"
+                },
+                {
+                    "shortName": {
+                        "en": "top left to bottom right",
+                        "de": "top left to bottom right"
+                    },
+                    "value": "topleftbotright"
+                },
+                {
+                    "shortName": {
+                        "en": "bottom left to top right",
+                        "de": "bottom left to top right"
+                    },
+                    "value": "botlefttopright"
+                }
+            ],
+            "shortName": {
+                "en": "Direction",
+                "de": "Direction"
+            },
+            "description": {
+                "en": "The direction of the line",
+                "de": "Die Richtung der Linie"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        },
+        /*----------------------------------------------------------------------------------------------------
+        // property Line width
+        ------------------------------------------------------------------------------------------------------*/
+        {
+            "valueSourceTypes": [
+                "constString"
+            ],
+            "name": "linewidth",
+            "sortIndex": 500200,
+            "propertyType": "variable",
+            "datatype": "string",
+            "units": "px",
+            "default": "1px",
+            "shortName": {
+                "en": "Line width",
+                "de": "Line width"
+            },
+            "description": {
+                "en": "The width of the line",
+                "de": "Die Linienstärke"
+            },
+            "group": {
+                "en": "General styling",
+                "de": "General styling"
+            },
+            "userLevel": 0,
+            "userLevelStyling": 0,
+            "tab": {
+                "en": "Style",
+                "de": "Style"
+            },
+            "tabIndex": 20
+        }
+    ],
+    "helpFiles": [
+        {
+            "language": "de",
+            "default": true,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Line Simple_DE.chm"
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "default": false,
+            "files": [
+                {
+                    "name": "Prog_Manual",
+                    "path": "Line Simple_DE.chm"
+                }
+            ]
+        }
+    ],
+    "designs": [
+        {
+            "name": "Deep Blue Theme",
+            "path": "../designs/DeepBlueTheme_v01.00.000.lvz"
+        }
+    ]
+}

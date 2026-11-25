@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\LASAL.HMI.Converter.Models\LASAL.HMI.Converter.Models.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Infrastructure\LASAL.HMI.Converter.Infrastructure.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.PythonBridge\LASAL.HMI.Converter.PythonBridge.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Mapping\LASAL.HMI.Converter.Mapping.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Assets\LASAL.HMI.Converter.Assets.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Logic\LASAL.HMI.Converter.Logic.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LASAL.HMI.Converter.Models\LASAL.HMI.Converter.Models.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Infrastructure\LASAL.HMI.Converter.Infrastructure.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Validation\LASAL.HMI.Converter.Validation.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Mapping\LASAL.HMI.Converter.Mapping.csproj" />
+    <ProjectReference Include="..\LASAL.HMI.Converter.Target.VISUDesigner\LASAL.HMI.Converter.Target.VISUDesigner.csproj" />
+  </ItemGroup>
+
+</Project>

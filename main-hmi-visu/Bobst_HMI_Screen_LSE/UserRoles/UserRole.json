@@ -1,0 +1,31 @@
+{
+	"type": "userRoles",
+	"version": "0.0.96",
+	"userRoles": [
+		{
+			"type": "UserRole",
+			"designTimeId": "40536967-7375-7065-7275-736572726f6c",
+			"name": "superuser",
+			"description": "It can do everything",
+			"writeAccess": "1",
+			"readAccess": "1",
+			"accessNumber": 65535,
+			"privilegeBits": "0x5FFF",
+			"revision": {
+				"type": "Revision"
+			}
+		},
+		{
+			"type": "UserRole",
+			"designTimeId": "40536967-4465-6661-756c-74526f6c6500",
+			"name": "@SigDefaultClientRole",
+			"description": "Default user role which is used when no user is logged in",
+			"writeAccess": "$==cn::65535",
+			"readAccess": "cn::1",
+			"accessNumber": "65535",
+			"revision": {
+				"type": "Revision"
+			}
+		}
+	]
+}
