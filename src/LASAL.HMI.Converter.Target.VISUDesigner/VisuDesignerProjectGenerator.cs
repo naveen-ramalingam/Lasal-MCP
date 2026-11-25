@@ -2044,7 +2044,7 @@ public sealed class VisuGenerationOptions
     public bool OverwriteTarget { get; set; } = true;
     public bool ConvertBmpTransparencyToPng { get; set; } = true;
     public bool PublishWebroot { get; set; } = true;
-    public SvgConversionOptions? SvgOptions { get; set; } = new SvgConversionOptions { Enabled = true, Mode = "Hybrid" };
+    public SvgConversionOptions? SvgOptions { get; set; }
 }
 
 public sealed class VisuGenerationResult

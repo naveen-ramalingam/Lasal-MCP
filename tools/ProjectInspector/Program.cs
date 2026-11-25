@@ -19,7 +19,7 @@ internal static class Program
 
         string? convertDir = null;
         string? irOutPath = null;
-        var svgMode = "Hybrid";
+        var svgMode = "None";
         string? aiProvider = null;
         string? aiModel = null;
         for (var i = 1; i < args.Length; i++)

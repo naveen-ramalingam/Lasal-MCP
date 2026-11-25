@@ -390,7 +390,9 @@ public sealed class AssetMigrationService
 
     /// <summary>
     /// Converts a full 24-bit source BMP to RGBA PNG using the exact LASAL SCREEN RGB565 transparency key from LS0003.MPC.
-    /// Matching in RGB565 space guarantees 100% parity with the SIGMATEK PLC runtime renderer.
+    /// For Magic Pink (0xF81F) or non-neutral keys, removes all matching pixels globally.
+    /// For white (0xFFFF) or black (0x0000) keys, flood-fills from the image border so interior white/black fills
+    /// (such as the white inside "JD" letters or the black "!" inside warning triangles) stay crisp and opaque.
     /// </summary>
     public static void ConvertDiskBitmapWithMpcTransparency(
         string bmpPath,
@@ -401,22 +403,7 @@ public sealed class AssetMigrationService
         using var img = Image.Load<Rgba32>(bmpPath);
         if (hasTransparency)
         {
-            img.ProcessPixelRows(accessor =>
-            {
-                for (var y = 0; y < accessor.Height; y++)
-                {
-                    var row = accessor.GetRowSpan(y);
-                    for (var x = 0; x < row.Length; x++)
-                    {
-                        ref var p = ref row[x];
-                        var rgb565 = (ushort)(((p.R >> 3) << 11) | ((p.G >> 2) << 5) | (p.B >> 3));
-                        if (rgb565 == transparentRgb565)
-                        {
-                            p = new Rgba32(0, 0, 0, 0);
-                        }
-                    }
-                }
-            });
+            ApplySmartRgb565Transparency(img, transparentRgb565);
         }
         img.SaveAsPng(pngOutputPath);
     }
@@ -433,6 +420,7 @@ public sealed class AssetMigrationService
         var isTurned = (rec.State & 0x0001) != 0;
         var totalPixels = w * h;
         var pixels = new Rgba32[totalPixels];
+        var rawCols = new ushort[totalPixels];
 
         var p = rec.DataOffset;
         var dst = 0;
@@ -451,26 +439,19 @@ public sealed class AssetMigrationService
                 p += 2;
             }
 
-            Rgba32 rgba;
-            if (hasTrans && col == rec.TransparentRgb565)
-            {
-                rgba = new Rgba32(0, 0, 0, 0);
-            }
-            else
-            {
-                var r5 = (col >> 11) & 0x1F;
-                var g6 = (col >> 5) & 0x3F;
-                var b5 = col & 0x1F;
-                var r8 = (byte)((r5 * 255 + 15) / 31);
-                var g8 = (byte)((g6 * 255 + 31) / 63);
-                var b8 = (byte)((b5 * 255 + 15) / 31);
-                rgba = new Rgba32(r8, g8, b8, 255);
-            }
+            var r5 = (col >> 11) & 0x1F;
+            var g6 = (col >> 5) & 0x3F;
+            var b5 = col & 0x1F;
+            var r8 = (byte)((r5 * 255 + 15) / 31);
+            var g8 = (byte)((g6 * 255 + 31) / 63);
+            var b8 = (byte)((b5 * 255 + 15) / 31);
+            var rgba = new Rgba32(r8, g8, b8, 255);
 
             var end = Math.Min(totalPixels, dst + cnt);
             for (; dst < end; dst++)
             {
                 pixels[dst] = rgba;
+                rawCols[dst] = col;
             }
         }
 
@@ -479,7 +460,89 @@ public sealed class AssetMigrationService
         {
             img.Mutate(ctx => ctx.Flip(FlipMode.Vertical));
         }
+
+        if (hasTrans)
+        {
+            ApplySmartRgb565Transparency(img, rec.TransparentRgb565);
+        }
+
         img.SaveAsPng(pngOutputPath);
+    }
+
+    private static void ApplySmartRgb565Transparency(Image<Rgba32> img, ushort transparentRgb565)
+    {
+        var w = img.Width;
+        var h = img.Height;
+        var isNeutralKey = transparentRgb565 == 0xFFFF || transparentRgb565 == 0x0000;
+
+        static bool MatchesKey(Rgba32 p, ushort key, bool neutral)
+        {
+            var rgb565 = (ushort)(((p.R >> 3) << 11) | ((p.G >> 2) << 5) | (p.B >> 3));
+            if (rgb565 == key) return true;
+            if (neutral && key == 0xFFFF && p.R >= 248 && p.G >= 248 && p.B >= 248) return true;
+            if (neutral && key == 0x0000 && p.R <= 8 && p.G <= 8 && p.B <= 8) return true;
+            return false;
+        }
+
+        if (!isNeutralKey)
+        {
+            // Non-neutral chroma keys (e.g. Magic Pink 0xF81F) are stripped globally
+            img.ProcessPixelRows(accessor =>
+            {
+                for (var y = 0; y < h; y++)
+                {
+                    var row = accessor.GetRowSpan(y);
+                    for (var x = 0; x < w; x++)
+                    {
+                        if (MatchesKey(row[x], transparentRgb565, false))
+                        {
+                            row[x] = new Rgba32(0, 0, 0, 0);
+                        }
+                    }
+                }
+            });
+            return;
+        }
+
+        // For pure white (0xFFFF) or pure black (0x0000) keys, flood-fill from outer border pixels
+        // so outer background is cleanly removed while enclosed interior fills (like white inside "JD" or black "!") remain intact.
+        var visited = new bool[w * h];
+        var queue = new Queue<int>();
+
+        void TryEnqueue(int x, int y)
+        {
+            var idx = y * w + x;
+            if (visited[idx]) return;
+            if (MatchesKey(img[x, y], transparentRgb565, true))
+            {
+                visited[idx] = true;
+                queue.Enqueue(idx);
+            }
+        }
+
+        for (var x = 0; x < w; x++)
+        {
+            TryEnqueue(x, 0);
+            TryEnqueue(x, h - 1);
+        }
+        for (var y = 0; y < h; y++)
+        {
+            TryEnqueue(0, y);
+            TryEnqueue(w - 1, y);
+        }
+
+        while (queue.Count > 0)
+        {
+            var idx = queue.Dequeue();
+            var x = idx % w;
+            var y = idx / w;
+            img[x, y] = new Rgba32(0, 0, 0, 0);
+
+            if (x > 0) TryEnqueue(x - 1, y);
+            if (x + 1 < w) TryEnqueue(x + 1, y);
+            if (y > 0) TryEnqueue(x, y - 1);
+            if (y + 1 < h) TryEnqueue(x, y + 1);
+        }
     }
 
     public static MpcImageBank? LoadMpcImageBank(string ls0003MpcPath)

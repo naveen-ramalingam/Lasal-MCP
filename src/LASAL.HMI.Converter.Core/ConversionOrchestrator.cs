@@ -147,8 +147,8 @@ public sealed class ConversionRequest
     public bool OverwriteTarget { get; set; } = true;
     public bool ConvertBmpTransparencyToPng { get; set; } = true;
     public bool PublishWebroot { get; set; } = true;
-    public bool ConvertImagesToSvg { get; set; } = true;
-    public string SvgConversionMode { get; set; } = "Hybrid";
+    public bool ConvertImagesToSvg { get; set; }
+    public string SvgConversionMode { get; set; } = "None";
     public string? AiSvgProvider { get; set; }
     public string? AiSvgApiKey { get; set; }
     public string? AiSvgModel { get; set; }
