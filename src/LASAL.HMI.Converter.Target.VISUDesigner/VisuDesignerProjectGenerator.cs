@@ -159,13 +159,71 @@ public sealed class VisuDesignerProjectGenerator
         var schemeLookup = WriteSchemesAndBuildLookup(projectDir, model, colorLookup, mediaLookup, textLookup, stationDatapointGuids, versions);
         WriteUnitsAndAlarmsAndMenus(projectDir, model, textLookup, stationDatapointGuids, versions);
 
-        // Write ControlTemplates (reusable LSE objects)
+        // Pre-allocate ControlTemplate GUIDs + SafeNames so nested ControlTemplates and ObjectSchemes resolve cleanly
         var usedControlIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        var templateLookup = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        var templateLookup = new Dictionary<string, (string SafeName, string Guid)>(StringComparer.OrdinalIgnoreCase);
+        var usedTemplateNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var templateMetaList = new List<(ReusableObjectModel Obj, string SafeName, string Guid)>(model.ReusableObjects.Count);
         foreach (var obj in model.ReusableObjects)
         {
-            var tmplId = WriteControlTemplateFile(projectDir, obj, versions.ControlTemplateVersion, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, stationDatapointGuids, usedControlIds);
-            templateLookup[obj.Name] = tmplId;
+            var baseSafe = SanitizeComponentName(obj.Name, obj.Id);
+            var safeName = baseSafe;
+            if (!usedTemplateNames.Add(safeName))
+            {
+                safeName = $"{baseSafe}_{obj.Index}";
+                usedTemplateNames.Add(safeName);
+            }
+            var dtId = Guid.NewGuid().ToString();
+            templateMetaList.Add((obj, safeName, dtId));
+            templateLookup[obj.Name] = (safeName, dtId);
+            templateLookup[safeName] = (safeName, dtId);
+            if (!string.IsNullOrEmpty(obj.Id))
+            {
+                templateLookup[obj.Id] = (safeName, dtId);
+                if (obj.Id.StartsWith("Obj_", StringComparison.OrdinalIgnoreCase))
+                {
+                    templateLookup[obj.Id[4..]] = (safeName, dtId);
+                }
+            }
+            templateLookup[obj.Index.ToString(CultureInfo.InvariantCulture)] = (safeName, dtId);
+        }
+
+        // Build ObjectScheme -> default target ControlTemplate lookup so ObjectScheme-driven containers render visibly
+        var objectSchemeDefaults = new Dictionary<string, (string SafeName, string Guid)>(StringComparer.OrdinalIgnoreCase);
+        foreach (var s in model.Schemes.Where(s => s.SchemeType.Equals("Object", StringComparison.OrdinalIgnoreCase)))
+        {
+            string? targetObjKey = null;
+            // For 2-state enabled/disabled component toggles (0=OFF, 1=ON), prefer state 1 so active module buttons show in full color
+            var entryOne = s.Entries.FirstOrDefault(e => (e.Operator == "==" || e.Operator == "=") && e.CompareValue == 1 && !string.IsNullOrEmpty(e.ResultValue));
+            var entryZero = s.Entries.FirstOrDefault(e => (e.Operator == "==" || e.Operator == "=") && e.CompareValue == 0 && !string.IsNullOrEmpty(e.ResultValue));
+            if (entryOne != null && entryZero != null && s.Entries.Count == 2 && templateLookup.ContainsKey(entryOne.ResultValue))
+            {
+                targetObjKey = entryOne.ResultValue;
+            }
+            else if (!string.IsNullOrEmpty(s.DefaultValue) && templateLookup.ContainsKey(s.DefaultValue))
+            {
+                targetObjKey = s.DefaultValue;
+            }
+            else if (entryZero != null && templateLookup.ContainsKey(entryZero.ResultValue))
+            {
+                targetObjKey = entryZero.ResultValue;
+            }
+            else
+            {
+                targetObjKey = s.Entries.Select(e => e.ResultValue).FirstOrDefault(rv => !string.IsNullOrEmpty(rv) && templateLookup.ContainsKey(rv));
+            }
+
+            if (targetObjKey != null && templateLookup.TryGetValue(targetObjKey, out var resolvedTmpl))
+            {
+                objectSchemeDefaults[s.Name] = resolvedTmpl;
+                objectSchemeDefaults[s.Id] = resolvedTmpl;
+            }
+        }
+
+        // Write ControlTemplates (reusable LSE objects) with full templateLookup + objectSchemeDefaults support
+        foreach (var (obj, safeName, tmplId) in templateMetaList)
+        {
+            WriteControlTemplateFile(projectDir, obj, safeName, tmplId, versions.ControlTemplateVersion, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, stationDatapointGuids, usedControlIds);
         }
 
         // Write GlobalDashboard
@@ -180,17 +238,24 @@ public sealed class VisuDesignerProjectGenerator
                 0,
                 model.GlobalScreen,
                 versions.GlobalDashboardVersion,
-                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, stationDatapointGuids, usedControlIds);
+                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, stationDatapointGuids, usedControlIds);
             globalDashEntries.Add((gsName, gsId));
         }
 
         // Write Dashboards (Screens)
         var dashboardEntries = new List<(string Name, string Guid, bool IsStart)>();
+        var preferredStartName = model.ProjectMetadata.StartScreenName;
+        var hasExplicitStart = !string.IsNullOrWhiteSpace(preferredStartName) &&
+            model.Screens.Any(s => string.Equals(s.Name, preferredStartName, StringComparison.OrdinalIgnoreCase));
+        var startAssigned = false;
         for (var i = 0; i < model.Screens.Count; i++)
         {
             var scr = model.Screens[i];
             var dashName = SanitizeComponentName(scr.Name, $"Dashboard{i}");
-            var isStart = i == 0 || string.Equals(scr.Name, model.ProjectMetadata.StartScreenName, StringComparison.OrdinalIgnoreCase);
+            var isStart = !startAssigned && (hasExplicitStart
+                ? string.Equals(scr.Name, preferredStartName, StringComparison.OrdinalIgnoreCase)
+                : i == 0);
+            if (isStart) startAssigned = true;
             var dashId = WriteDashboardFile(
                 Path.Combine(projectDir, "Dashboards", $"{dashName}.json"),
                 "dashboard",
@@ -198,7 +263,7 @@ public sealed class VisuDesignerProjectGenerator
                 i,
                 scr,
                 versions.DashboardVersion,
-                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, stationDatapointGuids, usedControlIds);
+                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, stationDatapointGuids, usedControlIds);
             dashboardEntries.Add((dashName, dashId, isStart));
         }
 
@@ -242,7 +307,7 @@ public sealed class VisuDesignerProjectGenerator
                 i,
                 win,
                 versions.WindowVersion,
-                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, stationDatapointGuids, usedControlIds);
+                colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, stationDatapointGuids, usedControlIds);
             windowEntries.Add((winName, winId));
         }
 
@@ -314,6 +379,7 @@ public sealed class VisuDesignerProjectGenerator
         var foundWebroot = publishCandidates.FirstOrDefault(File.Exists);
         if (foundWebroot == null && options.PublishWebroot)
         {
+            result.Warnings.Add("VISUDesigner PublishProject did not produce Publish/webroot/index.html; falling back to minimal runtime shell.");
             // Fallback: Assemble self-contained HTML5/JS webroot bundle directly from the project's Runtime + generated JSON views
             var fallbackWebrootDir = Path.Combine(projectDir, "Publish", "webroot");
             TryAssembleFallbackWebroot(projectDir, fallbackWebrootDir);
@@ -1090,13 +1156,14 @@ public sealed class VisuDesignerProjectGenerator
         return dpGuidLookup;
     }
 
-    private Dictionary<string, string> WriteLogicAndFunctionBlocks(
+    private Dictionary<string, (string SafeName, string Guid)> WriteLogicAndFunctionBlocks(
         string projectDir,
         HmiIntermediateModel model,
         Dictionary<string, (string PublishName, string Guid)> dpLookup,
         string fbVersion)
     {
-        var fbLookup = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        var fbLookup = new Dictionary<string, (string SafeName, string Guid)>(StringComparer.OrdinalIgnoreCase);
+        var usedFbNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var logicArtifacts = _logicService.GenerateLogicArtifacts(model);
 
         var codeDir = Path.Combine(projectDir, "CodeModules");
@@ -1109,16 +1176,19 @@ public sealed class VisuDesignerProjectGenerator
         var fbDir = Path.Combine(projectDir, "Functionblocks");
         Directory.CreateDirectory(fbDir);
 
-        foreach (var fb in model.FunctionBlocks)
+        for (var i = 0; i < model.FunctionBlocks.Count; i++)
         {
+            var fb = model.FunctionBlocks[i];
             var rawGuid = Guid.NewGuid().ToString();
             var blockId = "_" + rawGuid.Replace("-", "");
-            var safeName = SanitizeComponentName(fb.Name, $"Functionblock_{fb.Index}");
-            fbLookup[fb.Id] = rawGuid;
-            fbLookup[fb.Name] = rawGuid;
-            fbLookup[safeName] = rawGuid;
+            var safeName = SanitizeUniqueFunctionBlockName(fb.Name, fb.Index, usedFbNames);
+            fbLookup[fb.Id] = (safeName, rawGuid);
+            fbLookup[fb.Name] = (safeName, rawGuid);
+            fbLookup[safeName] = (safeName, rawGuid);
 
-            var artifact = logicArtifacts.FunctionBlocks.FirstOrDefault(a => string.Equals(a.Name, safeName, StringComparison.OrdinalIgnoreCase));
+            var artifact = i < logicArtifacts.FunctionBlocks.Count
+                ? logicArtifacts.FunctionBlocks[i]
+                : logicArtifacts.FunctionBlocks.FirstOrDefault(a => string.Equals(a.Name, safeName, StringComparison.OrdinalIgnoreCase));
             var fbJson = new Dictionary<string, object?>
             {
                 ["type"] = "Functionblock",
@@ -1131,6 +1201,7 @@ public sealed class VisuDesignerProjectGenerator
             WriteTabIndentedJson(Path.Combine(fbDir, $"{safeName}.json"), fbJson);
 
             var jsBody = artifact?.JavaScriptBody ?? "    return true;\n";
+            var jsMethodName = artifact?.Name ?? safeName;
             var fbJs = $$"""
 class _{{blockId}} extends window.functionBlockBase {
     constructor() {
@@ -1138,8 +1209,8 @@ class _{{blockId}} extends window.functionBlockBase {
     }
 
     async _execute() {
-        if (window.LasalMigratedLogic && typeof window.LasalMigratedLogic.{{safeName}} === 'function') {
-            return window.LasalMigratedLogic.{{safeName}}();
+        if (window.LasalMigratedLogic && typeof window.LasalMigratedLogic.{{jsMethodName}} === 'function') {
+            return window.LasalMigratedLogic.{{jsMethodName}}();
         }
 {{jsBody}}
     }
@@ -1152,7 +1223,16 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
         return fbLookup;
     }
 
-    private static Dictionary<string, (string Folder, string Guid)> WriteSchemesAndBuildLookup(
+    private sealed record SchemeLookupEntry(
+        string Folder,
+        string Guid,
+        string SafeName,
+        string? DefaultColorPaletteRef = null,
+        string? DefaultColorGuid = null,
+        string? DefaultMediaFileName = null,
+        string? DefaultMediaId = null);
+
+    private static Dictionary<string, SchemeLookupEntry> WriteSchemesAndBuildLookup(
         string projectDir,
         HmiIntermediateModel model,
         Dictionary<string, (string PaletteRef, string Guid)> colorLookup,
@@ -1161,7 +1241,7 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
         Dictionary<string, (string PublishName, string Guid)> dpLookup,
         FileVersionInfoBlock versions)
     {
-        var lookup = new Dictionary<string, (string Folder, string Guid)>(StringComparer.OrdinalIgnoreCase);
+        var lookup = new Dictionary<string, SchemeLookupEntry>(StringComparer.OrdinalIgnoreCase);
         var schemesRoot = Path.Combine(projectDir, "Schemes");
 
         var byFolder = new Dictionary<string, (string FileName, string CollectionType, string SchemeKind, int SchemeTypeId, List<SchemeModel> Items)>
@@ -1185,9 +1265,10 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             {
                 var safeName = SanitizeComponentName(s.Name, s.Id);
                 var dtId = Guid.NewGuid().ToString();
-                lookup[$"{s.SchemeType}:{s.Id}"] = (folder, dtId);
-                lookup[s.Id] = (folder, dtId);
-                lookup[s.Name] = (folder, dtId);
+                string? defaultColorPaletteRef = null;
+                string? defaultColorGuid = null;
+                string? defaultMediaFileName = null;
+                string? defaultMediaId = null;
 
                 var entries = new List<Dictionary<string, object?>>();
                 foreach (var e in s.Entries)
@@ -1249,6 +1330,11 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
                              (mediaLookup.TryGetValue(e.ResultValue, out var mHit) ||
                               mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(e.ResultValue), out mHit)))
                     {
+                        if (defaultMediaFileName == null)
+                        {
+                            defaultMediaFileName = mHit.FileName;
+                            defaultMediaId = mHit.MediaId;
+                        }
                         entryObj["setValue"] = new Dictionary<string, object?>
                         {
                             ["value"] = $"Resources\\Images\\{mHit.FileName}",
@@ -1259,6 +1345,11 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
                     }
                     else if (spec.SchemeKind == "Color" && colorLookup.TryGetValue(e.ResultValue, out var cHit))
                     {
+                        if (defaultColorPaletteRef == null)
+                        {
+                            defaultColorPaletteRef = cHit.PaletteRef;
+                            defaultColorGuid = cHit.Guid;
+                        }
                         entryObj["setValue"] = new Dictionary<string, object?>
                         {
                             ["value"] = cHit.PaletteRef,
@@ -1273,6 +1364,18 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
                         entries.Add(entryObj);
                     }
                 }
+
+                var entryRecord = new SchemeLookupEntry(
+                    folder,
+                    dtId,
+                    safeName,
+                    defaultColorPaletteRef,
+                    defaultColorGuid,
+                    defaultMediaFileName,
+                    defaultMediaId);
+                lookup[$"{s.SchemeType}:{s.Id}"] = entryRecord;
+                lookup[s.Id] = entryRecord;
+                lookup[s.Name] = entryRecord;
 
                 schemeObjs.Add(new Dictionary<string, object?>
                 {
@@ -1343,18 +1446,20 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
                 }
             };
 
+            var usedAlarmNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "Default" };
             foreach (var a in model.Alarms)
             {
+                var alarmName = SanitizeComponentName(a.Id, $"Alarm_{a.AlarmNumber}");
+                if (!usedAlarmNames.Add(alarmName))
+                {
+                    alarmName = $"{alarmName}_{a.AlarmNumber}";
+                    if (!usedAlarmNames.Add(alarmName)) continue;
+                }
                 alarmObjs.Add(new Dictionary<string, object?>
                 {
                     ["type"] = "Alarm",
                     ["designTimeId"] = Guid.NewGuid().ToString(),
-                    ["name"] = SanitizeComponentName(a.Id, $"Alarm_{a.AlarmNumber}"),
-                    ["alarmNumber"] = a.AlarmNumber,
-                    ["group"] = a.Group,
-                    ["severity"] = a.Severity,
-                    ["datapoint"] = a.DatapointId,
-                    ["activeColor"] = a.ActiveBackgroundColorHex,
+                    ["name"] = alarmName,
                     ["revision"] = new Dictionary<string, object?> { ["type"] = "Revision" }
                 });
             }
@@ -1398,22 +1503,24 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
     private string WriteControlTemplateFile(
         string projectDir,
         ReusableObjectModel obj,
+        string safeName,
+        string dtId,
         string version,
         Dictionary<string, (string PaletteRef, string Guid)> colorLookup,
         Dictionary<string, string> fontLookup,
         Dictionary<string, (string ListName, string AliasName, string EntryGuid)> textLookup,
         Dictionary<string, (string FileName, string MediaId)> mediaLookup,
-        Dictionary<string, string> fbLookup,
-        Dictionary<string, (string Folder, string Guid)> schemeLookup,
+        Dictionary<string, (string SafeName, string Guid)> fbLookup,
+        Dictionary<string, SchemeLookupEntry> schemeLookup,
+        Dictionary<string, (string SafeName, string Guid)> templateLookup,
+        Dictionary<string, (string SafeName, string Guid)> objectSchemeDefaults,
         Dictionary<string, (string PublishName, string Guid)> dpLookup,
         HashSet<string> usedControlIds)
     {
         var dir = Path.Combine(projectDir, "ControlTemplate");
         Directory.CreateDirectory(dir);
-        var safeName = SanitizeComponentName(obj.Name, obj.Id);
-        var dtId = Guid.NewGuid().ToString();
         var elements = obj.Controls.Select((c, idx) => BuildVisuControlJson(
-            c, idx, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, null, dpLookup, usedControlIds)).ToList();
+            c, idx, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, dpLookup, usedControlIds, selfTemplateGuid: dtId)).ToList();
 
         var doc = new Dictionary<string, object?>
         {
@@ -1447,15 +1554,16 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
         Dictionary<string, string> fontLookup,
         Dictionary<string, (string ListName, string AliasName, string EntryGuid)> textLookup,
         Dictionary<string, (string FileName, string MediaId)> mediaLookup,
-        Dictionary<string, string> fbLookup,
-        Dictionary<string, (string Folder, string Guid)> schemeLookup,
-        Dictionary<string, string> templateLookup,
+        Dictionary<string, (string SafeName, string Guid)> fbLookup,
+        Dictionary<string, SchemeLookupEntry> schemeLookup,
+        Dictionary<string, (string SafeName, string Guid)> templateLookup,
+        Dictionary<string, (string SafeName, string Guid)> objectSchemeDefaults,
         Dictionary<string, (string PublishName, string Guid)> dpLookup,
         HashSet<string> usedControlIds)
     {
         var dtId = Guid.NewGuid().ToString();
         var elements = screen.Controls.Select((c, idx) => BuildVisuControlJson(
-            c, idx, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, dpLookup, usedControlIds)).ToList();
+            c, idx, colorLookup, fontLookup, textLookup, mediaLookup, fbLookup, schemeLookup, templateLookup, objectSchemeDefaults, dpLookup, usedControlIds)).ToList();
 
         // In VISUDesigner 01.04: Dashboards & GlobalDashboards use "dashboardelements", Window uses "controls"!
         var elementsJsonKey = string.Equals(rootType, "window", StringComparison.OrdinalIgnoreCase)
@@ -1513,23 +1621,30 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
         Dictionary<string, string> fontLookup,
         Dictionary<string, (string ListName, string AliasName, string EntryGuid)> textLookup,
         Dictionary<string, (string FileName, string MediaId)> mediaLookup,
-        Dictionary<string, string> fbLookup,
-        Dictionary<string, (string Folder, string Guid)> schemeLookup,
-        Dictionary<string, string>? templateLookup,
+        Dictionary<string, (string SafeName, string Guid)> fbLookup,
+        Dictionary<string, SchemeLookupEntry> schemeLookup,
+        Dictionary<string, (string SafeName, string Guid)>? templateLookup,
+        Dictionary<string, (string SafeName, string Guid)>? objectSchemeDefaults,
         Dictionary<string, (string PublishName, string Guid)> dpLookup,
-        HashSet<string>? usedControlIds = null)
+        HashSet<string>? usedControlIds = null,
+        string? selfTemplateGuid = null)
     {
         var visuControlId = string.IsNullOrWhiteSpace(ctrl.TargetVisuType) || ctrl.TargetVisuType.Contains('.')
             ? _mappingRegistry.ResolveRule(ctrl).TargetVisuControlId
             : ctrl.TargetVisuType;
         usedControlIds?.Add(visuControlId);
 
+        // LSE single-line text boxes can have tight heights (e.g. 10px for 14px text) without clipping; pad slightly for HTML
+        var effectiveHeight = visuControlId == "sig-control-text"
+            ? Math.Max(16, ctrl.Height)
+            : Math.Max(4, ctrl.Height);
+
         var props = new List<Dictionary<string, object?>>
         {
             MakeProp("--theme-sig-element-left", $"{ctrl.X}px", 17, 2),
             MakeProp("--theme-sig-element-top", $"{ctrl.Y}px", 17, 2),
             MakeProp("--theme-sig-element-width", $"{Math.Max(4, ctrl.Width)}px", 17, 2),
-            MakeProp("--theme-sig-element-height", $"{Math.Max(4, ctrl.Height)}px", 17, 2),
+            MakeProp("--theme-sig-element-height", $"{effectiveHeight}px", 17, 2),
             MakeProp("rotation", 0.0, 17, 12),
             MakeProp("--theme-sig-element-zindex", $"{100 + ctrl.ZIndex}", 0, 2)
         };
@@ -1572,24 +1687,54 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             }
         }
 
-        // Bind Colors (prefer dynamic ColorScheme if present; make image controls transparent so transparent PNG/SVG layers cleanly)
+        // Bind Colors (VISUDesigner requires a bound scheme-input datapoint for typeId=18 ColorScheme properties during PublishProject;
+        // when no scheme-input datapoint is bound, resolve the ColorScheme's default palette entry so PublishProject succeeds cleanly while preserving Schemes\ColorSchemes\ColorScheme.json)
+        var isButtonWithGradientStop = visuControlId == "sig-control-button" || visuControlId == "sig-control-toggle-button";
+        var hasResolvedImage =
+            (!string.IsNullOrEmpty(ctrl.ImageAssetId) &&
+             (mediaLookup.ContainsKey(ctrl.ImageAssetId) || mediaLookup.ContainsKey(Path.GetFileNameWithoutExtension(ctrl.ImageAssetId)))) ||
+            (!string.IsNullOrEmpty(ctrl.ImageSchemeId) &&
+             (schemeLookup.TryGetValue($"Image:{ctrl.ImageSchemeId}", out var tmpMediaSch) || schemeLookup.TryGetValue(ctrl.ImageSchemeId, out tmpMediaSch)) &&
+             tmpMediaSch.Folder == "MediaSchemes" && !string.IsNullOrEmpty(tmpMediaSch.DefaultMediaFileName));
+
         if (!string.IsNullOrEmpty(ctrl.ColorSchemeId) &&
             (schemeLookup.TryGetValue($"Color:{ctrl.ColorSchemeId}", out var colSch) || schemeLookup.TryGetValue(ctrl.ColorSchemeId, out colSch)) &&
-            colSch.Folder == "ColorSchemes")
+            colSch.Folder == "ColorSchemes" &&
+            !string.IsNullOrEmpty(colSch.DefaultColorPaletteRef) &&
+            !string.IsNullOrEmpty(colSch.DefaultColorGuid))
         {
-            props.Add(MakeProp($"--theme-{visuControlId}-background-color", SanitizeComponentName(ctrl.ColorSchemeId, ctrl.ColorSchemeId), 18, 2, colSch.Guid));
+            props.Add(MakeProp($"--theme-{visuControlId}-background-color", colSch.DefaultColorPaletteRef, 9, 2, colSch.DefaultColorGuid));
+            if (isButtonWithGradientStop)
+            {
+                props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", colSch.DefaultColorPaletteRef, 9, 2, colSch.DefaultColorGuid));
+            }
         }
-        else if (visuControlId == "sig-control-image" || ctrl.TransparentBackground)
+        else if (visuControlId == "sig-control-image" ||
+                 visuControlId == "sig-composite-container" ||
+                 ctrl.TransparentBackground ||
+                 (isButtonWithGradientStop && hasResolvedImage))
         {
             props.Add(MakeProp($"--theme-{visuControlId}-background-color", "transparent", 0, 2));
+            if (isButtonWithGradientStop)
+            {
+                props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", "transparent", 0, 2));
+            }
         }
         else if (colorLookup.TryGetValue(ctrl.BackgroundColorHex, out var bgPalette))
         {
             props.Add(MakeProp($"--theme-{visuControlId}-background-color", bgPalette.PaletteRef, 9, 2, bgPalette.Guid));
+            if (isButtonWithGradientStop)
+            {
+                props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", bgPalette.PaletteRef, 9, 2, bgPalette.Guid));
+            }
         }
         else
         {
             props.Add(MakeProp($"--theme-{visuControlId}-background-color", ctrl.BackgroundColorHex, 0, 2));
+            if (isButtonWithGradientStop)
+            {
+                props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", ctrl.BackgroundColorHex, 0, 2));
+            }
         }
 
         if (colorLookup.TryGetValue(ctrl.ForegroundColorHex, out var fgPalette))
@@ -1597,26 +1742,28 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             props.Add(MakeProp($"--theme-{visuControlId}-color", fgPalette.PaletteRef, 9, 2, fgPalette.Guid));
         }
 
-        // Bind Media Image or Dynamic MediaScheme (typeId=29, propTypeId=2) + Pressed Image for buttons
+        // Bind Media Image (or default entry of MediaScheme when no scheme-input datapoint is bound, avoiding SchemeVariableUndefined PublishProject failure)
         var imgProp = visuControlId == "sig-control-image"
             ? "--theme-sig-control-image-background-image"
             : $"--theme-{visuControlId}-background-image";
 
-        if (!string.IsNullOrEmpty(ctrl.ImageSchemeId) &&
-            (schemeLookup.TryGetValue($"Image:{ctrl.ImageSchemeId}", out var mediaSch) || schemeLookup.TryGetValue(ctrl.ImageSchemeId, out mediaSch)) &&
-            mediaSch.Folder == "MediaSchemes")
+        if (!string.IsNullOrEmpty(ctrl.ImageAssetId) &&
+            (mediaLookup.TryGetValue(ctrl.ImageAssetId, out var mediaRef) ||
+             mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(ctrl.ImageAssetId), out mediaRef)))
         {
-            props.Add(MakeProp(imgProp, SanitizeComponentName(ctrl.ImageSchemeId, ctrl.ImageSchemeId), 29, 2, mediaSch.Guid));
+            props.Add(MakeProp(imgProp, $"Resources\\Images\\{mediaRef.FileName}", 15, 2, mediaRef.MediaId));
             if (visuControlId == "sig-control-image")
             {
                 props.Add(MakeProp("--theme-sig-control-image-background-size", "100% 100%", 0, 2));
             }
         }
-        else if (!string.IsNullOrEmpty(ctrl.ImageAssetId) &&
-                 (mediaLookup.TryGetValue(ctrl.ImageAssetId, out var mediaRef) ||
-                  mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(ctrl.ImageAssetId), out mediaRef)))
+        else if (!string.IsNullOrEmpty(ctrl.ImageSchemeId) &&
+                 (schemeLookup.TryGetValue($"Image:{ctrl.ImageSchemeId}", out var mediaSch) || schemeLookup.TryGetValue(ctrl.ImageSchemeId, out mediaSch)) &&
+                 mediaSch.Folder == "MediaSchemes" &&
+                 !string.IsNullOrEmpty(mediaSch.DefaultMediaFileName) &&
+                 !string.IsNullOrEmpty(mediaSch.DefaultMediaId))
         {
-            props.Add(MakeProp(imgProp, $"Resources\\Images\\{mediaRef.FileName}", 15, 2, mediaRef.MediaId));
+            props.Add(MakeProp(imgProp, $"Resources\\Images\\{mediaSch.DefaultMediaFileName}", 15, 2, mediaSch.DefaultMediaId));
             if (visuControlId == "sig-control-image")
             {
                 props.Add(MakeProp("--theme-sig-control-image-background-size", "100% 100%", 0, 2));
@@ -1631,36 +1778,51 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             props.Add(MakeProp("--theme-sig-control-button-pressed-background-image", $"Resources\\Images\\{pressedMediaRef.FileName}", 15, 2, pressedMediaRef.MediaId));
         }
 
-        // Bind Composite Template for ObjectInstance
-        if (visuControlId == "sig-composite-container" &&
-            !string.IsNullOrEmpty(ctrl.ReferencedObjectName) &&
-            templateLookup != null &&
-            templateLookup.TryGetValue(ctrl.ReferencedObjectName, out var tmplGuid))
+        // Bind Composite Template for ObjectInstance (direct reference OR ObjectScheme default target, guarding against self-recursion)
+        if (visuControlId == "sig-composite-container")
         {
-            props.Add(MakeProp("sigcompositectrl", SanitizeComponentName(ctrl.ReferencedObjectName, "Template"), 23, 5, tmplGuid));
-            if (!string.IsNullOrEmpty(ctrl.OverloadDatapointPrefix))
+            (string SafeName, string Guid) resolvedTmpl = default;
+            var hasTmpl = false;
+            if (!string.IsNullOrEmpty(ctrl.ReferencedObjectName) &&
+                templateLookup != null &&
+                templateLookup.TryGetValue(ctrl.ReferencedObjectName, out resolvedTmpl))
             {
-                var ovKey = ctrl.OverloadDatapointPrefix.Contains(':')
-                    ? ctrl.OverloadDatapointPrefix[(ctrl.OverloadDatapointPrefix.IndexOf(':') + 1)..]
-                    : ctrl.OverloadDatapointPrefix;
-                if (dpLookup.TryGetValue(ovKey, out var ovRef))
+                hasTmpl = true;
+            }
+            else if (!string.IsNullOrEmpty(ctrl.ObjectSchemeId) &&
+                     objectSchemeDefaults != null &&
+                     objectSchemeDefaults.TryGetValue(ctrl.ObjectSchemeId, out resolvedTmpl))
+            {
+                hasTmpl = true;
+            }
+
+            if (hasTmpl && !string.Equals(resolvedTmpl.Guid, selfTemplateGuid, StringComparison.OrdinalIgnoreCase))
+            {
+                props.Add(MakeProp("sigcompositectrl", resolvedTmpl.SafeName, 23, 5, resolvedTmpl.Guid));
+                if (!string.IsNullOrEmpty(ctrl.OverloadDatapointPrefix))
                 {
-                    props.Add(MakeProp("sigoverloadcontent", ovRef.PublishName, 4, 7, ovRef.Guid));
+                    var ovKey = ctrl.OverloadDatapointPrefix.Contains(':')
+                        ? ctrl.OverloadDatapointPrefix[(ctrl.OverloadDatapointPrefix.IndexOf(':') + 1)..]
+                        : ctrl.OverloadDatapointPrefix;
+                    if (dpLookup.TryGetValue(ovKey, out var ovRef))
+                    {
+                        props.Add(MakeProp("sigoverloadcontent", ovRef.PublishName, 4, 7, ovRef.Guid));
+                    }
                 }
             }
         }
 
-        // Bind Button FunctionBlock events
+        // Bind Button FunctionBlock events using the sanitized, deduplicated FunctionBlock name
         foreach (var evt in ctrl.Events)
         {
             if (evt.ActionType == "ExecuteFunctionBlock" &&
                 !string.IsNullOrEmpty(evt.FunctionBlockId) &&
-                fbLookup.TryGetValue(evt.FunctionBlockId, out var fbGuid))
+                fbLookup.TryGetValue(evt.FunctionBlockId, out var fbRef))
             {
                 var evProp = evt.Trigger == "OnRelease"
                     ? $"{visuControlId}-mouseup"
                     : $"{visuControlId}-tap";
-                props.Add(MakeProp(evProp, evt.FunctionBlockId, 1, 3, fbGuid));
+                props.Add(MakeProp(evProp, fbRef.SafeName, 1, 3, fbRef.Guid));
             }
         }
 
@@ -1990,6 +2152,60 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
         }
         var s = sb.ToString().Trim();
         return string.IsNullOrEmpty(s) ? "MigratedVisuProject" : s;
+    }
+
+    private static string SanitizeUniqueFunctionBlockName(string raw, int index, HashSet<string> usedNames)
+    {
+        var sb = new StringBuilder((raw?.Length ?? 0) + 8);
+        if (!string.IsNullOrWhiteSpace(raw))
+        {
+            foreach (var ch in raw)
+            {
+                if (char.IsLetterOrDigit(ch) || ch == '_' || ch == '-') sb.Append(ch);
+                else sb.Append(ch switch
+                {
+                    '+' => "_plus",
+                    '<' => "_lt",
+                    '>' => "_gt",
+                    '.' => "_dot",
+                    ',' => "_comma",
+                    '/' => "_slash",
+                    '\\' => "_bslash",
+                    '*' => "_mul",
+                    '=' => "_eq",
+                    '!' => "_bang",
+                    '?' => "_qmark",
+                    ':' => "_colon",
+                    ';' => "_semi",
+                    '@' => "_at",
+                    '#' => "_hash",
+                    '%' => "_pct",
+                    '&' => "_amp",
+                    '|' => "_pipe",
+                    '^' => "_caret",
+                    '~' => "_tilde",
+                    '(' => "_lparen",
+                    ')' => "_rparen",
+                    '[' => "_lbrack",
+                    ']' => "_rbrack",
+                    ' ' => "_",
+                    _ => "_"
+                });
+            }
+        }
+
+        var baseName = sb.ToString().Trim('_');
+        if (string.IsNullOrEmpty(baseName)) baseName = $"Functionblock_{index}";
+        if (char.IsDigit(baseName[0])) baseName = "C_" + baseName;
+
+        var candidate = baseName;
+        var suffix = 0;
+        while (!usedNames.Add(candidate))
+        {
+            candidate = suffix == 0 ? $"{baseName}_{index}" : $"{baseName}_{index}_{suffix}";
+            suffix++;
+        }
+        return candidate;
     }
 
     private static string SanitizeComponentName(string raw, string fallback)

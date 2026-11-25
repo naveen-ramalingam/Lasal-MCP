@@ -91,10 +91,17 @@ public sealed class LogicMigrationService
         jsSb.AppendLine("            }");
         jsSb.AppendLine("        },");
 
-        // Emit FunctionBlocks
+        // Emit FunctionBlocks (deduplicated so symbol-named blocks like Key_< / Key_+ don't collide)
+        var usedFnNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (var fb in model.FunctionBlocks)
         {
-            var fnName = SanitizeJsIdentifier(fb.Name);
+            var baseFnName = SanitizeJsIdentifier(fb.Name);
+            var fnName = baseFnName;
+            if (!usedFnNames.Add(fnName))
+            {
+                fnName = $"{baseFnName}_{fb.Index}";
+                usedFnNames.Add(fnName);
+            }
             jsSb.AppendLine();
             jsSb.AppendLine($"        {fnName}: function () {{");
             var fbBody = BuildFunctionBlockJsBody(fb, "            ");
@@ -389,11 +396,39 @@ public sealed class LogicMigrationService
     private static string SanitizeJsIdentifier(string raw)
     {
         if (string.IsNullOrWhiteSpace(raw)) return "fn_0";
-        var sb = new StringBuilder(raw.Length);
+        var sb = new StringBuilder(raw.Length + 8);
         foreach (var ch in raw)
         {
             if (char.IsLetterOrDigit(ch) || ch == '_') sb.Append(ch);
-            else sb.Append('_');
+            else sb.Append(ch switch
+            {
+                '+' => "_plus",
+                '-' => "_minus",
+                '<' => "_lt",
+                '>' => "_gt",
+                '.' => "_dot",
+                ',' => "_comma",
+                '/' => "_slash",
+                '\\' => "_bslash",
+                '*' => "_mul",
+                '=' => "_eq",
+                '!' => "_bang",
+                '?' => "_qmark",
+                ':' => "_colon",
+                ';' => "_semi",
+                '@' => "_at",
+                '#' => "_hash",
+                '%' => "_pct",
+                '&' => "_amp",
+                '|' => "_pipe",
+                '^' => "_caret",
+                '~' => "_tilde",
+                '(' => "_lparen",
+                ')' => "_rparen",
+                '[' => "_lbrack",
+                ']' => "_rbrack",
+                _ => "_"
+            });
         }
         var res = sb.ToString();
         if (char.IsDigit(res[0])) res = "_" + res;

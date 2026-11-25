@@ -188,19 +188,36 @@ public sealed class MpcBinaryReader
             }
         }
 
-        // Update project resolution from screens if detected
+        // Update project resolution from screens if detected (use max across non-window screens so partial-height
+        // screens below the GlobalScreen header don't clip full 1024x768 layouts like the bottom navigation bar)
         if (model.Screens.Count > 0)
         {
             var first = model.Screens[0];
-            if (first.Width > 0 && first.Height > 0)
+            var maxW = model.Screens.Max(s => s.Width);
+            var maxH = model.Screens.Max(s => s.Height);
+            if (maxW > 0 && maxH > 0)
             {
-                model.ProjectMetadata.ResolutionWidth = first.Width;
-                model.ProjectMetadata.ResolutionHeight = first.Height;
+                model.ProjectMetadata.ResolutionWidth = Math.Max(model.ProjectMetadata.ResolutionWidth, maxW);
+                model.ProjectMetadata.ResolutionHeight = Math.Max(model.ProjectMetadata.ResolutionHeight, maxH);
+                foreach (var scr in model.Screens)
+                {
+                    if (!scr.IsWindow && !scr.IsGlobalScreen)
+                    {
+                        scr.Width = Math.Max(scr.Width, model.ProjectMetadata.ResolutionWidth);
+                        scr.Height = Math.Max(scr.Height, model.ProjectMetadata.ResolutionHeight);
+                    }
+                }
             }
             if (string.IsNullOrEmpty(model.ProjectMetadata.StartScreenName))
             {
-                model.ProjectMetadata.StartScreenName = first.Name;
-                model.ProjectMetadata.StartScreenNumber = first.ScreenNumber;
+                var preferredStart = model.Screens.FirstOrDefault(s =>
+                        string.Equals(s.Name, "Main", StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(s.Name, "Main_Screen", StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(s.Name, "Start", StringComparison.OrdinalIgnoreCase))
+                    ?? model.Screens.FirstOrDefault(s => s.ScreenNumber == 0)
+                    ?? first;
+                model.ProjectMetadata.StartScreenName = preferredStart.Name;
+                model.ProjectMetadata.StartScreenNumber = preferredStart.ScreenNumber;
             }
         }
     }
@@ -1266,6 +1283,13 @@ public sealed class MpcBinaryReader
 
             var width = Math.Max(64, room.X2 - room.X1 + 1);
             var height = Math.Max(48, room.Y2 - room.Y1 + 1);
+            if (!isWindow && !isGlobalScreen && controls.Count > 0)
+            {
+                var maxRight = controls.Max(c => c.X + c.Width);
+                var maxBottom = controls.Max(c => c.Y + c.Height);
+                width = Math.Max(width, maxRight);
+                height = Math.Max(height, maxBottom);
+            }
             if (!isWindow && (width <= 64 || width > 4096))
             {
                 width = model.ProjectMetadata.ResolutionWidth > 0 ? model.ProjectMetadata.ResolutionWidth : 800;
@@ -2043,10 +2067,14 @@ public sealed class MpcBinaryReader
         SkipLinkScheme(br); // dyncolbr
         _ = br.ReadUInt16(); // stscheme
 
-        // buttonimages (7 * uint16 = 14 bytes)
+        // buttonimages (7 * uint16 = 14 bytes, T_file.cpp Read_BUTTONIMAGES)
         var imgRelease = br.ReadUInt16();
         var imgPress = br.ReadUInt16();
-        _ = br.ReadBytes(10);
+        var imgSelPress = br.ReadUInt16();
+        var imgSelRelease = br.ReadUInt16();
+        var imgInPress = br.ReadUInt16();
+        var imgInRelease = br.ReadUInt16();
+        var imgDescribe = br.ReadUInt16();
 
         var (txtList0, txtEntry0) = ReadAnyParaTextRef(br);
         var (varNo, _) = ReadVarLabelTarget(br);
@@ -2104,6 +2132,7 @@ public sealed class MpcBinaryReader
             PressedColorHex = ExtractPenColorHex(col, "#A0A0A0"),
             BorderColorHex = ExtractPenColorHex(frameCol, "#606060"),
             BorderWidth = frameType == 0 ? 0 : 1,
+            TransparentBackground = ((col >> 16) & 0xFFFF) == 0xFFFE,
             FontStyleId = fontIdx < model.FontStyles.Count ? model.FontStyles[fontIdx].Id : null,
             HorizontalAlignment = DecodeHorizAlign(attrib),
             VerticalAlignment = DecodeVertAlign(attrib),
@@ -2113,8 +2142,13 @@ public sealed class MpcBinaryReader
             PressedTextEntryId = pEntryId,
             StaticTextFallback = fallbackTxt,
             DatapointId = dpSymbol,
-            ImageAssetId = ResolveImageAssetId(imgRelease, imageSymbols, model),
-            PressedImageAssetId = ResolveImageAssetId(imgPress, imageSymbols, model),
+            ImageAssetId = ResolveImageAssetId(imgRelease, imageSymbols, model)
+                           ?? ResolveImageAssetId(imgDescribe, imageSymbols, model)
+                           ?? ResolveImageAssetId(imgSelRelease, imageSymbols, model)
+                           ?? ResolveImageAssetId(imgInRelease, imageSymbols, model),
+            PressedImageAssetId = ResolveImageAssetId(imgPress, imageSymbols, model)
+                                  ?? ResolveImageAssetId(imgSelPress, imageSymbols, model)
+                                  ?? ResolveImageAssetId(imgDescribe, imageSymbols, model),
             ColorSchemeId = dynBackScheme != 0xFFFF ? ResolveSchemeName("Color", dynBackScheme, model) : null,
             SetVal = setVal,
             ResetVal = resetVal
