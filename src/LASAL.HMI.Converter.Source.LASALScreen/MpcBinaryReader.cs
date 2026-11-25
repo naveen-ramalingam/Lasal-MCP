@@ -476,15 +476,17 @@ public sealed class MpcBinaryReader
                 }
 
                 var attr = i < attrs.Length ? attrs[i] : 0u;
+                var fontFileName = i < fontFiles.Count ? Path.GetFileNameWithoutExtension(fontFiles[i]) : string.Empty;
+                var inferredSize = InferFontSizePx(name, fontFileName);
                 model.FontStyles.Add(new FontStyleModel
                 {
                     Id = name,
                     Index = i,
                     FamilyName = "Arial",
-                    SizePx = 14,
-                    Bold = (attr & 0x0400) != 0,
-                    Italic = (attr & 0x0800) != 0,
-                    Underline = (attr & 0x1000) != 0
+                    SizePx = inferredSize,
+                    Bold = (attr & 0x0400) != 0 || name.Contains("Bold", StringComparison.OrdinalIgnoreCase),
+                    Italic = (attr & 0x0800) != 0 || name.Contains("Italic", StringComparison.OrdinalIgnoreCase),
+                    Underline = (attr & 0x1000) != 0 || name.Contains("_UL", StringComparison.OrdinalIgnoreCase)
                 });
             }
         }
@@ -492,6 +494,27 @@ public sealed class MpcBinaryReader
         {
             ConverterLogger.Warn($"Non-fatal warning reading LS0007.MPC font list: {ex.Message}");
         }
+    }
+
+    private static int InferFontSizePx(string fontName, string fileName)
+    {
+        foreach (var candidate in new[] { fontName, fileName })
+        {
+            if (string.IsNullOrWhiteSpace(candidate)) continue;
+            var m = System.Text.RegularExpressions.Regex.Match(candidate, @"(?<![0-9])(\d{1,2})(?![0-9])");
+            if (m.Success && int.TryParse(m.Groups[1].Value, out var px) && px >= 6 && px <= 72)
+            {
+                return px;
+            }
+        }
+
+        if (fontName.Contains("Big", StringComparison.OrdinalIgnoreCase) || fontName.Contains("Large", StringComparison.OrdinalIgnoreCase))
+            return 24;
+        if (fontName.Contains("Mini", StringComparison.OrdinalIgnoreCase) || fontName.Contains("Tiny", StringComparison.OrdinalIgnoreCase))
+            return 9;
+        if (fontName.Contains("Small", StringComparison.OrdinalIgnoreCase))
+            return 10;
+        return 14;
     }
 
     private static void TryParseVarList(string filePath, HmiIntermediateModel model)

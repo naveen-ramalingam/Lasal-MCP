@@ -1,21 +1,16 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
-<template>
-    <style id="lvddefault">
+    <template>
+<style id="lvdtemplate">
         :host sig-control-line-simple {
-            --theme-sig-control-line-simple-border-width: 1px;
-            --theme-sig-control-line-simple-border-style: solid;
-            --theme-sig-control-line-simple-border-color: --palette-default-color253;
-            --theme-sig-control-line-simple-background-color: --palette-default-color255;
-            --theme-sig-control-line-simple-line-color: --palette-default-color253;
-        }
+   --theme-sig-control-line-simple-border-width: 1px;
+   --theme-sig-control-line-simple-border-style: solid;
+   --theme-sig-control-line-simple-border-color: #FFFFFF;
+   --theme-sig-control-line-simple-background-color: rgba(255,255,255,0);
+   --theme-sig-control-line-simple-line-color: #FFFFFF;
+}
+
     </style>
-    <style id="lvdtemplate">
-        /*! @@lvdstyles */
-    </style>
-    <style id="development">
-    </style>
-</template>`;
+</template>
+`;
 styleElement.register('sig-control-line-simple-css');
-export {};
-//# sourceMappingURL=sig-control-line-simple-css.js.map

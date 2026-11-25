@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "079fb4fb-8bf2-4aee-9178-0113af3f6ac6",
+	"designTimeId": "28823b86-82aa-4257-91f8-57407ea023b7",
 	"name": "DataToPLC",
-	"instanceId": "design_4dbb7aee7df847fbb1099bfd22e86f0c",
+	"instanceId": "design_80c6fcd2fb444e6bb6311f41115252e6",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "c7d5f0fc-1336-468f-b6a6-a399899fd64e",
+			"designTimeId": "2d52cebc-7af6-4e44-b0b6-9bc18e6e6ca2",
 			"name": "Button_0_0",
-			"instanceId": "lvd8d7de7ac2b3a43e28165fb92a3d36e01",
+			"instanceId": "lvd74ad976a177945acac6573cdd9523121",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -105,28 +105,65 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_217",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "ae7ab7d8-68aa-4f9d-9e15-b4549650c2f7"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "fb67cb96-81a2-41ba-abb4-0e5a3836f6a1"
+					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\copy_to_cipc.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "942833cb-85f0-4b95-892e-1c8a183f9b05"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\copy_to_cipc.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "942833cb-85f0-4b95-892e-1c8a183f9b05"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "SetDataToPLC",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "9a4170a2-dd6e-4edb-83aa-a10e059ad025"
+					"refId": "52adeff7-eb15-490c-b7ca-631e6fcb9daf"
 				}
 			]
 		}

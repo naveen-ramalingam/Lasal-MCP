@@ -1,40 +1,33 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
     <template>
-        <style id="lvddefault">
-            :host sig-control-button {
-                
-                --theme-sig-control-button-font-size: 11px;
-                
-                --theme-sig-control-button-background-color: --palette-default-color228;
-                --theme-sig-control-button-background-color-stop: --palette-default-color224;
-                --theme-sig-control-button-color: --palette-default-color253;
-
-                --theme-sig-control-button-border-color: --palette-default-color228;
-                --theme-sig-control-button-border-color-stop: --palette-default-color255;
-                --theme-sig-control-button-shadow-color: --palette-default-color254;
-
-                --theme-sig-control-button-pressed-background-color: --palette-default-color229;
-                --theme-sig-control-button-pressed-background-color-stop: --palette-default-color225;
-                --theme-sig-control-button-pressed-color: --palette-default-color228;
-                --theme-sig-control-button-pressed-border-color: --palette-default-color229;
-                --theme-sig-control-button-pressed-border-color-stop: --palette-default-color255;
-                
-                --theme-sig-control-button-shadow-color: --palette-default-color254;
-                --theme-sig-control-button-pressed-shadow-color: --palette-default-color254;
-            }
-        </style>
-        <style id="lvdtemplate">
+<style id="lvdtemplate">
         :host sig-control-button {
             --theme-sig-element-height: initial;
             --theme-sig-element-width: initial;
         }
-            /*! @@lvdstyles */
+            :host sig-control-button {
+   --theme-sig-control-button-border-width: 1px;
+   --theme-sig-control-button-background-color: #00ACC4;
+   --theme-sig-control-button-color: #FFFFFF;
+   --theme-sig-control-button-border-color: #FFFFFF;
+   --theme-sig-control-button-pressed-background-color: rgba(2,63,95,0.6);
+   --theme-sig-control-button-pressed-color: #FFFFFF;
+   --theme-sig-control-button-pressed-border-color: #FFFFFF;
+   --theme-sig-control-button-pressed-border-color-stop: #FFFFFF;
+   --theme-sig-control-button-shadow-color: #000000;
+   --theme-sig-control-button-border-color-stop: rgba(255,255,255,0);
+   --theme-sig-control-button-pressed-shadow-color: #000000;
+   --theme-sig-control-button-pressed-background-color-stop: rgba(2,21,51,0.6);
+   --theme-sig-control-button-background-color-stop: #3C6BAA;
+   --theme-sig-control-button-font-size: 11px;
+}
+:host sig-control-button.__lvdStyle_FileManagerButtons {
+   --theme-sig-element-width: 50px;
+   --theme-sig-element-height: 50px;
+}
+
         </style>
-        <style id="development">
-        </style>
-    </template>
-    `;
+</template>
+`;
 styleElement.register('sig-control-button-css');
-export {};
-//# sourceMappingURL=sig-control-button-css.js.map

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "31a18a65-b21c-443b-ba99-c5cb7e6e9da3",
+	"designTimeId": "b32b2262-1f2c-4501-bf46-194e5f1e276e",
 	"name": "GlobalMachineSpeed",
-	"instanceId": "design_2a9bf25c897c4d379d51161e3d85fd0e",
+	"instanceId": "design_6640a9eaa3e44547ab453b722df68755",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "26001925-a129-4939-b168-2f4536fc52b9",
+			"designTimeId": "50dfa1dc-5ef5-4fd4-98db-e7a8a72604f7",
 			"name": "Output_0_Main_Settings_01_JD_MasterEncoder_0",
-			"instanceId": "lvd1ebe793766c74ac7b9fa72962e229399",
+			"instanceId": "lvdb4120853eae347e1a65c1b94fbbe6540",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -102,10 +102,16 @@
 				},
 				{
 					"name": "--theme-sig-composite-container-background-color",
-					"value": "MigratedColors:MigratedColor_000",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "df227236-04e4-4731-ab28-b08ce058493a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "GlobalMachineSpeedMaster",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1a3d9073-3dec-41dc-9892-064c53aa2de1"
 				}
 			]
 		}

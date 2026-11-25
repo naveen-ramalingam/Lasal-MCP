@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c9e4c4bb-1dbd-429a-8826-69f58f9c7848",
+	"designTimeId": "137315d7-cb03-4f24-a118-6360756f4bdf",
 	"name": "GlobalMachineSpeedMasterStopped",
-	"instanceId": "design_41dd2e9fa6ce43879c9802fcd6842331",
+	"instanceId": "design_342cf07edf4642539bc1d9ef9d38b3ad",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "a0eef24e-8652-4feb-a8fa-8c434e610f61",
+			"designTimeId": "0a44258d-9645-470a-ae83-db912c9ba0ef",
 			"name": "Label_0_0",
-			"instanceId": "lvd82af6428381c4a5cb2dc605a5c3554e5",
+			"instanceId": "lvd183cb9fa59334967b141ae4ebc6f4f11",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -101,33 +101,45 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "--theme-sig-control-text-value-align",
+					"value": "left",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-vertical-align",
+					"value": "top",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
 					"name": "elementMainFont",
 					"value": "Arial16",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "4c9f6273-cfbd-4916-a0ad-b02497c7d4da"
+					"refId": "f0167a73-e42a-4107-b265-2e7750f7153d"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_12:Text_17",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "df6eba23-c91a-4688-8991-fc2882e3e250"
+					"refId": "9cc48b53-9967-49f0-81ed-4cc18eb74bdc"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "ae7ab7d8-68aa-4f9d-9e15-b4549650c2f7"
+					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "de90d91e-088d-472f-96f2-c9688543032b",
+			"designTimeId": "60133252-e475-46d8-8ef0-41c3591dcab2",
 			"name": "Input_0_Main_MachineController_01_DesiredSpeed_1",
-			"instanceId": "lvdeaa60b47e9cd4a6ebd2c69acebc8fc0b",
+			"instanceId": "lvd4d4c127e45b648a29a8352f48b2fb06d",
 			"controlId": "sig-control-numeric-input",
 			"properties": [
 				{
@@ -171,21 +183,21 @@
 					"value": "Arial16",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "4c9f6273-cfbd-4916-a0ad-b02497c7d4da"
+					"refId": "f0167a73-e42a-4107-b265-2e7750f7153d"
 				},
 				{
 					"name": "value",
 					"value": "255:Main_MachineController_01.DesiredSpeed",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "db2f8e0e-3a58-46cb-8b55-6c231ffc435e"
+					"refId": "1b4346e1-c55d-4b16-991e-5e7d03896085"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "ae7ab7d8-68aa-4f9d-9e15-b4549650c2f7"
+					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
 				},
 				{
 					"name": "unittext",
@@ -193,7 +205,7 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "db2f8e0e-3a58-46cb-8b55-6c231ffc435e"
+					"refId": "1b4346e1-c55d-4b16-991e-5e7d03896085"
 				}
 			]
 		}

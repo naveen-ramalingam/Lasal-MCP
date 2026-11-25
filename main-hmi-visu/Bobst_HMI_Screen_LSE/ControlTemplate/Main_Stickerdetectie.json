@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "1fb540af-048c-4153-a621-000315a07db8",
+	"designTimeId": "de3ff57f-e075-4b47-a024-65d7187d3683",
 	"name": "Main_Stickerdetectie",
-	"instanceId": "design_216e22e694714744b60aeba4b432e365",
+	"instanceId": "design_dda84e294e344518b8a2194d6e4485a7",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "71441cd2-0f3c-44c1-afec-f1ffe1d0d1b7",
+			"designTimeId": "663ed669-14b6-428f-a29e-33e46a4fd26a",
 			"name": "Output_0_StickerDetector1_Present_0",
-			"instanceId": "lvd6d99da76581d4e289d7af41f7a439c43",
+			"instanceId": "lvdaf035473771a418db7b599014b242dd8",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -108,10 +108,10 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Sensor_LabelAire",
-					"typeId": 29,
+					"value": "Resources\\Images\\sensor_in_off.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "219bca0a-f44c-427f-a1ec-2c68ca8ae0d2"
+					"refId": "bf2d3cae-e6b0-43bb-bfed-b746ac2d58c8"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -123,9 +123,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "d750d564-93eb-40d7-869c-c76d234dca87",
+			"designTimeId": "d5b9664f-8b54-412c-ab15-488e3c82c4a9",
 			"name": "Button_0_1",
-			"instanceId": "lvd8ac6fbce30364ba5a11657ea28b97bc4",
+			"instanceId": "lvd7c4fa53c1c4f4d1e8757ed13042abf4c",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -169,28 +169,51 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_218",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "e9ba717b-4617-4edc-836c-1c94fc726487"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "fb67cb96-81a2-41ba-abb4-0e5a3836f6a1"
+					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "scr_Stickerdetectie",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "f5ec5b06-82ef-4896-b7e3-ab7151da0f28"
+					"refId": "ef9ed48f-db38-4daf-b882-3ace028fd7a6"
 				}
 			]
 		}

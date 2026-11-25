@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c2b176c2-fa8c-4a16-ac53-69214c751fcb",
+	"designTimeId": "093480c1-0e44-47c2-b724-1fa2657b2f20",
 	"name": "Main_Wenglor_Present",
-	"instanceId": "design_47794e1169c24d388b0770b9ad43ea6a",
+	"instanceId": "design_a9ba05db3bc8408182b2ad117704c390",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "98103728-883b-4434-86ca-3d6145ccb8b6",
+			"designTimeId": "ea4dfabd-bab3-4982-a174-9db43fdbb85c",
 			"name": "Output_0_BarcodeLezer_Wenglor_FIS_0911_OnOff_0",
-			"instanceId": "lvd764f94626e2e45dba303c6a1f9d31743",
+			"instanceId": "lvdb84281d76cc24eef8ea8f5e37d924e77",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -108,10 +108,10 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Wenglor_ON_OFF_small",
-					"typeId": 29,
+					"value": "Resources\\Images\\wenglor_fis_0911_small_off.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "b410fb6e-2e9f-466c-b28a-4ad63116156b"
+					"refId": "aaa22f93-5594-432b-9949-3ab2f4629725"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -123,9 +123,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "bd6d7ca1-4fb4-4ebc-867a-e748454df867",
+			"designTimeId": "e7204ec7-e8de-4bce-b2d9-8a944048c6f0",
 			"name": "Button_0_1",
-			"instanceId": "lvd049c4e81a2c045aab5ef8c47edd45305",
+			"instanceId": "lvd03a5ba8e0b354e10a9bfa504a67f0921",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -169,28 +169,51 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_218",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "e9ba717b-4617-4edc-836c-1c94fc726487"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "fb67cb96-81a2-41ba-abb4-0e5a3836f6a1"
+					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "scr_Wenglor_FIS_0911",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "c41e0670-c2b0-4a0a-90e3-2d6386cd1e2d"
+					"refId": "00d18f74-e90b-4679-b8f4-1712dc454302"
 				}
 			]
 		}

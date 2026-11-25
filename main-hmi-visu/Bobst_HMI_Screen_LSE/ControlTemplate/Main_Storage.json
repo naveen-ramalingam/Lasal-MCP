@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "d57506d7-c00e-4773-af6a-081e150c2b78",
+	"designTimeId": "b5073842-2eb2-4fb7-b055-d579e0736f38",
 	"name": "Main_Storage",
-	"instanceId": "design_960ca0b50e36455a9ac96c2bcd9fe50f",
+	"instanceId": "design_a58085218661461f8a8eb7e2fe62df7c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "a69d5d03-08c9-4ca5-a36b-4122df6cbce1",
+			"designTimeId": "5877bc45-c892-4fce-a49e-feb5c6bd41e4",
 			"name": "Output_0_UseFileSystem_Data_0",
-			"instanceId": "lvded323aa6d85e4f60a5b5c55c304925cb",
+			"instanceId": "lvd28be496a1c9b43b1b6ba6cc6b279e6f1",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -102,10 +102,16 @@
 				},
 				{
 					"name": "--theme-sig-composite-container-background-color",
-					"value": "MigratedColors:MigratedColor_000",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "df227236-04e4-4731-ab28-b08ce058493a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Main_StorageFilesystem",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "0af9421a-9b5b-4d31-ba7a-1b6db15babce"
 				}
 			]
 		}

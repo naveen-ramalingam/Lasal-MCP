@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "91283556-e353-4ed7-91a9-f8c3bd43ad4c",
+	"designTimeId": "c5f4157a-f571-427c-9b66-bd743bc3223c",
 	"name": "b_Bovenhaak_01_ON",
-	"instanceId": "design_98657ee048544df191b2c0c2b12ea07e",
+	"instanceId": "design_a6408976410d40d487b80ab0d19259bc",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "a509bf9d-ac56-460f-8332-268342249f8b",
+			"designTimeId": "c8c5fcca-0b7f-41ca-a244-07fa5fd97760",
 			"name": "Label_0_0",
-			"instanceId": "lvd74658e9d64b446ee9143dfef4d19d3ea",
+			"instanceId": "lvd1de06047ba2c41b3847e58608a84ef06",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -101,18 +101,54 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "--theme-sig-control-text-value-align",
+					"value": "left",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-vertical-align",
+					"value": "top",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-top",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-bottom",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-left",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-text-value-padding-right",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
 					"name": "elementMainFont",
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "0c2d5b69-723f-4823-99ec-eba02ade984c"
+					"refId": "06b19796-cc69-4e54-947e-66e1bafaeb17"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_13:Text_10",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "a63dc2f5-ef96-4633-bb73-c278a307e224"
+					"refId": "0217eb92-df66-4f65-a621-560e4dfa5bc0"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
@@ -125,15 +161,15 @@
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "df227236-04e4-4731-ab28-b08ce058493a"
+					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "170c9ca4-08d2-4da2-94a1-56a25f3fe00a",
+			"designTimeId": "5a27cd14-c3c1-436d-b77c-841f47144b19",
 			"name": "Button_0_1",
-			"instanceId": "lvd0c40883a5f1249c889419edd2fad22bb",
+			"instanceId": "lvd4d3e2e3914d94c4692c72030140ca461",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -177,28 +213,65 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_264",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\btn - bovenhaak.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "46a80809-edba-406d-baa1-5276161ba02b"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\btn - bovenhaak.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "46a80809-edba-406d-baa1-5276161ba02b"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "scr_Servo_Bovenhaak1",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "048e8201-a338-4030-af4d-3cae3ecd9e93"
+					"refId": "98806171-705b-47df-999f-3df24035a7e7"
 				}
 			]
 		}

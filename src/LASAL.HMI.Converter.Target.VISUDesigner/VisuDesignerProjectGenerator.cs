@@ -1634,9 +1634,9 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             : ctrl.TargetVisuType;
         usedControlIds?.Add(visuControlId);
 
-        // LSE single-line text boxes can have tight heights (e.g. 10px for 14px text) without clipping; pad slightly for HTML
+        // LSE single-line text boxes can have tight heights (e.g. 10px) without clipping; remove default 3px vertical padding and ensure minimum readable height
         var effectiveHeight = visuControlId == "sig-control-text"
-            ? Math.Max(16, ctrl.Height)
+            ? Math.Max(14, ctrl.Height)
             : Math.Max(4, ctrl.Height);
 
         var props = new List<Dictionary<string, object?>>
@@ -1648,6 +1648,31 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             MakeProp("rotation", 0.0, 17, 12),
             MakeProp("--theme-sig-element-zindex", $"{100 + ctrl.ZIndex}", 0, 2)
         };
+
+        if (visuControlId == "sig-control-text")
+        {
+            var hAlign = ctrl.HorizontalAlignment?.ToLowerInvariant() switch
+            {
+                "left" => "left",
+                "right" => "right",
+                _ => "center"
+            };
+            var vAlign = ctrl.VerticalAlignment?.ToLowerInvariant() switch
+            {
+                "top" => "top",
+                "bottom" => "bottom",
+                _ => "middle"
+            };
+            props.Add(MakeProp("--theme-sig-control-text-value-align", hAlign, 0, 2));
+            props.Add(MakeProp("--theme-sig-control-text-value-vertical-align", vAlign, 0, 2));
+            if (ctrl.Height <= 24)
+            {
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-top", "0px", 0, 2));
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-bottom", "0px", 0, 2));
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-left", "1px", 0, 2));
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-right", "1px", 0, 2));
+            }
+        }
 
         // Bind font if resolved
         if (!string.IsNullOrEmpty(ctrl.FontStyleId) && fontLookup.TryGetValue(ctrl.FontStyleId, out var fontGuid))
@@ -1735,6 +1760,14 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             {
                 props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", ctrl.BackgroundColorHex, 0, 2));
             }
+        }
+
+        // Remove VISUDesigner's default 1px white button border on transparent overlay buttons, frameless buttons, and image buttons
+        if (isButtonWithGradientStop && (ctrl.TransparentBackground || ctrl.BorderWidth == 0 || hasResolvedImage))
+        {
+            props.Add(MakeProp($"--theme-{visuControlId}-border-width", "0px", 0, 2));
+            props.Add(MakeProp($"--theme-{visuControlId}-border-color", "transparent", 0, 2));
+            props.Add(MakeProp($"--theme-{visuControlId}-border-color-stop", "transparent", 0, 2));
         }
 
         if (colorLookup.TryGetValue(ctrl.ForegroundColorHex, out var fgPalette))

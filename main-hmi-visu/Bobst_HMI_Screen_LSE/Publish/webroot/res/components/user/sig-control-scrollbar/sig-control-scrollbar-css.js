@@ -1,50 +1,43 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
-<template>
-    <style id="lvddefault">
-    :host {
-        --theme-sig-control-scrollbar-width:25px;
-        --theme-sig-control-scrollbar-background-color:--palette-default-color251;
-        --theme-sig-control-scrollbar-track-background-color:--palette-default-color246;
-        --theme-sig-control-scrollbar-track-border-width: 0px;
-        --theme-sig-control-scrollbar-track-border-top-width: 1px;
-        --theme-sig-control-scrollbar-track-border-bottom-width: 1px;
-        --theme-sig-control-scrollbar-track-border-left-width: 8px;
-        --theme-sig-control-scrollbar-track-border-right-width: 8px;
-        --theme-sig-control-scrollbar-track-border-style: solid;
-        --theme-sig-control-scrollbar-track-border-color: --palette-default-color251;
-        --theme-sig-control-scrollbar-track-border-radius: 0px;
+    <template>
+<style id="lvdtemplate">
 
-        --theme-sig-control-scrollbar-track-active-background-color: --palette-default-color246;
-        --theme-sig-control-scrollbar-track-active-border-color: --palette-default-color251;
-      
-        --theme-sig-control-scrollbar-thumb-background-color: --palette-default-color240;
-        --theme-sig-control-scrollbar-thumb-border-width: 0px;
-        --theme-sig-control-scrollbar-thumb-border-top-width: 1px;
-        --theme-sig-control-scrollbar-thumb-border-bottom-width: 1px;
-        --theme-sig-control-scrollbar-thumb-border-left-width: 8px;
-        --theme-sig-control-scrollbar-thumb-border-right-width:8px;
-        --theme-sig-control-scrollbar-thumb-border-style: solid;
-        --theme-sig-control-scrollbar-thumb-border-color:--palette-default-color251;
-        --theme-sig-control-scrollbar-thumb-border-radius:0px;
+        :host  {
+   --theme-sig-control-scrollbar-track-active-border-color: #000000;
+   --theme-sig-control-scrollbar-track-border-color: #000000;
+   --theme-sig-control-scrollbar-button-background-color: #000000;
+   --theme-sig-control-scrollbar-button-active-background-color: #000000;
+   --theme-sig-control-scrollbar-thumb-active-background-color: #AFC81A;
+   --theme-sig-control-scrollbar-thumb-background-color: #023F5F;
+   --theme-sig-control-scrollbar-track-active-background-color: #D2D2D2;
+   --theme-sig-control-scrollbar-track-background-color: #D2D2D2;
+   --theme-sig-control-scrollbar-button-color: #D2D2D2;
+   --theme-sig-control-scrollbar-width: 50px;
+   --theme-sig-control-scrollbar-button-height: 45px;
+   --theme-sig-control-scrollbar-thumb-border-radius: 3px;
+   --theme-sig-control-scrollbar-thumb-border-left-width: 12px;
+   --theme-sig-control-scrollbar-thumb-border-right-width: 12px;
+   --theme-sig-control-scrollbar-track-border-left-width: 12px;
+   --theme-sig-control-scrollbar-track-border-right-width: 12px;
+   --theme-sig-control-scrollbar-thumb-active-border-color: #000000;
+   --theme-sig-control-scrollbar-thumb-border-bottom-width: 0px;
+   --theme-sig-control-scrollbar-thumb-border-top-width: 0px;
+   --theme-sig-control-scrollbar-thumb-border-color: #000000;
+   --theme-sig-control-scrollbar-button-active-color: #D2D2D2;
+   --theme-sig-control-scrollbar-background-color: #000000;
+   --theme-sig-control-scrollbar-track-border-width: 0px;
+   --theme-sig-control-scrollbar-track-border-top-width: 1px;
+   --theme-sig-control-scrollbar-track-border-bottom-width: 1px;
+   --theme-sig-control-scrollbar-track-border-style: solid;
+   --theme-sig-control-scrollbar-track-border-radius: 0px;
+   --theme-sig-control-scrollbar-thumb-border-width: 0px;
+   --theme-sig-control-scrollbar-thumb-border-style: solid;
+   --theme-sig-control-scrollbar-button-border-width: 0px;
+   --theme-sig-control-scrollbar-button-border-style: none;
+   --theme-sig-control-scrollbar-button-border-radius: 0px;
+}
 
-        --theme-sig-control-scrollbar-thumb-active-background-color: --palette-default-color240;
-        --theme-sig-control-scrollbar-thumb-active-border-color:--palette-default-color251;
-
-        --theme-sig-control-scrollbar-button-color:--palette-default-color246;
-        --theme-sig-control-scrollbar-button-background-color: --palette-default-color251;
-        --theme-sig-control-scrollbar-button-border-width: 0px;
-        --theme-sig-control-scrollbar-button-height: 20px;
-        --theme-sig-control-scrollbar-button-border-style: none;
-        --theme-sig-control-scrollbar-button-border-radius: 0px;
-
-        --theme-sig-control-scrollbar-button-active-color:--palette-default-color246;
-        --theme-sig-control-scrollbar-button-active-background-color: --palette-default-color251;
-    }
-    </style>
-    <style id="lvdtemplate">
-
-        /*! @@lvdstyles */
         
         @media (min-resolution:.001dpcm) { 
          :host {
@@ -244,7 +237,6 @@ styleElement.innerHTML = `
         }
     }
     </style>
-    <style id="development">
-    </style>
-</template>`;
+</template>
+`;
 styleElement.register('sig-control-scrollbar-css');

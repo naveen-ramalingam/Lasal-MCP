@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c97c3aa3-3299-4478-851a-7dc0dbc95782",
+	"designTimeId": "f5eb2510-f472-4039-96a2-136d03c6db78",
 	"name": "S06_Buttons_Setpos",
-	"instanceId": "design_a8370273d6c543569ad56f8ac1d069b8",
+	"instanceId": "design_6ba4b792d3f94c9da8f2e38ed81fa97a",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "18ad2b7d-0cac-4ac7-ad2a-335ebf6765cf",
+			"designTimeId": "a26d4e68-caaf-4389-b0e6-c0d8e40ef1e8",
 			"name": "Object_1101_0_0",
-			"instanceId": "lvdc3cb7a79c313473eb25b9a806db87b69",
+			"instanceId": "lvd97130a2c9f1e4133b083194f734b7f8d",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -102,18 +102,17 @@
 				},
 				{
 					"name": "--theme-sig-composite-container-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "251617cc-4807-4f6e-9943-70eac4a83ac1"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "6d66cccd-6716-4e35-a691-592c1df6fe9a",
+			"designTimeId": "fd2d267d-e4cd-4dca-b888-0b391cddea14",
 			"name": "Output_0_S06_Autosetcontrol_ETV_Enable_Startbutton_1",
-			"instanceId": "lvd8b86b2788d3d4e8bb2192e97b2c56fe1",
+			"instanceId": "lvd82c0835f00d24824b62506fed11a7962",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -154,10 +153,16 @@
 				},
 				{
 					"name": "--theme-sig-composite-container-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "70959f98-43cf-4d4f-b00b-b300eb8ef69d"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Sxx_Idle",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "fa366463-7136-4ee9-b5a8-a42ed3289fae"
 				}
 			]
 		}

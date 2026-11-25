@@ -1,20 +1,15 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
-<template>
-    <style id="lvddefault">
+    <template>
+<style id="lvdtemplate">
         :host sig-control-ellipse {
-            --theme-sig-control-ellipse-border-width: 1px;
-            --theme-sig-control-ellipse-border-style: solid;
-            --theme-sig-control-ellipse-border-color: --palette-default-color253;
-            --theme-sig-control-ellipse-background-color: --palette-default-color255;
-        }
+   --theme-sig-control-ellipse-border-width: 1px;
+   --theme-sig-control-ellipse-border-style: solid;
+   --theme-sig-control-ellipse-border-color: #FFFFFF;
+   --theme-sig-control-ellipse-background-color: rgba(255,255,255,0);
+}
+
     </style>
-    <style id="lvdtemplate">
-        /*! @@lvdstyles */
-    </style>
-    <style id="development">
-    </style>
-</template>`;
+</template>
+`;
 styleElement.register('sig-control-ellipse-css');
-export {};
-//# sourceMappingURL=sig-control-ellipse-css.js.map

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "cd11172e-9584-47fb-a768-f4260f6ea0b9",
+	"designTimeId": "246d1541-5210-4605-b4d0-b7f591629bfb",
 	"name": "MS_Ventieldriver",
-	"instanceId": "design_d1d0de34f8d64676a544c3bf1cbaeafe",
+	"instanceId": "design_cf353b268b1c4fd986c0f4f4da148234",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "8fbf0cc0-ee48-4892-9606-73ef51d209ef",
+			"designTimeId": "c3461272-b7a7-41e5-b661-b4feea7eb881",
 			"name": "Obj_464_Rect_0_0",
-			"instanceId": "lvd61c442274c574ff69546bd5e8f80a4c6",
+			"instanceId": "lvdb384423e17f74028aa5c85107c7f41cd",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cb28fd87-dacd-4f1a-957f-edddfe2bb509",
+			"designTimeId": "697082d2-1024-44f6-b761-e50292dc2b53",
 			"name": "Output_0_Machine_Settings1_Comp_Ventieldriver_1",
-			"instanceId": "lvd9b95f27b7b6044fa972513af719cf122",
+			"instanceId": "lvde79d18f5d67a4f2a94a55e1279c7776c",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -160,10 +160,10 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Pushbutton",
-					"typeId": 29,
+					"value": "Resources\\Images\\pushbutton p off red.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "fa12d650-359e-439c-8ee4-ba4bc5fd7f2d"
+					"refId": "fd46f71e-f0dc-4a5e-a600-48e374d95cff"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -175,9 +175,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "bd62a11b-0116-4eef-b898-12cd0fc13fbe",
+			"designTimeId": "359f1718-d155-4b92-9c06-277ea65bfb7e",
 			"name": "Button_0_2",
-			"instanceId": "lvd5bbb59b0daef4abf9513889b756beac3",
+			"instanceId": "lvdd9ed40fefd4d4ad89242180445f9dff0",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -221,42 +221,65 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "value",
 					"value": "255:Machine_Settings1.Comp_Ventieldriver",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "af7f5e0e-5f58-4775-9d6f-a464ad296eaa"
+					"refId": "d9225369-312a-4c3e-8049-ca87640f5ebb"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_218",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "e9ba717b-4617-4edc-836c-1c94fc726487"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\pushbutton p off red.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "679f4c56-4a2f-480b-8fc8-8390725aa0ac"
+					"refId": "fd46f71e-f0dc-4a5e-a600-48e374d95cff"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\pushbutton p on green.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "45c71f77-85bd-4d34-bfc9-e69f97b4a24d"
+					"refId": "ec363432-82e0-4cb9-8bfe-3091577d990d"
 				}
 			]
 		}

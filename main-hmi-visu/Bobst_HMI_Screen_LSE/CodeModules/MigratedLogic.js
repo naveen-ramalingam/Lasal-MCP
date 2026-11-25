@@ -583,7 +583,7 @@
             }
         },
 
-        Key__: function () {
+        Key__lt: function () {
             if ((this.readDatapoint("ShiftLock.Data", 0)) == (1)) {
                 // Step opcode: CMD_SCANCODE
             } else {
@@ -620,7 +620,7 @@
             this.closeActiveWindow();
         },
 
-        Key__: function () {
+        Key__plus: function () {
             if ((this.readDatapoint("ShiftLock.Data", 0)) == (1)) {
                 // Step opcode: CMD_SCANCODE
             } else {
@@ -628,7 +628,7 @@
             }
         },
 
-        Key__: function () {
+        Key__hash: function () {
             if ((this.readDatapoint("ShiftLock.Data", 0)) == (1)) {
                 // Step opcode: CMD_SCANCODE
             } else {
@@ -761,7 +761,7 @@
             }
         },
 
-        Key_PgDown: function () {
+        Key_PgDown_94: function () {
             // Step opcode: CMD_SCANCODE
         },
 
@@ -2452,13 +2452,13 @@
             this.writeDatapoint("Lijm_Head_Settings_01.Copy_KopData", 1);
         },
 
-        Glue_Offset_Min: function () {
+        Glue_Offset_Min_426: function () {
             if ((this.readDatapoint("LijmKop_Data_01.Lijm_Offset", 0)) > (this.readDatapoint("LijmKop_Data_01.Lijm_Offset_Min", 0))) {
                 this.writeDatapoint("LijmKop_Data_01.Lijm_Offset", (this.readDatapoint("LijmKop_Data_01.Lijm_Offset", 0)) - 1);
             }
         },
 
-        Glue_Offset_Plus: function () {
+        Glue_Offset_Plus_427: function () {
             if ((this.readDatapoint("LijmKop_Data_01.Lijm_Offset", 0)) < (this.readDatapoint("LijmKop_Data_01.Lijm_Offset_Max", 0))) {
                 this.writeDatapoint("LijmKop_Data_01.Lijm_Offset", (this.readDatapoint("LijmKop_Data_01.Lijm_Offset", 0)) + 1);
             }

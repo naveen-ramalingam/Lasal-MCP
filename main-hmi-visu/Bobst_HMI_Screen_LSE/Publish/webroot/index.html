@@ -1,1 +1,46 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><title>VISUDesigner Published HMI</title></head><body><div id="sig-visu-root"></div><script src="CodeModules/MigratedLogic.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Metadata -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lasal Visu Runtime for Designer</title>
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+	<link rel="icon" href="res\resources\others/favicon.ico" type="image/x-icon" crossorigin="use-credentials">
+	<link rel="apple-touch-icon" href="res\resources\images/appletouchicon.png" crossorigin="use-credentials">
+	<!-- Preload boot logo -->
+	
+
+	<!-- Class applied to body tag during dependency loading -->
+	<style id="lvdbootstyles">
+        body.isLoading {
+            background-color: #082b3e;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }
+    </style>
+
+	<!-- Preloads -->
+	<link rel="prefetch" href="rt\fonts/fontawesome/fa-solid-900.woff2" as="font" crossorigin="anonymous">
+	<link rel="prefetch" href="rt\fonts/roboto/roboto-regular.ttf" as="font" crossorigin="anonymous">
+
+	<!-- Font Preloads -->
+
+
+	<!-- Essential scripts  -->
+	<script src="rt\node_modules/loadjs/dist/loadjs.min.js" type="text/javascript" crossorigin="use-credentials"></script>
+	<script type="module" src="res\components/sigmatek/sig-dependency-loader/sig-dependency-loader.js" crossorigin="use-credentials"></script>
+</head>
+
+<body class="isLoading">
+<sig-dependency-loader id="lvddependencyloaderinstance" 
+    style=" --theme-sig-dependency-loader-background-color: #082b3e; --theme-sig-dependency-loader-color: #c2c4c5; --theme-sig-dependency-loader-logo-color: #2d82bc; --theme-sig-dependency-loader-color-count: #c2c4c5; --theme-sig-dependency-loader-progress-bar-background-color: rgba(147,152,154,0.2); --theme-sig-dependency-loader-progress-finished-background-color: #05698d; --theme-sig-dependency-loader-reload-color: #2d82bc; --theme-sig-dependency-loader-color-info: #c2c4c5; --theme-sig-dependency-loader-color-warn: #ffff28; --theme-sig-dependency-loader-color-error: #de453b; --theme-sig-dependency-loader-critical-error-background-color: #de453b; --theme-sig-dependency-loader-critical-error-color: #ffffff;" 
+    data-rtpath="rt/" 
+    data-respath="res/" 
+    data-splashscreen="false"> 
+</sig-dependency-loader>
+</body>
+
+</html>

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "530c7275-c979-44ac-b293-3a9bb4b1e6b6",
+	"designTimeId": "f73cc4e3-2824-44cf-95c6-e15d0e7c3a32",
 	"name": "b_Glue_OP_Lijmdrukregeling",
-	"instanceId": "design_09a97b3f147a4db786aefc9a94379fbe",
+	"instanceId": "design_557f65390e254ff584daa0d80de8fd7c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "c2565053-5b92-4cea-a602-4149ed4b5298",
+			"designTimeId": "4afa1aeb-353e-4c2d-b7a3-884d61110b4c",
 			"name": "Obj_407_Rect_0_0",
-			"instanceId": "lvde7e9a001d80242139aa5d9b57264702e",
+			"instanceId": "lvd9a2ca6e0726148f18465335d14d329e0",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "14fdd6da-3fc0-41b6-9cf3-7d40a138d89f",
+			"designTimeId": "8353db7c-ec4f-48af-b8a5-47763b0e4ef0",
 			"name": "Image_0_1",
-			"instanceId": "lvd5b6b12728c59439fa342f734f6638533",
+			"instanceId": "lvd3bb35b4a2af84ec7ac15cc280f5cf754",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -163,7 +163,7 @@
 					"value": "Resources\\Images\\btn_glue_druk_zw.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "569d0372-94d5-44e8-8ec5-676b56417c68"
+					"refId": "2e8ba9b3-4ce8-41be-9f1e-88e0216c6e55"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -175,9 +175,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "2f9297d7-0d3e-4ad5-a997-090ada7d7656",
+			"designTimeId": "e3fa69da-6180-4622-ab66-1e7f9a0f21bb",
 			"name": "Button_0_2",
-			"instanceId": "lvd95aacbd5f184481db90fafda8b21a496",
+			"instanceId": "lvdb027bc9e4cdd4518ab2299782037f6e0",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -221,28 +221,65 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f103d369-115a-4028-bb8e-e8f5f485248c"
+					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
-					"value": "MigratedColors:MigratedColor_264",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-background-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-width",
+					"value": "0px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-button-border-color-stop",
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "08b62960-8afb-4774-9c08-ea683e4fa843"
+					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+				},
+				{
+					"name": "--theme-sig-control-button-background-image",
+					"value": "Resources\\Images\\btn_glue_druk.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "ef3a9baa-26d1-4989-8f5a-b92e9e96e3dc"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\btn_glue_druk.png",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "ef3a9baa-26d1-4989-8f5a-b92e9e96e3dc"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "scr_Glue25_32",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "0ed77193-8f40-42f3-a6f8-49e02afdd572"
+					"refId": "6c7dde9e-6231-49ea-b494-1967fb4da5fe"
 				}
 			]
 		}

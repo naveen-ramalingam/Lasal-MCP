@@ -1,20 +1,16 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
-<template>
-    <style id="lvddefault">
+    <template>
+<style id="lvdtemplate">
         :host sig-control-rectangle {
-            --theme-sig-control-rectangle-border-width: 1px;
-            --theme-sig-control-rectangle-border-style: solid;
-            --theme-sig-control-rectangle-border-color: --palette-default-color253;
-            --theme-sig-control-rectangle-background-color: --palette-default-color255;
-        }
+   --theme-sig-control-rectangle-border-radius: 3px;
+   --theme-sig-control-rectangle-background-color: rgba(255,255,255,0);
+   --theme-sig-control-rectangle-border-color: #FFFFFF;
+   --theme-sig-control-rectangle-border-width: 1px;
+   --theme-sig-control-rectangle-border-style: solid;
+}
+
     </style>
-    <style id="lvdtemplate">
-        /*! @@lvdstyles */
-    </style>
-    <style id="development">
-    </style>
-</template>`;
+</template>
+`;
 styleElement.register('sig-control-rectangle-css');
-export {};
-//# sourceMappingURL=sig-control-rectangle-css.js.map

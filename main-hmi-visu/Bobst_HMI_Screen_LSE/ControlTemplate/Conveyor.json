@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "df11e574-9af9-4908-90ed-d3bbff93d406",
+	"designTimeId": "54a8e034-32c8-44c6-a207-737c09aec4db",
 	"name": "Conveyor",
-	"instanceId": "design_d16a33c7afaf406e8ea3237477e942a7",
+	"instanceId": "design_4a79eda2d0974f3b978e5059d019a017",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "d4577bd1-514e-4b10-bce6-e293e4596e9a",
+			"designTimeId": "b0fac1f1-c089-40e8-a853-65c93a513a5d",
 			"name": "Obj_41_Rect_0_0",
-			"instanceId": "lvd7e1d5508a193457fbb6630e93cd51a6f",
+			"instanceId": "lvd80aa4a0f3acf4b1d8ef3cd9c88233820",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_219",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "bdabf4f2-7262-41b6-9a01-9b6f04a2d1cb"
+					"refId": "ba2a3981-c972-41a6-b528-5caa3e8743bc"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "4261feeb-3552-40d7-8fa0-d9c005a8e5c6",
+			"designTimeId": "5006a5fa-5755-4908-b1f0-fed7800a86d6",
 			"name": "Output_0_S12_Conveyor_Master_Main_01_Conveyor_Master1_Present_1",
-			"instanceId": "lvd51f6e318cf614404b6c1eabc4914f384",
+			"instanceId": "lvdd3974def01644f6084d8e74cb937832a",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -154,10 +154,16 @@
 				},
 				{
 					"name": "--theme-sig-composite-container-background-color",
-					"value": "MigratedColors:MigratedColor_000",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "df227236-04e4-4731-ab28-b08ce058493a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Conveyor_mode_details",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "909758e6-e0b5-47c6-a787-cf6947f64972"
 				}
 			]
 		}

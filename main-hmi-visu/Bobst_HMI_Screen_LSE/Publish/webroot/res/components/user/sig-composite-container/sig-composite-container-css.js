@@ -1,16 +1,11 @@
 const styleElement = document.createElement('dom-module');
 styleElement.innerHTML = `
-    <template>    
-    <style id="lvddefault">
-            :host sig-composite-container {
-                
-            }
+    <template>
+<style id="lvdtemplate">
+    :host sig-composite-container {
+}
+
     </style>
-    <style id="lvdtemplate">
-    /*! @@lvdstyles */
-    </style>
-    <style id="development">
-    </style>
-    </template>
+</template>
 `;
 styleElement.register('sig-composite-container-css');
