@@ -191,10 +191,14 @@ public sealed class ConversionReportGenerator
 
         // 10. Asset & Image Conversion Results
         sb.AppendLine("<h2>10. Asset &amp; Image Conversion Results</h2>");
-        sb.AppendLine("<table><tr><th>Original File</th><th>Target File</th><th>Dimensions</th><th>Transparency Converted</th></tr>");
+        var svgAssetsCount = model.Assets.Count(a => string.Equals(a.Format, "SVG", StringComparison.OrdinalIgnoreCase));
+        var pngAssetsCount = model.Assets.Count(a => string.Equals(a.Format, "PNG", StringComparison.OrdinalIgnoreCase));
+        var jpgAssetsCount = model.Assets.Count(a => string.Equals(a.Format, "JPG", StringComparison.OrdinalIgnoreCase) || string.Equals(a.Format, "JPEG", StringComparison.OrdinalIgnoreCase));
+        sb.AppendLine($"<p>Total Assets: <b>{model.Assets.Count}</b> | 1:1 Vector SVG: <b>{svgAssetsCount}</b> | RGBA PNG: <b>{pngAssetsCount}</b> | JPG: <b>{jpgAssetsCount}</b></p>");
+        sb.AppendLine("<table><tr><th>Original File</th><th>Target File</th><th>Format / Mode</th><th>Dimensions</th><th>Transparency Key</th></tr>");
         foreach (var a in model.Assets)
         {
-            sb.AppendLine($"<tr><td>{H(a.OriginalFileName)}</td><td>{H(a.TargetFileName)}</td><td>{a.Width}x{a.Height}</td><td>{a.HasTransparencyKey}</td></tr>");
+            sb.AppendLine($"<tr><td>{H(a.OriginalFileName)}</td><td>{H(a.TargetFileName)}</td><td>{H(a.ConversionMode)}</td><td>{a.Width}x{a.Height}</td><td>{(a.HasTransparencyKey ? H(a.TransparencyKeyCssHex ?? "Yes") : "None")}</td></tr>");
         }
         sb.AppendLine("</table>");
 

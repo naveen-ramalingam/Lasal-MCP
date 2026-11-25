@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "1e3ff80e-0302-4fa7-a271-024e4a81724f",
+	"designTimeId": "8ecd6a1f-969b-4093-bf5e-5372c0a46c67",
 	"name": "LED_Kicker",
-	"instanceId": "design_688d2a0bb2704e91a8f1d66a6c5a39f5",
+	"instanceId": "design_05fdf6ce30dd468588dc6ae2a3c4fea0",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "ac9bddba-f032-4ced-9305-34181e18cb7a",
+			"designTimeId": "6f2e2838-2bbb-4242-b4cd-3da0a8c16b50",
 			"name": "Output_0_VisuTeller1_oOutputHW_0",
-			"instanceId": "lvdade5ae794af14977ab0efe29f9d3ea06",
+			"instanceId": "lvd6177d04f712e4a3295bc46fde1429f91",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Kicker",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "272e0b5a-a0e3-4bea-b3a3-b891b59b74ce"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

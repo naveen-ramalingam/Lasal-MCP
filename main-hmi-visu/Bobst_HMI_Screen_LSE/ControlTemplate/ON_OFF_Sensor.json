@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "2fcb2d34-c46d-4664-b869-727c79b7ddeb",
+	"designTimeId": "b7d49fd5-842b-48a8-af43-520d9e5f897d",
 	"name": "ON_OFF_Sensor",
-	"instanceId": "design_01be719dde834abf89faa21a9e04d63a",
+	"instanceId": "design_4bd53e063d7d4d42be894168b07790c9",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "d6a84b96-b514-420f-9ea4-5fb9b41c97c9",
+			"designTimeId": "c8df61f9-84c9-4b17-a9cd-923fe4e7fa5c",
 			"name": "Output_0_Visu_Vouwhaak1_oSensorHW_0",
-			"instanceId": "lvd1c7f2e5798894648b5aca2df8bd27696",
+			"instanceId": "lvd9954d315a2d04abf97604f56050264d2",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,18 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Sensor",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "93e15728-bc2a-4990-b7d0-36b929a0d170"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "edd6f3fe-bdd5-4ca8-8d0a-9aff91de86d0",
+			"designTimeId": "a849de27-c81e-41ec-9d40-00e890898324",
 			"name": "Output_1_Visu_Vouwhaak1_oSensorZeroHW_1",
-			"instanceId": "lvd69e9a994f2d74949b2f88175d65e1cab",
+			"instanceId": "lvda07c5f09c81a4f40a2918ff1e74fdf24",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -154,18 +166,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Sensor_Resolver",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "a71ef17f-3749-44a3-bb4d-c4f93fa99f8b"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "c0802cc4-cefe-4398-ba98-c2a631995ca7",
+			"designTimeId": "44e34942-fb65-49e9-9578-372814219515",
 			"name": "Button_0_2",
-			"instanceId": "lvdcd850915a2bf4e279bc479dfec73787c",
+			"instanceId": "lvd9e03190b459140ac91e8005bf1111936",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -209,35 +233,42 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "value",
 					"value": "255:Visu_Vouwhaak1.iOnOff",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "ba642a51-2e42-4c37-ae3c-ea3b627879f9"
+					"refId": "4d00b947-6475-4473-b581-838517be8993"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_218",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "6521afd8-5a78-48ab-ac06-af018e5ab8b0"
+					"refId": "d317b7bb-53dd-4312-bdb0-ae39c1c1d9e7"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
-					"value": "Resources\\Images\\pushbutton p off red.png",
+					"value": "Resources\\Images\\pushbutton p off red.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "8fa8911c-dec2-4fe2-ac14-5cc5b015e250"
+					"refId": "cede32b7-8232-4f7a-b396-13f457b0dc8d"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\pushbutton p on green.svg",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "49710220-6eaa-40f7-9450-67a7fa1ce733"
 				}
 			]
 		}

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "961722ac-a164-4ba9-b94d-ad0bf75d0ed0",
+	"designTimeId": "6ffc16b4-2307-4266-9ccb-310287ced7d9",
 	"name": "HSC_RL_Keyence_setzero",
-	"instanceId": "design_03cecd7280d14376a8a900dbc4c67587",
+	"instanceId": "design_329f5c4454204784a70fc130de1a8308",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "227c312f-0f0d-45c9-9851-f62e3bdcc1f8",
+			"designTimeId": "ee224e50-631e-40ff-bd69-4895f25bdede",
 			"name": "Image_0_0",
-			"instanceId": "lvd28ed3bd02d1a478f8e6482b8dcdf61ea",
+			"instanceId": "lvd30277a6796e044e6afc9a925158992b1",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\conveyor_hoogteregeling_expl.png",
+					"value": "Resources\\Images\\conveyor_hoogteregeling_expl.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "3b0d73f9-9d45-4019-9375-8951ea6d81f6"
+					"refId": "d7be6273-255e-4af3-bf59-a8385748b5ca"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "de35a3da-9aef-464a-b571-a9f27858b70d",
+			"designTimeId": "bf15cf35-6074-4881-9f9e-145c11b01fa8",
 			"name": "Btn_0_1",
-			"instanceId": "lvd93487f37fe934e3f837ae9f882675142",
+			"instanceId": "lvd57ab971c50254d5d86a22c825e538dde",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -164,35 +169,35 @@
 					"value": "LCD_36",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b8e63759-9b3f-4fe0-b526-c9b2c0a65677"
+					"refId": "660cd1ed-aa3a-4fa2-93c8-d3be57f14b93"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_42:Text_0",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "9a068e0b-5b98-4f2a-9e7a-7b36e9dda671"
+					"refId": "d0232ea5-0783-45e2-b92b-20250b6c1cca"
 				},
 				{
 					"name": "value",
 					"value": "255:S12_Conveyor_Master_Main_01Conveyor_Master1.Set_Hoogte_Set_Value",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "a9d7f651-85f5-4f26-be47-5a8e3b4f5838"
+					"refId": "e50e4af6-952c-404f-a4c0-9454bbca04c1"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_226",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "a06b21fe-3577-48db-86d0-e94fccced82b"
+					"refId": "49da686e-df71-4380-a7af-4bfd633bd677"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				}
 			]
 		}

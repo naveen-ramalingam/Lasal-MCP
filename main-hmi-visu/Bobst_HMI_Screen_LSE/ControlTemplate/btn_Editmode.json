@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "93d367cd-ff0f-4ff5-9193-0bf6799e5201",
+	"designTimeId": "fd5255d2-cb6d-4795-acac-4310ddd36431",
 	"name": "btn_Editmode",
-	"instanceId": "design_4dc96500bfb044f9b0b9f023126bac49",
+	"instanceId": "design_4796bd385fc54d2880c32c3f4d5c9f70",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "a4f44c82-c48e-4141-afbf-6ebc9502b5d2",
+			"designTimeId": "49406aca-f35a-41c0-9275-c4e6c9c8fbe5",
 			"name": "Image_0_0",
-			"instanceId": "lvd1a5fa7263da64125aca5f75625340417",
+			"instanceId": "lvd4c95da50d3264295b2b4028489591fe0",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\btn_editmode_disabled.png",
+					"value": "Resources\\Images\\btn_editmode_disabled.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "d43686de-4609-4807-a17e-3f339cb708a8"
+					"refId": "c32b1e84-425c-44ec-98c0-006fdf9307f0"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9f4bdfa0-ef5e-4303-8dcc-b23b40bccc42",
+			"designTimeId": "d7bd61a0-7694-4ce7-a859-c55fcd37722d",
 			"name": "Button_0_1",
-			"instanceId": "lvd0d5adadc7d544296857ec723fd1f37ac",
+			"instanceId": "lvd67814374a1bd4defa29052793515f49c",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -164,35 +169,42 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
-					"value": "Resources\\Images\\btn_editmode.png",
+					"value": "Resources\\Images\\btn_editmode.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "8a9dfe18-3daa-4f3c-b63c-b04210b62c0b"
+					"refId": "6301d336-b69a-4f83-b4d9-d35592a2ad34"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\btn_editmode_pr.svg",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "8247854c-090d-46c4-b6e9-58bbf14bddab"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "EditMode_select",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "3ccac5c9-d683-4573-a91a-e894326ad97a"
+					"refId": "709b6586-7c52-4ebb-82a2-ecade1ddb19e"
 				}
 			]
 		}

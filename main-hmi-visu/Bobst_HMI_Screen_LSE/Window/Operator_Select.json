@@ -9,16 +9,16 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "d8fc90ef-4e67-4ec7-b018-6b10cbcec92d",
+	"designTimeId": "0f00eca6-1afa-4626-8087-b9123817479c",
 	"name": "Operator_Select",
-	"instanceId": "design_7d7c8501ae3341d1b94ebe93aa88530c",
+	"instanceId": "design_a6e0e281268447e8bd8c948b07f9ffab",
 	"controlId": "sig-window-container",
 	"controls": [
 		{
 			"type": "control",
-			"designTimeId": "53c5a088-91ad-4ab0-a0e2-dc9645f06874",
+			"designTimeId": "52c6e132-0204-4253-ad25-d49c6aa9178e",
 			"name": "Operator_Select_Rect_0_0",
-			"instanceId": "lvdadd9140257f44d8a9bd66091655f96fd",
+			"instanceId": "lvdc9137684387f43b18af0b9dfe173d985",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -62,15 +62,15 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "c6300b0e-f643-4c01-89f6-e9dd6d0a2723",
+			"designTimeId": "e433c601-7e12-4fe8-bcea-a7d44f20d5f7",
 			"name": "Operator_Select_Rect_1_1",
-			"instanceId": "lvddb28646c675b40c1a4f520e6fc9abcc1",
+			"instanceId": "lvddf4d747d8c8c42bf9c16714e26ab894a",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -114,15 +114,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "786c4cdf-243e-4d04-b63f-9b647a35480e",
+			"designTimeId": "8cd25b15-29cf-4082-ab08-12349b97f1fc",
 			"name": "Image_0_2",
-			"instanceId": "lvdfdee302264f549a5b101e74908beeb21",
+			"instanceId": "lvdb4c2129c5fc94029b1a1b10045229d59",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -163,18 +163,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\raster_1024x768.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "cec62f48-fd23-4e5d-b533-5715d748a77c"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8991c98a-e556-4cdc-907a-e8f5fce2a87d",
+			"designTimeId": "4c5fe209-da60-4edf-ae08-14e834eac00e",
 			"name": "Output_0_OperatorLogIn1_Operator_Select_3",
-			"instanceId": "lvde45fd77311d749edb98d59e79327edf5",
+			"instanceId": "lvde63f77ba7c034199bd5db2203200bb56",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -218,15 +230,15 @@
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "dee574d0-a5c7-45c1-954c-3a306d495609"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "da369b61-8601-42f4-9cc0-9db21445f6aa",
+			"designTimeId": "9138f9c2-8b90-4191-b81d-440e1508ef0b",
 			"name": "Output_1_OperatorLogIn1_LogInOK_4",
-			"instanceId": "lvdc12b749e8214466cb5aaa03c3c78d85b",
+			"instanceId": "lvd003f0f9ba4ec49099f21006a4080cfb2",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -267,10 +279,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Meas_A",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "56cfd80e-7ba3-46ba-afb3-083bcddd0073"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

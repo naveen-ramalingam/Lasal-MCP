@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c3be1535-121e-4169-a57f-88dc00ccb8fb",
+	"designTimeId": "aa897314-723f-48fa-820e-9ec450732de6",
 	"name": "LED_Conveyor_OFF",
-	"instanceId": "design_500540ccd780461a978eb231e38727ca",
+	"instanceId": "design_b7f2905c369f415f8d3ca9caea1b7ecd",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "e421e2e4-7e26-4cae-947c-4434f87b1a98",
+			"designTimeId": "f8485c60-e3d7-4857-ab0c-3e8d113756f5",
 			"name": "Image_0_0",
-			"instanceId": "lvd455eaab540984904a548aab0fe9f061c",
+			"instanceId": "lvdcd295035df3a412ca27b979526abf97f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,17 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\conveyor_on_1.png",
+					"value": "Resources\\Images\\conveyor_on_1.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "a5d06bf9-4c1a-4070-af9b-39b380b66783"
+					"refId": "a3efc42a-fd35-4f73-9f32-4f5ad1f579d8"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

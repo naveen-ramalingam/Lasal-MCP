@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "8dcc763c-3851-42a2-9f7a-9c9a652c8513",
+	"designTimeId": "17703f60-e77a-41d4-86d2-59db5545e51a",
 	"name": "Feeder_Vacuumpomp_M1",
-	"instanceId": "design_8d64f11bd0dd415c8924d1238430af35",
+	"instanceId": "design_1d45d5d8ec3e456daf2d1486fec7d2e9",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "2550b1e6-aa29-464d-9258-73327750b977",
+			"designTimeId": "2a85c446-8d7c-48c8-a3a6-94cb94f7c118",
 			"name": "Image_0_0",
-			"instanceId": "lvd390d154d18f449de829c4cfdd8689b07",
+			"instanceId": "lvdd7d57ed35b3d4a35b21d7a9db3de0fca",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\vac_na.png",
+					"value": "Resources\\Images\\vac_na.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "6dc6c682-fd66-4454-ba0f-e639c748db62"
+					"refId": "308adc2c-1ec2-4de9-b120-589a903d527a"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "47295d49-ba9c-45af-8b9b-3bec17210eaf",
+			"designTimeId": "48197528-675b-42da-b7c1-d9e05c5ebd1c",
 			"name": "Button_0_1",
-			"instanceId": "lvdd716bfc06dab4e0ab46be5a0982542ce",
+			"instanceId": "lvd8362ea94a9a14f3fbe1a14125a069473",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -164,35 +169,42 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "value",
 					"value": "255:Feeder_Operators_01.VacuumOnOff_01",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "7ad940bb-b8a1-4cc5-b370-5fbddfa3a6bf"
+					"refId": "f699ac62-d17b-40b7-a079-b64af108004a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
-					"value": "Resources\\Images\\vacuum_off.png",
+					"value": "Resources\\Images\\vacuum_off.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "1e1f8eed-e08d-4a0f-a046-ea9b20192442"
+					"refId": "e680439e-f1bf-4caf-b01a-e1057f501541"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\vacuum_on.svg",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "098c2146-84b3-4ed0-b7ba-7e5f1f7e64f3"
 				}
 			]
 		}

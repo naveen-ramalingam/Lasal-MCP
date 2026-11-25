@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "16b99d71-465d-41d4-95ad-be0548f9ee9a",
+	"designTimeId": "0a1f1458-702b-42d4-bb97-655af78f8d16",
 	"name": "Barcode_on_box_ON",
-	"instanceId": "design_7bdc9ad61eac4dea8a67dd853aaba971",
+	"instanceId": "design_9d133f08cb14454c9b7d1060be632db0",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "52c89e61-4408-43a6-9aef-29a24fe71d85",
+			"designTimeId": "f2a4a2cf-2682-4d39-befa-f6ba6e53c53e",
 			"name": "Output_0_BarcodeLezer_Wenglor_FIS_0911_Rotatie_0",
-			"instanceId": "lvdd1ec4d6cd1414ce791d4e323daf1c3fc",
+			"instanceId": "lvdf8a66ecaf07e48b0948e1f496aee5706",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "barcode_rotate_display_OFF",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "9b1e1523-3771-4fb3-be54-5aa7e081a772"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

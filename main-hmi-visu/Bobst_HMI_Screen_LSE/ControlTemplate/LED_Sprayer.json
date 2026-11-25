@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "7a84e138-1471-41ac-8473-2469563acb80",
+	"designTimeId": "8a298514-06b6-462d-a312-d63d660489be",
 	"name": "LED_Sprayer",
-	"instanceId": "design_7c3c5ce82a1541e69a0846fd94309196",
+	"instanceId": "design_68841f52e9ea42aba5b6cf58d1356a60",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "42761220-fabd-43aa-af13-316d827df1db",
+			"designTimeId": "91a4ccd3-8fd1-46c5-a219-5bf621a1bba7",
 			"name": "Output_0_VisuTeller1_oOutputHW_0",
-			"instanceId": "lvd30c371b9a90b4b6ca6d5eec51a1eb049",
+			"instanceId": "lvd23a861a0e0ad40b8a0f0b8031e16ed3f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Sprayer",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "2cfb1354-80b0-4732-8df3-f7078207e863"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

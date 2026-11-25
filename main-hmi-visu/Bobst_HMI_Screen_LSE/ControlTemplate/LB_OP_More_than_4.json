@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "f9ff692b-1279-4f7a-a0fa-e23e9d5df6dc",
+	"designTimeId": "24ca0c4c-265e-4d5f-bf24-f9491a73ae81",
 	"name": "LB_OP_More_than_4",
-	"instanceId": "design_8c14333a51334f1499d95ec6b7522e4a",
+	"instanceId": "design_7009d30eb63744aeaa53589b79289bda",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "5f9de670-a85f-48d6-babd-9518af448c5c",
+			"designTimeId": "d201bc7f-d195-45ba-89d6-bdb240f0b400",
 			"name": "Image_0_0",
-			"instanceId": "lvdb7c2b6ba7a76468c9b0a244bfc12bab3",
+			"instanceId": "lvd7c80c7ae21e6492fbd28b7e48645f4bf",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,18 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\backdrop_150x25_lb_bot_morethan4.svg",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "511d767a-d79c-4a42-af58-92206d985f7b"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "c218e0f3-4fe2-4e70-ac9c-bdc8d381a51e",
+			"designTimeId": "c3f9187f-6e7a-4368-8671-998f6f96d3c4",
 			"name": "Image_1_1",
-			"instanceId": "lvdd4c4873c721b45d6b6d9cd4202cf3c15",
+			"instanceId": "lvd6f000674b0294ff5bd33785123c6cf39",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -154,17 +166,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\backdrop_lb_morethan4.png",
+					"value": "Resources\\Images\\backdrop_lb_morethan4.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "d4f21645-3745-4352-b4a8-e12f78683bc0"
+					"refId": "048fbca0-2bda-4a2d-93dc-a714104dbc30"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

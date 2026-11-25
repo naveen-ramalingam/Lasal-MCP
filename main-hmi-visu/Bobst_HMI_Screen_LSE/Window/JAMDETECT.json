@@ -9,16 +9,16 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "2c5422b1-af04-4848-9992-f3afc27163fa",
+	"designTimeId": "7c3effc6-3e46-4dc9-8d12-a319cbda4b5f",
 	"name": "JAMDETECT",
-	"instanceId": "design_a11265a455fc4ffdb0b41e13030d63b8",
+	"instanceId": "design_bc39093a09564ae2baa8caf147a18a8d",
 	"controlId": "sig-window-container",
 	"controls": [
 		{
 			"type": "control",
-			"designTimeId": "14a0f397-4a86-421b-ae46-82dacef3afbc",
+			"designTimeId": "26b17b51-5edf-4e82-9443-4258c06d1581",
 			"name": "Jamdetect_0_0",
-			"instanceId": "lvd18e03c0dba814295bc7de33d1322d2f1",
+			"instanceId": "lvdb4f691b5cc8e4c28820b39fb9f4b71d9",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -62,22 +62,22 @@
 					"value": "MigratedColors:MigratedColor_224",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3bd9a89e-1688-4f77-a698-44bb81374d00"
 				},
 				{
 					"name": "sigcompositectrl",
 					"value": "Jamdetect",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "e9934057-a84f-4f95-8c62-504c9cf1ef81"
+					"refId": "6e6bac58-1e32-4c5d-8a08-4dd949ceda86"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "683c8cb7-9b91-4634-bdde-dd1290bbb000",
+			"designTimeId": "b0904792-2293-4857-ae4e-853b58dfce55",
 			"name": "Image_0_1",
-			"instanceId": "lvd5037723dcf2f4e438596748f09900e28",
+			"instanceId": "lvdf66a9f5d79fb41e081b6ed517e13d3fa",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -118,10 +118,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\raster_1024x768.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "cec62f48-fd23-4e5d-b533-5715d748a77c"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

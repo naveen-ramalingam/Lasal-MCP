@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "8a6ef7a4-c156-4a21-9bda-3fdaaa1ba3f1",
+	"designTimeId": "40a511e8-b69b-4b00-b806-399061780c02",
 	"name": "SensorConv",
-	"instanceId": "design_5d8a39ee772b40b097a9337200099ad4",
+	"instanceId": "design_aa113ef68c334d758077cc3d570a0ad8",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "13c3a4bc-eb07-457d-89e8-fd224fb063b3",
+			"designTimeId": "e7ae6702-ac72-49da-a6d4-346bf2deeb07",
 			"name": "Image_0_0",
-			"instanceId": "lvdfb8cd1f1f0a24f57a9955018b89db187",
+			"instanceId": "lvdd9852cdb482f454a895dc4c3d2ba0065",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\sensor grey.png",
+					"value": "Resources\\Images\\sensor grey.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "56ca3158-7ebd-4e90-9fb2-178b6d90192f"
+					"refId": "54676a2a-684f-4786-8535-75fbd0e5b2ee"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "0f1c74dc-f18b-43e7-bf5d-454f49d19983",
+			"designTimeId": "8e717093-ce9d-48a8-a813-d7f2333494c0",
 			"name": "Output_0_S12_Conveyor_Master_Main_01_Conveyor_Master1_oSensorHW_1",
-			"instanceId": "lvdf94128a1bbc64f8a8a315aa81e8a069f",
+			"instanceId": "lvda57a6505e7004b8d8e01e8fc393ca4d7",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -161,10 +166,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "SensorLED",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "911544ca-be3f-4b5b-a2af-1e55b1ce4862"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

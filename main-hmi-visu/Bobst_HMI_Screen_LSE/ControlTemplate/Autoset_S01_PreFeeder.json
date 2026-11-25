@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "abdabf99-27a8-4bdc-b1b8-ea0c6e908b4c",
+	"designTimeId": "a62b249f-4ec3-4478-96c7-fbb00c33335a",
 	"name": "Autoset_S01_PreFeeder",
-	"instanceId": "design_06303fd845784048938d13f39eda7903",
+	"instanceId": "design_a3b019d5e67d4c3fa7a02621013f2453",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "e0837591-01c9-4259-adb1-9abde5aba6a3",
+			"designTimeId": "825b25fb-096f-4a30-b8f0-b76b6592bb20",
 			"name": "Obj_1067_Rect_0_0",
-			"instanceId": "lvd8d2575198dcf486c87e69002b1085e5a",
+			"instanceId": "lvd51aebd677981468b960baf0a45810c23",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "2784f982-4094-4292-9b38-a6a7d06434d4",
+			"designTimeId": "b4c0e9f8-e074-4ef9-8f01-425bd0c4fe7f",
 			"name": "Label_0_1",
-			"instanceId": "lvdd211371d2f4b4a29a70627b494731554",
+			"instanceId": "lvdeb43a1d5721d4623a6a59578febf2b9c",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -157,36 +157,35 @@
 					"value": "LCD_16",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "1002005b-79bf-44f5-a9eb-0a698e916fc4"
+					"refId": "cc41f275-1285-4407-a68e-4649e54ca109"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_14:Text_29",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "390b4645-c03b-403c-9b2f-c62e53d8cc8f"
+					"refId": "672bd53b-53b3-4b2a-8324-c604c299e8d0"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
-					"value": "MigratedColors:MigratedColor_264",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "5ce4bc9b-6502-442d-872d-4300072206a7",
+			"designTimeId": "29482c4b-b442-4250-b3df-27f6862c3826",
 			"name": "Object_1030_0_2",
-			"instanceId": "lvd83341466a290494f9b2c7b8ccc1e4dce",
+			"instanceId": "lvd34b4456805a3463d8fafc6d854214b75",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -230,15 +229,15 @@
 					"value": "MigratedColors:MigratedColor_224",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3bd9a89e-1688-4f77-a698-44bb81374d00"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "fb4f8dbd-0341-44ce-99f2-3e34387ed39a",
+			"designTimeId": "fe2dfb06-bf96-4b26-9ee1-467eeb060662",
 			"name": "Image_0_3",
-			"instanceId": "lvd167190ed3a454c3d9f9565fbafe51f1a",
+			"instanceId": "lvdf728c24dfef94e489b5c4f81dce2a6eb",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -279,17 +278,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\keyswitch_s_inactive.png",
+					"value": "Resources\\Images\\keyswitch_s_inactive.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "4f038ead-1734-46aa-8184-74daf46ad09c"
+					"refId": "b904898a-f4c1-42ee-be22-4fe5593d45ac"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

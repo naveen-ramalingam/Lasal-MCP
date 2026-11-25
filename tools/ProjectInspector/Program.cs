@@ -13,17 +13,32 @@ internal static class Program
     {
         if (args.Length == 0 || !File.Exists(args[0]))
         {
-            Console.WriteLine("Usage: LASAL.HMI.Converter.ProjectInspector <path-to-LSE.lpr> [output-ir.json] [--convert <target-output-dir>]");
+            Console.WriteLine("Usage: LASAL.HMI.Converter.ProjectInspector <path-to-LSE.lpr> [output-ir.json] [--convert <target-output-dir>] [--svg-mode Hybrid|VTracer|AI|None] [--ai-provider Gemini|OpenAI] [--ai-model <model>]");
             return 1;
         }
 
         string? convertDir = null;
         string? irOutPath = null;
+        var svgMode = "Hybrid";
+        string? aiProvider = null;
+        string? aiModel = null;
         for (var i = 1; i < args.Length; i++)
         {
             if (string.Equals(args[i], "--convert", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
             {
                 convertDir = args[++i];
+            }
+            else if (string.Equals(args[i], "--svg-mode", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                svgMode = args[++i];
+            }
+            else if (string.Equals(args[i], "--ai-provider", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                aiProvider = args[++i];
+            }
+            else if (string.Equals(args[i], "--ai-model", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                aiModel = args[++i];
             }
             else if (irOutPath == null)
             {
@@ -43,7 +58,11 @@ internal static class Program
                 TargetOutputDirectory = convertDir,
                 OverwriteTarget = true,
                 ConvertBmpTransparencyToPng = true,
-                PublishWebroot = true
+                PublishWebroot = true,
+                ConvertImagesToSvg = !string.Equals(svgMode, "None", StringComparison.OrdinalIgnoreCase),
+                SvgConversionMode = svgMode,
+                AiSvgProvider = aiProvider,
+                AiSvgModel = aiModel
             }, progress);
 
             var model = res.IntermediateModel;

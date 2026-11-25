@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c68c655c-fa11-485d-ab19-1b52c9594ab7",
+	"designTimeId": "840604a0-f7cd-4d7c-87bf-9dfb1aba02e7",
 	"name": "Comm_Busy_LED",
-	"instanceId": "design_3c861240572049dd9488013ab8e5972b",
+	"instanceId": "design_134a20f692c442af9a9b7c9eedcf85b4",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "fabcb8dd-67f4-4971-80b4-081153c77cad",
+			"designTimeId": "9b0a7613-b855-4a04-a943-ea798cd91c2c",
 			"name": "Output_0_Count_To1_Count_To_10_0",
-			"instanceId": "lvd335764e0f47c4becaadea0f893564bf7",
+			"instanceId": "lvd79275090afe04c63809f634d0ebfebae",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "calibrate_screen_picto",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "a7175ee8-eb95-499c-9f7f-446b3d113997"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

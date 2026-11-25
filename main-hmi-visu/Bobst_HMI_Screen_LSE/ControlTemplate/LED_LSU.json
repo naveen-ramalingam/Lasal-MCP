@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "cd97fbaa-0fa7-4631-bb76-e4b12e1ba4ab",
+	"designTimeId": "85d406dc-7670-4d30-a636-9246f07aaf8d",
 	"name": "LED_LSU",
-	"instanceId": "design_362bb5c437a1494480adbff1f20104ce",
+	"instanceId": "design_dfc2592c7c0747358877fa97a72ae92e",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "12524e63-a992-4565-87e8-dd16d2321991",
+			"designTimeId": "c72ae28c-ccf7-481f-9200-e8d146d841f3",
 			"name": "Output_0_VisuTeller1_oOutputHW_0",
-			"instanceId": "lvd0b599d3c204e4d71a734512c2b2fd2d0",
+			"instanceId": "lvd7d20d7de6a3e4f39806d651dfcc35c79",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "LSU",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "9d34d12a-3a11-483d-9707-fb02275c3aeb"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

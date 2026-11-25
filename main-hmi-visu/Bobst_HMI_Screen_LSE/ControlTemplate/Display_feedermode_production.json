@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "b025e020-c97d-47e9-886d-68910d1533fe",
+	"designTimeId": "33067775-144d-4889-955f-83ea327d5459",
 	"name": "Display_feedermode_production",
-	"instanceId": "design_687143c33dc94e6694a0ac33a43eae91",
+	"instanceId": "design_8da242418ad442b9826f04b2180c776b",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "3e0a70ba-a199-4c2b-b33d-b3dd2392f369",
+			"designTimeId": "38124973-d0a9-4b5a-b4ce-5f18d24073bf",
 			"name": "Output_0_Feeder_Operators_01_Mode_0",
-			"instanceId": "lvd99a8e7642c974b97a6f6e9a0260bf393",
+			"instanceId": "lvd0b7e8dfcdd194b7eaa099d6cb2e1f69b",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,18 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Hotmeld_COLDGLUE_offSTATE",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "a51093f2-e2e8-4325-b335-513a85aa3278"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cc14d31a-4793-4d02-95e4-7197a506f15d",
+			"designTimeId": "1761c13a-f2b2-44d3-8f95-e866f5749470",
 			"name": "Output_1_Feeder_Operators_01_Mode_1",
-			"instanceId": "lvdab06e708e3544501bfd67599a61d93e7",
+			"instanceId": "lvd5f02c3afeea3447ab3a3dcd6fc7022ff",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -154,10 +166,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "PROD_Feedmode_TRI",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "ccf27b3a-0e73-4518-961f-ca47247fbe06"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "6cb5e399-4dd8-48bf-8533-fec48bf5b07c",
+	"designTimeId": "7de06981-52be-42ed-819b-ed52be9a3d16",
 	"name": "Feeder_View_Prod_HW3F_1",
-	"instanceId": "design_ace4246284b644dbbf0a38ba9e241cf6",
+	"instanceId": "design_d387cb81241d4035acc8db55fd258ffc",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "321e3a75-0618-4153-b847-c093a47abd9b",
+			"designTimeId": "49c12bab-e69d-4a40-8054-b6baf0bf53c0",
 			"name": "Obj_358_Rect_0_0",
-			"instanceId": "lvd79e6edba19c445e7bb037e249ad8635f",
+			"instanceId": "lvdfea2a54a292c4cb197c1b84a3afac6fc",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "353fcd8b-9845-46df-af1f-8667e6e4943e",
+			"designTimeId": "af96fa29-afbc-46dc-92b2-3647d596539d",
 			"name": "Object_313_0_1",
-			"instanceId": "lvd310b8b2bf1254de2ac7638995cfc1412",
+			"instanceId": "lvd1f0df44966ec4cb583d2e58e5611db6e",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,15 +157,15 @@
 					"value": "MigratedColors:MigratedColor_224",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3bd9a89e-1688-4f77-a698-44bb81374d00"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "de1310c3-e0cc-463f-af70-8bd6625bd2a7",
+			"designTimeId": "b2014f84-42ac-4207-98f3-d0d05a34521d",
 			"name": "Object_311_1_2",
-			"instanceId": "lvd8779a50fc1a3423fbd3c35b1945dda59",
+			"instanceId": "lvda6dce1d1c6e2481ab5cb2e793a6a3177",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -209,15 +209,15 @@
 					"value": "MigratedColors:MigratedColor_224",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3bd9a89e-1688-4f77-a698-44bb81374d00"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "1da46c6c-c46c-49b8-aa2e-b5d7e0c09d84",
+			"designTimeId": "4bd48fa8-21c9-4f01-ae28-ab8e492c9906",
 			"name": "Image_0_3",
-			"instanceId": "lvdb260e4b4f5a746e1be719e35cd7ddaae",
+			"instanceId": "lvda0d8b897a810465d9207fa0cde68f4c5",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -258,25 +258,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
 					"value": "Resources\\Images\\feeder_prod_triple_1v_big.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "e7c1e3a0-eaf9-4021-9d89-802381896b27"
+					"refId": "26d5413b-cda7-47ad-8737-d546c2779e9d"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "af6a8d0c-4c85-48fe-8f4a-1b41cb4b4efd",
+			"designTimeId": "f1de794b-425d-47ca-ba47-a6af1125ee53",
 			"name": "Output_0_JDinfeed1_oSensorHW_4",
-			"instanceId": "lvd901bfc592e77467499f54284145368f6",
+			"instanceId": "lvd42ad5ff89c464ee491995365abc3d07c",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -317,18 +322,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Sensor",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "93e15728-bc2a-4990-b7d0-36b929a0d170"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "7524cd6a-fade-49ea-88da-5fa27917567e",
+			"designTimeId": "8380d820-d326-4ec0-83f4-790e4ecb86a4",
 			"name": "Button_0_5",
-			"instanceId": "lvdd9b6be55c1804967b0ced524db1f1071",
+			"instanceId": "lvd8c6e7aa9a06e4e908e81974527a301ae",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -372,35 +389,42 @@
 					"value": "Arial48",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "1f0d60ba-c734-4c45-a96e-5e78890dd81b"
+					"refId": "94e63f88-e6df-49e6-b619-9984507dddcc"
 				},
 				{
 					"name": "value",
 					"value": "255:JDinfeed1.iSpeedorTaktControl",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "0a26b27b-7eb8-41d9-8a9e-b74ea2f84418"
+					"refId": "dacbfe12-99e2-45ba-9489-a99de3c5283f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_226",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "a06b21fe-3577-48db-86d0-e94fccced82b"
+					"refId": "49da686e-df71-4380-a7af-4bfd633bd677"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
-					"value": "Resources\\Images\\doos - feeder - continue.png",
+					"value": "Resources\\Images\\doos - feeder - continue.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "4833ae26-a9c9-40fd-a5e9-6ef8c0344a6f"
+					"refId": "31e744c1-ef08-4379-84f4-cf03238fdab4"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\doos - feeder - takt.svg",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "338a6020-c89f-4736-8541-f52c3effe1dc"
 				}
 			]
 		}

@@ -159,7 +159,14 @@ public sealed class VisualAndFunctionalValidator
             var targetFile = Path.Combine(resourcesImgDir, asset.TargetFileName);
             if (!File.Exists(targetFile))
             {
-                summary.Issues.Add($"Converted image asset missing in target project: '{asset.TargetFileName}'.");
+                // Check stem match in case SVG/PNG format changed during export
+                var stemMatches = Directory.Exists(resourcesImgDir)
+                    ? Directory.GetFiles(resourcesImgDir, Path.GetFileNameWithoutExtension(asset.TargetFileName) + ".*")
+                    : Array.Empty<string>();
+                if (stemMatches.Length == 0)
+                {
+                    summary.Issues.Add($"Converted image asset missing in target project: '{asset.TargetFileName}'.");
+                }
             }
         }
 

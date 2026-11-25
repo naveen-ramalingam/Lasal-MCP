@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "1eca7472-5deb-4c92-b696-b7be42cbf2c3",
+	"designTimeId": "e2f3b9cb-350c-4e71-9654-71b32cc84371",
 	"name": "VD_Extra_sensoren_LabelAire",
-	"instanceId": "design_761cdb3afb274ad1a015ec5cba9d1b16",
+	"instanceId": "design_d5c2f7ac5aee411199acd2b16b218bf6",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "e5333cd3-afe6-4bf4-ae83-cf8b374f65ae",
+			"designTimeId": "648164d8-1827-4053-9412-e3b92c0f9ce7",
 			"name": "Obj_871_Rect_0_0",
-			"instanceId": "lvd33ee8675d5134299a68206b9dbd79288",
+			"instanceId": "lvdaced513ef3014d62aac915af8314b847",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e234a758-418c-4b34-99b9-50d7757f781b",
+			"designTimeId": "a4ee7934-6f23-4878-86eb-76e33278c359",
 			"name": "Output_0_Ventieldriver_Retrofit_01_Sensor_HIGH_1",
-			"instanceId": "lvd3bdb309c570a45a2b4b4dbb34ec0827c",
+			"instanceId": "lvd7886c21340c94b789516e95bc8776176",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -154,18 +154,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "KEB_Hoofdmotor",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "ee519f12-e9b6-46bd-a598-22b43ca2de94"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "dded6148-3ced-4e45-9c44-586606668b82",
+			"designTimeId": "74ea8185-0ffe-47d4-8d9e-9a1afb2c5fd6",
 			"name": "Output_1_Ventieldriver_Retrofit_01_Sensor_LOW_2",
-			"instanceId": "lvdf8f3e4ceb0654522beb3a72cb4102211",
+			"instanceId": "lvd9763e78b78df4a6db2737ff4ea83105f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -206,10 +218,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "KEB_Hoofdmotor",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "ee519f12-e9b6-46bd-a598-22b43ca2de94"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

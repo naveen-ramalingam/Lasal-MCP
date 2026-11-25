@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "5b547ca2-702c-4220-8dce-ad26894bdf18",
+	"designTimeId": "4b8b6171-b751-4d92-8d4c-ffdcbf4a227d",
 	"name": "Feeder_VibrationMotor_M1",
-	"instanceId": "design_efecd3554b504b89a94c077087e12fea",
+	"instanceId": "design_694abdc445c44ffca1f2ef8833db16b9",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "f2389197-25d6-4674-95d2-b9a7623191d3",
+			"designTimeId": "3b476d53-9d48-4855-b3b9-cc4717038b71",
 			"name": "Image_0_0",
-			"instanceId": "lvde426a18741ca4fe8a1957d23b485ef1a",
+			"instanceId": "lvdfa6a9326548d487f83c69f9b8ed8d074",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\vibr_off.png",
+					"value": "Resources\\Images\\vibr_off.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "2f81bfac-0f6c-4b35-b354-6da665f826e5"
+					"refId": "5094dac5-e409-4471-88dd-04eeee4559af"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "012c433e-7d7c-4dff-98f2-0921d73c264c",
+			"designTimeId": "3dd6cce1-e1e5-430b-bad9-cd5de27086cf",
 			"name": "Button_0_1",
-			"instanceId": "lvd2308bc8c7eb9444eb095baa782832240",
+			"instanceId": "lvd38d33ad3ec994f2fb36ad9acddc353ba",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -164,35 +169,42 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "value",
 					"value": "255:Feeder_Operators_01.VibrationMotorOnOff_01",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "a744e51c-41a3-4275-9f62-9f8eccf22f28"
+					"refId": "c2c6f0ec-cd5f-452d-897c-9e286f167898"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
-					"value": "Resources\\Images\\vibr_off.png",
+					"value": "Resources\\Images\\vibr_off.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "2f81bfac-0f6c-4b35-b354-6da665f826e5"
+					"refId": "5094dac5-e409-4471-88dd-04eeee4559af"
+				},
+				{
+					"name": "--theme-sig-control-button-pressed-background-image",
+					"value": "Resources\\Images\\vibr_on.svg",
+					"typeId": 15,
+					"propTypeId": 2,
+					"refId": "5847f480-0364-4912-9030-ea074069e575"
 				}
 			]
 		}

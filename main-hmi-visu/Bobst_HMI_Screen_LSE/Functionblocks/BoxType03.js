@@ -1,7 +1,7 @@
-﻿class __93e028b489684ad28ab25b2f567ff653 extends window.functionBlockBase
+﻿class __8b5eb074884d4fce9fe4de0fd1211b28 extends window.functionBlockBase
 {
   constructor() {
-    super('_93e028b489684ad28ab25b2f567ff653');
+    super('_8b5eb074884d4fce9fe4de0fd1211b28');
   }
 
   _execute() {
@@ -11,4 +11,4 @@
     // ######## generated code end ########
   }
 }
-window.functionBlocks.__93e028b489684ad28ab25b2f567ff653 = __93e028b489684ad28ab25b2f567ff653;
+window.functionBlocks.__8b5eb074884d4fce9fe4de0fd1211b28 = __8b5eb074884d4fce9fe4de0fd1211b28;

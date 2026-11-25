@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "9fbb1c01-0a37-40d8-92c2-37cfd32014cf",
+	"designTimeId": "5a050c9a-dd24-4862-9094-60f1b8ee0cf7",
 	"name": "Main_Wenglor_Present",
-	"instanceId": "design_8eda49c30cc94bfd902f320aead05d86",
+	"instanceId": "design_b6b914bd85444e438d6174ca4dce136c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "cc0abb91-9185-4bc0-8034-429b58deb3c0",
+			"designTimeId": "1ea78b82-d6c9-453f-be92-834db98342d2",
 			"name": "Output_0_BarcodeLezer_Wenglor_FIS_0911_OnOff_0",
-			"instanceId": "lvd0ba70a0688524edca8328e1a49b21e51",
+			"instanceId": "lvd009fa5ab5ebf480b9c2b308fba2e9521",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,18 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Wenglor_ON_OFF_small",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "864092d1-c1a5-4391-a104-170a23bc8848"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8d0d1f01-d64d-44d7-a111-c735ea9e127a",
+			"designTimeId": "874dd5e2-c6de-4339-83c3-6461bddc7c2c",
 			"name": "Button_0_1",
-			"instanceId": "lvdc1cb31b3c81a46638cf2445d701c33e4",
+			"instanceId": "lvd53d1eeb17ddb42628a3a96ef3e3cff92",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -157,28 +169,28 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_218",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "6521afd8-5a78-48ab-ac06-af018e5ab8b0"
+					"refId": "d317b7bb-53dd-4312-bdb0-ae39c1c1d9e7"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "scr_Wenglor_FIS_0911",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "24049e49-9bc8-4a2f-8d8c-01026964b19a"
+					"refId": "7a75048f-3a3e-4838-8fc4-9248ee910883"
 				}
 			]
 		}

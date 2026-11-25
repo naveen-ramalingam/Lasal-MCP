@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "66ef4fb1-3aef-47bd-a858-eb91d723dd69",
+	"designTimeId": "4dc04377-9563-4d5f-836c-5306d65f1a44",
 	"name": "Conveyor_collision_type_DUCK_TOSOKU",
-	"instanceId": "design_407eed78162a48b0badb0fc900de4cd2",
+	"instanceId": "design_1e1089e4a9eb4973860992726171b3b6",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "13325578-956e-488c-ac1f-746642031edd",
+			"designTimeId": "bb713851-7955-467e-8366-bf1e1b1f5d1b",
 			"name": "Obj_566_Rect_0_0",
-			"instanceId": "lvdeca3c8128cc14fc3bd84f96dbf80ec9f",
+			"instanceId": "lvd3c5cef53c9f549169f74c09aa3690788",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "5aa190c4-bdfb-4812-b94b-a8d1f8be251b",
+			"designTimeId": "4f67c342-15d7-4e0e-aacf-49c2b0e7cff4",
 			"name": "Label_0_1",
-			"instanceId": "lvde2ee77dbc9dd402ea4952cb5d84d986b",
+			"instanceId": "lvdfc048fc1acb44469aec00fd1d0741223",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -157,36 +157,35 @@
 					"value": "Tiny_7",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "79e0c63a-37a5-4dda-a928-d5c703b5b67d"
+					"refId": "92f6bb47-5bd2-4baa-8299-1c3e59230092"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_11:Text_58",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "bd00d665-7b1a-4365-b7e5-fb01b8226a82"
+					"refId": "3b334ff1-6c74-4838-b0ed-24326358d22d"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
-					"value": "MigratedColors:MigratedColor_264",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "5f691598-688c-4fa3-afcf-eb035c042fc2",
+			"designTimeId": "7faed1f2-9a79-4593-acb5-ee6c7effe1b1",
 			"name": "Image_0_2",
-			"instanceId": "lvd21a3b044ad2847ea8c76d8a923c0e59a",
+			"instanceId": "lvd3b9351360e924a7f81c78a177244bb10",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -227,18 +226,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\cipc_TC.svg",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "faeef1b9-a1bc-4a66-b08f-d9979e927f9b"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "5c586a36-e169-46b3-9f3f-9644466d38ca",
+			"designTimeId": "05033925-5ba9-4a0e-b267-afcd1320ecf3",
 			"name": "Image_1_3",
-			"instanceId": "lvd8f0f8a4ee27746e38f3d6f666a078ea5",
+			"instanceId": "lvde65c83c14a504b0f97f9adb88e810030",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -279,25 +290,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\cipc_mem.png",
+					"value": "Resources\\Images\\cipc_mem.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "7e1646e1-493e-49ef-8f7f-37972ebd3421"
+					"refId": "3daa1f0c-3f50-49d0-a287-3507ac4064e3"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "d70a4754-1585-4cdc-acfe-62b81ea95fb8",
+			"designTimeId": "fa22c173-dfd2-49df-95a2-5dc1f208d0ad",
 			"name": "Input_0_ConveyorTromboneCollisieBew1_s_CollisieWaarde_S11_S12_4",
-			"instanceId": "lvddeb674b0a1054a348a0bdf06d36ace1c",
+			"instanceId": "lvdd71297d3b86c434c9101044d8b2bd2b2",
 			"controlId": "sig-control-numeric-input",
 			"properties": [
 				{
@@ -341,28 +357,28 @@
 					"value": "Tiny_7",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "79e0c63a-37a5-4dda-a928-d5c703b5b67d"
+					"refId": "92f6bb47-5bd2-4baa-8299-1c3e59230092"
 				},
 				{
 					"name": "value",
 					"value": "255:ConveyorTromboneCollisieBew1.s_CollisieWaarde_S11_S12",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "bddc87e5-546b-45d6-b37c-4149dabc48bd"
+					"refId": "9e2402ec-c91a-46b3-afa3-2e1ced0dc764"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+					"refId": "2c40257a-25c2-46ab-9150-226f151adf70"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				},
 				{
 					"name": "unittext",
@@ -370,15 +386,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "bddc87e5-546b-45d6-b37c-4149dabc48bd"
+					"refId": "9e2402ec-c91a-46b3-afa3-2e1ced0dc764"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "16518e8a-d297-47d6-8b50-0aa20a4e3018",
+			"designTimeId": "e9442e70-506d-4b39-aefc-19d9930e68e7",
 			"name": "Input_1_ConveyorTromboneCollisieBew1_s_CollisieWaarde_S11_S12_SubPC_5",
-			"instanceId": "lvdc58fa7348d1343bebc9c93b598ffbd9c",
+			"instanceId": "lvd1ca250b907a747948a17478c95bc8dd8",
 			"controlId": "sig-control-numeric-input",
 			"properties": [
 				{
@@ -422,21 +438,21 @@
 					"value": "Tiny_7",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "79e0c63a-37a5-4dda-a928-d5c703b5b67d"
+					"refId": "92f6bb47-5bd2-4baa-8299-1c3e59230092"
 				},
 				{
 					"name": "value",
 					"value": "255:ConveyorTromboneCollisieBew1.s_CollisieWaarde_S11_S12_SubPC",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "e89cfd77-a7e2-46b2-9e24-7f86dd26c0f5"
+					"refId": "90f31c37-6ba7-4265-bc2a-36fb1731a665"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+					"refId": "2c40257a-25c2-46ab-9150-226f151adf70"
 				},
 				{
 					"name": "unittext",
@@ -444,7 +460,7 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "e89cfd77-a7e2-46b2-9e24-7f86dd26c0f5"
+					"refId": "90f31c37-6ba7-4265-bc2a-36fb1731a665"
 				}
 			]
 		}

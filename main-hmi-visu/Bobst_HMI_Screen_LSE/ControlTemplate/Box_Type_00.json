@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "29fe74cd-629c-41d3-a7b9-f64bce569d6c",
+	"designTimeId": "174a24ad-b815-4af5-917a-632b555fcb5b",
 	"name": "Box_Type_00",
-	"instanceId": "design_9f4a797278b84ad1b1dbc811e1637464",
+	"instanceId": "design_e467d3b70a0443c0aa610ef99aaded39",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "acf9e81c-6af0-49d0-9a3d-d09834502982",
+			"designTimeId": "a2250f10-3c0a-4ae6-bad3-3407cda5e9f0",
 			"name": "Obj_108_Rect_0_0",
-			"instanceId": "lvd695ad7e06027488496cd04cc36f021d7",
+			"instanceId": "lvd4459015252cc4557a36fa020c866f597",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "2d318967-f719-45dd-8074-c5a0a17189cb",
+			"designTimeId": "fcb07c96-7baf-48b5-8157-42cbac9b1dea",
 			"name": "Image_0_1",
-			"instanceId": "lvd244fbb191a6d470a801e4aa584e61f21",
+			"instanceId": "lvdddb427a5b8cf4f8aa3ee7b157ae5efea",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -154,25 +154,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\box_select_w.png",
+					"value": "Resources\\Images\\box_select_w.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "d96ad5d8-b5de-4ee7-828a-050d283b8750"
+					"refId": "70dff39e-8a02-431f-901b-d9aeddb0ae5c"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e1c0deea-1dd3-4860-a9ec-60903e9603ad",
+			"designTimeId": "a629c145-4891-4502-a7ee-38ce234218c1",
 			"name": "Button_0_2",
-			"instanceId": "lvdbf4926d33d23494e8615784f6da91900",
+			"instanceId": "lvd1b2661d6c2ee474aa10e69c04aeb52a4",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -216,28 +221,28 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_218",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "6521afd8-5a78-48ab-ac06-af018e5ab8b0"
+					"refId": "d317b7bb-53dd-4312-bdb0-ae39c1c1d9e7"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "wnd_BoxSelect",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "b360ee37-f03d-4f13-93db-38e2a5954fdb"
+					"refId": "d8c0a20b-1b9d-425e-a249-c7e064d4d2f4"
 				}
 			]
 		}

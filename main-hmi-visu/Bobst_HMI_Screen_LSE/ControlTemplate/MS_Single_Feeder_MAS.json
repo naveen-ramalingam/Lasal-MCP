@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "fb453fe9-4d0e-4451-b141-c87299de47af",
+	"designTimeId": "be185d65-e7a7-49d9-8b04-141d190a88ca",
 	"name": "MS_Single_Feeder_MAS",
-	"instanceId": "design_09e5bfb7cc7446c2b41ff4fd63e9265f",
+	"instanceId": "design_730bb683c4fd4f1f95fc05ce3beb9021",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "82e51d3e-7b0f-49de-b72f-bf256476df16",
+			"designTimeId": "b9705b23-b010-40cd-8d0c-3a5b3a0841cc",
 			"name": "Image_0_0",
-			"instanceId": "lvdbee376e9a4064326ab4b07cefeb19bf1",
+			"instanceId": "lvd31d1508c1d7f4d6f83939e34ca8a644f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\feeder_on.png",
+					"value": "Resources\\Images\\feeder_on.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "5d5a05a4-5840-48f7-bb60-d139bba699ee"
+					"refId": "41750009-0263-4d92-9afe-e30d585cc479"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9d41b0c8-c381-47b0-91f6-fd268bc1a42e",
+			"designTimeId": "75103472-2b82-46c6-829c-60a90b52b674",
 			"name": "Image_1_1",
-			"instanceId": "lvd30f4955cd8434cccb62545b089aadb39",
+			"instanceId": "lvd38db64554cdc4027b58f1a17190d9e7e",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -161,17 +166,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\mas_main_button_pressed.png",
+					"value": "Resources\\Images\\mas_main_button_pressed.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "94cffc46-7818-48b6-9e48-90f8d51fb38a"
+					"refId": "533ad7c9-076f-423e-9f9c-21e70669ae27"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "04c83a24-1d48-48bf-b9bc-75dc428df813",
+	"designTimeId": "d2f93f07-ba98-43de-b785-3b8f362d3aec",
 	"name": "LED_OFF",
-	"instanceId": "design_7e270ec0a6b0443398f7e2ff63d680a5",
+	"instanceId": "design_de7e5d8009b041df8c4d26abfb3b7136",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "47ebf380-4fd7-40a4-b0da-0f972b34456e",
+			"designTimeId": "fff7b26d-9bb3-4130-9b00-07aceb1a78d4",
 			"name": "Image_0_0",
-			"instanceId": "lvd45b5ab7d5dbb4cf7927178ccf52d5b3a",
+			"instanceId": "lvdfcb5612833ee48638370d6419cba4658",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,17 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\lamp_uit_bg.png",
+					"value": "Resources\\Images\\lamp_uit_bg.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "93aa8c73-f80f-4437-82d0-9ef4031e479b"
+					"refId": "41741b7d-63f7-486f-aaab-e39a946972f2"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

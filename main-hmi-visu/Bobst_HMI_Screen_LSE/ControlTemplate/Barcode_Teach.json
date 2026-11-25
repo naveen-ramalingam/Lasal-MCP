@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "3b9febbd-a52d-4c84-b131-667234a392df",
+	"designTimeId": "73d78d30-27b5-45f8-bf39-565fb2916d61",
 	"name": "Barcode_Teach",
-	"instanceId": "design_886dd960cc6a47b499d25303b7aa5f19",
+	"instanceId": "design_8fad8ed44eb946e88acbf82c499f7db9",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "934cf77e-3d46-4552-8645-59fc7298d143",
+			"designTimeId": "996ee658-1c64-4602-85dc-eceb6a0f211d",
 			"name": "Obj_937_Rect_0_0",
-			"instanceId": "lvdbee431c408c04771a245318f6181ef04",
+			"instanceId": "lvdb0447414bb524b03957563892d7187fe",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_219",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "8a35d656-d513-47f1-babd-d0e2a484e167"
+					"refId": "09ec40d0-a445-40a5-9886-5b543690a5cf"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "d73e2614-8b83-449d-9b11-8b0c5dd2af75",
+			"designTimeId": "b4d4187c-e59f-48d6-baa1-e614cc0ef275",
 			"name": "Obj_937_Rect_1_1",
-			"instanceId": "lvd548e1257999742898d4a7482fd3afe73",
+			"instanceId": "lvdac82048b36fa4b828aa684f90ca7cbd3",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -157,15 +157,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "a112ccb1-431f-4272-843d-e5658454b432",
+			"designTimeId": "2b22adcc-1e92-4bf2-9739-57748f324964",
 			"name": "Output_0_BarcodeLezer_Wenglor_FIS_0911_TeachIn_2",
-			"instanceId": "lvd55680a9063904cf38f282ddac8759abd",
+			"instanceId": "lvdef240ce157674f978f3cb271b5d24732",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -206,18 +206,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "barcode_teachresult",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "f5145e62-4202-4057-ba75-b95c02121693"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "98582840-b86e-4fb7-88b0-44ffd3ae4392",
+			"designTimeId": "6d303aa3-baf9-46f6-985d-7411743c455c",
 			"name": "Output_1_BarcodeLezer_Wenglor_FIS_0911_TeachResult_3",
-			"instanceId": "lvd0185b4727729469ab3a4581366a929f2",
+			"instanceId": "lvd6c9b893954ed4fc591911794f023813f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -258,18 +270,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "barcode_result",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "443e7c7a-450e-4263-9549-b8cde04a9466"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "98f69d3f-093d-4c22-8945-9bc3b69d6379",
+			"designTimeId": "687c0aa7-20fd-418e-81fc-e9422e6586bb",
 			"name": "Output_2_BarcodeLezer_Wenglor_FIS_0911_OnOff_4",
-			"instanceId": "lvd5f6d37f359ee41e18cf32afab37e9141",
+			"instanceId": "lvd57169024d0e54e4ebca20d6ca1b4f37c",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -310,18 +334,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Serial_comm_busy",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "bf845fdf-b01e-4b26-a93c-1dd494fb5ed5"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8e1ec239-50e0-486f-8b54-444eacc8613b",
+			"designTimeId": "717e3b8b-b38e-462d-a28c-3b9c0d9cafb4",
 			"name": "Button_0_5",
-			"instanceId": "lvd0856cabf9157494c9a957540817c5b5e",
+			"instanceId": "lvdb702f89bbc6747769dc5110396f0c702",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -365,28 +401,28 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_218",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "6521afd8-5a78-48ab-ac06-af018e5ab8b0"
+					"refId": "d317b7bb-53dd-4312-bdb0-ae39c1c1d9e7"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "168a5a96-de72-484e-8308-186d4bac290b"
+					"refId": "623e140b-85d4-465d-9867-6156b00a244f"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "scr_Wenglor_FIS_0911",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "24049e49-9bc8-4a2f-8d8c-01026964b19a"
+					"refId": "7a75048f-3a3e-4838-8fc4-9248ee910883"
 				}
 			]
 		}

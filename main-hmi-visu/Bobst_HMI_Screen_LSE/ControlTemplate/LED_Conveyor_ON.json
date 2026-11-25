@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "74c2d2cc-d237-4008-928f-420fd1c79743",
+	"designTimeId": "55fca414-68cb-4f06-a9d5-647f95673f88",
 	"name": "LED_Conveyor_ON",
-	"instanceId": "design_71e7fcf1693741cba07bd6feef88a0a9",
+	"instanceId": "design_aaf1e32de39444cb95eee19c8d5795f4",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "46251e9b-0a11-4848-a7bf-c5c4503816d9",
+			"designTimeId": "280ec56a-ddb1-4e05-a969-e83e89fcb066",
 			"name": "Output_0_Count_To1_Count_To_5_0",
-			"instanceId": "lvdba1a9159193747f983714af99b16bf8f",
+			"instanceId": "lvd0ef335dd05dd4ec3a81c5563ac48f934",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Conveyor_Run",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "e0331eff-2edf-4198-8ca4-66ee682027e4"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

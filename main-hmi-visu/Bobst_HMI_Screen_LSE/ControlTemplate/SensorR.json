@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "05a8da52-b8c7-4714-94dd-bc3daf8c813b",
+	"designTimeId": "55f6a4bf-33c2-4fb8-ad58-dfb96fdab4ce",
 	"name": "SensorR",
-	"instanceId": "design_f34d6e59a98b4895ab53e82874883adf",
+	"instanceId": "design_14e21cb204c84820a9c31e919b1cfd7a",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "4ad905e9-7d23-4656-9062-77836e15fd05",
+			"designTimeId": "0e84ef8b-9aed-4173-b8e5-376364d0f0d9",
 			"name": "Label_0_0",
-			"instanceId": "lvd55f1ce07e07347ec81e77dfd75d809b7",
+			"instanceId": "lvd82fb867d8d544fd881b2ce8beb51159c",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -105,36 +105,35 @@
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "776c8bc5-fa74-4dee-aff3-837d3be09268"
+					"refId": "8b9d937c-0895-430d-bc6b-628870d9c556"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_9:Text_7",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "cfd02cbf-1d39-48cf-8e78-10459e0fdece"
+					"refId": "d3c926c7-da55-4786-9b93-9e8d43a30eda"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
-					"value": "MigratedColors:MigratedColor_264",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "b29537a2-ba0e-4414-9d67-8d79b6e582ac",
+			"designTimeId": "db49c13b-8f39-4a2b-a1da-2ac2bc89fa80",
 			"name": "Image_0_1",
-			"instanceId": "lvdf3b914ac026f430aab44d545c674783c",
+			"instanceId": "lvd514961ec68bd4659810827bebf5b80e8",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -175,25 +174,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\sensor grey.png",
+					"value": "Resources\\Images\\sensor grey.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "56ca3158-7ebd-4e90-9fb2-178b6d90192f"
+					"refId": "54676a2a-684f-4786-8535-75fbd0e5b2ee"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "317f99cf-eaeb-460a-b0d8-4a9da8c0ddce",
+			"designTimeId": "937d4f50-6805-4515-a60e-7dab336427c0",
 			"name": "Output_0_VisuTeller1_oSensorHW_2",
-			"instanceId": "lvdf4eaff41705f4db3b94a7958f3414f8a",
+			"instanceId": "lvd6c779e26822542acb7d9a5f0a04a9093",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -234,18 +238,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "SensorLED",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "911544ca-be3f-4b5b-a2af-1e55b1ce4862"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "5b5e49eb-6a57-442a-95ae-96a96d89812b",
+			"designTimeId": "70d6d96d-a036-4a2c-9998-48cb05717b46",
 			"name": "Button_0_3",
-			"instanceId": "lvda15fc5a86a5045dfbcb31a0a2efca3d9",
+			"instanceId": "lvd4e99837505b34ad892477acbbe37e1b4",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -289,28 +305,28 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "14e3c7f7-8722-4adc-b41d-38ca4318423a"
+					"refId": "1758f824-022a-4027-ad5c-b7d9305a877b"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_218",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "6521afd8-5a78-48ab-ac06-af018e5ab8b0"
+					"refId": "d317b7bb-53dd-4312-bdb0-ae39c1c1d9e7"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "aae5510d-7408-4cb6-a0f1-727b65a436eb"
+					"refId": "a9114c7e-5488-4c66-a634-b78508037da4"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "SetSensorL",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "60263b67-9317-41c5-aa03-c763acbb4e22"
+					"refId": "09cc8972-885a-423f-ba07-81fce5bd89b7"
 				}
 			]
 		}

@@ -359,6 +359,18 @@ public sealed class AssetModel
 
     [JsonPropertyName("transparencyKeyCssHex")]
     public string? TransparencyKeyCssHex { get; set; }
+
+    [JsonPropertyName("mpcImageIndex")]
+    public int? MpcImageIndex { get; set; }
+
+    [JsonPropertyName("mpcTransparentRgb565")]
+    public ushort? MpcTransparentRgb565 { get; set; }
+
+    [JsonPropertyName("mpcStateFlags")]
+    public ushort? MpcStateFlags { get; set; }
+
+    [JsonPropertyName("conversionMode")]
+    public string ConversionMode { get; set; } = "PNG";
 }
 
 public sealed class SchemeModel

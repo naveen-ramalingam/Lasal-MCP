@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using LASAL.HMI.Converter.Assets;
 using LASAL.HMI.Converter.Infrastructure;
 using LASAL.HMI.Converter.Mapping;
 using LASAL.HMI.Converter.Models;
@@ -88,7 +89,17 @@ public sealed class ConversionOrchestrator
             {
                 OverwriteTarget = request.OverwriteTarget,
                 ConvertBmpTransparencyToPng = request.ConvertBmpTransparencyToPng,
-                PublishWebroot = request.PublishWebroot
+                PublishWebroot = request.PublishWebroot,
+                SvgOptions = request.ConvertImagesToSvg
+                    ? new SvgConversionOptions
+                    {
+                        Enabled = true,
+                        Mode = request.SvgConversionMode,
+                        AiProvider = request.AiSvgProvider,
+                        AiApiKey = request.AiSvgApiKey,
+                        AiModel = request.AiSvgModel
+                    }
+                    : null
             },
             cancellationToken).ConfigureAwait(false);
 
@@ -136,6 +147,11 @@ public sealed class ConversionRequest
     public bool OverwriteTarget { get; set; } = true;
     public bool ConvertBmpTransparencyToPng { get; set; } = true;
     public bool PublishWebroot { get; set; } = true;
+    public bool ConvertImagesToSvg { get; set; } = true;
+    public string SvgConversionMode { get; set; } = "Hybrid";
+    public string? AiSvgProvider { get; set; }
+    public string? AiSvgApiKey { get; set; }
+    public string? AiSvgModel { get; set; }
 }
 
 public sealed record ConversionProgressUpdate(int PercentComplete, string StageDescription);

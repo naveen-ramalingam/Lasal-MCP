@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "cd1ef24c-f946-4596-a7f3-87c757294eb4",
+	"designTimeId": "250237d0-4fb0-4200-8336-b6c45cce1f3f",
 	"name": "LED_Straighter",
-	"instanceId": "design_e44e53d48fba4881863e7ce2f514c2a0",
+	"instanceId": "design_3ba7f5e16f6b409ab87e3ddfc1b6b775",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "c96a199d-49e6-4883-8153-f997a758cd72",
+			"designTimeId": "ba2a44a6-2b75-46d4-a150-81c7c5915699",
 			"name": "Output_0_VisuTeller1_oOutputHW_0",
-			"instanceId": "lvdcbad9f1b071542dd871372753a0e35d2",
+			"instanceId": "lvd14372a23313a473f9340ba36d7c309b5",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,10 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_229",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Straighter",
+					"typeId": 29,
 					"propTypeId": 2,
-					"refId": "db232f40-bd83-4a00-a48a-13cfbe5a45c8"
+					"refId": "21c9abe7-3085-4588-8a31-822385b93101"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

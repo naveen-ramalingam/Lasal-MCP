@@ -12,8 +12,10 @@ release/
 01_Manuals/
 examples/ExpectedOutput/
 
-# VISUDesigner temporary SQLite cache & oversized IR dump (>100 MB GitHub limit)
+# VISUDesigner temporary SQLite cache, lock files, archives & oversized IR dump (>100 MB GitHub limit)
 **/.tmp/
+*.lock
+main-hmi-visu.zip
 main-hmi-visu/intermediate_model.json
 main-hmi-lse/Bak/
 main-hmi-lse/Data.lse

@@ -32,12 +32,12 @@ public sealed class MpcBinaryReader
             TryParsePalette(paletteFile, model);
         }
 
-        // 2. Parse Image List (LS0003.MPC) for symbol names
+        // 2. Parse Image List (LS0003.MPC) for symbol names, dimensions, and exact transparency keys
         var imageSymbols = new List<string>();
         var bmpListFile = Path.Combine(runtimeDir, "LS0003.MPC");
         if (File.Exists(bmpListFile))
         {
-            imageSymbols = TryParseImageList(bmpListFile);
+            imageSymbols = TryParseImageList(bmpListFile, model);
         }
 
         // 3. Parse Font List (LS0007.MPC)
@@ -340,9 +340,10 @@ public sealed class MpcBinaryReader
         }
     }
 
-    private static List<string> TryParseImageList(string filePath)
+    private static List<string> TryParseImageList(string filePath, HmiIntermediateModel model)
     {
         var labels = new List<string>();
+        var mpcMeta = new List<(int Index, ushort Width, ushort Height, ushort TransparentRgb565, ushort State)>();
         try
         {
             using var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -359,12 +360,13 @@ public sealed class MpcBinaryReader
                 for (var i = 0; i < no; i++)
                 {
                     var datano = br.ReadUInt32();
-                    _ = br.ReadUInt16(); // width
-                    _ = br.ReadUInt16(); // height
-                    _ = br.ReadUInt16(); // transparent
+                    var w = br.ReadUInt16();
+                    var h = br.ReadUInt16();
+                    var trans = br.ReadUInt16();
                     var state = br.ReadUInt16();
                     var bytesPerPacket = (state & 0x0008) != 0 ? 2 : 3;
                     br.BaseStream.Seek(datano * bytesPerPacket, SeekOrigin.Current);
+                    mpcMeta.Add((i, w, h, trans, state));
                 }
             }
             else
@@ -373,6 +375,49 @@ public sealed class MpcBinaryReader
             }
 
             labels = TryReadAsciiBuffer(br);
+
+            // Populate authoritative LS0003.MPC asset records (exact runtime symbols, dimensions, and transparency keys)
+            for (var i = 0; i < mpcMeta.Count; i++)
+            {
+                var meta = mpcMeta[i];
+                var symName = i < labels.Count && !string.IsNullOrWhiteSpace(labels[i])
+                    ? labels[i].Trim()
+                    : $"MpcImage_{i}";
+                var assetId = Path.GetFileNameWithoutExtension(symName);
+                var hasTrans = (meta.State & 0x0004) == 0; // Bit 0x0004 = BMP_NO_TRANSPARENT
+                var keyHex = hasTrans ? AssetMigrationService.ConvertRgb565ToCssHex(meta.TransparentRgb565) : null;
+
+                var existing = model.Assets.Find(a => string.Equals(a.Id, assetId, StringComparison.OrdinalIgnoreCase));
+                if (existing != null)
+                {
+                    existing.MpcImageIndex = meta.Index;
+                    existing.MpcTransparentRgb565 = meta.TransparentRgb565;
+                    existing.MpcStateFlags = meta.State;
+                    existing.HasTransparencyKey = hasTrans;
+                    existing.TransparencyKeyCssHex = keyHex;
+                    if (existing.Width == 0) existing.Width = meta.Width;
+                    if (existing.Height == 0) existing.Height = meta.Height;
+                }
+                else
+                {
+                    model.Assets.Add(new AssetModel
+                    {
+                        Id = assetId,
+                        Index = model.Assets.Count,
+                        OriginalFileName = $"{assetId}.bmp",
+                        OriginalRelativePath = Path.Combine("Runtime", "LS0003.MPC"),
+                        TargetFileName = $"{assetId}.png",
+                        Format = "PNG",
+                        Width = meta.Width,
+                        Height = meta.Height,
+                        HasTransparencyKey = hasTrans,
+                        TransparencyKeyCssHex = keyHex,
+                        MpcImageIndex = meta.Index,
+                        MpcTransparentRgb565 = meta.TransparentRgb565,
+                        MpcStateFlags = meta.State
+                    });
+                }
+            }
         }
         catch (Exception ex)
         {
@@ -752,7 +797,7 @@ public sealed class MpcBinaryReader
                     var resultStr = val.ToString();
                     if (schemeType == "Image" && val < imageSymbols.Count)
                     {
-                        resultStr = Path.GetFileNameWithoutExtension(imageSymbols[(int)val]) + ".png";
+                        resultStr = Path.GetFileNameWithoutExtension(imageSymbols[(int)val]);
                     }
                     else if (schemeType == "Color")
                     {

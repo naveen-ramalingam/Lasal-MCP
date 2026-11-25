@@ -75,13 +75,14 @@ public sealed class VisuDesignerProjectGenerator
         if (!extraLangs.Contains("en")) extraLangs.Add("en");
         if (!extraLangs.Contains(primaryLang)) extraLangs.Insert(0, primaryLang);
 
-        // Step 1: Prepare converted assets in temporary export folder
+        // Step 1: Prepare converted assets in temporary export folder (with LS0003.MPC exact transparency + 1:1 SVG vectorization)
         var convertedAssetsStagingDir = Path.Combine(targetOutputDir, "_converted_assets");
         var exportedAssetFiles = _assetService.ExportAssetsToTargetResources(
             sourceProjectDir,
             convertedAssetsStagingDir,
             model,
-            options.ConvertBmpTransparencyToPng);
+            options.ConvertBmpTransparencyToPng,
+            options.SvgOptions);
 
         // Step 2: Initialize native VISUDesigner project via VISUDesigner.exe --script
         // Note: lvd.CreateProject requires numeric dimension strings (without 'px') and creates projectDir itself.
@@ -1244,7 +1245,9 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
                             ["refId"] = tHit.EntryGuid
                         };
                     }
-                    else if (spec.SchemeKind == "Media" && mediaLookup.TryGetValue(e.ResultValue, out var mHit))
+                    else if (spec.SchemeKind == "Media" &&
+                             (mediaLookup.TryGetValue(e.ResultValue, out var mHit) ||
+                              mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(e.ResultValue), out mHit)))
                     {
                         entryObj["setValue"] = new Dictionary<string, object?>
                         {
@@ -1569,8 +1572,18 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             }
         }
 
-        // Bind Colors
-        if (colorLookup.TryGetValue(ctrl.BackgroundColorHex, out var bgPalette))
+        // Bind Colors (prefer dynamic ColorScheme if present; make image controls transparent so transparent PNG/SVG layers cleanly)
+        if (!string.IsNullOrEmpty(ctrl.ColorSchemeId) &&
+            (schemeLookup.TryGetValue($"Color:{ctrl.ColorSchemeId}", out var colSch) || schemeLookup.TryGetValue(ctrl.ColorSchemeId, out colSch)) &&
+            colSch.Folder == "ColorSchemes")
+        {
+            props.Add(MakeProp($"--theme-{visuControlId}-background-color", SanitizeComponentName(ctrl.ColorSchemeId, ctrl.ColorSchemeId), 18, 2, colSch.Guid));
+        }
+        else if (visuControlId == "sig-control-image" || ctrl.TransparentBackground)
+        {
+            props.Add(MakeProp($"--theme-{visuControlId}-background-color", "transparent", 0, 2));
+        }
+        else if (colorLookup.TryGetValue(ctrl.BackgroundColorHex, out var bgPalette))
         {
             props.Add(MakeProp($"--theme-{visuControlId}-background-color", bgPalette.PaletteRef, 9, 2, bgPalette.Guid));
         }
@@ -1584,13 +1597,38 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             props.Add(MakeProp($"--theme-{visuControlId}-color", fgPalette.PaletteRef, 9, 2, fgPalette.Guid));
         }
 
-        // Bind Media Image
-        if (!string.IsNullOrEmpty(ctrl.ImageAssetId) && mediaLookup.TryGetValue(ctrl.ImageAssetId, out var mediaRef))
+        // Bind Media Image or Dynamic MediaScheme (typeId=29, propTypeId=2) + Pressed Image for buttons
+        var imgProp = visuControlId == "sig-control-image"
+            ? "--theme-sig-control-image-background-image"
+            : $"--theme-{visuControlId}-background-image";
+
+        if (!string.IsNullOrEmpty(ctrl.ImageSchemeId) &&
+            (schemeLookup.TryGetValue($"Image:{ctrl.ImageSchemeId}", out var mediaSch) || schemeLookup.TryGetValue(ctrl.ImageSchemeId, out mediaSch)) &&
+            mediaSch.Folder == "MediaSchemes")
         {
-            var imgProp = visuControlId == "sig-control-image"
-                ? "--theme-sig-control-image-background-image"
-                : $"--theme-{visuControlId}-background-image";
+            props.Add(MakeProp(imgProp, SanitizeComponentName(ctrl.ImageSchemeId, ctrl.ImageSchemeId), 29, 2, mediaSch.Guid));
+            if (visuControlId == "sig-control-image")
+            {
+                props.Add(MakeProp("--theme-sig-control-image-background-size", "100% 100%", 0, 2));
+            }
+        }
+        else if (!string.IsNullOrEmpty(ctrl.ImageAssetId) &&
+                 (mediaLookup.TryGetValue(ctrl.ImageAssetId, out var mediaRef) ||
+                  mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(ctrl.ImageAssetId), out mediaRef)))
+        {
             props.Add(MakeProp(imgProp, $"Resources\\Images\\{mediaRef.FileName}", 15, 2, mediaRef.MediaId));
+            if (visuControlId == "sig-control-image")
+            {
+                props.Add(MakeProp("--theme-sig-control-image-background-size", "100% 100%", 0, 2));
+            }
+        }
+
+        if (!string.IsNullOrEmpty(ctrl.PressedImageAssetId) &&
+            visuControlId == "sig-control-button" &&
+            (mediaLookup.TryGetValue(ctrl.PressedImageAssetId, out var pressedMediaRef) ||
+             mediaLookup.TryGetValue(Path.GetFileNameWithoutExtension(ctrl.PressedImageAssetId), out pressedMediaRef)))
+        {
+            props.Add(MakeProp("--theme-sig-control-button-pressed-background-image", $"Resources\\Images\\{pressedMediaRef.FileName}", 15, 2, pressedMediaRef.MediaId));
         }
 
         // Bind Composite Template for ObjectInstance
@@ -2006,6 +2044,7 @@ public sealed class VisuGenerationOptions
     public bool OverwriteTarget { get; set; } = true;
     public bool ConvertBmpTransparencyToPng { get; set; } = true;
     public bool PublishWebroot { get; set; } = true;
+    public SvgConversionOptions? SvgOptions { get; set; } = new SvgConversionOptions { Enabled = true, Mode = "Hybrid" };
 }
 
 public sealed class VisuGenerationResult

@@ -9,16 +9,16 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "bae1bfcd-767b-44e0-8802-647d987c0142",
+	"designTimeId": "d46d415c-a3d7-4953-ab87-eda0ee4c5ccc",
 	"name": "ServoSettingsVVHaak2",
-	"instanceId": "design_17728b27f77b4430a542c987ddca0e72",
+	"instanceId": "design_4ba6fa95dab94542b7d63267a8d464b9",
 	"controlId": "sig-window-container",
 	"controls": [
 		{
 			"type": "control",
-			"designTimeId": "416449b1-8089-42d8-977e-eca8db4aa1ae",
+			"designTimeId": "53a2e5c2-5bb2-4c48-bffc-85594d60b0bd",
 			"name": "ServoSettings_VVH_0_0",
-			"instanceId": "lvd3d7d2d984d4441d291b2bb30ec193b2d",
+			"instanceId": "lvd824496329b4944469b2c39506a555674",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -62,29 +62,29 @@
 					"value": "MigratedColors:MigratedColor_224",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3bd9a89e-1688-4f77-a698-44bb81374d00"
 				},
 				{
 					"name": "sigcompositectrl",
 					"value": "ServoSettings_VVH",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "ea92c6fa-e0b6-44da-887c-9ea565d3fba1"
+					"refId": "304655e7-f421-470a-8744-c0e724b863f2"
 				},
 				{
 					"name": "sigoverloadcontent",
 					"value": "255:Visu_VoorVouwhaak2",
 					"typeId": 4,
 					"propTypeId": 7,
-					"refId": "02080b5d-5828-49cd-a8a7-10ed4f76bffc"
+					"refId": "7893b92b-a059-424d-bf45-b66327c9aa26"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e49a3215-9785-4c4d-8d79-16d3695c6885",
+			"designTimeId": "181e1fd2-bcc0-4049-b4be-233968523378",
 			"name": "Image_0_1",
-			"instanceId": "lvd3a69cc5b80494bcf983a57a4bfca7219",
+			"instanceId": "lvd649b31bae954485586d5b00e789a84fe",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -125,18 +125,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\raster_1024x768.png",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "cec62f48-fd23-4e5d-b533-5715d748a77c"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "fd139b7a-c51d-435c-8e41-57182fd18167",
+			"designTimeId": "f4936c8a-f052-4abf-900e-9d185b95815e",
 			"name": "Btn_Motorinleren_2",
-			"instanceId": "lvd39988a0f4879453ba085ca787c8b971c",
+			"instanceId": "lvd033895ad61264a0c8e95bd674c055b49",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -180,35 +192,35 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "975900e6-81c9-4848-b43d-52b794e0e851"
+					"refId": "8be0d859-0b31-405b-b083-59092d340ee2"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_13:Text_36",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "f0d1f0cb-4797-4556-9f8d-648b9f37d9ca"
+					"refId": "2bd196b7-4ae8-4637-8f6d-c827c95dac8d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "e5610716-aaa3-4668-9e37-eb1d4d4e9274"
+					"refId": "2c40257a-25c2-46ab-9150-226f151adf70"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "68a6d9f3-ec70-47e5-99ff-542ce0d0dae2"
+					"refId": "e51020e9-9f5b-4957-8344-009f75465548"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "Abs_motor_inleren_VVH2",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "95b3a545-18d8-4cc7-aa78-6314ab61c70b"
+					"refId": "b8566cc2-dc51-45b6-b58f-7b26845b9eec"
 				}
 			]
 		}

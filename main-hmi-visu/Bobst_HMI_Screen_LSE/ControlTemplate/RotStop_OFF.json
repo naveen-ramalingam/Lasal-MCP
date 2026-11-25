@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "f0907c8e-24b2-47a3-8db1-418000d4145f",
+	"designTimeId": "20830bc9-c09e-4831-a5f4-fec4c9fb5dff",
 	"name": "RotStop_OFF",
-	"instanceId": "design_83ce9b65c3a240c5b06f3aaf78f3848c",
+	"instanceId": "design_8f5e290119fb475dbc69653187a6f2aa",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "fe090b43-015e-47b5-8eb6-a7a3ac28a72c",
+			"designTimeId": "8335cc25-d91a-49d0-9a55-6325c3d4dd40",
 			"name": "Image_0_0",
-			"instanceId": "lvdb31ae8db467e4814942824ad4992608e",
+			"instanceId": "lvdd72cba02b34d4216b11cd6b2cc32af3a",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,17 +102,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\rotstop_off.png",
+					"value": "Resources\\Images\\rotstop_off.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "545b7de9-41d0-4a7b-b276-6da8310356ea"
+					"refId": "c34aeba7-1dcc-4678-9aef-47f99cec062c"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}

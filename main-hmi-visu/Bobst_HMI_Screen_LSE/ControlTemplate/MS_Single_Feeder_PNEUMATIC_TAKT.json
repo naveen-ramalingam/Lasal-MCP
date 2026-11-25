@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "b13e3e2f-90bc-4116-9a6b-abb45e7a2815",
+	"designTimeId": "2bd7591e-d2a7-4061-9998-3a2d51c1569b",
 	"name": "MS_Single_Feeder_PNEUMATIC_TAKT",
-	"instanceId": "design_d28328d11e604feebc518402ccf2c249",
+	"instanceId": "design_58798724cbe64b7c8d3e63ce993d7d91",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "b0b98a4e-7ee5-4cd8-9394-12a87f040516",
+			"designTimeId": "8b319fd7-2f20-46a6-a1b7-1b106ee7b1e4",
 			"name": "Image_0_0",
-			"instanceId": "lvd54f98dec2d994de781073f793d1794b5",
+			"instanceId": "lvd500a3b4768ef4925820dfea2424e3685",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -102,25 +102,30 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-image-background-image",
-					"value": "Resources\\Images\\feeder_on.png",
+					"value": "Resources\\Images\\feeder_on.svg",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "5d5a05a4-5840-48f7-bb60-d139bba699ee"
+					"refId": "41750009-0263-4d92-9afe-e30d585cc479"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "d2a9647c-353f-4a99-81c5-abd9259db5b9",
+			"designTimeId": "445c2c3d-b173-4d54-9bc9-6f783fa5903e",
 			"name": "Image_1_1",
-			"instanceId": "lvdfcf147ef317946eba85ea142153a0635",
+			"instanceId": "lvde8363522ce794a0594c375742e1b5b72",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -161,10 +166,22 @@
 				},
 				{
 					"name": "--theme-sig-control-image-background-color",
-					"value": "MigratedColors:MigratedColor_224",
-					"typeId": 9,
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-image-background-image",
+					"value": "Resources\\Images\\picto_pneumatic_takten.svg",
+					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "83a8173a-754c-48fc-a6ab-678939a7a49a"
+					"refId": "3454ebda-5295-4904-8d7b-09a36301790e"
+				},
+				{
+					"name": "--theme-sig-control-image-background-size",
+					"value": "100% 100%",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		}
