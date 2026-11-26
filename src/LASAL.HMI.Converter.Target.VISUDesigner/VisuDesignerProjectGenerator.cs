@@ -186,6 +186,7 @@ public sealed class VisuDesignerProjectGenerator
                 }
             }
             templateLookup[obj.Index.ToString(CultureInfo.InvariantCulture)] = (safeName, dtId);
+            templateLookup[$"Object_{obj.Index}"] = (safeName, dtId);
         }
 
         // Build ObjectScheme -> default target ControlTemplate lookup so ObjectScheme-driven containers render visibly
@@ -1667,10 +1668,11 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             props.Add(MakeProp("--theme-sig-control-text-value-vertical-align", vAlign, 0, 2));
             if (ctrl.Height <= 24)
             {
+                props.Add(MakeProp("dolinebreak", false, 0, 1));
                 props.Add(MakeProp("--theme-sig-control-text-value-padding-top", "0px", 0, 2));
                 props.Add(MakeProp("--theme-sig-control-text-value-padding-bottom", "0px", 0, 2));
-                props.Add(MakeProp("--theme-sig-control-text-value-padding-left", "1px", 0, 2));
-                props.Add(MakeProp("--theme-sig-control-text-value-padding-right", "1px", 0, 2));
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-left", "0px", 0, 2));
+                props.Add(MakeProp("--theme-sig-control-text-value-padding-right", "0px", 0, 2));
             }
         }
 
@@ -1759,6 +1761,20 @@ window.functionBlocks._{{blockId}} = _{{blockId}};
             if (isButtonWithGradientStop)
             {
                 props.Add(MakeProp($"--theme-{visuControlId}-background-color-stop", ctrl.BackgroundColorHex, 0, 2));
+            }
+        }
+
+        if (visuControlId == "sig-control-rectangle" && ctrl.BorderWidth > 0)
+        {
+            props.Add(MakeProp("--theme-sig-control-rectangle-border-width", $"{ctrl.BorderWidth}px", 0, 2));
+            props.Add(MakeProp("--theme-sig-control-rectangle-border-style", "solid", 0, 2));
+            if (colorLookup.TryGetValue(ctrl.BorderColorHex, out var borderPalette))
+            {
+                props.Add(MakeProp("--theme-sig-control-rectangle-border-color", borderPalette.PaletteRef, 9, 2, borderPalette.Guid));
+            }
+            else
+            {
+                props.Add(MakeProp("--theme-sig-control-rectangle-border-color", ctrl.BorderColorHex, 0, 2));
             }
         }
 

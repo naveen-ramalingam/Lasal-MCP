@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "67c57168-e5e3-4e7f-a434-b17f771b488d",
+	"designTimeId": "f4e925cc-8c55-47aa-86ec-ac2529fa8099",
 	"name": "Nokkeninstelling_Nok_3_V2L",
-	"instanceId": "design_be6258c915ca4aad8b7ff74ef28fbafc",
+	"instanceId": "design_7261ba23392a42bbb7da0e62e4cf0d0f",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "ef43cb03-752f-465e-a205-1b75e6101d74",
+			"designTimeId": "66deb0f9-ee89-4c10-9720-d08b34ccda14",
 			"name": "Object_347_0_0",
-			"instanceId": "lvd705a3dcc30a54e6e8994eadec523ef88",
+			"instanceId": "lvd7b1ec569211e43d7ba00bf612d82549b",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -105,14 +105,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Nokkeninstelling_on_off_v2",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "12a20a6c-1a1a-4b37-912e-7adea24a2386"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:NokkenRiemController_S3_BL",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "6253c712-3101-474b-b959-d10586446eb1"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "3a63ac84-27df-4cd9-9e42-97ebca145031",
+			"designTimeId": "1793785a-94d8-436b-a068-2de3ec2ec16c",
 			"name": "Object_330_1_1",
-			"instanceId": "lvd98ab135e12b942c6a422513d7f986f7d",
+			"instanceId": "lvd8b42fcfa1b8b4e78bc01acefac69c617",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -156,6 +170,13 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Nok_status_3_V2L",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "eea455f4-e417-4493-b44e-fa6c99ec6b49"
 				}
 			]
 		}

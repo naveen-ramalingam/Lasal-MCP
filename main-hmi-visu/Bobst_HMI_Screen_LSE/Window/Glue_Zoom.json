@@ -9,16 +9,16 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "1dc4e586-c2ab-4b4c-84ea-98e7ccd163be",
+	"designTimeId": "a15d8113-2579-44ee-a46d-75c525e7810c",
 	"name": "Glue_Zoom",
-	"instanceId": "design_a711b296eec84a069222e68a26c4abee",
+	"instanceId": "design_807d695a7ead415dac3c5c37d6c76750",
 	"controlId": "sig-window-container",
 	"controls": [
 		{
 			"type": "control",
-			"designTimeId": "3800162b-730c-4606-8126-9118ee75f380",
+			"designTimeId": "f7b42d84-f2b1-4b07-b87a-2f64d142529a",
 			"name": "Glue_Zoom_Rect_0_0",
-			"instanceId": "lvd2414c46b55f34d388c84ae3e2653507c",
+			"instanceId": "lvd5db7e02dc3ca411cb8aedb8a83aef949",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -62,15 +62,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "26f1ec85-2b1c-4787-879a-9506c390aac0",
+			"designTimeId": "aa698a7d-fb59-4c2b-b20a-49101e5562b1",
 			"name": "Image_0_1",
-			"instanceId": "lvd197692a05bc34fa1bbe0aac2d0cf39f7",
+			"instanceId": "lvd54c3ab920d91468d95890290ea82947f",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -120,7 +139,7 @@
 					"value": "Resources\\Images\\raster_1024x768.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "7cb542ea-f6aa-4b59-86a4-686ea4d18f7a"
+					"refId": "069e69ee-dbb9-44b6-afdc-e59f6b360cc9"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -132,9 +151,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "853bf732-e221-47e6-86d0-27522feacc9f",
+			"designTimeId": "6d7cec79-9d46-4ff1-8a02-93e15bab357d",
 			"name": "MyIO_LijmData_TemplateRetrofit_2",
-			"instanceId": "lvd1d88a24dcc0f4beca578b0e0e5647341",
+			"instanceId": "lvd19ed3d86a29144468de58123fbe605b2",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -178,22 +197,22 @@
 					"value": "Lucidia_10",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "88e094d5-bb5b-41d6-a7de-ec3f98a9283d"
+					"refId": "5cec4362-8f46-4904-b2b1-7e6fb390b059"
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
+					"refId": "02cd7cee-94c9-452c-a155-f345f48c0000"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "7725b470-4faf-4f8c-ab84-95dd606d90d9",
+			"designTimeId": "70e395bd-d2af-4d04-849e-2ba02d07d33d",
 			"name": "Button_0_3",
-			"instanceId": "lvd66591cb4847c43cfa2edb38f450c2f3a",
+			"instanceId": "lvd57420450d25e412ea79fe4815b8b74e7",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -237,7 +256,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -274,14 +293,14 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "Glue_Zoom_off",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "ad1acf78-ac94-41cb-9553-ec1a8cdfec1a"
+					"refId": "51c63119-341b-4d70-a699-e9a292553c5d"
 				}
 			]
 		}

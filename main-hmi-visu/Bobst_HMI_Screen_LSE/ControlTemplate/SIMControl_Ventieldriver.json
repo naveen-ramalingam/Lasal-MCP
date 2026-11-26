@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "cc1808f2-33c0-403d-a7da-b2169ca34e6b",
+	"designTimeId": "73acd5b8-b995-4163-bd89-996c08d6cd60",
 	"name": "SIMControl_Ventieldriver",
-	"instanceId": "design_bb987e39e829421f98739c248886349d",
+	"instanceId": "design_610ea85caba2408a8bf8429da1b8398d",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "2102fcbd-0623-43e6-94c6-9cd2244ee208",
+			"designTimeId": "bc33cbc7-07b8-4856-a994-c438b5131642",
 			"name": "Obj_943_Rect_0_0",
-			"instanceId": "lvd731f5d9fd5b64b85996bad33efffe2b9",
+			"instanceId": "lvd4f2e87277b564a04b8b2a7756737d61e",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "79d84912-3e93-4e72-aef4-87221f6f3288",
+			"designTimeId": "cffb99b2-5ede-455d-96ec-46916e7c6e40",
 			"name": "Input_0_Ventieldriver_Retrofit_01_SimSpeed_1",
-			"instanceId": "lvdc92cfb5f64a348c9b1f93b4616a00985",
+			"instanceId": "lvd25ecbe88c05642ee8c69de3743ad2fb1",
 			"controlId": "sig-control-numeric-input",
 			"properties": [
 				{
@@ -157,28 +176,28 @@
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "06b19796-cc69-4e54-947e-66e1bafaeb17"
+					"refId": "bf7279c2-6494-4c04-8321-a57af2e8b152"
 				},
 				{
 					"name": "value",
 					"value": "255:Ventieldriver_Retrofit_01.SimSpeed",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "c0f5c32d-b293-41e2-b5fa-90dcb7c5ed54"
+					"refId": "b454a82f-da64-4d7a-bd75-f941a9ed90e7"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
+					"refId": "02cd7cee-94c9-452c-a155-f345f48c0000"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -186,15 +205,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "c0f5c32d-b293-41e2-b5fa-90dcb7c5ed54"
+					"refId": "b454a82f-da64-4d7a-bd75-f941a9ed90e7"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "34432a68-122c-4959-a8e2-7a8b1a854534",
+			"designTimeId": "2f056649-2972-4b3b-ab4a-00009c54d74b",
 			"name": "Button_0_2",
-			"instanceId": "lvd482178bd8fe84878890b198788ca3589",
+			"instanceId": "lvdce2f9de13f924da08ce72b73a80ef6ee",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -238,7 +257,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -275,36 +294,36 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\pushbutton plus p off small.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "c20120b9-7aaa-418d-b641-503f83d7967c"
+					"refId": "f177fc0a-1e99-4dc0-b4af-b5db96ed933d"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\pushbutton plus p on small.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "4ac3bde0-834b-4f43-a7b9-a69bfc8b9d96"
+					"refId": "27972bb0-3fd0-4850-8645-3f84b0831fc5"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "SIM_Speed_Ventieldriver_Up",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "950e59d9-3aaf-4373-a85a-016488b716f0"
+					"refId": "2623dfce-0a11-44f7-a6f9-4074e084a2e3"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "1b8b1943-f859-40d2-96bc-5ecf7b16f5b1",
+			"designTimeId": "ce89ec13-4112-4e0c-9b6e-963e935ba5a2",
 			"name": "Btn_SIM_3",
-			"instanceId": "lvd255ac04aaadc4dac9971fe625ca8d608",
+			"instanceId": "lvd17162590ad314469ab047864551b490c",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -348,50 +367,50 @@
 					"value": "Font",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b0845c22-0ffc-40a0-80dc-b6d91b9d56df"
+					"refId": "daff4ca0-b729-40ca-a217-7ce6b15ab3fa"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_10:Text_18",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "080b4636-9759-49fc-aa88-5b5d4467212a"
+					"refId": "d4fdcf04-7717-438a-b05f-457210a2ae6a"
 				},
 				{
 					"name": "value",
 					"value": "255:Ventieldriver_Retrofit_01.Simpuls",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "13cc66bd-252e-4b9a-bcf6-723bdfe83633"
+					"refId": "f067a7bd-d99d-4f02-8edb-dc186810d487"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_132",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "1730d7df-c970-4240-ba9e-964d8ae0fdb9"
+					"refId": "0967615e-d913-4a94-9068-6f78b3ff0041"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color-stop",
 					"value": "MigratedColors:MigratedColor_132",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "1730d7df-c970-4240-ba9e-964d8ae0fdb9"
+					"refId": "0967615e-d913-4a94-9068-6f78b3ff0041"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "20290b2c-0cdb-4cac-8a6f-87de4878abb0",
+			"designTimeId": "ebe7b1e4-c585-4dca-9034-6be073db8816",
 			"name": "Button_2_4",
-			"instanceId": "lvd1acd6007b8034a18b28c6a55e5477907",
+			"instanceId": "lvd08ca1f0b7dce4b3c95e4d9953f6bd911",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -435,7 +454,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -472,28 +491,28 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\pushbutton min p off small.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "53ab6d5d-2d15-4cb4-b29a-6d67d90422eb"
+					"refId": "9f8c906b-3058-49e6-aebc-c22688676e13"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\pushbutton min p on small.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "6ffe2de6-7638-4c39-bd6c-1b39a52d229d"
+					"refId": "a09f049d-6ac1-4b27-973b-0e1fa1b6def6"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "SIM_Speed_Ventieldriver_Down",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "bb0b2e5b-1bed-455f-a8c8-ea89d3f02111"
+					"refId": "334a540b-addc-4b50-9569-dc1e01eb47d7"
 				}
 			]
 		}

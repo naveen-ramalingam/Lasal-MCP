@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "2f420196-1181-4d0e-988e-9fbc59dd617f",
+	"designTimeId": "ef717ea6-e199-47f5-ac11-68a1a6e39a1a",
 	"name": "Nokkeninstelling_Nok_6_V3R_DUAL_MODE",
-	"instanceId": "design_dccbe3e03f8d4bc7b37be4c743a8ca87",
+	"instanceId": "design_2fb37a64487a49c1a500ddc2cb4f66df",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "be9b267c-481c-46bf-8f95-9497e42f6efe",
+			"designTimeId": "709a6eca-16f9-4f60-9367-7fe1dc6fee9e",
 			"name": "Object_347_0_0",
-			"instanceId": "lvd11c1f08dce7348b3a863674a9666e2ba",
+			"instanceId": "lvdde4cbd9d2645403080659f6f300b0926",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -105,14 +105,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Nokkeninstelling_on_off_v2",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "12a20a6c-1a1a-4b37-912e-7adea24a2386"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.NokkenRiemController_S3_BR",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "31188ea9-58e4-4691-903b-2ad365ea6788"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "7c539bff-274f-4853-b4fa-d6d32d27e411",
+			"designTimeId": "850e3960-16d9-42ac-9cd7-1192efa11e93",
 			"name": "Object_333_1_1",
-			"instanceId": "lvde1119bec37314b3a926f005b72415d8b",
+			"instanceId": "lvdf12cb083c1c744f58b575cad68369277",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -156,14 +170,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Nok_status_6_V3R",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "860b4fac-ea74-48ba-853a-d02a970a8bfa"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "96cc33c4-14ce-4ee1-8c23-a6c18fe134a0",
+			"designTimeId": "eadf71a0-58e4-4cac-aa17-b19c29d4ec3c",
 			"name": "Image_0_2",
-			"instanceId": "lvd73701a28e2d941cb91f11e511685942f",
+			"instanceId": "lvde43a3b104a2642b4981817c2b552205c",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -213,7 +234,7 @@
 					"value": "Resources\\Images\\backdrop_nokkenselector.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "d3d760b4-f9af-4d5c-91dc-a474eb966c44"
+					"refId": "4f736be5-815c-43b5-ac0b-d84e7d89004d"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",

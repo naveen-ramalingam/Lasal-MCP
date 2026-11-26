@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "6d012728-289e-491b-9b7c-74cea76e5e99",
+	"designTimeId": "88bfc1fd-390f-450d-a2ae-93c365b267ff",
 	"name": "Outputstates_Trail_16",
-	"instanceId": "design_b7bbbba461884067ae287922e9c6abff",
+	"instanceId": "design_151cef7f69314b1fb2798eafc7aae912",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "39ae2c37-c872-40aa-8dd2-c9589ca0a0c9",
+			"designTimeId": "5788920a-280b-489e-9ef1-021020f3fc99",
 			"name": "Obj_87_Rect_0_0",
-			"instanceId": "lvdc11544d1c46a4b02a081aa1cffefc7e9",
+			"instanceId": "lvda0582f8972b84f02a0a95a28622420b2",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8c3c2a4f-4061-4288-b370-25cf5a979923",
+			"designTimeId": "4d6e36f5-8b60-4aaf-b099-0dedc70270fb",
 			"name": "Object_92_0_1",
-			"instanceId": "lvd5a99e8a5fe3d445abaaf1d09adc266e9",
+			"instanceId": "lvdda312cd50df940628f55c452adba5e97",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +176,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "LEDs_Output_16",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "53e5f39e-4b10-4c5f-a8a6-a6b95265d675"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "f9828a5f-06fe-43e8-b0d2-6492ac905103",
+			"designTimeId": "37bbbb74-ca7d-4ea6-9c0e-498127474985",
 			"name": "Image_0_2",
-			"instanceId": "lvd66835397b4314f41943dc3e985afea0e",
+			"instanceId": "lvd2050609fddc64ed09e82223f4b800d20",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -214,7 +240,7 @@
 					"value": "Resources\\Images\\01-161.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "017b6bf2-239e-48df-bdc8-cc26688c9959"
+					"refId": "24f49e9b-6345-4c79-b8f9-8af3ff27bada"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",

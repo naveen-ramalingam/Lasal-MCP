@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "89fe15ed-284b-43ee-a437-566cdd92d359",
+	"designTimeId": "6f8b360e-a5b0-4f44-9e13-b6920af8d240",
 	"name": "Sensors_taktriemen_tri_2",
-	"instanceId": "design_eb92dc3ea82b47d29b7641a0197709f9",
+	"instanceId": "design_47444b5b6a7b45f88220b1e55f8235fc",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "2a6371a9-0cd3-4e8c-98ca-008b7a178588",
+			"designTimeId": "14529e74-1d63-4a73-aae5-0cdfd26093f1",
 			"name": "Obj_306_Rect_0_0",
-			"instanceId": "lvd9e34ef6c5e284271bafde3350d175e30",
+			"instanceId": "lvd66d881805e4344228d951ff4850782c9",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9e40701f-9e36-4f6a-8d29-be8166d38df7",
+			"designTimeId": "10670501-7946-4bc5-bdb1-43b586063642",
 			"name": "Polygon_0_1",
-			"instanceId": "lvdb55e5c521ffe4e7d817a4ee3a2c975a2",
+			"instanceId": "lvdf70fae2eddbb499e9f336568c503dea1",
 			"controlId": "sig-control-svg-container",
 			"properties": [
 				{
@@ -157,15 +157,15 @@
 					"value": "MigratedColors:MigratedColor_189",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "d7756502-846c-4ce9-bf4f-97cf4122e86f"
+					"refId": "8238771b-622c-44a7-b029-5616a124df0d"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "c3cb5400-4f5b-4329-8016-87f6c85b1e22",
+			"designTimeId": "1b3f0b09-2af1-4763-a6b2-2f0be26c7451",
 			"name": "Object_308_0_2",
-			"instanceId": "lvd8b6e824cf167406f82d761400026b993",
+			"instanceId": "lvd7b2469143cc14e638f29aab888e11e48",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -209,14 +209,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Boxlength_taktriemen",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1e44003f-0ebc-41f8-ac63-c6c5efa5dab5"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:TaktRiemInFeed_S1_BL",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "cf354702-974f-4484-a443-661092592a0b"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cbe3b71f-8a93-4658-b790-700718a58dd7",
+			"designTimeId": "ab50cdd5-b913-4f3e-ada1-db05d32c9122",
 			"name": "Object_308_1_3",
-			"instanceId": "lvd1f441682d19c40a5aeddd7acdc5f014b",
+			"instanceId": "lvd47e333138eb9469d96b7e93bf15f8e0a",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -260,14 +274,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Boxlength_taktriemen",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1e44003f-0ebc-41f8-ac63-c6c5efa5dab5"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:TaktRiemInFeed_S1_OL",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "579931c0-9fdf-4e8e-a325-5e912f056c09"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9cbd1dff-3188-4576-96d8-3a14b989877a",
+			"designTimeId": "00010008-c9f9-41dc-9742-5d768a6728f3",
 			"name": "Object_308_2_4",
-			"instanceId": "lvd945fba0215fc48ca8ff2463358e88303",
+			"instanceId": "lvd498600ff938841cf980a0384aef78150",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -311,14 +339,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Boxlength_taktriemen",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1e44003f-0ebc-41f8-ac63-c6c5efa5dab5"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:TaktRiemInFeed_S1_O",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "9b671d13-5378-4179-940a-884527929513"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "45a5ef8d-259a-4d82-bc66-cb408d0ebc03",
+			"designTimeId": "9d04712c-9b7a-4273-bf0c-fa8af60bde26",
 			"name": "Object_308_3_5",
-			"instanceId": "lvd2afb17da8a374e73b6347a76a529ae70",
+			"instanceId": "lvd94fb384e2d1f4cea95a6eb1653bcaf8e",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -362,14 +404,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Boxlength_taktriemen",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1e44003f-0ebc-41f8-ac63-c6c5efa5dab5"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:TaktRiemInFeed_S1_OR",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "4a257451-a6de-4150-a786-fde0cebdf4e8"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "621a4768-aad6-457e-87fc-ae488e07c896",
+			"designTimeId": "e15c4187-18dc-49c5-9808-f9873995ece6",
 			"name": "Object_309_4_6",
-			"instanceId": "lvdc37da9f9f1dd45dc8c11ec597c04b92c",
+			"instanceId": "lvdcd16ce41079643f5912cbcb0a02d1c4d",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -413,14 +469,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "sensor_infeedbelt_demountable",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "427864e0-a1e1-4222-ae24-98aea76902fd"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "3fcf4416-a0c5-41ad-a114-20f2f72aa711",
+			"designTimeId": "31052168-119b-4292-8b5f-03dd6ec38a33",
 			"name": "Object_309_5_7",
-			"instanceId": "lvd5dada9908c8c4cbaae212d0e601a9328",
+			"instanceId": "lvd02d5286372594e7695fe7e5391f0a639",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -464,14 +527,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "sensor_infeedbelt_demountable",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "427864e0-a1e1-4222-ae24-98aea76902fd"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "41af08bd-1e0c-4f18-b85f-f644e67c43f3",
+			"designTimeId": "63c10fe9-73cb-4b62-90d6-e564f4d22c9a",
 			"name": "Btn_Ctrl_8",
-			"instanceId": "lvd2cea32e43f7543ecab7746ce3138139d",
+			"instanceId": "lvd7f7c41212ba64eb79a73476ffc8ebb71",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -515,50 +585,50 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_9:Text_80",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "be0a287e-256d-4c0a-9404-4840850e1782"
+					"refId": "165d45a5-1428-459e-b098-f800b28d5b07"
 				},
 				{
 					"name": "value",
 					"value": "255:TaktRiemInFeed_S1_O.FeederGateSensorL_R",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "2f1b8a79-7534-4895-b229-632e7ffbb730"
+					"refId": "afd240bf-2c1a-43e6-b7e7-e0d593d5139d"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color-stop",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "2e82340c-9ade-4d80-91ad-b15925e2fc64",
+			"designTimeId": "6cf24629-5425-4323-8b82-a528a438fd72",
 			"name": "Btn_Ctrl_9",
-			"instanceId": "lvdadd7b13759c94aad886d26e7a679e2ef",
+			"instanceId": "lvd2c2679885c64454cb60a8a694714cd30",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -602,50 +672,50 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_9:Text_80",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "be0a287e-256d-4c0a-9404-4840850e1782"
+					"refId": "165d45a5-1428-459e-b098-f800b28d5b07"
 				},
 				{
 					"name": "value",
 					"value": "255:TaktRiemInFeed_S1_BL.FeederGateSensorL_R",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "ba95962c-a532-4c8b-b8e6-379b0697d555"
+					"refId": "c7066e43-d586-4baf-a163-118883d7a055"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color-stop",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "93e1d465-03d2-4cba-bc0b-0c4de58311d4",
+			"designTimeId": "51dce86c-13bb-43e9-81d4-1ddb9b75b2a1",
 			"name": "Btn_Ctrl_10",
-			"instanceId": "lvdf5a4d659dcbb4dadb50be54e0bb9a995",
+			"instanceId": "lvdd3fa83e46a4f4121b704fdad273989f6",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -689,50 +759,50 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_9:Text_80",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "be0a287e-256d-4c0a-9404-4840850e1782"
+					"refId": "165d45a5-1428-459e-b098-f800b28d5b07"
 				},
 				{
 					"name": "value",
 					"value": "255:TaktRiemInFeed_S1_OL.FeederGateSensorL_R",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "f06e2f3a-ab5c-455e-bbaa-05d25627cf47"
+					"refId": "d288c8e8-90ab-4b4f-8a19-33587e968abd"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color-stop",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "0a91351a-0fa6-4fc4-9039-2886a39db05d",
+			"designTimeId": "fe7582e3-4d75-4cf9-837f-fa8716d3714d",
 			"name": "Btn_Ctrl_11",
-			"instanceId": "lvd7d04b976c90543b0bfa24d3bc7b0b041",
+			"instanceId": "lvd1f85936ad5bc4f9ebb04506fc4631394",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -776,42 +846,42 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "sigbtntext",
 					"value": "TextList_9:Text_80",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "be0a287e-256d-4c0a-9404-4840850e1782"
+					"refId": "165d45a5-1428-459e-b098-f800b28d5b07"
 				},
 				{
 					"name": "value",
 					"value": "255:TaktRiemInFeed_S1_OR.FeederGateSensorL_R",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "3d32ac20-7564-42b3-b40a-affed64b0c4c"
+					"refId": "4c2a42d3-a058-4f00-993b-23fb0c69318f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color-stop",
 					"value": "MigratedColors:MigratedColor_238",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2392506b-6f78-4cc4-bbf4-d3cf7884a71e"
+					"refId": "06fb348b-4684-424c-bbd1-2545ad32f600"
 				},
 				{
 					"name": "--theme-sig-control-button-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		}

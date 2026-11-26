@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "8a61f3d4-088c-46a2-92da-18a9917bc675",
+	"designTimeId": "743ff78d-f54e-49f1-90ec-98678e48c045",
 	"name": "SensorL",
-	"instanceId": "design_a92852fc1e0d495ca2e48d8e95794bf8",
+	"instanceId": "design_26769036033045c4b06da57d0e02af86",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "d2508bc1-6f86-4c84-bdb3-6dad85a0547a",
+			"designTimeId": "c6c738fc-aff0-459f-9b27-85739ded2c7a",
 			"name": "Label_0_0",
-			"instanceId": "lvd8dedef0e9a7241bf823108ad90cbe181",
+			"instanceId": "lvdf54b6de21f25443b9de4138323303156",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -113,6 +113,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -126,13 +132,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -141,14 +147,14 @@
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "06b19796-cc69-4e54-947e-66e1bafaeb17"
+					"refId": "bf7279c2-6494-4c04-8321-a57af2e8b152"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_9:Text_6",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "4b4266a5-22f4-47c2-8171-fb7754eed8c2"
+					"refId": "89d29734-ef58-4e7d-9a54-b50e56d91e3f"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
@@ -161,15 +167,15 @@
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "7f257584-3faa-45cb-a7cd-3e4d5459d65d",
+			"designTimeId": "1066fcf7-ad8d-4d84-abed-3387a9f0cc7c",
 			"name": "Image_0_1",
-			"instanceId": "lvda5323f378e5f40fb97d272d042feca77",
+			"instanceId": "lvdc92c66b68e32449d8e52472a8c01f1bf",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -219,7 +225,7 @@
 					"value": "Resources\\Images\\sensor grey.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "7cfccf1a-22ef-4fbf-88c2-6ae18dbeaa22"
+					"refId": "139c4482-e786-41b4-b719-ce9241d86df1"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -231,9 +237,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "1f032c0c-d853-41ad-80ea-76c27c2f7535",
+			"designTimeId": "174f20b5-7e5e-40f3-a1b0-781961e1b16e",
 			"name": "Output_0_VisuTeller1_oSensorHW_2",
-			"instanceId": "lvd4c2cc507ebc34da7a779b68e2531df0f",
+			"instanceId": "lvdd73d2f73905342b1823799685298cfc2",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -283,7 +289,7 @@
 					"value": "Resources\\Images\\sensor led red.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "b31ad90c-c527-45d8-8876-cf84ef64b63d"
+					"refId": "95b3f6f2-74bd-441b-baa9-0aad0f5ea62d"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -295,9 +301,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "e8b7c639-8be9-4127-9e3e-148a7b71a90c",
+			"designTimeId": "76c697a3-0abf-4267-b882-516455355d80",
 			"name": "Button_0_3",
-			"instanceId": "lvd62698ef9b27b4a1087058e2f51c65339",
+			"instanceId": "lvdd510ecfc181249fa948a49b4a87c8661",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -341,7 +347,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -378,14 +384,14 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "SetSensorR",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "75466a96-c997-4429-9c8c-3a31a277429c"
+					"refId": "d1b53f0c-40d6-40fd-ad2e-b3f2e950a1bc"
 				}
 			]
 		}

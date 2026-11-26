@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "8a71f2bb-1f73-46ce-9bca-7bbcc0cab7dd",
+	"designTimeId": "bdef7786-833c-4b83-8dd7-0385f89d7951",
 	"name": "Settings_Vrijloop",
-	"instanceId": "design_49733ec8ed59489aaf8b6b2f39a7d513",
+	"instanceId": "design_f2b66b7abebf4566866c4395793549b1",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "9b3f9319-3b4b-43be-b620-7ed37f1e92ac",
+			"designTimeId": "4a544e6b-c84e-4ade-9d80-5741c3a6a3c1",
 			"name": "Obj_190_Rect_0_0",
-			"instanceId": "lvd8581b50d6e424708be7befedf55ce362",
+			"instanceId": "lvd642599468dfe4df88ced907809a5f8f7",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "41c446ad-37cf-41c8-9427-797b99ea310b",
+			"designTimeId": "461091c2-daee-43f6-9ed1-629d3b160493",
 			"name": "Label_0_1",
-			"instanceId": "lvdf3faf54ec513415fa7f26f50a448b860",
+			"instanceId": "lvdfb2434a913d447538ac021ce80530f6f",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -165,6 +184,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -178,13 +203,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -193,14 +218,14 @@
 					"value": "Tiny_7",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "4b82aa0c-6a80-4d0b-a974-f101544b6f9c"
+					"refId": "82c92561-f158-45d5-b092-ee918f09dd56"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_6:Text_24",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "5fc8f19e-7940-49b7-a853-76dc6f9dd852"
+					"refId": "c271f707-bb2c-4793-aa92-12e6972d911d"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
@@ -213,15 +238,15 @@
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "d5f1298b-87fc-4953-ab86-9119342b9825",
+			"designTimeId": "91399335-4f97-4484-8824-a3126d3dfe58",
 			"name": "Image_0_2",
-			"instanceId": "lvda3e6a5d7895a4f2f93a788b1793ec15f",
+			"instanceId": "lvda929716251f748c689b3b2657fe65512",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -271,7 +296,7 @@
 					"value": "Resources\\Images\\vrijloop.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "5e221bba-7a9e-4ec8-bc30-7b553e9f9caa"
+					"refId": "1ec3e5c3-23eb-4e42-ba8f-37b65bd0561e"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -283,9 +308,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "f9a828f0-b73c-4435-9f8b-a437bfdc5534",
+			"designTimeId": "230cd0d1-6f10-4ad5-b0dd-6164bddf1589",
 			"name": "Output_0_Visu_Vouwhaak1_Vrijloop_3",
-			"instanceId": "lvd3e9f9caff29c47b089bd30a6f3d09573",
+			"instanceId": "lvd4266fd86d9d340ed87fb6e2631ddc91a",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -329,28 +354,28 @@
 					"value": "Arial36Bold",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "a751f4f4-d1d7-4d4e-b34d-ba903166257a"
+					"refId": "97a53273-08dd-4186-88fa-210f371847ad"
 				},
 				{
 					"name": "value",
 					"value": "255:Visu_Vouwhaak1.Vrijloop",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "7ef38988-5cf5-44f4-b212-aecf3ba11f16"
+					"refId": "dbdc1915-9e84-4715-bc8d-8c31ff19cc9e"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
+					"refId": "02cd7cee-94c9-452c-a155-f345f48c0000"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_199",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "5cc3b41b-3f54-4301-9a18-1a7c3266ca48"
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				},
 				{
 					"name": "unittext",
@@ -358,15 +383,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "7ef38988-5cf5-44f4-b212-aecf3ba11f16"
+					"refId": "dbdc1915-9e84-4715-bc8d-8c31ff19cc9e"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "6388a12e-ca00-4a27-9ca1-c79aa5c1648c",
+			"designTimeId": "84ab3ba5-1058-4b66-bd00-031c3e38b248",
 			"name": "Output_1_Visu_Vouwhaak1_Vrijloop_Corr_4",
-			"instanceId": "lvdd9652247489c47d9adbcbf93dd190f2d",
+			"instanceId": "lvdc17642932f924d4dbc42361a3fe9e76b",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -410,28 +435,28 @@
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "06b19796-cc69-4e54-947e-66e1bafaeb17"
+					"refId": "bf7279c2-6494-4c04-8321-a57af2e8b152"
 				},
 				{
 					"name": "value",
 					"value": "255:Visu_Vouwhaak1.Vrijloop_Corr",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "a4b1d7aa-38d0-4a71-ba02-2b7638727932"
+					"refId": "c4a8884b-fbb6-4e84-8a7a-41c9628f2b81"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -439,15 +464,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "a4b1d7aa-38d0-4a71-ba02-2b7638727932"
+					"refId": "c4a8884b-fbb6-4e84-8a7a-41c9628f2b81"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e1f6763e-e0cf-4478-a350-e9c9cdb1431f",
+			"designTimeId": "e0636d73-961d-458a-97a0-2dcc0e538426",
 			"name": "Button_0_5",
-			"instanceId": "lvd0117a6c766a14222bd5d6ac2be6d4d74",
+			"instanceId": "lvd7ef815ca67d84a65af3fbc4b14503e76",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -491,7 +516,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -528,36 +553,36 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\pushbutton plus p off.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "dbd4e2cd-34f3-4751-b086-dd9961552c50"
+					"refId": "37fab5d9-9a12-4ea5-bb01-384965e069ee"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\pushbutton plus p on.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "a8226231-40cd-4d73-9486-77ba058aa797"
+					"refId": "7efa5721-6a4d-4ced-83bf-1faeb5a3e9c8"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "Vrijloop_plus",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "e4c6ecd3-117a-4744-9143-a0a2ecfbe570"
+					"refId": "17e18ccd-ddc1-469b-8851-af381b378cfa"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "ca62949b-662d-422c-aa69-71cd3e777137",
+			"designTimeId": "e75aa2e5-f4af-4d26-985b-375f3ca5f7a5",
 			"name": "Button_1_6",
-			"instanceId": "lvd190908ca97c240c5a28c3c35afc0d0b4",
+			"instanceId": "lvd6409c964d90b4adfb36039507d483e34",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -601,7 +626,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -638,28 +663,28 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\pushbutton min p off.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "5aa30754-20a3-4d66-af0d-41a10d733fc1"
+					"refId": "e5d54546-08fa-4968-bb17-1423ccade251"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\pushbutton min p on.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "622bdf8a-08a2-42eb-8584-c48004e6bb99"
+					"refId": "6b9e67b5-d06c-4152-b8c3-38d15505e1d3"
 				},
 				{
 					"name": "sig-control-button-tap",
 					"value": "Vrijloop_min",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "4f871f9f-1b6a-4305-beba-4a16a997cb49"
+					"refId": "27f5701d-6824-4833-859d-0cf01e62cc80"
 				}
 			]
 		}

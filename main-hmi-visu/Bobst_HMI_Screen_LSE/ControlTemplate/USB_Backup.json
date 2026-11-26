@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "3c59fbf8-957f-4094-9bee-74d789c7427d",
+	"designTimeId": "016e7b0c-99d9-43a1-835c-1b6b1d068234",
 	"name": "USB_Backup",
-	"instanceId": "design_368c3ee8e51049398a330fbbdade8677",
+	"instanceId": "design_c161cff5f2154181baa260ee755b137c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "71ab38f4-992a-4307-bf07-81b1b82eef54",
+			"designTimeId": "43bf0293-ab7a-447e-9f4b-bb06209aab8f",
 			"name": "Obj_946_Rect_0_0",
-			"instanceId": "lvde6f8bfb59a0d413ca73aaec660f6ccac",
+			"instanceId": "lvd78f1d4b6c4d44d18ad6f0276a07580c7",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "1550bdd9-3db5-4a71-a110-6ffaf0470bc6",
+			"designTimeId": "038501c9-62f2-43c0-a88b-2b0a1de4564b",
 			"name": "Output_0_Data_backup_to_USB1_Busy_1",
-			"instanceId": "lvd43123dda74dd42b5a302ee0cf93941e4",
+			"instanceId": "lvddbd5894ffb8741caa239be358e7eed2f",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -163,7 +182,7 @@
 					"value": "USB_Backup_busy",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "647c08a9-38e5-498c-ad54-89f0b569817a"
+					"refId": "b04a2cc0-2d0a-42c4-aa0f-abf7b17235ba"
 				}
 			]
 		}

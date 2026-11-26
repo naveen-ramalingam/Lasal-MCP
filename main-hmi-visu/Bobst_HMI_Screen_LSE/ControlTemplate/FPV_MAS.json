@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "66bc33c6-7ed9-48b4-ae90-c083a008ebe8",
+	"designTimeId": "0ed74f13-5370-4b32-8918-4ebf135f973b",
 	"name": "FPV_MAS",
-	"instanceId": "design_4762a26093bf419aae0f970b59eef5e4",
+	"instanceId": "design_41e32e85ab1c4f85921fddef90c2bf3d",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "e88687d8-f16e-4506-a9af-74d8a45e68dc",
+			"designTimeId": "21137235-46e6-4c55-806b-fdaefb36114b",
 			"name": "Obj_1105_Rect_0_0",
-			"instanceId": "lvda0c32e5be7aa4c64a2861b23fa20504e",
+			"instanceId": "lvde7eebd23c3854d1783a21a81f876d66d",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "1bf049aa-7bd3-4de9-8444-184bf3f198e4",
+			"designTimeId": "b41c3ea1-dd05-4e63-b742-bb4c9c03d206",
 			"name": "Object_1040_0_1",
-			"instanceId": "lvd4ffeffa3787e41be97b7a8a807b53963",
+			"instanceId": "lvdaa28eb09b7bd465ea0e7c7c259f986a3",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +157,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Framepositions_Vertikaal",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "a70b127e-0dac-4d01-880f-6e633bfb9f3c"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:SectieMAS",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "92eb705b-a203-4f92-8015-cdb24146447f"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "ed006466-b14b-461a-a7a0-4a11117f4817",
+			"designTimeId": "779a23bd-3deb-457d-8b9c-0abfb8e84304",
 			"name": "Object_1059_1_2",
-			"instanceId": "lvd6a0d83629e2f402ba5637071787193a0",
+			"instanceId": "lvde448955133b44fd79be18ac09122a29f",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -208,14 +222,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "SetPos_V",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "054bbd39-4637-4fd8-9f2e-cfe67d4a3409"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:S04_Autosetcontrol_ETV",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "bbdb59c9-7496-4c05-8f4f-1df9c92d5496"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "35bed98a-12d6-45b0-9b6b-281db1a8932c",
+			"designTimeId": "6f8c6dfb-078f-487f-baea-4d8a29ab04d7",
 			"name": "Object_1107_2_3",
-			"instanceId": "lvd94215e7d79d540b5a6b47c91f1d1413f",
+			"instanceId": "lvd20ea580bc51e40c2967a995981390109",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -259,14 +287,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "S04_Buttons_Setpos",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "406b7d72-f27a-43b2-9484-41346f75d318"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:S04_Autosetcontrol_ETV",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "bbdb59c9-7496-4c05-8f4f-1df9c92d5496"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "30976111-c017-42e2-b03c-ee8976c13930",
+			"designTimeId": "4143fb45-4070-4e36-b82b-4c407195f52a",
 			"name": "Image_0_4",
-			"instanceId": "lvd4cef12eca53c4feea3c92a19f50ac035",
+			"instanceId": "lvde4ae8ee5d73c493595383a4ae89c077d",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -316,7 +358,7 @@
 					"value": "Resources\\Images\\section___empty_2rail.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "3a7a9514-4656-49c6-ad33-f5d49e52e461"
+					"refId": "f67a67f0-3fb3-4728-8a64-5883775d5d93"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -328,9 +370,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "790431bd-976a-42c9-8259-8e0f139b890a",
+			"designTimeId": "8988a0b4-e2d7-4647-8a7b-130a1716df93",
 			"name": "Visu_Fr_Gr_MAS_ACT_5",
-			"instanceId": "lvd6f110fee458a446892a03318fce5047b",
+			"instanceId": "lvd1bc56f302be2447a84e5de37eddeec96",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -374,22 +416,41 @@
 					"value": "Font",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b0845c22-0ffc-40a0-80dc-b6d91b9d56df"
+					"refId": "daff4ca0-b729-40ca-a217-7ce6b15ab3fa"
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_131",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "4e92cb60-6adf-4b78-b7ec-25c0d0d277f7",
+			"designTimeId": "6c1b7edb-f312-41d0-bdc7-5732a391ef7e",
 			"name": "Output_1_Visu_Fr_Gr_MAS_ACT_MinLim_6",
-			"instanceId": "lvd952d77dfad404dbfb5cecb35600e6328",
+			"instanceId": "lvdcff7c47fa6414137b9b97011d19ba44a",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -433,28 +494,28 @@
 					"value": "Font",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b0845c22-0ffc-40a0-80dc-b6d91b9d56df"
+					"refId": "daff4ca0-b729-40ca-a217-7ce6b15ab3fa"
 				},
 				{
 					"name": "value",
 					"value": "1:Visu_Fr_Gr_MAS_ACT.MinLim",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "0ee2a81a-fa09-4762-8f92-46c224a9ae9b"
+					"refId": "c84ead6f-b274-4f13-beea-41e4af98df20"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -462,15 +523,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "0ee2a81a-fa09-4762-8f92-46c224a9ae9b"
+					"refId": "c84ead6f-b274-4f13-beea-41e4af98df20"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8a539220-9452-4d9a-8313-b7894ab0910b",
+			"designTimeId": "deb645df-e322-4653-943c-7bdcbc00784b",
 			"name": "Output_2_Visu_Fr_Gr_MAS_ACT_MaxLim_7",
-			"instanceId": "lvdf2d31b7f889c4528bf9ff260cd418688",
+			"instanceId": "lvd4360e16af842437498114e80e1240bf3",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -514,28 +575,28 @@
 					"value": "Font",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b0845c22-0ffc-40a0-80dc-b6d91b9d56df"
+					"refId": "daff4ca0-b729-40ca-a217-7ce6b15ab3fa"
 				},
 				{
 					"name": "value",
 					"value": "1:Visu_Fr_Gr_MAS_ACT.MaxLim",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "c7a02b51-6aac-491c-ac21-0c0791030c7b"
+					"refId": "a8d96164-729b-4322-8074-8fb7faddec15"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -543,7 +604,7 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "c7a02b51-6aac-491c-ac21-0c0791030c7b"
+					"refId": "a8d96164-729b-4322-8074-8fb7faddec15"
 				}
 			]
 		}

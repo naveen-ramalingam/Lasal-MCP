@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "d16f25f0-2295-4f83-9f97-7d2f70854e5a",
+	"designTimeId": "9fa08f11-b665-422a-8ff0-2600e6c17998",
 	"name": "snelheid_conveyor",
-	"instanceId": "design_2a9b063f5419442498afc571ee40e0a4",
+	"instanceId": "design_837bbf86b09245baaf918fc9be9b32b7",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "2a8b65ee-4a3f-4b7e-ba6e-16dd575a0244",
+			"designTimeId": "bcc1e85a-d261-4ccd-8cee-94437619fffb",
 			"name": "Label_0_0",
-			"instanceId": "lvd5e3ea8d6d10045569d39562ff653500c",
+			"instanceId": "lvdbe45284524604987b38683342940804e",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -113,6 +113,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -126,13 +132,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -141,14 +147,14 @@
 					"value": "LCD_36",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f46d9810-5d16-4891-8e39-823c15576c24"
+					"refId": "29cff41f-9eef-4777-9b9a-0e8564cefe00"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_40:Text_0",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "4f5bcb91-8be7-4820-b56b-e9457050db8b"
+					"refId": "c7180b89-c598-4311-8cd7-8f23804fdc82"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
@@ -161,15 +167,15 @@
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "06bf099d-65f7-4359-8361-f6a7d205f365",
+			"designTimeId": "44303cd3-1fe9-448e-be50-7213c5da2c51",
 			"name": "Image_0_1",
-			"instanceId": "lvd72b116836b7d4622a51c9d0ce1e17d2a",
+			"instanceId": "lvd2a7614c7c0c04d2c802cdf8ff3089444",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -219,7 +225,7 @@
 					"value": "Resources\\Images\\speed_arrow.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "ec62947e-3501-4e74-a4ea-37211fda8717"
+					"refId": "62ec6a80-3052-4bed-8414-c4fad4e0676c"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -231,9 +237,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "26601e38-7e3f-4840-acbf-4d10ad045534",
+			"designTimeId": "8ef1ec61-f8c8-4e4c-883f-4da4a63e470f",
 			"name": "Output_0_S12_Conveyor_Master_Main_01_Conveyor_Master1_oSpeed_Conv_m_Min_2",
-			"instanceId": "lvd76588bc375154adea9f0d9b5731ac369",
+			"instanceId": "lvd99a8ef07b13d4d518013901fba6cc08b",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -277,28 +283,28 @@
 					"value": "LCD_08",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "9f71163a-682b-4eba-9981-5272589fed5c"
+					"refId": "2dcf4451-bc99-4db5-a986-3ee2253958c3"
 				},
 				{
 					"name": "value",
 					"value": "255:S12_Conveyor_Master_Main_01Conveyor_Master1.oSpeed_Conv_m_Min",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "799cc341-f9f2-4862-8c5e-500ac784551c"
+					"refId": "55e3cdcd-18db-4635-ae0b-e2c7ab4e6dc7"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -306,7 +312,7 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "799cc341-f9f2-4862-8c5e-500ac784551c"
+					"refId": "55e3cdcd-18db-4635-ae0b-e2c7ab4e6dc7"
 				}
 			]
 		}

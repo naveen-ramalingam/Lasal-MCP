@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "7abfc71b-5f3d-4008-9601-6a895fca405a",
+	"designTimeId": "293d7d5b-ba78-4af7-ab20-a41578ea00dd",
 	"name": "LB_Graph_Input_Mix",
-	"instanceId": "design_a23299a0299b45318049298c60d4b6b1",
+	"instanceId": "design_d3df0d45d2424730881d1de8948a3af3",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "086b5eaa-5b60-4fdf-adbe-da5819bb0d2f",
+			"designTimeId": "48307dd8-f6fc-485b-99b5-b13bc71b75db",
 			"name": "Obj_811_Rect_0_0",
-			"instanceId": "lvdbebbc11c26704afd8475eedfbd242cec",
+			"instanceId": "lvd6fbab7617e6e4676850132e895938aa0",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -102,18 +102,17 @@
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
-					"value": "MigratedColors:MigratedColor_219",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "ba2a3981-c972-41a6-b528-5caa3e8743bc"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9a8ad516-df8a-465b-a8ed-3272a9165984",
+			"designTimeId": "002a5c3f-cbc3-4a9b-929d-33d56a0f99bd",
 			"name": "Obj_811_Rect_1_1",
-			"instanceId": "lvda1c1c6624657409f829152dabe633115",
+			"instanceId": "lvd7ce774ffb64a40369c61bf0d5a10ce3a",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -157,15 +156,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "3eb10cd0-4796-4942-8783-daeab1c1266a",
+			"designTimeId": "423ff1df-badc-4d0d-ab61-15557abf0cb8",
 			"name": "Object_762_0_2",
-			"instanceId": "lvda16b9b41ffea4586901b9fb022f1dba0",
+			"instanceId": "lvdaae63ef17176420facbeec8d6d0a44a2",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -209,14 +227,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Lijmbewaking_OP_lijmkop",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "1d0a5b3e-b9d2-49a0-a239-aad164d5618f"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "0fa22ff3-8c67-44df-8e73-30838a3ba867",
+			"designTimeId": "ef7899ae-f547-40b1-a099-f9a8d8e53447",
 			"name": "Object_761_1_3",
-			"instanceId": "lvdc14f4fa9c0d9449aaeb561d249172262",
+			"instanceId": "lvd172c6fc1c0bc404bbac54ce96f974279",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -260,14 +285,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "LB_Nav_slider_graph_input_mix",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "acd91b45-2c04-4d28-86cc-e81e9ab6ddbf"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cff929dc-3b8d-46f4-998c-9412b859dcad",
+			"designTimeId": "d93798c1-90ca-44a8-a972-481ad4252655",
 			"name": "MyIO_LijmDataBewaking_TemplateRetrofit_4",
-			"instanceId": "lvde0256471c3d14b3a877be4c16009a941",
+			"instanceId": "lvd9ad6c5d085624f149f150083a359ab4d",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -311,14 +343,14 @@
 					"value": "Lucidia_10",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "88e094d5-bb5b-41d6-a7de-ec3f98a9283d"
+					"refId": "5cec4362-8f46-4904-b2b1-7e6fb390b059"
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
+					"refId": "02cd7cee-94c9-452c-a155-f345f48c0000"
 				}
 			]
 		}

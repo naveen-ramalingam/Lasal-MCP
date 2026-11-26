@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "ea243c9d-8ce2-4874-9770-8315ec479f01",
+	"designTimeId": "89a94a1b-aee3-4eca-9f26-311eba3eb1c6",
 	"name": "SubSelect_MAS",
-	"instanceId": "design_6ffaab53825f4b45af5d477531647205",
+	"instanceId": "design_bf6d433f725e46a0bfe197b5bc050393",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "cb163acd-6236-4168-86b4-62fab8d50e6d",
+			"designTimeId": "abbb797b-21fe-496e-b5d9-f5bbd2937549",
 			"name": "Obj_587_Rect_0_0",
-			"instanceId": "lvd0e019ccb070349c99cb4e0e4fdd78864",
+			"instanceId": "lvd517c15b028e94dadbd5f97a91091ec42",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e939d0ec-5612-47ce-bb75-0342f12aec65",
+			"designTimeId": "56722cbf-dc5a-401a-8cd8-834ad97beabe",
 			"name": "Object_495_0_1",
-			"instanceId": "lvd607d370a68ec44e8b8412dee32906544",
+			"instanceId": "lvd173a4d76079641e3b0c5e3f8629c7618",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +176,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Knoppen_Type_TOSOKU_DUCT_SubPC_nr",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "75b8e089-8d5c-43f6-8e78-a994169ef3b8"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:SectieSetup_Main_MAS",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "0e6227a7-ea80-45bf-a429-9e5464bb54ab"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "31e5f4e0-e9b9-4ab9-b5c0-15e89a0f295c",
+			"designTimeId": "2b63a2c7-b395-447f-b6b9-9e6f5ac75e10",
 			"name": "Object_498_1_2",
-			"instanceId": "lvdbb1ac704c87441f491559eb02ee38474",
+			"instanceId": "lvd6039b304113e411ca86d0d1ce4f0b99f",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -208,14 +241,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Knoppen_Type_TOSOKU_DUCT",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "08619d42-d134-4a30-b745-760043fe5365"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:Serial_Communication_MAS",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "6598985c-d6a5-4e6d-a445-a0d245648c67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "62fe92a9-e2f7-4b5e-957d-a1def1484d15",
+			"designTimeId": "d0dcedbb-dbca-46bf-9ea1-62897090ea3d",
 			"name": "Input_0_SectieSetup_Main_MAS_SubPC_Type_3",
-			"instanceId": "lvda53bd391d4604065a607047750b4b292",
+			"instanceId": "lvdab5a3b15595348e59ceb1e058a643869",
 			"controlId": "sig-control-enum",
 			"properties": [
 				{
@@ -259,36 +306,36 @@
 					"value": "Arial_20_UL",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "73147684-85cf-4460-ad69-b964cf4657b0"
+					"refId": "eff6f394-0d08-49ca-8a83-49f25ecaf760"
 				},
 				{
 					"name": "value",
 					"value": "255:SectieSetup_Main_MAS.SubPC_Type",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "41cc4f0b-043a-441c-bd50-e509d39a2854"
+					"refId": "f0d8ac19-6bef-4f95-b74c-1f2e64e9de72"
 				},
 				{
 					"name": "--theme-sig-control-enum-background-color",
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-enum-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9ca1cd10-d608-49fb-874b-bafcc35f8bdd",
+			"designTimeId": "7bdb32ec-081c-42d8-9376-b04601a378b8",
 			"name": "Button_0_4",
-			"instanceId": "lvdbdf5cd799a754013b08ccc1835c35caa",
+			"instanceId": "lvdce20567616594d40a74480488b8d9bf5",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -332,14 +379,14 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "value",
 					"value": "1:AutosetScreenSettings.S04_MAS_Enabled",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "0b9b2cc0-41d8-4eb1-9360-ace003330c9d"
+					"refId": "04c96e1c-5560-4528-850c-fa5c5f57f76e"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -376,21 +423,21 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\control_disabled.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "38d61647-6370-4443-acc5-46af40248f33"
+					"refId": "d588ff07-8368-4cfd-a079-8aad47a2f979"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\control_enabled.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "8b111614-ff1b-4940-a48b-91eeb913c57e"
+					"refId": "30200520-b42d-407f-995a-4413dd1f7d6e"
 				}
 			]
 		}

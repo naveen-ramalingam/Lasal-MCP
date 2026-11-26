@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "454195ff-d565-4832-9e78-f224a3c74894",
+	"designTimeId": "99277222-4ec0-43b5-9363-48aaa848b8d2",
 	"name": "KEB_instelling_S12",
-	"instanceId": "design_572d57726c66495a8b51f926e5cf7094",
+	"instanceId": "design_16db37345a5c49c18a4726e3a3a8030c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "5e2020a5-cf38-4f7e-ac7a-f2ddeea42116",
+			"designTimeId": "e23b35a1-56a7-4144-a3e1-3b4c59daee52",
 			"name": "Obj_985_Rect_0_0",
-			"instanceId": "lvd1a0c769f7cc848fcaa4f592f1c89d8f7",
+			"instanceId": "lvd8e784dd7fc7b4c02ad80f4fb4ec37363",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,15 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8062a21a-f802-4840-aaaf-620dc6451898",
+			"designTimeId": "7b5ec377-e7d1-41ec-9f48-c0af309d9135",
 			"name": "Object_973_0_1",
-			"instanceId": "lvd3a3816b629bf42c186f81a756ee5c1dc",
+			"instanceId": "lvd2e1cd65b834840699e9a9d3032482ee1",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +157,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "KEB_instelling_conveyor_master",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "36597c12-cb83-45af-ad68-cbab3b834433"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:S12_Conveyor_Master_Main_01",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "32d59b48-ff93-4fa5-b165-26fcfdb9bdab"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "ef7b2e03-b27b-4f7b-90ed-5e4662baa33c",
+			"designTimeId": "279c5019-ce08-48e0-a761-e1487e3db1b0",
 			"name": "Object_976_1_2",
-			"instanceId": "lvd4d1f31ecbae748c29187ded54db5acbf",
+			"instanceId": "lvdeb27b1485d9f4408a214b99b41a7709e",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -208,14 +222,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "KEB_instelling_conveyor_slave",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "753c0324-d58f-4f15-bb76-d5e761c81240"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cc5d1ae4-5056-4ebe-be3e-0473abc15006",
+			"designTimeId": "dc3a1683-597d-4bca-a9e6-0c3305a4ba66",
 			"name": "Object_975_2_3",
-			"instanceId": "lvd9128047dc6524d2fbe31a10b72c764eb",
+			"instanceId": "lvdd5ea60b61c324f4db15f43ca249fa16b",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -259,6 +280,13 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "KEB_instelling_conveyor_feedroll",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "75a5e4d3-c45a-4b2a-9c2c-eaf4c27e38ff"
 				}
 			]
 		}

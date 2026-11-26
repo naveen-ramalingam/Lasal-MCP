@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "2452ec6b-b95b-46a6-811c-868850e3cb91",
+	"designTimeId": "1a0403cd-60b9-42f5-a4e3-885f86ffd518",
 	"name": "Lijmkop_UIT",
-	"instanceId": "design_5d5473e677bd40498051eb45c1abf2f4",
+	"instanceId": "design_ce22158c007a4b22a19b04ab9056c2aa",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "ae7ab971-3d1b-4ed7-a562-e35aaedfc20d",
+			"designTimeId": "146bbd0e-83c6-4577-84e1-1fa3e129d595",
 			"name": "Obj_753_Rect_0_0",
-			"instanceId": "lvd8801f9f7df40402484670767f8002595",
+			"instanceId": "lvdcf2acf9760df4ef182afff24f1884356",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -102,18 +102,17 @@
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
-					"value": "MigratedColors:MigratedColor_219",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "ba2a3981-c972-41a6-b528-5caa3e8743bc"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "493c501e-654b-444d-a309-a2bf6ad3ea96",
+			"designTimeId": "8077fdfb-21f9-42d9-a68a-5e451508a58e",
 			"name": "Obj_753_Rect_1_1",
-			"instanceId": "lvd262aea8795bb42b9bab1c4059fc86860",
+			"instanceId": "lvd05060b4cf13644a0b8a7844dac50ca96",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -157,15 +156,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8e224a0c-1d40-4fe8-b2cd-01345f2cf1ce",
+			"designTimeId": "75a6c551-64a8-43e5-9dae-8da3f83d9e80",
 			"name": "Object_703_0_2",
-			"instanceId": "lvd37a62822ecfe425a9722f99146ba70a5",
+			"instanceId": "lvd5113661423bc4ffeaa5877aa7f211114",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -209,14 +227,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "CopyFunction_LIJM",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "235d83c4-e601-467e-93cb-d48e3d6816c8"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "8a579d8b-1272-47d3-b4e5-a4f1e0a73290",
+			"designTimeId": "c08867c3-32e8-470c-b662-0926f165754f",
 			"name": "Image_0_3",
-			"instanceId": "lvde4feca54de114c8293baf2bfb4d4dd55",
+			"instanceId": "lvd80a7e0137cc74611adaffb68c20640e9",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -266,7 +291,7 @@
 					"value": "Resources\\Images\\sensortje.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "58cf0e36-f6e8-44e3-8c9b-53814badb857"
+					"refId": "79c7089a-629a-4e8f-8745-eb50ce044c83"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -278,9 +303,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "1dda7ab7-18e4-4b1d-87ec-6f866525a8f8",
+			"designTimeId": "aceeb1dd-68e9-489e-b76c-f05ce5fc0d2c",
 			"name": "Output_0_LijmKop_Data_01_HeadNr_4",
-			"instanceId": "lvd57353b9f3ee54864ac10adb4d3cbcd52",
+			"instanceId": "lvd9427818fc1f942d5950b2bc4186e24b3",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -324,28 +349,28 @@
 					"value": "LCD_08",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "9f71163a-682b-4eba-9981-5272589fed5c"
+					"refId": "2dcf4451-bc99-4db5-a986-3ee2253958c3"
 				},
 				{
 					"name": "value",
 					"value": "2:LijmKop_Data_01.HeadNr",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "1b87c377-3bd7-465d-94ff-dc8c019eb634"
+					"refId": "9377515a-8372-428d-9088-ab6c9cb20a8c"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -353,15 +378,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "1b87c377-3bd7-465d-94ff-dc8c019eb634"
+					"refId": "9377515a-8372-428d-9088-ab6c9cb20a8c"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "24822fa7-abf4-40aa-a838-2f0c8a47b6ff",
+			"designTimeId": "41ee40eb-ba29-4825-bc2b-4ac509671d2a",
 			"name": "Output_1_LijmKop_Data_01_DIHW_5",
-			"instanceId": "lvd79571c9448424ddbad4670168b0cd544",
+			"instanceId": "lvd105c62e4b70d4c4e9264fc8137e6a41a",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -411,7 +436,7 @@
 					"value": "Resources\\Images\\sensor_in_off.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "bf2d3cae-e6b0-43bb-bfed-b746ac2d58c8"
+					"refId": "2fb0d26d-2fdc-4c56-a657-0dbb0487f148"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -423,9 +448,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "6ce4d229-e461-47bf-9f19-0aa49a3eccf5",
+			"designTimeId": "84ba9fc2-3cbf-41b7-a2a1-e078981a65de",
 			"name": "Output_2_LijmKop_Data_01_DOHW_6",
-			"instanceId": "lvd8cf3d214fa8b44d6b7621c2d639eb8ab",
+			"instanceId": "lvdaf4f76ac35594e9b9030596997f36c66",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -475,7 +500,7 @@
 					"value": "Resources\\Images\\sensor_out_off.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "42983809-b822-4440-ab8c-d8ac339da36a"
+					"refId": "1fbec149-a454-46b0-931f-7b93ad6869b8"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -487,9 +512,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "490b2e4b-e30a-4ee7-a421-fae4576c7d2d",
+			"designTimeId": "8362f2d4-e20a-47ce-9824-fc50b7c8dd59",
 			"name": "Output_3_LijmKop_Data_01_SensorSelected_7",
-			"instanceId": "lvddd7f119033384259bc5e461ae00a3dbf",
+			"instanceId": "lvde0f1e8fbbb4445d38fa1770d516a8934",
 			"controlId": "sig-control-output",
 			"properties": [
 				{
@@ -533,28 +558,28 @@
 					"value": "Arial7",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "2bd1e013-dc39-40fe-bdea-0e5f0af8c94b"
+					"refId": "b0d927f1-7957-4242-b425-1ef5f79b044f"
 				},
 				{
 					"name": "value",
 					"value": "2:LijmKop_Data_01.SensorSelected",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "33b9447c-da14-4409-bfcd-f01fd6268ba5"
+					"refId": "d214a3b7-a168-4b2b-ba9a-e53173220782"
 				},
 				{
 					"name": "--theme-sig-control-output-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-output-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -562,15 +587,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "33b9447c-da14-4409-bfcd-f01fd6268ba5"
+					"refId": "d214a3b7-a168-4b2b-ba9a-e53173220782"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "f6ee7aad-6e58-48da-9b58-0c38a159bdcc",
+			"designTimeId": "9875ee92-b67d-4d8c-a0fe-fdbaffa021b7",
 			"name": "Output_4_LijmKop_Data_01_HM_Mode_8",
-			"instanceId": "lvdfbe9979ed6294efbaf4b6ede59e9bb27",
+			"instanceId": "lvd662822a9337140678a0326f10d8b586e",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -620,7 +645,7 @@
 					"value": "Resources\\Images\\batt_picto_01.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "2afa4f56-8e2c-48e8-923d-e470c5260db8"
+					"refId": "4cced771-7dd7-49ea-9b02-93c2f4b98654"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",
@@ -632,9 +657,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "76cc189d-6fe7-4923-9536-1309556ab5d4",
+			"designTimeId": "17a92672-5da6-4ecf-955e-794be8b15424",
 			"name": "Button_0_9",
-			"instanceId": "lvd68e60be54c7643bdb95bc3770c2a5473",
+			"instanceId": "lvda7abb4bddeac499c99f30e3bfd2ba8eb",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -678,14 +703,14 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "value",
 					"value": "2:LijmKop_Data_01.Head_enabled",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "72e48932-bcc9-444b-a3ad-e517e614a3fc"
+					"refId": "c2dcfd33-bb37-4c52-b7e6-8ecb4d1ed027"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -722,21 +747,21 @@
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\lijmkop_off.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "ead8833e-ee79-49b9-9858-5d4d772dd1cf"
+					"refId": "7f53fe9a-2c2b-4dcd-bcc0-30f9a0e817bb"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\lijmkop_on.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "acd6f204-5eb4-4d3b-b61a-532a9364f977"
+					"refId": "df982b99-b1fb-4b9d-a298-6e137dd0de87"
 				}
 			]
 		}

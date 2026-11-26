@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "adbb1014-a281-49bd-b9de-d3e3a73d3396",
+	"designTimeId": "2bd884a4-d4ba-4f0d-bbe8-ec85f0cb06c5",
 	"name": "S03_Buttons_Setpos_BobstFeeder",
-	"instanceId": "design_324a0048ceb04a6a87363e710389673d",
+	"instanceId": "design_41ca02e74bae46d4922c053b7dff1d51",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "a1932022-0ac4-4be9-a4ce-76a29cc5e236",
+			"designTimeId": "b87425b0-d3da-4552-9fb8-6ba6d2a6cb62",
 			"name": "Object_1136_0_0",
-			"instanceId": "lvd6311075517e94a7db6faf69e69ba375a",
+			"instanceId": "lvd17fa73fff33c4cd28ce377febea78f22",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -105,14 +105,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "S03_Stop_BobstFeeder",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "60a3da46-ef2e-43f1-990d-5dcf565e1ba3"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9822ec8a-3664-4627-9048-699bc4a58c0a",
+			"designTimeId": "8f6cfb9b-f625-4912-9a9d-5fdd2fc3912c",
 			"name": "Output_0_BobstFeederSectionPositioning_AbleToAutoset_1",
-			"instanceId": "lvd3683edb5e91d44d2b4b87f272e529a40",
+			"instanceId": "lvdf4335ae4af3c44738fe08738fe789c5c",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -162,15 +169,15 @@
 					"value": "Sxx_Idle",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "fa366463-7136-4ee9-b5a8-a42ed3289fae"
+					"refId": "b42c98e2-a3b9-40f4-a94c-4a938dd8636d"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "b4dbc941-f6b7-4e92-91b7-5e25b4682c1c",
+			"designTimeId": "66a28dae-f8c2-43b4-8947-90de006dae7b",
 			"name": "Output_1_BobstFeederSectionPositioning_DoRequestBridgeDirection_2",
-			"instanceId": "lvded356c25421f4e1ab24477c9874e8407",
+			"instanceId": "lvdbaae39adab7b4006a3c7ebfdb6235387",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -220,7 +227,7 @@
 					"value": "S03_BobstFeeder_BridgeDown",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "04d93daa-6bb0-48c7-8d01-afa2fcfd06fb"
+					"refId": "94631ecb-776c-46a0-b63e-bb341d70e605"
 				}
 			]
 		}

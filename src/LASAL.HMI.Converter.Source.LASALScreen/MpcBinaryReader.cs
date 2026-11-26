@@ -1246,6 +1246,21 @@ public sealed class MpcBinaryReader
                     model.ReusableObjects.Add(parsedObjects[i]);
                 }
             }
+
+            // Resolve intra-library Object_N references now that all object labels are known
+            foreach (var obj in parsedObjects)
+            {
+                foreach (var ctrl in obj.Controls)
+                {
+                    if (!string.IsNullOrEmpty(ctrl.ReferencedObjectName) &&
+                        ctrl.ReferencedObjectName.StartsWith("Object_", StringComparison.OrdinalIgnoreCase) &&
+                        int.TryParse(ctrl.ReferencedObjectName[7..], out var targetIdx) &&
+                        targetIdx >= 0 && targetIdx < parsedObjects.Count)
+                    {
+                        ctrl.ReferencedObjectName = parsedObjects[targetIdx].Name;
+                    }
+                }
+            }
         }
         catch (Exception ex)
         {
@@ -2284,6 +2299,7 @@ public sealed class MpcBinaryReader
             ZIndex = zIndex,
             ForegroundColorHex = ExtractPenColorHex(color, "#D4D0C8"),
             BackgroundColorHex = ExtractBackColorHex(color, ExtractPenColorHex(color, "#D4D0C8")),
+            TransparentBackground = ((color >> 16) & 0xFFFF) == 0xFFFE,
             BorderColorHex = ExtractPenColorHex(colorFrame, "#808080"),
             BorderWidth = frameType == 0 ? 0 : 1,
             FrameType = frameType.ToString()

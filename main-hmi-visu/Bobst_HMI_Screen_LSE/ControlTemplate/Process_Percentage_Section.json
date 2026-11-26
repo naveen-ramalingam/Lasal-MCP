@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "c45aa8d9-eb59-4028-9543-884e600b39f1",
+	"designTimeId": "791b933e-cd90-43ef-ba2d-dc62b4a37ca9",
 	"name": "Process_Percentage_Section",
-	"instanceId": "design_d23afc27b3e64a95ab86c8037940387a",
+	"instanceId": "design_a06a61ad321743fcb364ffb378628610",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "8ea14007-a6a9-4873-9184-df4793aa09d1",
+			"designTimeId": "fb969148-5acb-469c-8d65-7600e1ce1db4",
 			"name": "Obj_499_Rect_0_0",
-			"instanceId": "lvdcbf5799af8b349d59d55fcc756f8d3a8",
+			"instanceId": "lvddae599b1804a494a9fb620bdda67391c",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -102,18 +102,17 @@
 				},
 				{
 					"name": "--theme-sig-control-rectangle-background-color",
-					"value": "MigratedColors:MigratedColor_219",
-					"typeId": 9,
-					"propTypeId": 2,
-					"refId": "ba2a3981-c972-41a6-b528-5caa3e8743bc"
+					"value": "transparent",
+					"typeId": 0,
+					"propTypeId": 2
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "97177019-f887-4db6-a550-909ba78e677f",
+			"designTimeId": "d26c6bee-9aa3-41d3-8208-dd11650755b3",
 			"name": "Object_497_0_1",
-			"instanceId": "lvd7c1beaf6d73248bdac1a221b797e7236",
+			"instanceId": "lvd377e5714447b42da8755f29a261e2e39",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +156,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Comm_Busy_LED",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "ac82f313-3909-48ea-8cac-f9d6b10b14ea"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "176800d5-c137-43dd-bec9-7e636a9c8da9",
+			"designTimeId": "b9eb6d02-951c-46d6-8535-bec57d02b815",
 			"name": "Output_0_Serial_Communication_Feeder_s_ProcessInfo_2",
-			"instanceId": "lvd11e4f32fb2514602b7d862ff1d7bc288",
+			"instanceId": "lvd19a4bd73f8fd4bb5ab26b1640329027b",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -216,6 +222,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -229,13 +241,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -244,29 +256,29 @@
 					"value": "LCD_22",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "29efa24f-b51f-4d31-90e5-15420549a005"
+					"refId": "9fe3504d-09ea-45f6-82a6-d499d3572d6e"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "cf121dde-c8cd-453d-adcc-a0b0419f0877",
+			"designTimeId": "b75a5da7-1b60-4733-9264-68d9930c6038",
 			"name": "Output_1_Serial_Communication_Feeder_s_ProcessPercentage_3",
-			"instanceId": "lvdccfcefc63fa349f3ac5852219c5c8f55",
+			"instanceId": "lvd298676b2ffb94f51a6647fa2d74d5773",
 			"controlId": "sig-control-bar-straight",
 			"properties": [
 				{
@@ -310,14 +322,14 @@
 					"value": "Font",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "b0845c22-0ffc-40a0-80dc-b6d91b9d56df"
+					"refId": "daff4ca0-b729-40ca-a217-7ce6b15ab3fa"
 				},
 				{
 					"name": "value",
 					"value": "255:Serial_Communication_Feeder.s_ProcessPercentage",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "2b67ba1e-9516-4b36-9dfc-794638c4c56b"
+					"refId": "108b3985-29e7-48d9-882f-805f3e34f820"
 				}
 			]
 		}

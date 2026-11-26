@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "9d09a564-e539-4e4c-8762-b5446c798f7d",
+	"designTimeId": "bfeaa4f9-b548-4905-8896-2f10ce9efb01",
 	"name": "ConveyorServo",
-	"instanceId": "design_bd47aa0a71ab418bad77162d76763561",
+	"instanceId": "design_6196c644f51346958e354a0a9a3b2d0c",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "20ab3fff-361b-43a4-a97c-35a437e8cf4b",
+			"designTimeId": "0d3749e8-0614-4d13-b1c8-cd8aa1371fe5",
 			"name": "Line_0_0",
-			"instanceId": "lvd44cd02acad2d4fa8a36538f8e89ffa15",
+			"instanceId": "lvddd537f4988654aa09da961990e978ea2",
 			"controlId": "sig-control-line-simple",
 			"properties": [
 				{
@@ -104,9 +104,9 @@
 		},
 		{
 			"type": "control",
-			"designTimeId": "e7287d97-02db-4b89-914f-6951d8f51c97",
+			"designTimeId": "afba7378-47fc-407f-b09c-48fe367697b5",
 			"name": "Object_26_0_1",
-			"instanceId": "lvd11939ba0cb44444f9595c93bcf02078e",
+			"instanceId": "lvd50e7a227250045c690dc75259cea8f61",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -150,14 +150,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "SensorConv",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "5e215084-379b-4131-85af-9f926f087d1a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "fe608675-bc98-439f-889e-04d74ee3e948",
+			"designTimeId": "a8e9dbe9-242d-42e3-b6ca-b8887b28563f",
 			"name": "Object_19_1_2",
-			"instanceId": "lvd823b525ca91f4d8e9d1c019eb2d1a82f",
+			"instanceId": "lvd8698e31f99e94927834010f7baf965b8",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -201,14 +208,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "LED_Conveyor",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "0d8aa193-1181-4beb-a4f6-9c57c4f57c30"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "af295339-c73e-47ac-9758-34ff8a807c3b",
+			"designTimeId": "ea17f47b-434d-4c6c-bb07-f250119c427e",
 			"name": "Object_50_2_3",
-			"instanceId": "lvd0aeb2cea508541ba8fc54c6eeb635ef1",
+			"instanceId": "lvd58417a7213e040268f95aa218de2e134",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -252,14 +266,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Conveyor_mode_selected",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "8d4e0ed1-c69d-476d-bd07-1453c2ab3e4c"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "ce5ac84b-82fe-4965-a59b-ff451a802576",
+			"designTimeId": "a52aeb6d-f76d-4a16-bea0-780c0ad05dca",
 			"name": "Object_41_3_4",
-			"instanceId": "lvd083efa932ecb4e28ac5ed51ebe8a3b02",
+			"instanceId": "lvdf5c3767bce954871823c3ccd695ce00d",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -303,14 +324,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "Conveyor",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "8bb5b1d1-902a-4450-8160-c580e0d5985e"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "a232a78c-bff2-4698-8eaa-8419f9a33fab",
+			"designTimeId": "31bcd244-2726-4dc5-b6c7-c2d5922b25b6",
 			"name": "Output_0_VisuTeller1_oOutputHW_5",
-			"instanceId": "lvdf3a911c702794ff192546029031e2ae5",
+			"instanceId": "lvd5527d7fd5b7241f587b52d77f3be5864",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -360,7 +388,7 @@
 					"value": "Resources\\Images\\lamp p off red.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "a649053e-656f-4cc0-a78d-304addf9d1f6"
+					"refId": "cc75b029-c725-4019-a18b-57279060c970"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",

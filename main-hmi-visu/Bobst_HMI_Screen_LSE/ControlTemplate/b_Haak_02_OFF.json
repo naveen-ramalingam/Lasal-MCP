@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "6942b2c3-c1f0-4772-b40f-3ff76ca90e64",
+	"designTimeId": "f1bdd477-d62e-4aa5-b3b1-55bb0d94dda6",
 	"name": "b_Haak_02_OFF",
-	"instanceId": "design_885b199d5c0e43b0a7c10d2897e8fbe7",
+	"instanceId": "design_bd562778146442cda8b54a2dbda52afc",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "da50beba-5088-48c4-a2d5-b8b7ba01ba50",
+			"designTimeId": "7dec3626-1cfd-4cda-a531-6093d220b7d5",
 			"name": "Obj_436_Rect_0_0",
-			"instanceId": "lvd378945e6b1d94f8d87822665379014a9",
+			"instanceId": "lvda407c9adad2340ab8fc409672fdf3f98",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "b5e92e1e-616d-4bdc-912a-37d337c53f30",
+			"designTimeId": "ca3d597b-646b-4db8-8cd5-504823ef273a",
 			"name": "Label_0_1",
-			"instanceId": "lvdd10bc5e677b7478080d782087bc3d364",
+			"instanceId": "lvd774f81fc38be426888b87db06fd58625",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -165,6 +184,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -178,13 +203,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -193,14 +218,14 @@
 					"value": "Lucidia14",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "06b19796-cc69-4e54-947e-66e1bafaeb17"
+					"refId": "bf7279c2-6494-4c04-8321-a57af2e8b152"
 				},
 				{
 					"name": "sigtext",
 					"value": "TextList_13:Text_11",
 					"typeId": 5,
 					"propTypeId": 1,
-					"refId": "a0956a66-e69f-4163-a031-c4762f442dd0"
+					"refId": "469c08da-0e1d-4cc8-b91c-dfc7431a210a"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
@@ -213,15 +238,15 @@
 					"value": "MigratedColors:MigratedColor_199",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "5cc3b41b-3f54-4301-9a18-1a7c3266ca48"
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "66b1ed82-e4d9-4e46-829b-d9ec39b1ad99",
+			"designTimeId": "5b38dfd6-405b-47ad-be05-ac17a7b1955c",
 			"name": "Image_0_2",
-			"instanceId": "lvdb6a37f82fb464eb880ba1d436c05353d",
+			"instanceId": "lvdf56dbd5246af46f580c16c048a638675",
 			"controlId": "sig-control-image",
 			"properties": [
 				{
@@ -271,7 +296,7 @@
 					"value": "Resources\\Images\\btn - vouwhaak - zw.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "4ed479ff-4b8f-44fa-a1f9-0937704f2e6a"
+					"refId": "9a46e385-d4c6-46ee-8fee-cfa374e6fc37"
 				},
 				{
 					"name": "--theme-sig-control-image-background-size",

@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "8fb742f3-119c-40b8-b7cd-6127640ec4b3",
+	"designTimeId": "6d731249-12d9-4e1f-8f2a-f16e89dcbd35",
 	"name": "S05_Buttons_Setpos",
-	"instanceId": "design_96a5ad6d7c9544c88b56f14f56df3edf",
+	"instanceId": "design_7adce29f895646daad52a69e21e29e21",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "1aaee324-3c23-4b4f-8377-8e80872e5420",
+			"designTimeId": "43c0ed23-eeef-43ad-8c48-411399a49008",
 			"name": "Object_1117_0_0",
-			"instanceId": "lvd0307fe9fcaab49e5b05fde28d08a8f52",
+			"instanceId": "lvd62c9b5bab84a4918b0e04f66fc167ff2",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -105,14 +105,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "S05_Stop",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "152f6539-71ed-4713-b610-1d523a331df8"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:S05_Autosetcontrol_ETV",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "7e2b5977-503b-410e-918f-0f8ab43710b7"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "edf3f6b3-5677-412f-88ff-b3820b4524e3",
+			"designTimeId": "22327fcd-e28b-4345-9dc5-bd3abaf79edf",
 			"name": "Output_0_S05_Autosetcontrol_ETV_Enable_Startbutton_1",
-			"instanceId": "lvd87abef840fc9433285f3047ca84d8645",
+			"instanceId": "lvdda9d64b6013f4da48f2c8044cc2ebc07",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -162,7 +176,7 @@
 					"value": "Sxx_Idle",
 					"typeId": 23,
 					"propTypeId": 5,
-					"refId": "fa366463-7136-4ee9-b5a8-a42ed3289fae"
+					"refId": "b42c98e2-a3b9-40f4-a94c-4a938dd8636d"
 				}
 			]
 		}

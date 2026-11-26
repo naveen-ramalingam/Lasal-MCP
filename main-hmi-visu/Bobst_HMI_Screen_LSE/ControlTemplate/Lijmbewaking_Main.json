@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "dbfc911d-8012-4532-8e14-26236d078219",
+	"designTimeId": "16936468-b646-4a75-a420-c8d5c656eb84",
 	"name": "Lijmbewaking_Main",
-	"instanceId": "design_e92ecaa93cf5422d9cdfa073f421fe01",
+	"instanceId": "design_a5c88c7cc7c644c39849f3a128af9e91",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "ebc427d2-670a-476d-9b3d-d37b899aa9a1",
+			"designTimeId": "fd52c55c-d274-4b96-b488-a235c6a727db",
 			"name": "Obj_763_Rect_0_0",
-			"instanceId": "lvd070165921454491db97e7af60b4cad1c",
+			"instanceId": "lvd00b49ae744e44a64bcb7cfce42edacfc",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "22ff0183-ee0f-484a-9a5f-cd262136238a",
+			"designTimeId": "6c8cdd10-e249-48f3-905c-e58cfba87b16",
 			"name": "Object_834_0_1",
-			"instanceId": "lvdc1472a9b5eba4304910ee25244c8de11",
+			"instanceId": "lvdca2cc7f5e795489486953a9e31ce7b30",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +176,21 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "LijmBewaking_MAIN_Template_MainCPU",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "a99b82e6-7050-4b03-9702-331a42235d9f"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e894a787-0836-455d-a380-779d49633d7f",
+			"designTimeId": "13f53dbc-a9a4-4e6f-9666-26693ecb6798",
 			"name": "Object_835_1_2",
-			"instanceId": "lvdb05f083612114d7dbea61be3e97b6d24",
+			"instanceId": "lvd5938aad8e88d42deaf18245a1331b28b",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -208,6 +234,13 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "LijmBewaking_MAIN_Template_GlueCPU",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "a7e8ae1d-6b85-46e2-a483-1884a6472512"
 				}
 			]
 		}

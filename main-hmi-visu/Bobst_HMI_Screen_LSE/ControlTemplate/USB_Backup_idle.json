@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "150f9ab3-cbf6-4186-8b14-b753edba489d",
+	"designTimeId": "51ba41d3-0335-4f71-9265-86392064931d",
 	"name": "USB_Backup_idle",
-	"instanceId": "design_438432e6b4814eef8582080ddd295544",
+	"instanceId": "design_0298833dabd44a11a701662d0c0fb68d",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "ba6ee49a-b576-452e-9c10-43e69a79a2d8",
+			"designTimeId": "50958418-1d8d-4902-9b63-e79efd0045c3",
 			"name": "Obj_947_Rect_0_0",
-			"instanceId": "lvdf39eb6cb852842a6a7b1381fc248d6e2",
+			"instanceId": "lvd7bb04ae5dd314852bc7e6b90d73e5705",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "3b28e385-3fa1-4a62-9639-a5aa79b07dd1",
+			"designTimeId": "4780468a-2aa2-4520-866b-1f6301f4cb41",
 			"name": "Output_0_Data_backup_to_USB1_USB_Aanwezig_1",
-			"instanceId": "lvd2e758293df20433f9f3e60c1e62c4136",
+			"instanceId": "lvd6893630ad8a34c6ca3c0c367d48821f1",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -165,6 +184,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -178,13 +203,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -193,29 +218,29 @@
 					"value": "LCD_36",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f46d9810-5d16-4891-8e39-823c15576c24"
+					"refId": "29cff41f-9eef-4777-9b9a-0e8564cefe00"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "877a3da8-5f18-4cfa-aadb-1266bd78b8ea",
+			"designTimeId": "41ef736c-55fe-4241-84d7-1e92f88dfa4d",
 			"name": "Output_1_Data_backup_to_USB1_USB_Aanwezig_2",
-			"instanceId": "lvd94141547e2ee4dc7be894786bb9cbf16",
+			"instanceId": "lvd49cc37d9551742779186a8c971de8f13",
 			"controlId": "sig-control-text",
 			"properties": [
 				{
@@ -267,6 +292,12 @@
 					"propTypeId": 2
 				},
 				{
+					"name": "dolinebreak",
+					"value": false,
+					"typeId": 0,
+					"propTypeId": 1
+				},
+				{
 					"name": "--theme-sig-control-text-value-padding-top",
 					"value": "0px",
 					"typeId": 0,
@@ -280,13 +311,13 @@
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-left",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
 				{
 					"name": "--theme-sig-control-text-value-padding-right",
-					"value": "1px",
+					"value": "0px",
 					"typeId": 0,
 					"propTypeId": 2
 				},
@@ -295,29 +326,29 @@
 					"value": "LCD_36",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "f46d9810-5d16-4891-8e39-823c15576c24"
+					"refId": "29cff41f-9eef-4777-9b9a-0e8564cefe00"
 				},
 				{
 					"name": "--theme-sig-control-text-background-color",
 					"value": "MigratedColors:MigratedColor_229",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "81f1340e-f688-4982-98fe-aef512059aa7"
+					"refId": "238398bd-042e-4096-9566-112d53500814"
 				},
 				{
 					"name": "--theme-sig-control-text-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "2b9a1eb2-3b90-43cf-a202-0a7109155977",
+			"designTimeId": "d22ecf52-ea11-4dbe-9a7c-35323ad1e2c1",
 			"name": "Button_0_3",
-			"instanceId": "lvd4e30b1e952e14f32b6ff11d58f107a13",
+			"instanceId": "lvd6a0cbcd9fee245f28458549c8c8ca101",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -361,14 +392,14 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "value",
 					"value": "255:Data_backup_to_USB1.Backup_Data",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "6d9d986d-19cb-43f6-a52b-c213a9e06174"
+					"refId": "c4954b02-0b0d-4ba3-a7b7-caf1bfcad26f"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -405,29 +436,29 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\backup_cipc_usb.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "ffc2ac75-d0c2-4a6e-bc10-34a69f012685"
+					"refId": "15347e5d-6489-4c52-a211-fe13289ad750"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\backup_cipc_usb_pr.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "89083d34-72a6-4ad5-8cff-fb4f5a832d96"
+					"refId": "6fa3d15b-53cf-43f2-9727-c23137a6efaa"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "23aa7ccf-d4ab-4605-b771-e365c3744af1",
+			"designTimeId": "994ff6e7-e17d-46fa-ba56-fe3f4f82d61d",
 			"name": "Button_1_4",
-			"instanceId": "lvdf06d4caa3b5948a1b6bafd46e5d1f476",
+			"instanceId": "lvd8fe71ce6995947f3963318b852db547a",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -471,14 +502,14 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "value",
 					"value": "255:Data_backup_to_USB1.Restore_Data",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "6e8c1939-c254-4652-82aa-9cc80e570ce3"
+					"refId": "8eae7700-93aa-4d8e-9121-5330933363e9"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -515,21 +546,21 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\backup_usb_cipc.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "c22c6458-d54e-4a61-9ddb-528a6916f460"
+					"refId": "ac01006b-ea88-4a22-9f1e-201ce47a0c01"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\backup_usb_cipc_pr.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "fa789eeb-7f27-4080-966e-85056f4c1f9d"
+					"refId": "b95a7fbb-0a40-44a0-8cb2-b7323a7925a4"
 				}
 			]
 		}

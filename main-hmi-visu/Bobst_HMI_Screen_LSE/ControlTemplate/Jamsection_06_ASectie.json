@@ -8,9 +8,9 @@
 	"revision": {
 		"type": "Revision"
 	},
-	"designTimeId": "0b1c17ed-0bca-489c-9fda-3d42fe7f1c30",
+	"designTimeId": "2b57f213-faab-40bc-8a80-e56d23438cc9",
 	"name": "Jamsection_06_ASectie",
-	"instanceId": "design_5f2d5467859746cebb8468170fb09f67",
+	"instanceId": "design_ca2480b0680946e09fadb6514c4a9b76",
 	"controlId": "sig-dashboard",
 	"properties": [
 		{
@@ -59,9 +59,9 @@
 	"dashboardelements": [
 		{
 			"type": "control",
-			"designTimeId": "e3f88e60-8b5e-49c0-8c9c-3a782ad17e41",
+			"designTimeId": "2254e2a1-52a4-4a79-8383-1c95e66f1db0",
 			"name": "Obj_602_Rect_0_0",
-			"instanceId": "lvdc2f70f098c164578b29ca67a116c97c2",
+			"instanceId": "lvd5c2262db7aef40f3bfed671de2134149",
 			"controlId": "sig-control-rectangle",
 			"properties": [
 				{
@@ -105,15 +105,34 @@
 					"value": "MigratedColors:MigratedColor_264",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "c28488a4-08a0-4b15-a92d-1ecbb2f86844"
+					"refId": "32726ce2-5ca6-40a3-a1ea-8041ec97873a"
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-width",
+					"value": "1px",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-style",
+					"value": "solid",
+					"typeId": 0,
+					"propTypeId": 2
+				},
+				{
+					"name": "--theme-sig-control-rectangle-border-color",
+					"value": "MigratedColors:MigratedColor_199",
+					"typeId": 9,
+					"propTypeId": 2,
+					"refId": "a84913dc-3102-42ed-b38e-1a804d83815a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "ea3f3680-adc7-4c9e-9473-cb5952f5761f",
+			"designTimeId": "5cd4d7dc-1461-4d6b-a48e-7b3f8440152a",
 			"name": "Object_599_0_1",
-			"instanceId": "lvd78b31cfd5d974c8ab84b9e1046e44a3d",
+			"instanceId": "lvdf12b00977ed54611b8dceae7ad1733a8",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -157,14 +176,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_01",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "47a07510-2718-49d4-8ad1-0c93d8b54683"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "63c86c76-4003-4394-bdc6-43b0f0155fb4",
+			"designTimeId": "2f90de9a-d32d-4946-96ac-eb4aa24af0e8",
 			"name": "Object_599_1_2",
-			"instanceId": "lvd688ecf37d3af405e848b6d82d4101aa9",
+			"instanceId": "lvd434c5346514046e0af71d5369038474c",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -208,14 +241,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_02",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "1f96034b-16e6-4f23-a851-3346cb2cb49b"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "36c4ce87-7da3-432d-bdb4-9d83dfeb15d7",
+			"designTimeId": "1b7c7892-4eb0-4de4-bece-d98c0864cbc8",
 			"name": "Object_599_2_3",
-			"instanceId": "lvdce062345448b45c0864b37d2b8332ff5",
+			"instanceId": "lvda95129ae2eca4366815332d17187b9cb",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -259,14 +306,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_03",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "9568f7ac-88ce-4d6c-8124-74b1941bb234"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "1563d9f0-4998-4dbf-83c5-34da3b904a7d",
+			"designTimeId": "273ddf57-fdeb-4692-8e45-261d5975b804",
 			"name": "Object_599_3_4",
-			"instanceId": "lvdbf7a7dcc75444258a15776355c85e580",
+			"instanceId": "lvd954c7d1c59db491aa42fd74fb83ed1f5",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -310,14 +371,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_04",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "a73fc0b4-2e1a-4741-b535-13dc474ba4e4"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "9cc20c38-5e93-49d4-91d1-08972636a414",
+			"designTimeId": "d743330c-481a-47e4-be91-5e7173661fb8",
 			"name": "Object_599_4_5",
-			"instanceId": "lvdc5713ab76c3e4c50a63f830d4c6039a2",
+			"instanceId": "lvd6363145627644ff38aebee2e79ca313d",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -361,14 +436,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_05",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "395b6194-adc4-49f6-b2d5-3c98b666b098"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "86a619ae-6bd8-42ea-83cc-5204018e5844",
+			"designTimeId": "d7f3d382-f221-4638-8e09-109a074f70e7",
 			"name": "Object_599_5_6",
-			"instanceId": "lvd03862fcc8c6b4d96b47a150c6f8a162d",
+			"instanceId": "lvdb0f7072c15de4bfab8493aa26779cac9",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -412,14 +501,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_06",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "45ca2db0-5c69-4b48-8aa0-ef2c630d5bf3"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "6354f391-756e-45f0-998a-ecda01ca74aa",
+			"designTimeId": "d68fce65-3186-4a12-b5a2-658546f8d5b3",
 			"name": "Object_599_6_7",
-			"instanceId": "lvd6935ced54f92404380008fba00e7a894",
+			"instanceId": "lvd459860f4d33a45ee8af0c7adcb2654a0",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -463,14 +566,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_07",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "98a47cbf-8e0d-4142-b80f-c1c35aae76db"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "e10dbf56-48db-489f-9277-53acd8dbb3ac",
+			"designTimeId": "7e2d80a0-9a34-4828-85f0-8aebf192a0d9",
 			"name": "Object_599_7_8",
-			"instanceId": "lvd302b2c0d7cce449f8ef6c95cb91c06e1",
+			"instanceId": "lvded1bba8b259746c09699d86043b17f9b",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -514,14 +631,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_08",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "a8dfb8f7-d062-4702-b044-6af2fb48985c"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "0469f08b-e581-4d18-849e-40153b036998",
+			"designTimeId": "3032e6a8-6787-4d3a-b938-6c44ba2a25d1",
 			"name": "Object_599_8_9",
-			"instanceId": "lvd4cc8cc6d5009419998b0ed272d296849",
+			"instanceId": "lvd773a1d7eb8b84ca0bc6b257b6e1bd021",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -565,14 +696,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_09",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "63228d5f-17e6-4a5e-ab8c-ca4b6b9a5174"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "73a6294c-a499-444e-85b8-0e711b0e4d45",
+			"designTimeId": "f12c6163-e45f-48fa-9a3d-eb2eb10dfe1b",
 			"name": "Object_599_9_10",
-			"instanceId": "lvdf6977dc5c8a54fc8b3515c23e01220bf",
+			"instanceId": "lvd719773a91d1640f4be628b5655e6fb80",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -616,14 +761,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_10",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "2fac3df4-8aec-4121-bc3c-395e5a3549ce"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "3ef2b86b-632a-4e8d-b94c-81186f9e48e6",
+			"designTimeId": "f0d19541-b4ed-48e2-bc2c-f03f7cc6880a",
 			"name": "Object_599_10_11",
-			"instanceId": "lvde1810ce3d7c14595b029d4a822edaac4",
+			"instanceId": "lvd0659dc8ecb0f4e3d866c00d75772807e",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -667,14 +826,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_11",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "9e1b01db-74df-485c-ba31-3c94310ce1d9"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "fad32eba-9e47-45a1-ac45-8ed10715b50a",
+			"designTimeId": "a35d6b7f-092c-4420-8e28-07a670ec6360",
 			"name": "Object_599_11_12",
-			"instanceId": "lvd08c0d2266a1747d1b24d0f934ae14987",
+			"instanceId": "lvd27675faa538548da978fee553043b8ca",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -718,14 +891,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_12",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "d367de31-2d67-4314-8862-3c78b8e35358"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "46378491-0d70-4673-ad8f-a14e7801a220",
+			"designTimeId": "1dd62241-9851-4499-8ee3-dc8414d6735f",
 			"name": "Object_599_12_13",
-			"instanceId": "lvdee2bbe012a3f4178ae4e0e79b43909f1",
+			"instanceId": "lvd3e12557244b54d48ae967976585adbb2",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -769,14 +956,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_13",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "fd043b4c-7d28-4f47-8001-8052ee763c2a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "2c5a0719-c18c-4216-98c2-2945b61e65fa",
+			"designTimeId": "90d272f5-0f27-4d12-9039-300f1ae5339c",
 			"name": "Object_599_13_14",
-			"instanceId": "lvd4495f180171445838173a4a1309904af",
+			"instanceId": "lvd3db6b92a90e5402cbb4f05db94b90488",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -820,14 +1021,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_14",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "444403db-c1a1-470f-b022-454619e3798a"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "91baa472-b578-46fc-ad54-b3bc79504027",
+			"designTimeId": "34fa75c7-0ba6-47bb-9c51-0eb7988b139b",
 			"name": "Object_599_14_15",
-			"instanceId": "lvd4ba60dcd83244de7bb2fd386aa110121",
+			"instanceId": "lvdafbdb8b9a4314e33b1b1c171b1b9fbd4",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -871,14 +1086,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_15",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "22a110ed-64d6-4dd2-bb95-fd0b36e3072e"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "247cd21d-158a-4cc4-8b3c-2a91096bfee0",
+			"designTimeId": "7396cde3-094f-47cf-a43d-affffcf17651",
 			"name": "Object_599_15_16",
-			"instanceId": "lvd490a896f2b724c5eaed833db5f2c40d2",
+			"instanceId": "lvda7b2859ddcb846fe9ccca13334dffde0",
 			"controlId": "sig-composite-container",
 			"properties": [
 				{
@@ -922,14 +1151,28 @@
 					"value": "transparent",
 					"typeId": 0,
 					"propTypeId": 2
+				},
+				{
+					"name": "sigcompositectrl",
+					"value": "JAMsensor_mini",
+					"typeId": 23,
+					"propTypeId": 5,
+					"refId": "74a0bdc1-872d-4710-909b-2c4b2ea812be"
+				},
+				{
+					"name": "sigoverloadcontent",
+					"value": "255:GlobalVars.S06_VisuJamdetect_16",
+					"typeId": 4,
+					"propTypeId": 7,
+					"refId": "702ce3c2-2b37-4412-a72b-cddb2f46e660"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "beef7771-55fa-427c-9276-fdfc8b5e8b09",
+			"designTimeId": "1389042e-a905-4958-b688-2e090147d9c8",
 			"name": "Input_0_S06_Jamdetection_TeachIn_01_SectieNrInMachine_17",
-			"instanceId": "lvd72da92d166af45568e9d566d3e0df906",
+			"instanceId": "lvde8816d89d21f44a1a075dda3a1cc5ce0",
 			"controlId": "sig-control-numeric-input",
 			"properties": [
 				{
@@ -973,28 +1216,28 @@
 					"value": "LCD_Big",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "c808ed92-8378-40a9-9d80-a076c1cda535"
+					"refId": "94323aff-5b07-4d6c-8f8b-2c253a5f4052"
 				},
 				{
 					"name": "value",
 					"value": "255:S06_Jamdetection_TeachIn_01.SectieNrInMachine",
 					"typeId": 4,
 					"propTypeId": 1,
-					"refId": "f590ff53-14a2-4262-92e0-46b1c9d2cc38"
+					"refId": "d65702e0-b2e9-41a4-847e-b758d2084927"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-background-color",
 					"value": "MigratedColors:MigratedColor_217",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "2aa9072b-38ad-4817-bfed-70e26aec2728"
+					"refId": "02cd7cee-94c9-452c-a155-f345f48c0000"
 				},
 				{
 					"name": "--theme-sig-control-numeric-input-color",
 					"value": "MigratedColors:MigratedColor_000",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "83c39b6b-de5e-49e6-82c0-3c5c465061b2"
+					"refId": "f1f6a0d9-32bf-4dcb-8ac5-fa855f0f1d67"
 				},
 				{
 					"name": "unittext",
@@ -1002,15 +1245,15 @@
 					"typeId": 43,
 					"propTypeId": 1,
 					"path":["Unit"],
-					"refId": "f590ff53-14a2-4262-92e0-46b1c9d2cc38"
+					"refId": "d65702e0-b2e9-41a4-847e-b758d2084927"
 				}
 			]
 		},
 		{
 			"type": "control",
-			"designTimeId": "313e5ddc-cfb3-4a1a-8e9a-7e7693da4df3",
+			"designTimeId": "a5a77af9-d6a2-4a48-8108-b24301f959a8",
 			"name": "Button_0_18",
-			"instanceId": "lvd1fdb63c51e3d466cb36dbd863935b392",
+			"instanceId": "lvdfc59a5fc263d4374870a76bc346ad6d5",
 			"controlId": "sig-control-button",
 			"properties": [
 				{
@@ -1054,7 +1297,7 @@
 					"value": "Arial12_Bold_Shadow",
 					"typeId": 26,
 					"propTypeId": 6,
-					"refId": "5b1fe224-1b8d-47b2-bb16-b90c3c920c3d"
+					"refId": "1220148f-1f74-4404-840b-740761265580"
 				},
 				{
 					"name": "--theme-sig-control-button-background-color",
@@ -1091,28 +1334,28 @@
 					"value": "MigratedColors:MigratedColor_131",
 					"typeId": 9,
 					"propTypeId": 2,
-					"refId": "520a9a6b-5823-4e1a-8f81-eba6c19c469a"
+					"refId": "db85c516-0014-4f64-8e01-9b4d2cefbd58"
 				},
 				{
 					"name": "--theme-sig-control-button-background-image",
 					"value": "Resources\\Images\\loep klein.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "f0628744-440c-48eb-a95e-a8f2bbeb99f4"
+					"refId": "55c6dbf7-9d37-4717-9190-c38059f25bc0"
 				},
 				{
 					"name": "--theme-sig-control-button-pressed-background-image",
 					"value": "Resources\\Images\\loep klein.png",
 					"typeId": 15,
 					"propTypeId": 2,
-					"refId": "f0628744-440c-48eb-a95e-a8f2bbeb99f4"
+					"refId": "55c6dbf7-9d37-4717-9190-c38059f25bc0"
 				},
 				{
 					"name": "sig-control-button-mouseup",
 					"value": "wnd_JamTeach_06",
 					"typeId": 1,
 					"propTypeId": 3,
-					"refId": "a6f59744-b2f9-4748-a1f1-088dd67bc6c5"
+					"refId": "1cc8e809-a9a0-4b6b-b6c1-967ecd0abcd0"
 				}
 			]
 		}
